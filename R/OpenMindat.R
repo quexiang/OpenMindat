@@ -518,5 +518,169 @@ geomaterials_dens_range <- function(gt,lt,...){
   df_out
 }
 
+geomaterials_diapheny <- function(diapheny,...){
+  if(length(diapheny)>1){
+    df_out <- data.frame()
+    for (dia in diapheny){
+      df <- mindat_geomaterial_list(ids = c(''),diapheny = c(dia),...)
+      df_out <- rbind(df_out,df)
+    }
+    df_out
+  }
+  else{
+    df_out <- mindat_geomaterial_list(ids = c(''),diapheny = diapheny,...)
+    df_out
+  }
+}
+
+geomaterials_entrytype <- function(types,...){
+  if(length(types)>1){
+    df_out <- data.frame()
+    for (type in types){
+      df <- mindat_geomaterial_list(ids = c(''),entrytype = c(type),...)
+      df_out <- rbind(df_out,df)
+    }
+    df_out
+  }
+  else{
+    df_out <- mindat_geomaterial_list(ids = c(''),entrytype = types,...)
+    df_out
+  }
+}
+geomaterials_expand <- function(expanded_fields,...){
+  if(length(expanded_fields)>1){
+    df_out <- data.frame()
+    for (efild in expanded_fields){
+      df <- mindat_geomaterial_list(ids = c(''),expand = c(efild),...)
+      df_out <- rbind(df_out,df)
+    }
+    df_out
+  }
+  else{
+    df_out <- mindat_geomaterial_list(ids = c(''),expand = expanded_fields,...)
+    df_out
+  }
+
+}
+
+geomaterials_fracturetype <- function(types,...){
+  if(length(types)>1){
+    df_out <- data.frame()
+    for (type in types){
+      df <- mindat_geomaterial_list(ids = c(''),fracturetype = c(type),...)
+      df_out <- rbind(df_out,df)
+    }
+    df_out
+  }
+  else{
+    df_out <- mindat_geomaterial_list(ids = c(''),fracturetype = types,...)
+    df_out
+  }
+}
+
+geomaterials_hardness_gt<- function(hmin,...){
+
+  df_out <- mindat_geomaterial_list(ids = c(''),hardness__from = hmin,...)
+  df_out
+
+}
+
+geomaterials_hardness_lt<- function(hmax,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),hardness__to = hmax,...)
+  df_out
+}
+
+geomaterials_ima<- function(btrue =TRUE,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),ima = btrue,...)
+  df_out
+}
+
+geomaterials_lustretype <- function(types,...){
+  if(length(types)>1){
+    df_out <- data.frame()
+    for (type in types){
+      df <- mindat_geomaterial_list(ids = c(''),lustretype = c(type),...)
+      df_out <- rbind(df_out,df)
+    }
+    df_out
+  }
+  else{
+    df_out <- mindat_geomaterial_list(ids = c(''),lustretype = types,...)
+    df_out
+  }
+}
+
+
+geomeaterials_non_utf<- function(btrue =TRUE,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),non_utf = btrue,...)
+  df_out
+}
+
+geomaterials_opticalsign<- function(signs,...){
+  if(length(signs)>1){
+    df_out <- data.frame()
+    for (sign in signs){
+      df <- mindat_geomaterial_list(ids = c(''),opticalsign = c(sign),...)
+      df_out <- rbind(df_out,df)
+    }
+    df_out
+  }
+  else{
+    df_out <- mindat_geomaterial_list(ids = c(''),opticalsign = signs,...)
+    df_out
+  }
+}
+
+
+geomaterials_opticaltype <- function(types,...){
+  if(length(types)>1){
+    df_out <- data.frame()
+    for (type in types){
+      df <- mindat_geomaterial_list(ids = c(''),opticaltype = c(type),...)
+      df_out <- rbind(df_out,df)
+    }
+    df_out
+  }
+  else{
+    df_out <- mindat_geomaterial_list(ids = c(''),opticaltype = types,...)
+    df_out
+  }
+}
+
+geomaterials_ri_gt <- function(value){
+  df_out <- mindat_geomaterial_list(ids = c(''),ri__from = value,...)
+  df_out
+}
+
+geomaterials_ri_lt <- function(value){
+  df_out <- mindat_geomaterial_list(ids = c(''),ri__to = value,...)
+  df_out
+}
+
+geomaterials_ri_range <- function(gt,lt,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),ri__from = gt,ri__to = lt,...)
+  df_out
+}
+
+geomaterials_streak <- function(str){
+  df_out <- mindat_geomaterial_list(ids = c(''),steak = str,...)
+  df_out
+}
+
+geomaterials_synid <- function(idnum){
+  df_out <- mindat_geomaterial_list(ids = c(''),synid = idnum,...)
+  df_out
+}
+
+geomaterials_updated_at <- function(strDate){
+  df_out <- mindat_geomaterial_list(ids = c(''),updated_at = strDate,...)
+  df_out
+}
+
+geomaterials_varietyof<- function(intvalue){
+
+  df_out <- mindat_geomaterial_list(ids = c(''),varietyof = intvalue,...)
+  df_out
+}
 
 ########### mindat_geomaterials_tools.R #############

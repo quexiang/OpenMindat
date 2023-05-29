@@ -32,7 +32,31 @@ df_crystal3 <-geomaterials_crystal_system(c("Amorphous","Hexagonal"))
 df_density_gt <- geomaterials_dens_greater_than(3)
 df_density_lt <- geomaterials_dens_less_than(0.2)
 df_density_range <- geomaterials_dens_range(3,3.5)
+df_diapheny <- geomaterials_diapheny(c('Opaque'))
+df_diapheny <- geomaterials_diapheny(c('Opaque','Translucent'))
+df_entrytype <- geomaterials_entrytype(c('1','2'))
+df_expand <- geomaterials_expand(c('description','type_localities'))#ids = c('1','2','3')
+df_fracturetype <-geomaterials_fracturetype(c("Irregular/Uneven"))
+df_hardness_gt <- geomaterials_hardness_gt(9)
+df_hardness_lt <-geomaterials_hardness_lt(1)
+df_ima <- geomaterials_ima(FALSE)
+df_lustretype <- geomaterials_lustretype(c("Adamantine"))
+df_non_utf <-  geomeaterials_non_utf(TRUE)
+df_opticalsign <- geomaterials_opticalsign("+")
+df_optical_type <-geomaterials_opticaltype(types)
+df_polytypeof <- geomaterials_polytypeof(0)
 
+df_streak <- geomaterials_streak("white")
+df_updatetime <- geomaterials_updated_at("2023-05-07")
+df_varietyof <- geomaterials_varietyof(1)
+
+df_ri_gt <- geomaterials_ri_gt(1.6)
+df_ri_lt <- geomaterials_ri_lt(1.7)
+df_ri_range <- geomaterials_ri_range(1.6,1.7)
+
+
+#df_streak <- geomaterials_streak(str)
+#df_synid <- geomaterials_synid(idnum)
 
 
 response <- mindat_geomaterial_list(ids = c('3','5','7','9','222'))
