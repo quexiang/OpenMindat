@@ -45,8 +45,7 @@ df_non_utf <-  geomeaterials_non_utf(TRUE)
 df_opticalsign <- geomaterials_opticalsign("+")
 df_optical_type <-geomaterials_opticaltype(types)
 df_polytypeof <- geomaterials_polytypeof(0)
-
-df_streak <- geomaterials_streak("white")
+df_streak <- geomaterials_streak("black")
 df_updatetime <- geomaterials_updated_at("2023-05-07")
 df_varietyof <- geomaterials_varietyof(1)
 
@@ -54,10 +53,14 @@ df_ri_gt <- geomaterials_ri_gt(1.6)
 df_ri_lt <- geomaterials_ri_lt(1.7)
 df_ri_range <- geomaterials_ri_range(1.6,1.7)
 
+df_localities <- localities_list_country("United States")
+df_localities_desc <- localities_list_description("Chinese")
+df_loc_ecl <-localities_list_elems_ecl(c("H","O"))
+df_loc_icl <- localities_list_elems_inc(c("Be"))
 
 #df_streak <- geomaterials_streak(str)
 #df_synid <- geomaterials_synid(idnum)
-
+df_mineral_retrive = minerals_ima_retrieve(2)
 
 response <- mindat_geomaterial_list(ids = c('3','5','7','9','222'))
 response <- mindat_geomaterial_list()

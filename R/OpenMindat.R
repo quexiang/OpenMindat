@@ -351,26 +351,24 @@ mindat_mineral_ima_list<-function(...){
   mindat_query('minerals_ima_list', query = l)
 }
 
-mindat_localities<-function(...){
+mindat_localities_list<-function(...){
   l<-list(...)
-  mindat_query('localities', query = l)
+  mindat_query('localities_list', query = l)
 }
 
 mindat_localitiy<-function(id,...){
   l<-list(...)
   mindat_query('localities', query = c(list(id = id), l))
-  #mindat_query('localities', query = c(list(id = id), l),compulsory_params = list('id'))
 }
 
 mindat_locality_age<-function(id,...){
   l<-list(...)
-  #mindat_query('locality_age', query = c(list(id = id), l),compulsory_params = list('id'))
   mindat_query('locality_age', query = c(list(id = id), l))
 }
 
-mindat_locality_ages<-function(...){
+mindat_locality_age_list<-function(...){
   l<-list(...)
-  mindat_query('locality_age', query = l)
+  mindat_query('locality_age_list', query = l)
 }
 
 mindatnat_locality_status<-function(id,...){
@@ -647,12 +645,12 @@ geomaterials_opticaltype <- function(types,...){
   }
 }
 
-geomaterials_ri_gt <- function(value){
+geomaterials_ri_gt <- function(value,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ri__from = value,...)
   df_out
 }
 
-geomaterials_ri_lt <- function(value){
+geomaterials_ri_lt <- function(value,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ri__to = value,...)
   df_out
 }
@@ -662,25 +660,127 @@ geomaterials_ri_range <- function(gt,lt,...){
   df_out
 }
 
-geomaterials_streak <- function(str){
+geomaterials_streak <- function(str,...){
   df_out <- mindat_geomaterial_list(ids = c(''),steak = str,...)
   df_out
 }
 
-geomaterials_synid <- function(idnum){
+geomaterials_synid <- function(idnum,...){
   df_out <- mindat_geomaterial_list(ids = c(''),synid = idnum,...)
   df_out
 }
 
-geomaterials_updated_at <- function(strDate){
+geomaterials_updated_at <- function(strDate,...){
   df_out <- mindat_geomaterial_list(ids = c(''),updated_at = strDate,...)
   df_out
 }
 
-geomaterials_varietyof<- function(intvalue){
+geomaterials_varietyof<- function(intvalue,...){
 
   df_out <- mindat_geomaterial_list(ids = c(''),varietyof = intvalue,...)
   df_out
 }
+
+localities_list_country<- function(country,...){
+  df_out <- mindat_localities_list(ids = c(''),country = intvalue,...)
+  df_out
+}
+
+localities_list_description<- function(desc,...){
+  df_out <- mindat_localities_list(ids = c(''),description = desc,...)
+  df_out
+}
+
+localities_list_elems_exc<- function(exc_elems_list,...){
+  df_out <- mindat_localities_list(ids = c(''),elements_exc = exc_elems_list,...)
+  df_out
+}
+
+localities_list_elems_inc<- function(inc_elems_list,...){
+  df_out <- mindat_localities_list(ids = c(''),elements_exc = inc_elems_list,...)
+  df_out
+}
+
+localities_list_elems_inc_ecl <-function(inc_elems_list,exc_elems_list,...){
+  df_out <- mindat_localities_list(ids = c(''),elements_inc = inc_elems_list, elements_exc = inc_elems_list,...)
+  df_out
+}
+
+localities_list_expand <-function(expands,...){
+  df_out <- mindat_localities_list(ids = c(''),elements_inc = inc_elems_list, expand = expands,...)
+  df_out
+}
+
+localities_list_txt <-function(txt,...){
+  df_out <- mindat_localities_list(ids = c(''),txt = txt,...)
+  df_out
+}
+
+localities_list_updated_at<-function(updateDate,...){
+  df_out <- mindat_localities_list(ids = c(''),updated_at = updateDate,...)
+  df_out
+}
+
+localities_list_all<-function(...){
+  df_out <- mindat_localities_list(ids = c(''),...)
+  df_out
+}
+
+localities_retrieve_id<-function(id,...){
+  df_out <- mindat_localitiy(id,...)
+  df_out
+}
+##############
+locality_age_list <-function(...){
+  df_out <- mindat_locality_age_list(...)
+  df_out
+}
+locality_age_retrieve_id<-function(id,...){
+  df_out <- mindat_locality_age(id,...)
+  df_out
+}
+
+localities_status_list <-function(...){
+  df_out <- mindat_locality_status_list(...)
+  df_out
+}
+localities_status_retrieve<- function(id,...){
+  df_out <- mindatnat_locality_status(id,...)
+  df_out
+}
+
+localitiy_type_retrieve<- function(id,...){
+  df_out <- mindat_locality_type(id,...)
+  df_out
+}
+
+locality_type_list <- function(...){
+  df_out <- mindat_locality_type_list(...)
+  df_out
+}
+
+minerals_ima_list<- function(...){
+  df_out <- mindat_mineral_ima_list(...)
+  df_out
+}
+
+minerals_ima_list_expand <- function(expand){
+  df_out <-mindat_mineral_ima_list(ids = c(''),expand = expand,...)
+  df_out
+}
+minerals_ima_list_ima<- function(intValue){
+  df_out <-mindat_mineral_ima_list(ids = c(''),ima = intValue,...)
+  df_out
+}
+minerals_ima_updated_at <- function(updateDate,...){
+  df_out <-mindat_mineral_ima_list(ids = c(''),updated_at = updateDate,...)
+  df_out
+}
+minerals_ima_retrieve <- function(id,...){
+  df_out <- mindat_mineral_ima(id,...)
+  df_out
+}
+
+
 
 ########### mindat_geomaterials_tools.R #############
