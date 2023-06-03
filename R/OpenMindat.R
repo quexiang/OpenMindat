@@ -1,4 +1,13 @@
 ############ Initializing API Call ############
+#' Initializing Mindat API
+#' @description Initializing API Call. Setup the base_url, token and format.
+#' @usage mindat_connection(token, base_url = default, fmt = "json")
+#' @param token  string. You can apply a token from Mindat.org.
+#' @param base_url  string.The base url of mindat API, default is "https://api.mindat.org".
+#' @param fmt  string. The format of the request and response, default is json.
+#' @examples
+#' mindat_connection("ad9c15fa95d8063908cb5bf186c9e79f", "https://api.mindat.org","json")
+#' mindat_connection("ad9c15fa95d8063908cb5bf186c9e79f")
 mindat_connection <- function(token, base_url = "https://api.mindat.org",fmt ="json"){
   set_api_token(token)
   mindat_setup(base_url)
@@ -8,25 +17,61 @@ mindat_connection <- function(token, base_url = "https://api.mindat.org",fmt ="j
 ############  mindat_cache.R  #################
 mindat_cache <- new.env()
 
+#' Set cache name and value
+#' @description Assigns the value to the cache named varname in current environment.
+#' @usage mindat_cache_set(varname, value)
+#' @param varname  string. The cached varname.
+#' @param value  string.
+#' @examples
+#' mindat_cache_set("api_test", "https://api.mindat.org")
+#' mindat_cache_set("api_token","ad9c15fa95d8063908cb5bf186c9e79f")
 mindat_cache_set<-function(varname, value)
 {
   assign(varname, value, envir = mindat_cache)
 }
 
+#' Get cache value
+#' @description Retrieve the value of the cache named varname in current environment.
+#' @usage mindat_cache_get(varname)
+#' @param varname  string
+#' @returns cached value. A string, list or other objects.
+#' @examples
+#' mindat_cache_get("api_test")
+#' mindat_cache_get("api_token")
 mindat_cache_get<-function(varname)
 {
   return (get(varname, envir=mindat_cache))
 }
 
+#' Delete a cached value by the users input varname
+#' @description Remove (clear) the cache named varname in current environment.
+#' @usage mindat_cache_delete(varname)
+#' @param varname string input a cached name.Set a cached value empty by the given varname. A string, list or other objects.
+#' @examples
+#' mindat_cache_delete("api_test")
+#' mindat_cache_delete("api_token")
 mindat_cache_delete<-function(varname)
 {
   assign(varname, NULL, envir = mindat_cache)
 }
 
+#' Remove all cached values
+#' @description Clear all current cached values. Set current environment cache empty.
+#' @usage mindt_cache_empty()
+#' @examples
+#' mindt_cache_empty()
 mindt_cache_empty<-function(){
   rm(list = ls(envir = mindat_cache))
 }
 
+#' Check if the current environment has the cached value of varname.
+#' @description Check whether or not the current environment has the cache named varname.
+#' @usage mindat_cache_has(varname)
+#' @param varname string.
+#' @returns Boolean value. if the varname is found in current environment cache, return True otherwise return False.
+#' @examples
+#' mindat_cache_has("api_test")
+#' mindat_cache_has("api_token")
 mindat_cache_has <-function(varname)
 {
   if(exists(varname, envir= mindat_cache)){
@@ -36,6 +81,15 @@ mindat_cache_has <-function(varname)
   return (FALSE)
 }
 
+#' Check if the current environment has the cached function named varname, if yes return it. If not, setup up a new cached function.
+#' @description Check whether the current environment has the cached function named varname,if yes return it.
+#'              if not setup up a new cache function named varname.
+#' @usage mindat_cache_return_or_setup(varname,setupfun)
+#' @param varname string.
+#' @returns If the varname is found in current environment cache, return cached function.
+#'          If not, eval the function and return cached function.
+#' @examples
+#' mindat_cache_return_or_setup("end_point",function(){return (list())})
 mindat_cache_return_or_setup<-function(varname, setupfun)
 {
   if(!mindat_cache_has(varname))
@@ -53,16 +107,38 @@ mindat_cache_return_or_setup<-function(varname, setupfun)
 }
 ########### mindat_cache.R ###########
 
+
 ########### mindat_api_tools.R #############
+#' Create a default uri builder.
+#' @description Create a default uri builder which can create the request uri according to the query conditions.
+#' @usage default_uri_builder(api_base_uri,config,...,querystring=c(''))
+#' @param api_base_uri string .
+#' @param config list.
+#' @param ... other conditions.
+#' @param querystring query string. e.g. fields = "id,name"
+#' @returns uri string
+#' @examples
+#' default_uri_builder()
 default_uri_builder<-function(api_base_uri,config, ..., querystring = ''){
   endpoint_base <- config[['endpoint_base']]
   uri <- paste(api_base_uri, '/', endpoint_base, sep = "")
   if(querystring != ''){
     uri <- paste(uri, querystring, sep="?")
   }
-  uri
+  uri # = return uri
 }
 
+#' setup up a api endpoint.
+#' @description Setup up a api endpoint.
+#' @usage mindat_api_endpoint(name,endpoint_base,...,default_uri_builder,c(''))
+#' @param name string .
+#' @param endpoint_base list.
+#' @param ... other conditions.
+#' @param uri_builder fun. e.g. fields = "id,name"
+#' @param query_params list.
+#' @returns uri string
+#' @examples
+#' mindat_api_endpoint("geomaterials","geomaterials/%s",default_uri_builder,c(''))
 mindat_api_endpoint<-function(name, endpoint_base, ..., uri_builder = default_uri_builder,query_params = list()){
   if(!is.function(uri_builder)){
     stop("uri_builder must be a function")
@@ -676,13 +752,12 @@ geomaterials_updated_at <- function(strDate,...){
 }
 
 geomaterials_varietyof<- function(intvalue,...){
-
   df_out <- mindat_geomaterial_list(ids = c(''),varietyof = intvalue,...)
   df_out
 }
 
 localities_list_country<- function(country,...){
-  df_out <- mindat_localities_list(ids = c(''),country = intvalue,...)
+  df_out <- mindat_localities_list(ids = c(''),country = country,...)
   df_out
 }
 
@@ -701,7 +776,7 @@ localities_list_elems_inc<- function(inc_elems_list,...){
   df_out
 }
 
-localities_list_elems_inc_ecl <-function(inc_elems_list,exc_elems_list,...){
+localities_list_elems_inc_exc <-function(inc_elems_list,exc_elems_list,...){
   df_out <- mindat_localities_list(ids = c(''),elements_inc = inc_elems_list, elements_exc = inc_elems_list,...)
   df_out
 }
@@ -780,7 +855,5 @@ minerals_ima_retrieve <- function(id,...){
   df_out <- mindat_mineral_ima(id,...)
   df_out
 }
-
-
 
 ########### mindat_geomaterials_tools.R #############

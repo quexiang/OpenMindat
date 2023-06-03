@@ -1,5 +1,3 @@
-# install.packages("httr")
-# install.packages("jsonlite")
 library(OpenMindat)
 library(httr)
 library(jsonlite)
@@ -14,14 +12,18 @@ for (i in dc){
 #test_base_uri = "https://api.mindat.org"
 test_base_token = "aa9c25fa95d8063908cb2bf186c9e79f"
 mindat_connection(test_base_token)
-response <- mindat_geomaterial(id=6)
+response2 <- mindat_geomaterial(id=6)
 response_fields<- mindat_geomaterial(id = 6)
-#response_fields_ids<- mindat_geomaterial_list(ids = c('6','7','8'),fields ="id,name,updttime,ima_formula,ima_status,ima_notes,key_elements",elements_inc = "H,O")#ids = c('6','7','8'),
+response_fields_ids<- mindat_geomaterial_list(ids = c('6','7','8'),fields ="id,name,updttime,ima_formula,ima_status,ima_notes,key_elements",elements_inc = "H,O",elements_exc ="Be")#ids = c('6','7','8'),
+
+mindat_cache_has("sss")
+mindat_api_endpoint()
 
 df_contains_all <- geomaterials_contain_all_elems(c('Be','Cr'))
 df_contains_any <- geomaterials_contain_any_elems(c('Be','Cr'))
-df_notcontains <-  geomaterials_notcontain_elements(c('H','O'))
-df_contain_butnot <- geomaterials_contain_elems_butnot_elems(c('Be','O'),c('H'))
+df_notcontains <-  geomaterials_contain_all_and_without_elems(c('Be','O'),c('H'))
+
+#df_contain_butnot <- geomaterials_contain_elems_butnot_elems(c('Be','O'),c('H'))
 df_cleavagetype <- geomaterials_cleavagetype(c("None Observed"))
 df_cleavagetype2 <- geomaterials_cleavagetype(c("None Observed","Imperfect/Fair"))
 df_color <- geomaterials_colour(c("yellow"))
@@ -37,7 +39,8 @@ df_diapheny <- geomaterials_diapheny(c('Opaque','Translucent'))
 df_entrytype <- geomaterials_entrytype(c('1','2'))
 df_expand <- geomaterials_expand(c('description','type_localities'))#ids = c('1','2','3')
 df_fracturetype <-geomaterials_fracturetype(c("Irregular/Uneven"))
-df_hardness_gt <- geomaterials_hardness_gt(9)
+df_hardness_gt <- geomaterials_hardness_gt(9,fields ="id,name")
+
 df_hardness_lt <-geomaterials_hardness_lt(1)
 df_ima <- geomaterials_ima(FALSE)
 df_lustretype <- geomaterials_lustretype(c("Adamantine"))
@@ -53,10 +56,12 @@ df_ri_gt <- geomaterials_ri_gt(1.6)
 df_ri_lt <- geomaterials_ri_lt(1.7)
 df_ri_range <- geomaterials_ri_range(1.6,1.7)
 
-df_localities <- localities_list_country("United States")
+df_localities <- localities_list_country("China")
 df_localities_desc <- localities_list_description("Chinese")
-df_loc_ecl <-localities_list_elems_ecl(c("H","O"))
-df_loc_icl <- localities_list_elems_inc(c("Be"))
+df_loc_exc <-localities_list_elems_exc(c("H","O"))
+df_loc_icl <- localities_list_elems_inc(c("Dy"))
+df_loc_inc_exc <- localities_list_elems_inc_exc(c("Be"),c("H","O"))
+
 
 #df_streak <- geomaterials_streak(str)
 #df_synid <- geomaterials_synid(idnum)
@@ -66,15 +71,13 @@ response <- mindat_geomaterial_list(ids = c('3','5','7','9','222'))
 response <- mindat_geomaterial_list()
 response_varieties <- mindat_geomaterial_varieties(id=8)
 
-
-
 response2 <- mindat_mineral_ima(id=1)
 id_list2<-c('1','2','3','4','6')
 response2_list <- mindat_mineral_ima_list(ids =id_list2)
 response3_list <- mindat_mineral_ima_list(ids =id_list2,fields = "id,name,ima_formula,ima_symbol")
 response3 <- mindat_localitiy(id = 6)
 response4 <- midnat_country(id = 6)
-response5 <- midnat_locality_age(id = 6)
+response5 <- locality_age_retrieve_id(id = 6)
 response6 <- midnat_locality_status(id = 6)
 response7 <- midnat_locality_type(id = 212)
 ###test all basic mindat query#####
