@@ -1,11 +1,22 @@
 Package: OpenMindat
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Quickly access the required data based on mindat API
 Version: 1.0.0
-Author: XiangQue wrote it
+Imports:
+    httr (>= 1.4.4),
+    jsonlite (>= 1.8.4)
+usethis::use_package("httr", min_version = "1.4.4") 
+usethis::use_package("jsonlite", min_version ="1.8.4" ) 
+Author@R: 
+    c(person("Xiang","Que",email = "xiangq@uidaho.edu",role = ("aut","cre"), comment = c(ORCID = "0000-0002-5687-8627")),
+      person("Xiaogang","Ma",email = "max@uidaho.edu",role = ("aut"),comment = c(ORCID = "0000-0002-9110-7369"))
+    )
 Maintainer: The package maintainer <xiangq@uidaho.edu> or <quexiang@fafu.edu.cn>
-Description: The OpenMindat R package mainly provides functions for users or machines to quickly and easily retrieve datasets from the mindat.org API.
-License: MIT license
+Description: The openmindat R package mainly provides functions for users or machines to quickly and easily retrieve datasets from the mindat.org API (https://api.mindat.org/).
+License: 'use_mit_license()' MIT license
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+URL: https://github.com/quexiang/OpenMindat
+BugReports: https://github.com/quexiang/OpenMindat/issues
