@@ -40,8 +40,9 @@ df_entrytype <- geomaterials_entrytype(c('1','2'))
 df_expand <- geomaterials_expand(c('description','type_localities'))#ids = c('1','2','3')
 df_fracturetype <-geomaterials_fracturetype(c("Irregular/Uneven"))
 df_hardness_gt <- geomaterials_hardness_gt(9,fields ="id,name")
-
 df_hardness_lt <-geomaterials_hardness_lt(1)
+df_hardness_range <-geomaterials_hardness_range(1,1.2)
+
 df_ima <- geomaterials_ima(FALSE)
 df_lustretype <- geomaterials_lustretype(c("Adamantine"))
 df_non_utf <-  geomeaterials_non_utf(TRUE)
@@ -61,7 +62,7 @@ df_localities_desc <- localities_list_description("Chinese")
 df_loc_exc <-localities_list_elems_exc(c("H","O"))
 df_loc_icl <- localities_list_elems_inc(c("Dy"))
 df_loc_inc_exc <- localities_list_elems_inc_exc(c("Be"),c("H","O"))
-
+df_ima_integer <- minerals_ima_list_ima(1)
 
 #df_streak <- geomaterials_streak(str)
 #df_synid <- geomaterials_synid(idnum)

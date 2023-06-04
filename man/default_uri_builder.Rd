@@ -7,13 +7,13 @@
 default_uri_builder(api_base_uri,config,...,querystring=c(''))
 }
 \arguments{
-\item{api_base_uri}{string .}
+\item{api_base_uri}{string. The mindat api base uri.}
 
-\item{config}{list.}
+\item{config}{list of configuration.}
 
-\item{...}{other conditions.}
+\item{...}{Further named parameters,other conditions,such as fields = "id,name,ima_status".}
 
-\item{querystring}{query string. e.g. fields = "id,name"}
+\item{querystring}{query string.}
 }
 \value{
 uri string

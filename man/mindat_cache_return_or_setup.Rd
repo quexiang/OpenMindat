@@ -2,7 +2,7 @@
 % Please edit documentation in R/OpenMindat.R
 \name{mindat_cache_return_or_setup}
 \alias{mindat_cache_return_or_setup}
-\title{Check if the current environment has the cached function named varname, if yes return it. If not, setup up a new cached function.}
+\title{Check if the current environment has the cached function named varname.}
 \usage{
 mindat_cache_return_or_setup(varname,setupfun)
 }
@@ -14,8 +14,8 @@ If the varname is found in current environment cache, return cached function.
          If not, eval the function and return cached function.
 }
 \description{
-Check whether the current environment has the cached function named varname,if yes return it.
-             if not setup up a new cache function named varname.
+Check whether the current environment has the cached function named varname,if has, return it.
+             if not, setup up a new cache function named varname.
 }
 \examples{
 mindat_cache_return_or_setup("end_point",function(){return (list())})
