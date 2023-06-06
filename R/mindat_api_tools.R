@@ -28,7 +28,7 @@ default_uri_builder<-function(api_base_uri,config, querystring = ''){
 #' @returns uri string
 #' @examples
 #' mindat_api_endpoint("geomaterials","geomaterials/%s",default_uri_builder,c(''))
-mindat_api_endpoint<-function(name, endpoint_base, ..., uri_builder = default_uri_builder,query_params = list()){
+mindat_api_endpoint<-function(name, endpoint_base, uri_builder = default_uri_builder,query_params = list(),...){
   if(!is.function(uri_builder)){
     stop("uri_builder must be a function")
   }
@@ -45,19 +45,37 @@ mindat_api_endpoint<-function(name, endpoint_base, ..., uri_builder = default_ur
   mindat_cache_set('api_end_points', api_end_points)
 }
 
+
+#' stop_not_param
+#' @description if the query param is not in the list of mindat api, stop and report the errors.Throws error if a parameter is not found in query.
+#' This function needs to be improved. For different endpoints of mindat.org API, the fields that can be queried are different.
+#' @usage stop_not_param (comp_params, query)
+#' @param comp_params list. list of compulsory, the internal params in the mindat api.
+#' @param query list of query name/value pairs.
+#' @examples
+#' stop_not_param(comp_params,query)
+stop_not_param<-function(comp_params, query){
+ q_params <- names(query)
+ for(c_param in comp_params) {
+   if(!is.element(c_param, q_params)){
+     stop(sprintf("Query string param '%s' is missing", c_param))
+   }
+ }
+}
+
 #' build uri
 #' @description build a request uri based on .
 #' @usage build_uri(name,endpoint_base,...,default_uri_builder,c(fields))
 #' @param name string .
 #' @param endpoint list.
-#' @param ... Further named parameters, other conditions.
 #' @param uri_builder function default is the default_uri_builder.
 #' @param query_params list.
+#' @param ... Further named parameters, other conditions.
 #' @returns uri string
 #' @examples
 #' build_uri("geomaterials","geomaterials/%s",default_uri_builder,c(''))
 #' build_uri('minerals_ima_list', 'minerals_ima/%s', uri_builder = mindat_uri_builder)
-build_uri<-function(endpoint, ..., query = list(), api_base = NULL){
+build_uri<-function(endpoint, query = list(), api_base = NULL,...){
   # passed or global
   if(is.null(api_base)){
     if(mindat_cache_has('api_base')){
@@ -75,9 +93,9 @@ build_uri<-function(endpoint, ..., query = list(), api_base = NULL){
 
   query <- c(query, list(...))
 
-  # check compulsory params for end point
+  # check params for end point
   if(!is.null(config['query_params']) && length(config['query_params'][[1]] > 0)){
-    .stop_on_missing_param(config['query_params'][[1]], query)
+    stop_not_param(config['query_params'][[1]], query)
   }
   qs<-mindat_build_querystring(query)
   builder <- config[['uri_builder']]
@@ -105,19 +123,5 @@ set_api_token<-function(api_token){
   mindat_cache_set('api_token', api_token)
 }
 
-##' stop_missing_param
-##' @description if the query param is not in the list of mindat api, stop and report the errors.
-##' @usage stop_missing_param (compulsory_params, query)
-##' @param compulsory_params list. The internal params in the mindat api.
-##' @param query list. list of query fields and conditions.
-##' @examples
-##' stop_missing_param(compulsory_params,query)
-#stop_missing_param<-function(compulsory_params, query){
-#  q_params <- names(query)
-#  for(c_param in compulsory_params) {
-#    if(!is.element(c_param, q_params)){
-#      stop(sprintf("Query string param '%s' is missing", c_param))
-#    }
-#  }
-#}
+
 ########### mindat_api_tools.R #############
