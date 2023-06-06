@@ -9,7 +9,7 @@ test_check("OpenMindat")
 ###test all basic mindat query#####
 # Initializing API Call
 #test_base_uri = "https://api.mindat.org"
-test_base_token = "aa9c25fa95d8063908cb2bf186c9e79f"
+test_base_token = #You should get a token from mindat.org
 
 mindat_connection(test_base_token)
 response2 <- mindat_geomaterial(id=6)
