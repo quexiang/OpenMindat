@@ -1,4 +1,6 @@
 ############ Initializing API Call ############
+#library(httr)
+#library(jsonlite)
 #' Initializing Mindat API
 #' @description Initializing API Call. Setup the base_url, token and format.
 #' @usage mindat_connection(token, base_url = default, fmt = "json")
