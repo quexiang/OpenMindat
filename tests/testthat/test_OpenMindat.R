@@ -1,4 +1,4 @@
-Your_token = "ad9c15fa95d8063908cb5bf186c9e79f"
+Your_token = #Your_token
 
 test_that("Initializing Mindat API with only token", {
   expect_no_error(mindat_connection(Your_token))
