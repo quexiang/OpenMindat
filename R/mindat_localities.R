@@ -117,7 +117,7 @@ localities_list_elems_inc_exc <-function(inc_elems_list,exc_elems_list,...){
 #' localities_list_expand(c("geomaterials"))
 #' localities_list_expand(c("~all"))
 localities_list_expand <-function(expands,...){
-  df_out <- mindat_localities_list(ids = c(''),elements_inc = inc_elems_list, expand = expands,...)
+  df_out <- mindat_localities_list(ids = c(''), expand = expands,...)
   df_out
 }
 
@@ -229,10 +229,10 @@ localities_status_list <-function(...){
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality status.
 #' @examples
-#'  localities_status_retrieve()
-#'  localities_status_retrieve(fields = "id,name")
+#'  localities_status_retrieve(2)
+#'  localities_status_retrieve(id = 2)
 localities_status_retrieve<- function(id,...){
-  df_out <- mindatnat_locality_status(id,...)
+  df_out <- mindat_locality_status(id,...)
   df_out
 }
 

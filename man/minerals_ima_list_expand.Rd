@@ -4,7 +4,7 @@
 \alias{minerals_ima_list_expand}
 \title{minerals_ima_list_expand}
 \usage{
-minerals_ima_list (expand,...)
+minerals_ima_list_expand (expand,...)
 }
 \arguments{
 \item{expand}{description}

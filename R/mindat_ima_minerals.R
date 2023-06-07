@@ -15,7 +15,7 @@ minerals_ima_list<- function(...){
 
 #' minerals_ima_list_expand
 #' @description retrieve mineral ima list with the given expand.
-#' @usage minerals_ima_list (expand,...)
+#' @usage minerals_ima_list_expand (expand,...)
 #' @param expand description
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type.
@@ -25,8 +25,9 @@ minerals_ima_list<- function(...){
 #' @examples
 #'  minerals_ima_list_expand("~all")
 #'  minerals_ima_list_expand("~all",fields = "id,name")
-minerals_ima_list_expand <- function(expand){
-  df_out <-mindat_mineral_ima_list(ids = c(''),expand = expand,...)
+minerals_ima_list_expand <- function(expand,...){
+  query_expand <- c(expand, list(...))
+  df_out <-mindat_mineral_ima_list(ids = c(''),expand = query_expand)
   df_out
 }
 
@@ -40,7 +41,7 @@ minerals_ima_list_expand <- function(expand){
 #' Integer
 #' @examples
 #'  minerals_ima_list_ima(1)
-minerals_ima_list_ima<- function(intValue){
+minerals_ima_list_ima<- function(intValue,...){
   df_out <-mindat_mineral_ima_list(ids = c(''),ima = intValue,...)
   df_out
 }

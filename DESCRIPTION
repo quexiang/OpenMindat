@@ -7,8 +7,6 @@ Imports:
     jsonlite (>= 1.8.4)
 Suggests: testthat (>= 3.0.0)
 Config/testthat/edition: 3
-usethis::use_package("httr", min_version = "1.4.4") 
-usethis::use_package("jsonlite", min_version ="1.8.4" )
 usethis::use_testthat(3)
 Author@R: 
     c(person("Xiang","Que",email = "xiangq@uidaho.edu",role = ("aut","cre"), comment = c(ORCID = "0000-0002-5687-8627")),

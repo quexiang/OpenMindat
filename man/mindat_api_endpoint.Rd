@@ -11,11 +11,11 @@ mindat_api_endpoint(name,endpoint_base,...,default_uri_builder,c(fields))
 
 \item{endpoint_base}{list.}
 
-\item{...}{Further named parameters, other conditions.}
-
 \item{uri_builder}{function default is the default_uri_builder.}
 
 \item{query_params}{list.}
+
+\item{...}{Further named parameters, other conditions.}
 }
 \value{
 uri string

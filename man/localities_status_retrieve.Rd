@@ -18,6 +18,6 @@ df, data frame of locality status.
 retrieve locality status by its id.
 }
 \examples{
- localities_status_retrieve()
- localities_status_retrieve(fields = "id,name")
+ localities_status_retrieve(2)
+ localities_status_retrieve(id = 2)
 }
