@@ -9,8 +9,11 @@ R package for OpenMindat
 Install OpenMindat from source codes
 
 1.Download all the source codes and Open the OpenMindat.Rproj with RStudio.
+
 2.Select the "Install Package" in the "Build" menu of RStudio (Ctrl+Shift+B).
+
 3.Create a New R Script (Ctrl + Shift + N).
+
 4.Load the required packages
 
 ```coffee
@@ -23,12 +26,14 @@ library(jsonlite)
 **Set up your mindat api token**
 
 1. You should first get your own Mindat api token`YourToken` . ([How to get your mindat API token ?](https://www.mindat.org/a/how_to_get_my_mindat_api_key))
+
 2. Set up your token `YourToken`
 
 ```coffee
 #input `YourToken`
 mindat_connection(YourToken)
 ```
+
 3.Then you can easily retrieve the dataset as you want: 
 
 ```coffee
@@ -79,7 +84,7 @@ df_loc_inc_exc <- localities_list_elems_inc_exc(c("Be","Si"),c("H","Al"))
 
 **Bug Reports**
 
-[Any Bugs?](https://github.com/quexiang/OpenMindat/issues )
+[Any issues or bugs?](https://github.com/quexiang/OpenMindat/issues )
 
 **Related Articles**
 
