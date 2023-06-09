@@ -10,13 +10,13 @@ Install OpenMindat from source codes
 
 1. Download all the source codes and Open the OpenMindat.Rproj with RStudio.
 
-2. Install packages "httr" and "jsonlite". 
+2. Install packages `httr` and `jsonlite`. 
 
-3. Select the "Install Package" in the "Build" menu of RStudio (Ctrl + Shift + B). 
+3. Select the `Install Package` in the `Build` menu of RStudio (Ctrl + Shift + B). 
 
 4. Create a New R Script (Ctrl + Shift + N).
 
-5. Load the packages "OpenMindat", "httr", and "jsonlite". 
+5. Load the packages `OpenMindat`, `httr`, and `jsonlite`. 
 
 ```coffee
 #install.packages("httr")
@@ -37,7 +37,7 @@ library(jsonlite)
 mindat_connection("YourToken") #including the quotation marks
 ```
 
-3. You can now retrieve datasets of interest using functions in the "OpenMindat" package. Below are a few examples.
+3. You can now retrieve datasets of interest using functions in the `OpenMindat` package. Below are a few examples.
 
 ```coffee
 
