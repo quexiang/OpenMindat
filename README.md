@@ -6,6 +6,7 @@ R package for OpenMindat
 ### Quick start
 
 **Install and load necessary packages**
+
 1. Download all the source codes and Open the OpenMindat.Rproj with RStudio.
 
 2. Install packages `httr` and `jsonlite`. 
@@ -26,6 +27,7 @@ library(jsonlite)
 ```
 
 **Set up API connection with your Mindat API token and use the functions**
+
 1. You should first get your own Mindat api token `YourToken` . ([How to get your mindat API token ?](https://www.mindat.org/a/how_to_get_my_mindat_api_key))
 
 2. Set up your token `YourToken`
@@ -80,6 +82,14 @@ df_localities <- localities_list_country("China")
 
 #query localities contain the elements(e.g. Be,Si) withou the elements(e.g. H,Al) :
 df_loc_inc_exc <- localities_list_elems_inc_exc(c("Be","Si"),c("H","Al"))
+
+```
+
+**Documention of function list**
+
+An initial version of the `OpenMindat` documentation is available, inclduing a function list and the description of each function, which can be called using the code below.
+```coffee
+help(package = OpenMindat)
 
 ```
 
