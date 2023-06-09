@@ -37,7 +37,7 @@ library(jsonlite)
 mindat_connection("YourToken") #including the quotation marks
 ```
 
-3. You can easily retrieve the dataset as you want:
+3. You can now retrieve datasets of interest using functions in the "OpenMindat" package. Below are a few examples.
 
 ```coffee
 
