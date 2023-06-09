@@ -25,7 +25,7 @@ library(httr)
 library(jsonlite)
 ```
 
-**Set up your Mindat API token**
+**Set up your Mindat API token and use the functions**
 1. You should first get your own Mindat api token `YourToken` . ([How to get your mindat API token ?](https://www.mindat.org/a/how_to_get_my_mindat_api_key))
 
 2. Set up your token `YourToken`
