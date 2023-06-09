@@ -33,8 +33,8 @@ library(jsonlite)
 2. Set up your token `YourToken`
 
 ```coffee
-#input "YourToken"
-mindat_connection(YourToken)
+#input your Mindat API token
+mindat_connection("YourToken") #including the quotation marks
 ```
 
 3. You can easily retrieve the dataset as you want:
