@@ -85,6 +85,7 @@ df_loc_inc_exc <- localities_list_elems_inc_exc(c("Be","Si"),c("H","Al"))
 
 ```
 
+
 **Documention of function list**
 
 An initial version of the `OpenMindat` documentation is available, inclduing a function list and the description of each function, which can be called using the code below.
