@@ -1,7 +1,7 @@
 # OpenMindat
 R package for OpenMindat
 
-`OpenMindat` is a package for downloading, processing data from [mindat.org Database](https://www.mindat.org/).
+`OpenMindat` is a package for retrieving and processing data from [mindat.org Database](https://www.mindat.org/) through its open data API.
 
 ### Quick start
 
