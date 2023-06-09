@@ -12,7 +12,7 @@ Install OpenMindat from source codes
 
 2. Install packages "httr" and "jsonlite". 
 
-3. Select the "Install Package" in the "Build" menu of RStudio (Ctrl+Shift+B). 
+3. Select the "Install Package" in the "Build" menu of RStudio (Ctrl + Shift + B). 
 
 4. Create a New R Script (Ctrl + Shift + N).
 
