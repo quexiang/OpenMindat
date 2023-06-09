@@ -5,8 +5,7 @@ R package for OpenMindat
 
 ### Quick start
 
-**Install and load necessary packages**
-
+**Install necessary packages**
 Install OpenMindat from source codes
 
 1. Download all the source codes and Open the OpenMindat.Rproj with RStudio.
