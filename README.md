@@ -5,7 +5,7 @@ R package for OpenMindat
 
 ### Quick start
 
-**Install OpenMidat and other necessary packages**
+**Install and load necessary packages**
 1. Download all the source codes and Open the OpenMindat.Rproj with RStudio.
 
 2. Install packages `httr` and `jsonlite`. 
