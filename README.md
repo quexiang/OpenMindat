@@ -3,7 +3,7 @@ R package for OpenMindat
 
 `OpenMindat` is a package for retrieving and processing data from [mindat.org Database](https://www.mindat.org/) through its open data API.
 
-Mindat and University of Idaho collaborate on 'OpenMindat' [OpenMindat Project](https://www.mindat.org/mesg-567769.html)
+Mindat and University of Idaho collaborate on '[OpenMindat Project](https://www.mindat.org/mesg-567769.html)'
 
 ### Quick start
 
