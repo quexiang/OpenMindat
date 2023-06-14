@@ -16,6 +16,10 @@
 #   mapped
 # }
 
+#' @importFrom httr GET
+#' @name GET
+usethis::use_import_from("httr", "GET")
+
 #' mindat_make_data_frame
 #' @description convert the response json to dataframe of R
 #' @usage mindat_make_data_frame (reg_list)

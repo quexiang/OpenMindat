@@ -83,13 +83,13 @@ localities_list_elems_exc<- function(exc_elems_list,...){
 #' @examples
 #' localities_list_elems_inc(c('H','Be'))
 localities_list_elems_inc<- function(inc_elems_list,...){
-  df_out <- mindat_localities_list(ids = c(''),elements_exc = inc_elems_list,...)
+  df_out <- mindat_localities_list(ids = c(''),elements_inc = inc_elems_list,...)
   df_out
 }
 
 #' localities that contain the given elements but not contain some other given elements.
 #' @description Queries the list of localities that contain the given elements,but not contain some other given elements.
-#' @usage localities_list_elems_inc(inc_elems_list,exc_elems_list ...)
+#' @usage localities_list_elems_inc_exc(inc_elems_list,exc_elems_list, ...)
 #' @param inc_elems_list vector of elements.
 #' @param exc_elems_list vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
@@ -99,7 +99,7 @@ localities_list_elems_inc<- function(inc_elems_list,...){
 #' @examples
 #' localities_list_elems_inc_exc(c('H','Be'),c('O'))
 localities_list_elems_inc_exc <-function(inc_elems_list,exc_elems_list,...){
-  df_out <- mindat_localities_list(ids = c(''),elements_inc = inc_elems_list, elements_exc = inc_elems_list,...)
+  df_out <- mindat_localities_list(ids = c(''),elements_inc = inc_elems_list, elements_exc = exc_elems_list,...)
   df_out
 }
 

@@ -2,29 +2,19 @@
 % Please edit documentation in R/mindat_data_parse.R
 \name{mindat_make_data_frame}
 \alias{mindat_make_data_frame}
-\title{collapse_array_columns_map}
+\title{mindat_make_data_frame}
 \usage{
-collapse_array_columns_map (base_uri)
-
 mindat_make_data_frame (reg_list)
 }
 \arguments{
 \item{reg_list}{response json data to list format obj.}
-
-\item{name}{description}
 }
 \value{
-description
-
 df_out, R data frame
 }
 \description{
-set up of the mindat basic uri, endpoints, and cache
-
 convert the response json to dataframe of R
 }
 \examples{
-collapse_array_columns_map(c('id'))
-mindat_make_data_frame
 mindat_make_data_frame(data_list[["records"]])
 }

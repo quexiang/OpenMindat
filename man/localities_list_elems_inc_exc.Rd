@@ -4,7 +4,7 @@
 \alias{localities_list_elems_inc_exc}
 \title{localities that contain the given elements but not contain some other given elements.}
 \usage{
-localities_list_elems_inc(inc_elems_list,exc_elems_list ...)
+localities_list_elems_inc_exc(inc_elems_list,exc_elems_list, ...)
 }
 \arguments{
 \item{inc_elems_list}{vector of elements.}
