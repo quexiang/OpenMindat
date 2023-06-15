@@ -64,7 +64,7 @@ mindat_set_up_endpoints<-function(){
   mindat_api_endpoint('geomaterials/dict', 'geomaterials/dict/%s',uri_builder = mindat_uri_builder)
 
   #geomaterials_search/
-  mindat_api_endpoint('geomaterials_search', 'geomaterials_search/%s',uri_builder = mindat_uri_builder)
+  mindat_api_endpoint('geomaterials_search', 'geomaterials_search/?%s',uri_builder = mindat_uri_builder)
 
   #dana-8
   mindat_api_endpoint('dana-8', 'dana-8/%s',uri_builder = mindat_uri_builder,

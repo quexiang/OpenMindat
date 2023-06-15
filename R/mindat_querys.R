@@ -184,6 +184,21 @@ mindat_geomaterial_list<-function(...){
   mindat_query('geomaterials_list', query = l)
 }
 
+#' mindat_geomaterial_search
+#' @description retrieve all the geomaterial list or the geomaterial by given conditions.
+#' @usage mindat_geomaterial_search (name)
+#' @param ..., Further named parameters.
+#' @return df, data frame of geomaterials mathch the search
+#' @examples
+#' mindat_geomaterial_list()
+mindat_geomaterial_search<-function(...){
+  l<-list(...)
+  # if(length(l)){
+  #   print(l)
+  # }
+  mindat_query('geomaterials_search', query = l)
+}
+
 #' mindat_country
 #' @description retrieve the country by given its id.
 #' @usage mindat_country (id)

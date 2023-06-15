@@ -558,11 +558,26 @@ geomaterials_updated_at <- function(strDate,...){
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
 #' @details
-#' retrieve the localities that have the given varietyof.
+#' retrieve the geomaterials that have the given varietyof.
 #' @examples
 #' geomaterials_varietyof(1720)
 geomaterials_varietyof<- function(intvalue,...){
   df_out <- mindat_geomaterial_list(ids = c(''),varietyof = intvalue,...)
+  df_out
+}
+
+#' retrieve the geomaterials by a given name.
+#' @description : Queries the list of geomaterials by a given name.
+#' @usage geomaterials_search_name(name,...)
+#' @param name string,
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a list of geomaterials
+#' @details
+#' retrieve the geomaterial list that match the given name.
+#' @examples
+#' geomaterials_search_name("Quartz")
+geomaterials_search_name<- function(name,...){
+  df_out <- mindat_geomaterial_search(q = name,...)
   df_out
 }
 ########### mindat_geomaterials.R #############
