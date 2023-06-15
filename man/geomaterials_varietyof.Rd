@@ -18,7 +18,7 @@ df, a data frame of geomaterials
 : Queries the list of geomaterials that have the given varietyof.
 }
 \details{
-retrieve the localities that have the given varietyof.
+retrieve the geomaterials that have the given varietyof.
 }
 \examples{
 geomaterials_varietyof(1720)
