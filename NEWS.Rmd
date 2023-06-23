@@ -1,0 +1,24 @@
+---
+title: "NEWS"
+author: "Xiang Que"
+date: "2023-05-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# OpenMindat (development version)
+
+## OpenMindat 1.0.0 
+
+### NEW features
+
+
+* OpenMindat R package is useful for retrieving and processing data from [mindat.org Database](https://www.mindat.org/) through its open data API.
+
+
+## OpenMindat 0.1.0
+
+* Update functions on the `geomaterials` endpoints. No longer use the previous `item` endpoints.
+

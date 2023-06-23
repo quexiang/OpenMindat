@@ -66,6 +66,29 @@ geomaterials_contain_any_elems <- function(any_elems,...){
   df_out
 }
 
+#' geomaterials_contain_only_elems
+#' @description retrieve the geomaterials that contain only the elements users input.This function queries
+#' the list of geological materials that only contain the specified elements.
+#' It performs the query operation by calling the mindat_geomaterial_list function
+#' @usage geomaterials_contain_only_elems (icl_only_elms_vector)
+#' @param icl_only_elms_vector, vector of elements.
+#' @param ..., Further named parameters.Other optional arguments-Additional arguments that can be
+#' passed to the mindat_geomaterial_list function.
+#' @return df, a data frame of geomaterials
+#' @examples
+#' geomaterials_contain_only_elems(c('Si','O'))
+geomaterials_contain_only_elems<- function(icl_only_elms_vector,...){
+
+  all_mineral_vector <- c('H','Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Na', 'Mg', 'Al','Si', 'P', 'S','Cl',
+     'K', 'Ca', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge','As','Se', 'Br',
+     'Rb', 'Sr', 'Y', 'Zr', 'Nb', 'Mo', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd','In', 'Sn', 'Sb', 'Te', 'I', 'Cs',
+     'Ba', 'La', 'Ce', 'Nd', 'Sm', 'Gd', 'Dy', 'Er','Yb', 'Hf', 'Ta', 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au',
+     'Hg','Tl', 'Pb', 'Bi', 'Th', 'U')
+  all_mineral_vector[! all_mineral_vector %in% icl_only_elms_vector]
+  df <- mindat_geomaterial_list(ids = c(''),elements_inc = icl_only_elms_vector,elements_exc = all_mineral_vector,...)
+  df
+}
+
 #' geomaterials that have the given cleavagetype
 #' @description : Queries the list of geomaterials that have the specified cleavagetype
 #' @usage geomaterials_cleavagetype(types, ...)

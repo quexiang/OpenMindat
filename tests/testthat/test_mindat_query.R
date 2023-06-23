@@ -1,5 +1,6 @@
+
 test_that("Test mindat_query function", {
-  test_base_token =  #Your_token
+  test_base_token =   "aa9c25fa95d8063908cb2bf186c9e79f"  #Your_token
   expect_no_error(mindat_connection(test_base_token))
   request_uri = "https://api.mindat.org/geomaterials/6"
   endpoint<-"geomaterials"

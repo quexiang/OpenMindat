@@ -26,6 +26,14 @@ test_that("Test geomaterials_contain_any_elems function", {
   expect_equal(typeof(df), "list")
 })
 
+test_that("Test geomaterials_contain_only_elems function", {
+  #test_base_token =  #Your_token
+  #expect_no_error(mindat_connection(test_base_token))
+  expect_no_error(df <- geomaterials_contain_only_elems(c('Si','O')))
+  expect_equal(typeof(df), "list")
+})
+
+
 test_that("Test geomaterials_cleavagetype function", {
   #test_base_token =  #Your_token
   #expect_no_error(mindat_connection(test_base_token))
