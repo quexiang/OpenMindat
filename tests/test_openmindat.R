@@ -1,25 +1,41 @@
-#library(OpenMindat)
-#library(httr)
-#library(jsonlite)
-#library(testthat)
+library(httr)
+library(jsonlite)
+library(OpenMindat)
 library(testthat)
-library(pkg)
+#library(pkg)
 
-test_check("OpenMindat")
+#test_check("OpenMindat")
 ###test all basic mindat query#####
 # Initializing API Call
 #test_base_uri = "https://api.mindat.org"
-test_base_token = #You should get a token from mindat.org
+test_base_token = "aa9c25fa95d8063908cb2bf186c9e79f" #You should get a token from mindat.org
 
 mindat_connection(test_base_token)
 response2 <- mindat_geomaterial(id=6)
+
+
+query_test <- geomaterials_search_name("Quartz")
+
+resss <-localities_list_country("Myanmar")
+resss <-localities_list_country("United States")
+
+res <- geomaterials_search_name("Quartz")
+#write out to csv file
+response2<-data.frame(lapply(response2, as.character), stringsAsFactors= FALSE)
+
+res<- geomaterials_contain_only_elems(c('Si','O'))
+
 response_fields<- mindat_geomaterial(id = 6)
 response_fields_ids<- mindat_geomaterial_list(ids = c('6','7','8'),fields ="id,name,updttime,ima_formula,ima_status,ima_notes,key_elements",elements_inc = "H,O",elements_exc ="Be")#ids = c('6','7','8'),
 
-mindat_cache_has("sss")
-mindat_api_endpoint()
+df_contains_all <- geomaterials_contain_all_elems(c('Be','Cr','O'))
+df_contains_all<-data.frame(lapply(df_contains_all, as.character), stringsAsFactors= FALSE)
+write.table(df_contains_all, file="test.csv", row.names = FALSE, col.names = TRUE, sep=",")
 
-df_contains_all <- geomaterials_contain_all_elems(c('Be','Cr'))
+
+#df_contains_all<-data.frame(lapply(df_contains_all, as.character), stringsAsFactors= FALSE)
+#write.table(df_contains_all, file="test.csv", row.names = TRUE, col.names = TRUE, sep=",")
+
 df_contains_any <- geomaterials_contain_any_elems(c('Be','Cr'))
 df_notcontains <-  geomaterials_contain_all_and_without_elems(c('Be','O'),c('H'))
 
@@ -76,7 +92,7 @@ response2 <- mindat_mineral_ima(id=1)
 id_list2<-c('1','2','3','4','6')
 response2_list <- mindat_mineral_ima_list(ids =id_list2)
 response3_list <- mindat_mineral_ima_list(ids =id_list2,fields = "id,name,ima_formula,ima_symbol")
-response3 <- mindat_localitiy(id = 6)
+response3 <- mindat_localitiy(id = 58150)
 response4 <- midnat_country(id = 6)
 response5 <- locality_age_retrieve_id(id = 6)
 response6 <- midnat_locality_status(id = 6)

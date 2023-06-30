@@ -180,7 +180,7 @@ geomaterials_crystal_system <- function(crystals,...){
 #' geomaterials_dens_greater_than(6)
 #' geomaterials_dens_greater_than(3)
 geomaterials_dens_greater_than<- function(gt,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),density__from = gt,...)
+  df_out <- mindat_geomaterial_list(ids = c(''),density_min = gt,...)
   df_out
 }
 
@@ -196,7 +196,7 @@ geomaterials_dens_greater_than<- function(gt,...){
 #' geomaterials_dens_less_than(6)
 #' geomaterials_dens_less_than(3)
 geomaterials_dens_less_than<- function(lt,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),density__to = lt,...)
+  df_out <- mindat_geomaterial_list(ids = c(''),density_max = lt,...)
   df_out
 }
 
@@ -212,7 +212,7 @@ geomaterials_dens_less_than<- function(lt,...){
 #' @examples
 #' geomaterials_dens_range(3,3.5)
 geomaterials_dens_range <- function(gt,lt,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),density__from = gt,density__to = lt,...)
+  df_out <- mindat_geomaterial_list(ids = c(''),density_min = gt,density_max = lt,...)
   df_out
 }
 
@@ -332,7 +332,7 @@ geomaterials_fracturetype <- function(types,...){
 #' geomaterials_hardness_gt(3)
 geomaterials_hardness_gt<- function(hmin,...){
 
-  df_out <- mindat_geomaterial_list(ids = c(''),hardness__from = hmin,...)
+  df_out <- mindat_geomaterial_list(ids = c(''),hardness_min = hmin,...)
   df_out
 
 }
@@ -349,7 +349,7 @@ geomaterials_hardness_gt<- function(hmin,...){
 #' geomaterials_hardness_lt(6)
 #' geomaterials_hardness_lt(3)
 geomaterials_hardness_lt<- function(hmax,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),hardness__to = hmax,...)
+  df_out <- mindat_geomaterial_list(ids = c(''),hardness_max = hmax,...)
   df_out
 }
 
@@ -366,7 +366,7 @@ geomaterials_hardness_lt<- function(hmax,...){
 #' @examples
 #' geomaterials_hardness_range(3,3.5)
 geomaterials_hardness_range<-function(hmin,hmax,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),hardness__from =hmin ,hardness__to = hmax,...)
+  df_out <- mindat_geomaterial_list(ids = c(''),hardness_min =hmin ,hardness_max = hmax,...)
   df_out
 }
 
@@ -492,7 +492,7 @@ geomaterials_opticaltype <- function(types,...){
 #' @examples
 #' geomaterials_ri_gt(1.6)
 geomaterials_ri_gt <- function(gt,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),ri__from = gt,...)
+  df_out <- mindat_geomaterial_list(ids = c(''),ri_min = gt,...)
   df_out
 }
 
@@ -507,7 +507,7 @@ geomaterials_ri_gt <- function(gt,...){
 #' @examples
 #' geomaterials_ri_lt(1.8)
 geomaterials_ri_lt <- function(lt,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),ri__to = lt,...)
+  df_out <- mindat_geomaterial_list(ids = c(''),ri_max = lt,...)
   df_out
 }
 
@@ -523,7 +523,7 @@ geomaterials_ri_lt <- function(lt,...){
 #' @examples
 #' geomaterials_ri_range(1.6,1.8)
 geomaterials_ri_range <- function(gt,lt,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),ri__from = gt,ri__to = lt,...)
+  df_out <- mindat_geomaterial_list(ids = c(''),ri_min = gt,ri_max = lt,...)
   df_out
 }
 

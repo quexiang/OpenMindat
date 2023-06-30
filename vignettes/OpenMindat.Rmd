@@ -8,6 +8,24 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+### Overview
+Mindat.org is the world's largest open database of minerals, rocks, meteorites and the localities they come from.Mindat.org is run by the not-for-profit.
+
+Learn  Learn more about rocks and minerals, their origins and their uses: [Enter our learning center](https://www.mindat.org/a/learn).
+
+1.Rocks and Meteorites
+2.Popular Minerals 
+
+### Community
+1.Photography  We have 1,280,073 photographs uploaded by our community.
+2.Support us  We can't continue without your financial support. We are a 501(c)(3) non-profit
+3.Events  Our calendar of important events for the mineral community.
+4.Museums  Our directory of mineral museums and public collections worldwide.
+
+
+
+
+
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
