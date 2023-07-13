@@ -388,6 +388,90 @@ geomaterials_ima<- function(btrue =TRUE,...){
   df_out
 }
 
+#' retrieve the geomaterials match given notes.
+#' @description : Queries the geomaterials with an given .
+#' @usage geomaterials_ima(btrue,...)
+#' @param enum_item  Ima notes: multiple choice (OR) : "GROUP" "INTERMEDIATE" "NAMED_AMPHIBOLE" "PENDING_APPROVAL" "PUBLISHED_WITHOUT_APPROVAL" "REDEFINED" "REJECTED" "RENAMED" "UNNAMED_INVALID" "UNNAMED_VALID"
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' retrieve all the geomaterials that match the input IMA notes.
+#' @examples
+#' geomaterials_ima_notes("PUBLISHED_WITHOUT_APPROVAL")
+
+geomaterials_ima_notes<- function(enum_item,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),ima_notes = enum_item,...)
+  df_out
+}
+
+#' retrieve the geomaterials matched given IMA status.
+#' @description : Queries the geomaterials with your given ima status.
+#' @usage geomaterials_ima_status(enum_status,...)
+#' @param enum_status  Ima status: multiple choice (OR):"APPROVED" "DISCREDITED" "GRANDFATHERED" "PENDING_PUBLICATION" "QUESTIONABLE"
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' retrieve all the geomaterials that match the input IMA notes.
+#' @examples
+#' geomaterials_ima_status("PENDING_PUBLICATION")
+
+geomaterials_ima_status<- function(enum_status,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),ima_status = enum_status,...)
+  df_out
+}
+
+#' retrieve the geomaterials matched a given string in its name.
+#' @description : Queries the geomaterials with a given name.
+#' @usage geomaterials_name(str_name,...)
+#' @param str_name Text search supporting: _ as wildcards, e.g. "qu_rtz", "bario*"
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' retrieve all the geomaterials that match the input IMA notes.
+#' @examples
+#' geomaterials_name("qu_rtz")
+#' geomaterials_name("qu*")
+
+geomaterials_name<- function(str_name,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),name = str_name,...)
+  df_out
+}
+
+
+#' retrieve the geomaterials matched a given string in its meteoritical code.
+#' @description : Queries the geomaterials with a given string matched its given meteoritical_code.
+#' @usage geomaterials_meteoritical_code(str_name,...)
+#' @param str_meteoritical_code Text search supporting: _ as wildcards.
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' retrieve all the geomaterials that match the input meteoritical_code.
+#' @examples
+#' geomaterials_meteoritical_code("qu_rtz")
+#' geomaterials_meteoritical_code("qu*")
+
+geomaterials_meteoritical_code<- function(str_meteoritical_code,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),meteoritical_code_exists = FALSE,...)
+  df_out
+}
+
+#' Meteoritical code exists. Include non-empty (true) / include empty only (false)
+#' @description : Queries the geomaterials with the meteoritical_code_exists or not.
+#' @usage geomaterials_meteoritical_code_exists(true,...)
+#' @param bl_exists boolean
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' retrieve all the geomaterials that match the input meteoritical_code_exists or not.
+#' @examples
+#' geomaterials_meteoritical_code_exists("true")
+
+geomaterials_meteoritical_code_exists<- function(bl_exists,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),meteoritical_code_exists = bl_exists,...)
+  df_out
+}
+
+
 #' retrieve the geomaterials that have the given lustretype.
 #' @description : Queries the geomaterials that have the given lustretype.
 #' @usage geomaterials_lustretype(types, ...)
