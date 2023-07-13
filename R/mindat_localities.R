@@ -173,7 +173,7 @@ localities_list_all<-function(...){
 #' @details
 #' retrieve the localities by a given id.
 #' @examples
-#' localities_list_all(id =1)
+#' localities_retrieve_id(id =1)
 localities_retrieve_id<-function(id,...){
   df_out <- mindat_localitiy(id,...)
   df_out

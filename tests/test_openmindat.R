@@ -8,7 +8,9 @@ library(testthat)
 ###test all basic mindat query#####
 # Initializing API Call
 #test_base_uri = "https://api.mindat.org"
-test_base_token = "aa9c25fa95d8063908cb2bf186c9e79f" #You should get a token from mindat.org
+test_base_token = "" #You should get a token from mindat.org
+###
+###aa9c25fa95d8063908cb2bf186c9e79f
 
 mindat_connection(test_base_token)
 response2 <- mindat_geomaterial(id=6)
@@ -72,6 +74,9 @@ df_varietyof <- geomaterials_varietyof(1)
 df_ri_gt <- geomaterials_ri_gt(1.6)
 df_ri_lt <- geomaterials_ri_lt(1.7)
 df_ri_range <- geomaterials_ri_range(1.6,1.7)
+
+
+df_localitity <- localities_retrieve_id(id = 22)
 
 df_localities <- localities_list_country("China")
 df_localities_desc <- localities_list_description("Chinese")
