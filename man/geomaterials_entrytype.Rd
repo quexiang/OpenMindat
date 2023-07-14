@@ -19,6 +19,8 @@ df, a data frame of geomaterials
 }
 \details{
 Items Enum: 0 1 2 3 4 5 6 7 8
+Multiple choice:
+0- mineral; 1-synonym; 2-variety; 3-mixture; 4-series; 5-grouplist; 6-polytype; 7-rock; 8-commodity
 }
 \examples{
 geomaterials_entrytype(c('1'))

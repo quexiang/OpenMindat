@@ -22,5 +22,4 @@ retrieve the geomaterials that contain or not contain the non-utf name.
 }
 \examples{
 geomeaterials_non_utf(TRUE)
-geomeaterials_non_utf(FALSE)
 }

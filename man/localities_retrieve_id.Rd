@@ -19,5 +19,5 @@ df, a data frame of localities
 retrieve the localities by a given id.
 }
 \examples{
-localities_list_all(id =1)
+localities_retrieve_id(id =1)
 }

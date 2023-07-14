@@ -212,4 +212,68 @@ test_that("Test geomaterials_varietyof function", {
   expect_equal(typeof(df), "list")
 })
 
+test_that("Test geomaterials_bi_greater_than function", {
+  #test_base_token =  #Your_token
+  #expect_no_error(mindat_connection(test_base_token))
+  expect_no_error(df <- geomaterials_bi_greater_than(0.8))
+  expect_equal(typeof(df), "list")
+})
 
+test_that("Test geomaterials_bi_less_than function", {
+  #test_base_token =  #Your_token
+  #expect_no_error(mindat_connection(test_base_token))
+  expect_no_error(df <- geomaterials_bi_less_than(0.2))
+  expect_equal(typeof(df), "list")
+})
+
+test_that("Test geomaterials_bi_range function", {
+  #test_base_token =  #Your_token
+  #expect_no_error(mindat_connection(test_base_token))
+  expect_no_error(df <- geomaterials_bi_range(0.2,0.3))
+  expect_equal(typeof(df), "list")
+})
+
+
+test_that("Test geomaterials_by_groupid function", {
+  #test_base_token =  #Your_token
+  #expect_no_error(mindat_connection(test_base_token))
+  expect_no_error(df <- geomaterials_by_groupid(3))
+  expect_equal(typeof(df), "list")
+})
+
+
+test_that("Test geomaterials_ima_notes function", {
+  #test_base_token =  #Your_token
+  #expect_no_error(mindat_connection(test_base_token))
+  expect_no_error(df <- geomaterials_ima_notes("PUBLISHED_WITHOUT_APPROVAL"))
+  expect_equal(typeof(df), "list")
+})
+
+
+test_that("Test geomaterials_ima_status function", {
+  #test_base_token =  #Your_token
+  #expect_no_error(mindat_connection(test_base_token))
+  expect_no_error(df <- geomaterials_ima_status("PENDING_PUBLICATION"))
+  expect_equal(typeof(df), "list")
+})
+
+test_that("Test geomaterials_meteoritical_code function", {
+  #test_base_token =  #Your_token
+  #expect_no_error(mindat_connection(test_base_token))
+  expect_no_error(df <- geomaterials_meteoritical_code("qu*"))
+  expect_equal(typeof(df), "list")
+})
+
+test_that("Test geomaterials_meteoritical_code_exists function", {
+  #test_base_token =  #Your_token
+  #expect_no_error(mindat_connection(test_base_token))
+  expect_no_error(df <- geomaterials_meteoritical_code_exists(TRUE))
+  expect_equal(typeof(df), "list")
+})
+
+test_that("Test geomaterials_name function", {
+  #test_base_token =  #Your_token
+  #expect_no_error(mindat_connection(test_base_token))
+  expect_no_error(df <- geomaterials_name("qu*"))
+  expect_equal(typeof(df), "list")
+})

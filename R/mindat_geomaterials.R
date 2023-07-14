@@ -89,6 +89,8 @@ geomaterials_contain_only_elems<- function(icl_only_elms_vector,...){
   df
 }
 
+
+
 #' geomaterials that have the given cleavagetype
 #' @description : Queries the list of geomaterials that have the specified cleavagetype
 #' @usage geomaterials_cleavagetype(types, ...)
@@ -167,6 +169,53 @@ geomaterials_crystal_system <- function(crystals,...){
     df_out
   }
 }
+
+#' retrieve the geomaterials whose birifrigence are higher than the given value.
+#' @description : Queries the list of geomaterials that minmum value of the given birifrigence value.
+#' @usage geomaterials_bi_greater_than(gt, ...)
+#' @param gt float value
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' retrieve all the geomaterials that has higher birifrigence than the given birifrigence
+#' @examples
+#' geomaterials_bi_greater_than(0.3)
+geomaterials_bi_greater_than<- function(gt,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),bi_min = gt,...)
+  df_out
+}
+
+#' retrieve the geomaterials whose birifrigence are lower density than the given value.
+#' @description : Queries the list of geomaterials that have lower birifrigence than lt.
+#' @usage geomaterials_bi_less_than(lt, ...)
+#' @param lt float value
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' retrieve all the geomaterials that has higher birifrigence than the given birifrigence.
+#' @examples
+#' geomaterials_bi_less_than(0.8)
+geomaterials_bi_less_than<- function(lt,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),bi_max = lt,...)
+  df_out
+}
+
+#' retrieve the geomaterials whose birifrigence are higher and lower than the given value.
+#' @description : Queries the list of geomaterials that have lower birifrigence than lt.
+#' @usage geomaterials_bi_range(gt,lt, ...)
+#' @param gt float value
+#' @param lt float value
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' retrieve all the geomaterials that has the birifrigence within the range of (gt,lt).
+#' @examples
+#' geomaterials_bi_range(0.6,0.7)
+geomaterials_bi_range <- function(gt,lt,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),density_min = gt,density_max = lt,...)
+  df_out
+}
+
 
 #' retrieve the geomaterials whose density are higher density than the given value.
 #' @description : Queries the list of geomaterials that have higher density than gt.
@@ -321,6 +370,25 @@ geomaterials_fracturetype <- function(types,...){
   }
 }
 
+
+#' retrieve the geomaterials by an given value of groupid.
+#' @description : Queries the list of geomaterials that have the given groupid.
+#' @usage geomaterials_by_groupid(hmin, ...)
+#' @param gid integer value
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' retrieve all the geomaterials that has the given groupid.
+#' @examples
+#' geomaterials_by_groupid(6)
+#' geomaterials_by_groupid(3)
+geomaterials_by_groupid<- function(id,...){
+
+  df_out <- mindat_geomaterial_list(ids = c(''),groupid = gid,...)
+  df_out
+
+}
+
 #' retrieve the geomaterials whose hardness are higher than the given value.
 #' @description : Queries the list of geomaterials that have higher hardness than gt.
 #' @usage geomaterials_hardness_gt(hmin, ...)
@@ -447,11 +515,9 @@ geomaterials_name<- function(str_name,...){
 #' @details
 #' retrieve all the geomaterials that match the input meteoritical_code.
 #' @examples
-#' geomaterials_meteoritical_code("qu_rtz")
-#' geomaterials_meteoritical_code("qu*")
 
 geomaterials_meteoritical_code<- function(str_meteoritical_code,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),meteoritical_code_exists = FALSE,...)
+  df_out <- mindat_geomaterial_list(ids = c(''),meteoritical_code_exists = str_meteoritical_code,...)
   df_out
 }
 
@@ -464,7 +530,7 @@ geomaterials_meteoritical_code<- function(str_meteoritical_code,...){
 #' @details
 #' retrieve all the geomaterials that match the input meteoritical_code_exists or not.
 #' @examples
-#' geomaterials_meteoritical_code_exists("true")
+#' geomaterials_meteoritical_code_exists(TRUE)
 
 geomaterials_meteoritical_code_exists<- function(bl_exists,...){
   df_out <- mindat_geomaterial_list(ids = c(''),meteoritical_code_exists = bl_exists,...)
@@ -498,21 +564,39 @@ geomaterials_lustretype <- function(types,...){
   }
 }
 
-#' retrieve the geomaterials that include non-utf mineral names or not.
-#' @description : Queries the geomaterials include non-utf mineral names or not.
-#' @usage geomeaterials_non_utf(types, ...)
-#' @param types string of the type name.Please refer to the details.
+#' retrieve the geomaterials by an given ordering.
+#' @description : Queries the geomaterials by an given ordering.
+#' @usage geomeaterials_ordering(ord, ...)
+#' @param ord string Enum: "approval_year" "id" "minstats__ms_locentries" "minstats__ms_photos" "name" "updttime" "weighting".
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
 #' @details
-#' retrieve the geomaterials that contain or not contain the non-utf name.
+#' retrieve the geomaterials by an given ordering.
 #' @examples
-#' geomeaterials_non_utf(TRUE)
-#' geomeaterials_non_utf(FALSE)
-geomeaterials_non_utf<- function(btrue =TRUE,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),non_utf = btrue,...)
+#' geomeaterials_ordering("approval_year")
+#' geomeaterials_ordering("minstats__ms_photos")
+geomeaterials_ordering<- function(ord,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),ordering = ord,...)
   df_out
 }
+
+
+#' retrieve the geomaterials by an given polytypeof
+#' @description : Queries the geomaterials by an given polytypeof.
+#' @usage geomeaterials_polytypeof(ptype, ...)
+#' @param ptype integer .
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' retrieve the geomaterials with an given polytypeof.
+#' @examples
+#' geomeaterials_polytypeof("approval_year")
+
+geomeaterials_polytypeof<- function(ptype,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),polytypeof = ptype,...)
+  df_out
+}
+
 
 #' retrieve the geomaterials that have the given optical signs.
 #' @description : Queries the geomaterials have the given optical signs.
@@ -567,6 +651,23 @@ geomaterials_opticaltype <- function(types,...){
   }
 }
 
+#' retrieve the geomaterials that include non-utf mineral names or not.
+#' @description : Queries the geomaterials include non-utf mineral names or not.
+#' @usage geomeaterials_non_utf(types, ...)
+#' @param types string of the type name.Please refer to the details.
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' retrieve the geomaterials that contain or not contain the non-utf name.
+#' @examples
+#' geomeaterials_non_utf(TRUE)
+geomeaterials_non_utf<- function(btrue =TRUE,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),non_utf = btrue,...)
+  df_out
+}
+
+
+
 #' retrieve the geomaterials that refractive index higher than the given value.
 #' @description : Queries the geomaterials have the higher refractive index than the given value.
 #' @usage geomaterials_ri_gt(gt, ...)
@@ -612,7 +713,6 @@ geomaterials_ri_range <- function(gt,lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ri_min = gt,ri_max = lt,...)
   df_out
 }
-
 
 #' retrieve the geomaterials that have streak.
 #' @description : Queries the list of geomaterials that have the given steak.
