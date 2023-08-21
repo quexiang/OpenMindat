@@ -16,22 +16,22 @@ geomaterials_contain_all_elems<- function(icl_elms_vector,...){
 }
 
 #' geomaterials_that do not contain the elements
-#' @description retrieve the geomaterials that do nont contain the input elements.Queries the list of geological materials that
+#' @description retrieve the geomaterials that do not contain the input elements.Queries the list of geological materials that
 #' do not contain the specified elements.
-#' @usage geomaterials_without_elems(ecl_elms_vector, ...)
+#' @usage geomaterials_not_contain_elems (ecl_elms_vector, ...)
 #' @param ecl_elms_vector, vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of geomaterials
 #' @examples
-#' geomaterials_without_elems(c('H','Be'))
-geomaterials_without_elems <- function(ecl_elms_vector,...){
+#' geomaterials_not_contain_elems (c('H','Be'))
+geomaterials_not_contain_elems <- function(ecl_elms_vector,...){
   df <- mindat_geomaterial_list(ids = c(''),elements_exc = ecl_elms_vector,...)
   df
 }
 
 #' geomaterials_that do not contain the elements
 #' @description Queries the list of geological materials that simultaneously contain the specified elements and do not contain the specified elements.
-#' @usage geomaterials_contain_all_and_without_elems(icl_elm_vector, ecl_elms_vector, ...)
+#' @usage geomaterials_contain_all_but_without_elems(icl_elm_vector, ecl_elms_vector, ...)
 #' @param icl_elm_vector vector of elements.
 #' @param ecl_elms_vector vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
@@ -40,8 +40,8 @@ geomaterials_without_elems <- function(ecl_elms_vector,...){
 #' This function queries the list of geological materials that do not contain the specified elements.
 #' It performs the query operation by calling the mindat_geomaterial_list function.
 #' @examples
-#' geomaterials_contain_all_and_without_elems(c('H','Be'),c('O'))
-geomaterials_contain_all_and_without_elems <- function(icl_elm_vector,ecl_elms_vector,...){
+#' geomaterials_contain_all_but_without_elems(c('H','Be'),c('O'))
+geomaterials_contain_all_but_without_elems <- function(icl_elm_vector,ecl_elms_vector,...){
   df <- mindat_geomaterial_list(ids = c(''),elements_inc = icl_elm_vector,elements_exc = ecl_elms_vector,...)
   df
 }
@@ -84,7 +84,7 @@ geomaterials_contain_only_elems<- function(icl_only_elms_vector,...){
      'Rb', 'Sr', 'Y', 'Zr', 'Nb', 'Mo', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd','In', 'Sn', 'Sb', 'Te', 'I', 'Cs',
      'Ba', 'La', 'Ce', 'Nd', 'Sm', 'Gd', 'Dy', 'Er','Yb', 'Hf', 'Ta', 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au',
      'Hg','Tl', 'Pb', 'Bi', 'Th', 'U')
-  all_mineral_vector[! all_mineral_vector %in% icl_only_elms_vector]
+  all_mineral_vector <- all_mineral_vector[! all_mineral_vector %in% icl_only_elms_vector]
   df <- mindat_geomaterial_list(ids = c(''),elements_inc = icl_only_elms_vector,elements_exc = all_mineral_vector,...)
   df
 }
