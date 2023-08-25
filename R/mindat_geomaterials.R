@@ -212,7 +212,7 @@ geomaterials_bi_less_than<- function(lt,...){
 #' @examples
 #' geomaterials_bi_range(0.6,0.7)
 geomaterials_bi_range <- function(gt,lt,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),density_min = gt,density_max = lt,...)
+  df_out <- mindat_geomaterial_list(ids = c(''),bi_min = gt,bi_max = lt,...)
   df_out
 }
 
@@ -392,7 +392,7 @@ geomaterials_by_groupid<- function(id,...){
 #' retrieve the geomaterials whose hardness are higher than the given value.
 #' @description : Queries the list of geomaterials that have higher hardness than gt.
 #' @usage geomaterials_hardness_gt(hmin, ...)
-#' @param hmin float value
+#' @param hmin float value of the Mohs scale of mineral hardness, which ranging from 0 to 10.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
 #' @details
@@ -410,7 +410,7 @@ geomaterials_hardness_gt<- function(hmin,...){
 #' retrieve the geomaterials whose hardness are lower than the given value.
 #' @description : Queries the list of geomaterials that have lower hardness than hmax.
 #' @usage geomaterials_hardness_lt(hmax, ...)
-#' @param hmax float value
+#' @param hmax float value of the Mohs scale of mineral hardness, which ranging from 0 to 10.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
 #' @details
@@ -427,8 +427,8 @@ geomaterials_hardness_lt<- function(hmax,...){
 #' retrieve the geomaterials whose hardness is within the given range.
 #' @description : Queries the list of geomaterials that have hardness within the given range.
 #' @usage geomaterials_hardness_range(hmin,hmax, ...)
-#' @param hmin float value
-#' @param hmax float value
+#' @param hmin float value of the Mohs scale of mineral hardness, which ranging from 0 to 10.
+#' @param hmax float value of the Mohs scale of mineral hardness, which ranging from 0 to 10.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
 #' @details
@@ -521,22 +521,6 @@ geomaterials_meteoritical_code<- function(str_meteoritical_code,...){
   df_out
 }
 
-#' Meteoritical code exists. Include non-empty (true) / include empty only (false)
-#' @description : Queries the geomaterials with the meteoritical_code_exists or not.
-#' @usage geomaterials_meteoritical_code_exists(true,...)
-#' @param bl_exists boolean
-#' @param ..., Further named parameters.Other optional arguments.
-#' @return df, a data frame of geomaterials
-#' @details
-#' retrieve all the geomaterials that match the input meteoritical_code_exists or not.
-#' @examples
-#' geomaterials_meteoritical_code_exists(TRUE)
-
-geomaterials_meteoritical_code_exists<- function(bl_exists,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),meteoritical_code_exists = bl_exists,...)
-  df_out
-}
-
 
 #' retrieve the geomaterials that have the given lustretype.
 #' @description : Queries the geomaterials that have the given lustretype.
@@ -583,19 +567,67 @@ geomeaterials_ordering<- function(ord,...){
 
 #' retrieve the geomaterials by an given polytypeof
 #' @description : Queries the geomaterials by an given polytypeof.
-#' @usage geomeaterials_polytypeof(ptype, ...)
+#' @usage geomaterials_polytypeof(ptype, ...)
 #' @param ptype integer .
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
 #' @details
 #' retrieve the geomaterials with an given polytypeof.
 #' @examples
-#' geomeaterials_polytypeof("approval_year")
+#' geomaterials_polytypeof("approval_year")
 
-geomeaterials_polytypeof<- function(ptype,...){
+geomaterials_polytypeof<- function(ptype,...){
   df_out <- mindat_geomaterial_list(ids = c(''),polytypeof = ptype,...)
   df_out
 }
+
+
+#' retrieve the geomaterials that less than the given optical 2v.
+#' @description : Queries the geomaterials have the lower optical 2v value than the given lt.
+#' @usage geomaterials_optical2v_max(lt, ...)
+#' @param lt list of the signs.Please refer to the details.
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' @examples
+#' geomaterials_optical2v_max(40)
+geomaterials_optical2v_max<- function(lt,...){
+    df_out <- mindat_geomaterial_list(ids = c(''),optical2v_max = lt,...)
+    df_out
+
+}
+
+#' retrieve the geomaterials that has higher value than the given optical 2v.
+#' @description : Queries the geomaterials have the higher optical 2v value than the given lt.
+#' @usage geomaterials_optical2v_min(lt, ...)
+#' @param gt given value of optical 2v of mineral.Please refer to the details.
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' @examples
+#' geomaterials_optical2v_min(40)
+geomaterials_optical2v_min<- function(gt,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),optical2v_min = gt,...)
+  df_out
+
+}
+
+#' retrieve the geomaterials that has the given range of optical 2v.
+#' @description : Queries the geomaterials have the higher optical 2v value than the given lt.
+#' @usage geomaterials_optical2v_range(lt, ...)
+#' @param gt given value of optical 2v of mineral.Please refer to the details.
+#' @param lt given value of optical 2v of mineral.Please refer to the details.
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of geomaterials
+#' @details
+#' @examples
+#' geomaterials_optical2v_range(40,60)
+geomaterials_optical2v_range<- function(gt,lt,...){
+  df_out <- mindat_geomaterial_list(ids = c(''),optical2v_min = gt,optical2v_max = lt,...)
+  df_out
+
+}
+
 
 
 #' retrieve the geomaterials that have the given optical signs.
@@ -725,7 +757,7 @@ geomaterials_ri_range <- function(gt,lt,...){
 #' @examples
 #' geomaterials_streak("black")
 geomaterials_streak <- function(str,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),steak = str,...)
+  df_out <- mindat_geomaterial_list(ids = c(''),streak = str,...)
   df_out
 }
 
@@ -787,6 +819,30 @@ geomaterials_varietyof<- function(intvalue,...){
 #' geomaterials_search_name("Quartz")
 geomaterials_search_name<- function(name,...){
   df_out <- mindat_geomaterial_search(q = name,...)
+  df_out
+}
+
+
+#' retrieve the geomaterials records of empty or not empty of a given field.
+#' @description : Queries the list of geomaterials with an empty or not empty of a given field.
+#' @usage geomaterials_field_exists(fieldname,...)
+#' @param fieldname string
+#' @param bexists bool
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a list of geomaterials
+#' @details
+#' retrieve the geomaterial list with an empty or not empty of a given field.
+#' @examples
+#' geomaterials_field_exists("")
+geomaterials_field_exists<- function(fieldname,bexists,...){
+  if (bexists == TRUE){
+    filed_str<-paste(fieldname,'_exists=true',sep="")
+    df_out <- mindat_geomaterial_list(ids = c(''),filed_exists=filed_str,...)
+  }
+  else {
+    filed_str <- paste(fieldname,'_exists=false',sep="")
+    df_out <- mindat_geomaterial_list(ids = c(''),filed_str=filed_str,...)
+  }
   df_out
 }
 ########### mindat_geomaterials.R #############

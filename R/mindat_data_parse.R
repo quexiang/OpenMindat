@@ -42,6 +42,7 @@ mindat_make_data_frame<-function(reg_list){
       all_data2<-GET(next_url,add_headers('Authorization'= paste('Token ',YOUR_API_KEY,sep = "")),query = query)
       str(content(all_data2))
       all_data2_text <- content(all_data2,"text", encoding = "UTF-8")
+      #all_data2_json <- fromJSON(readLines(all_data2_text),flatten = TRUE, warn=F)
       all_data2_json <- fromJSON(all_data2_text,flatten = TRUE)
       data_results2<-all_data2_json$results
       df_tmp = data.frame(data_results2)
@@ -76,6 +77,7 @@ mindat_parse_raw_data<-function(raw_data){
       all_data2<-GET(next_url,add_headers('Authorization'= paste('Token ',api_token,sep = "")),query = query)
       str(content(all_data2))
       all_data2_text <- content(all_data2,"text", encoding = "UTF-8")
+      #all_data2_json <- fromJSON(readLines(all_data2_text),flatten = TRUE, warn=F)
       all_data2_json <- fromJSON(all_data2_text,flatten = TRUE)
       data_results2<-all_data2_json$results
       df_tmp = data.frame(data_results2)
@@ -147,6 +149,9 @@ mindat_build_querystring<-function(args){
     }
     else if(argName == "ids"){
       qs <-paste('?id__in=',qs, encodedArgValue, '&', sep = "")
+    }
+    else if(argName == "filed_exists"){
+      qs <-paste(qs, encodedArgValue, '&', sep = "")
     }
     else{
       qs <- paste(qs, argName, "=", encodedArgValue, '&', sep = "")
