@@ -82,7 +82,7 @@ df_ima_minerals <- minerals_ima_list(fields = "name")
 #query the IMA minerals by a given id e.g. 1 :
 df_ima_minerals <- minerals_ima_retrieve(id =1)
 
-#query localities in a given country (e.g. Chian):
+#query localities in a given country (e.g. China):
 df_localities <- localities_list_country("China")
 
 #query localities contain the elements(e.g. Be,Si) withou the elements(e.g. H,Al) :
