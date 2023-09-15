@@ -12,20 +12,22 @@ Mindat and University of Idaho collaborate on '[OpenMindat](https://www.mindat.o
 
 1. Download all the source codes and Open the OpenMindat.Rproj with RStudio.
 
-2. Install packages `httr` and `jsonlite`. 
+2. Install packages `usethis`,`httr`, and `jsonlite`. 
 
 3. Currently the `OpenMindat` package can be installed from source files. Select the `Install Package` in the `Build` menu of RStudio (Ctrl + Shift + B). 
 
 4. Create a New R Script (Ctrl + Shift + N).
 
-5. Load the packages `OpenMindat`, `httr`, and `jsonlite`. 
+5. Load the packages `OpenMindat`, `usethis`,`httr`, and `jsonlite`. 
 
 ```coffee
 #install.packages("httr")
 #install.packages("jsonlite")
+#install.packages("usethis")
 #install.packages("OpenMindat")
 library(OpenMindat)
 library(httr)
+library(usethis)
 library(jsonlite)
 ```
 

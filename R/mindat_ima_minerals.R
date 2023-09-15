@@ -41,6 +41,7 @@ minerals_ima_list_expand <- function(expand,...){
 #' Integer
 #' @examples
 #'  minerals_ima_list_ima(1)
+#'  minerals_ima_list_ima(0)
 minerals_ima_list_ima<- function(intValue,...){
   df_out <-mindat_mineral_ima_list(ids = c(''),ima = intValue,...)
   df_out
