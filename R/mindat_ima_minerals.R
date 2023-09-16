@@ -7,7 +7,7 @@
 #' @return df, data frame of locality type.
 #' @examples
 #'  minerals_ima_list()
-#'  minerals_ima_list(fields = "id,name")
+#'  minerals_ima_list(ids = c(''),fields = "id,name")
 minerals_ima_list<- function(...){
   df_out <- mindat_mineral_ima_list(...)
   df_out

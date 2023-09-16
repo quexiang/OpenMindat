@@ -90,7 +90,6 @@ build_uri<-function(endpoint, query = list(), api_base = NULL,...){
   if(is.null(config)){
     stop(sprintf("No config for endpoint '%s' is registered", endpoint))
   }
-
   query <- c(query, list(...))
 
   # check params for end point
@@ -123,5 +122,14 @@ set_api_token<-function(api_token){
   mindat_cache_set('api_token', api_token)
 }
 
+#' set_page_size
+#' @description set the page_size of response records.
+#' @usage set_page_size (page_size)
+#' @param page_size string. The token of mindat api.
+#' @examples
+#' set_api_token("ad9c15fa95d8063908cb5bf186c9e79f")
+set_page_size<-function(page_size = 1500){
+  mindat_cache_set('page_size', page_size)
+}
 
 ########### mindat_api_tools.R #############

@@ -157,7 +157,9 @@ mindat_build_querystring<-function(args){
       qs <- paste(qs, argName, "=", encodedArgValue, '&', sep = "")
     }
   }
-  qs <- substr(qs,0,nchar(qs)-1)
+  #qs <- substr(qs,0,nchar(qs)-1)
+  page_size <- mindat_cache_get('page_size')
+  qs <- paste(qs, 'page_size', "=", page_size, sep = "")
   qs
 }
 ########## mindat_data_parse.R  ###########
