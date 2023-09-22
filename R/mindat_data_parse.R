@@ -163,7 +163,13 @@ mindat_build_querystring<-function(args){
     qs <- paste(qs, 'page_size', "=", page_size, sep = "")
   }
   else{
-    qs <- paste(qs, '?page_size', "=", page_size, sep = "")
+    if('&' == substr(qs,nchar(qs),nchar(qs))){
+      qs<- substr(qs,0,nchar(qs)-1)
+      qs <- paste(qs, '/?page_size', "=", page_size, sep = "")
+    }
+    else{
+      qs <- paste(qs, '?page_size', "=", page_size, sep = "")
+    }
   }
   qs
 }
