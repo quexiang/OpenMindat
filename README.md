@@ -82,7 +82,7 @@ df_ima_minerals <- minerals_ima_list(fields = "name")
 #query the IMA minerals by a given id e.g. 1 :
 df_ima_minerals <- minerals_ima_retrieve(id =1)
 
-#query localities in a given country (e.g. Chian):
+#query localities in a given country (e.g. China):
 df_localities <- localities_list_country("China")
 
 #query localities contain the elements(e.g. Be,Si) withou the elements(e.g. H,Al) :
@@ -105,4 +105,4 @@ help(package = OpenMindat)
 
 **Related Articles**
 
-[OpenMindat: Open and FAIR mineralogy data from the Mindat database](https://doi.org/10.1002/gdj3.204)
+Ma, X., Ralph, J., Zhang, J., Que, X., Prabhu, A., Morrison, S.M., Hazen, R.M., Wyborn, L., Lehnert, K., 2023. OpenMindat: Open and FAIR mineralogy data from the Mindat database. Geoscience Data Journal, In Press, [https://doi.org/10.1002/gdj3.204](https://doi.org/10.1002/gdj3.204)
