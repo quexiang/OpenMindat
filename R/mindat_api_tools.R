@@ -128,7 +128,7 @@ set_api_token<-function(api_token){
 #' @param page_size string. The token of mindat api.
 #' @examples
 #' set_api_token("ad9c15fa95d8063908cb5bf186c9e79f")
-set_page_size<-function(page_size = 1500){
+set_page_size<-function(page_size = 800){
   mindat_cache_set('page_size', page_size)
 }
 

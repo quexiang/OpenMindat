@@ -92,9 +92,9 @@ mindat_set_up_endpoints<-function(){
 #' @usage mindat_set_up_endpoints (base_uri)
 #' @examples
 #' mindat_setup('https://api.mindat.org')
-mindat_setup<-function(base_uri = 'https://api.mindat.org'){
+mindat_setup<-function(base_uri = 'https://api.mindat.org',page_size = 800){
   set_api_base(base_uri)
-  set_page_size()
+  set_page_size(page_size)
   mindat_set_up_endpoints()
   mindat_cache_set('api_format', 'json')
 }
