@@ -13,11 +13,18 @@ geomaterials_contain_only_elems (icl_only_elms_vector)
 passed to the mindat_geomaterial_list function.}
 }
 \value{
-df, a data frame of geomaterials
+df, a data frame of geomaterials.
 }
 \description{
-retrieve the geomaterials that contain only the elements users input.This function queries
-the list of geological materials that only contain the specified elements.
+retrieve the geomaterials that only contain elements in an given list (icl_only_elms_vector).
+}
+\details{
+This function releated to the fields "elements_inc" and "elements_exc" of geomaterials.
+Here is a list of all elements that can make up geomaterials:'H','Li', 'Be', 'B', 'C', 'N', 'O', 'F',
+'Na', 'Mg', 'Al','Si', 'P', 'S','Cl',K', 'Ca', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn',
+'Ga', 'Ge','As','Se', 'Br', 'Rb', 'Sr', 'Y', 'Zr', 'Nb', 'Mo', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd','In', 'Sn',
+'Sb', 'Te', 'I', 'Cs',Ba', 'La', 'Ce', 'Nd', 'Sm', 'Gd', 'Dy', 'Er','Yb', 'Hf', 'Ta', 'W', 'Re', 'Os',
+'Ir', 'Pt', 'Au','Hg','Tl', 'Pb', 'Bi', 'Th', 'U'
 It performs the query operation by calling the mindat_geomaterial_list function
 }
 \examples{

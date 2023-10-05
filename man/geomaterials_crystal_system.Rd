@@ -7,7 +7,9 @@
 geomaterials_crystal_system(crystals, ...)
 }
 \arguments{
-\item{crystals}{vector of given crystals}
+\item{crystals}{vector of given crystals.
+"crystal system of the mineral;
+"Amorphous","Hexagonal","Icosahedral","Isometric","Monoclinic","Orthorhombic","Tetragonal","Triclinic","Trigonal"}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -15,9 +17,10 @@ geomaterials_crystal_system(crystals, ...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have the specified crystal system
+: Queries the list of geomaterials that have the given crystal system.
 }
 \details{
+This function releated to the field "crystal_system" of geomaterials.
 Items Enum: "Amorphous" "Hexagonal" "Icosahedral" "Isometric" "Monoclinic" "Orthorhombic" "Tetragonal" "Triclinic" "Trigonal"
 }
 \examples{

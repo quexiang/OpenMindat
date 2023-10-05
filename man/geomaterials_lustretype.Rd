@@ -2,12 +2,13 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_lustretype}
 \alias{geomaterials_lustretype}
-\title{retrieve the geomaterials that have the given lustretype.}
+\title{retrieve the geomaterials that match an given lustretype.}
 \usage{
 geomaterials_lustretype(types, ...)
 }
 \arguments{
-\item{types}{string of the type name.Please refer to the details.}
+\item{types}{string of the type name (Array of strings or null).
+adamantine, subadamtine, vitreous, subvitreous, resinous, waxy, greasy, silky, pearly, metallic, submetallic, dull, earthy}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -15,10 +16,13 @@ geomaterials_lustretype(types, ...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the geomaterials that have the given lustretype.
+: Queries the geomaterials that match an given lustretype.
 }
 \details{
-Items Enum: "Adamantine" "Dull" "Earthy" "Greasy" "Metallic" "Pearly" "Resinous" "Silky" "Sub-Adamantine" "Sub-Metallic" "Sub-Vitreous" "Vitreous" "Waxy"
+This function releated to the field "lustretype" of geomaterials.
+lustretype(Items Enum): "Adamantine" "Dull" "Earthy" "Greasy" "Metallic" "Pearly" "Resinous" "Silky"
+"Sub-Adamantine" "Sub-Metallic" "Sub-Vitreous" "Vitreous" "Waxy"
+multiple choice (AND)
 }
 \examples{
 geomaterials_lustretype(c("Adamantine"))

@@ -2,12 +2,12 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_synid}
 \alias{geomaterials_synid}
-\title{retrieve the geomaterials by given the synid.}
+\title{retrieve the geomaterials by an given synid.}
 \usage{
 geomaterials_synid(idnum,...)
 }
 \arguments{
-\item{idnum}{integer, syn id number}
+\item{idnum}{integer,an given synonym id.}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -15,10 +15,12 @@ geomaterials_synid(idnum,...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have the given synid.
+: Queries the list of geomaterials that match an given synid.
 }
 \details{
-retrieve the geomaterials that has the given steak.
+This function releated to the fields "synid" of geomaterials.
+The id of the geomaterial that is the synonym of this record (this geomaterial cannot be added to a locality).
+retrieve the geomaterials that has an given synid.
 }
 \examples{
 geomaterials_synid(0)

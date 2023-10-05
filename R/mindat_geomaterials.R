@@ -574,8 +574,9 @@ geomaterials_name<- function(str_name,...){
 #' Meteoritical code exists. Include non-empty (true) / include empty only (false).
 #' retrieve all the geomaterials that match the input str_meteoritical_code.
 #' @examples
+#' geomaterials_meteoritical_code("TRUE")
 geomaterials_meteoritical_code<- function(str_meteoritical_code,...){
-  df_out <- mindat_geomaterial_list(ids = c(''),meteoritical_code_exists = str_meteoritical_code,...)
+  df_out <- mindat_geomaterial_list(ids = c(''), meteoritical_code_exists = str_meteoritical_code,...)
   df_out
 }
 

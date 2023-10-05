@@ -2,12 +2,15 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_dens_greater_than}
 \alias{geomaterials_dens_greater_than}
-\title{retrieve the geomaterials whose density are higher density than the given value.}
+\title{retrieve the geomaterials whose density are higher than a given value.}
 \usage{
 geomaterials_dens_greater_than(gt, ...)
 }
 \arguments{
-\item{gt}{float value}
+\item{gt}{float value.
+dmeas: measured density of the mineral.
+This is either the lower limit (if there is a dmeas2) or average (if there is no dmeas2).
+dmeas2:measured maximum density of mineral}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -18,7 +21,8 @@ df, a data frame of geomaterials
 : Queries the list of geomaterials that have higher density than gt.
 }
 \details{
-retrieve all the geomaterials that has higher density than the given density.
+This function releated to the field "density_min" of geomaterials.
+retrieve all the geomaterials that has higher density than the given density(gt).
 }
 \examples{
 geomaterials_dens_greater_than(6)

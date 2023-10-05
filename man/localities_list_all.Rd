@@ -16,6 +16,7 @@ df, a data frame of localities
 : Queries the list of localities.
 }
 \details{
+This function releated to  the fields "ids" of localities.
 retrieve all the localities.
 }
 \examples{

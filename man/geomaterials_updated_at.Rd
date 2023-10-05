@@ -2,7 +2,7 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_updated_at}
 \alias{geomaterials_updated_at}
-\title{retrieve the geomaterials updated at the given time.}
+\title{retrieve the geomaterials updated at an given time.}
 \usage{
 geomaterials_updated_at(strDate,...)
 }
@@ -15,9 +15,11 @@ geomaterials_updated_at(strDate,...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have the given synid.
+: Queries the list of geomaterials that were updated at an given time
 }
 \details{
+This function releated to the fields "updated_at" of geomaterials.
+Last updated datetime in format \%Y-\%m-\%d \%H:\%M:\%S
 retrieve the geomaterials that have the latest updated at the given time.
 }
 \examples{

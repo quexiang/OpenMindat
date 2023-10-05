@@ -7,7 +7,8 @@
 geomaterials_fracturetype(types, ...)
 }
 \arguments{
-\item{types}{list of types.}
+\item{types}{list of types.fracturetype(Array of strings or null):
+How the mineral breaks-"Conchoidal" "Fibrous" "Hackly" "Irregular/Uneven" "Micaceous" "None observed" "Splintery" "Step-Like" "Sub-Conchoidal".}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -15,10 +16,11 @@ geomaterials_fracturetype(types, ...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have the given types.
+: Queries the list of geomaterials that have the given fracturetype.
 }
 \details{
-Items Enum: "Conchoidal" "Fibrous" "Hackly" "Irregular/Uneven" "Micaceous" "None observed" "Splintery" "Step-Like" "Sub-Conchoidal"
+This function releated to the field "fracturetype" of geomaterials.
+fracturetype(Items Enum): "Conchoidal" "Fibrous" "Hackly" "Irregular/Uneven" "Micaceous" "None observed" "Splintery" "Step-Like" "Sub-Conchoidal"
 }
 \examples{
 geomaterials_fracturetype(c('Conchoidal'))

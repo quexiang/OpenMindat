@@ -2,12 +2,12 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_hardness_lt}
 \alias{geomaterials_hardness_lt}
-\title{retrieve the geomaterials whose hardness are lower than the given value.}
+\title{retrieve the geomaterials whose hardness are lower than an given value.}
 \usage{
 geomaterials_hardness_lt(hmax, ...)
 }
 \arguments{
-\item{hmax}{float value}
+\item{hmax}{float value of the Mohs scale of mineral hardness, which ranging from 0 to 10.}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -15,10 +15,12 @@ geomaterials_hardness_lt(hmax, ...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have lower hardness than hmax.
+: Queries the list of geomaterials that have lower hardness than an given vlaue(hmax).
 }
 \details{
-retrieve all the geomaterials that has lower hardness than the given value.
+This function releated to the field "hardness_max" of geomaterials.
+retrieve all the geomaterials that has lower hardness than an given value(hmax).
+hamx: maximum Moh's hardness
 }
 \examples{
 geomaterials_hardness_lt(6)

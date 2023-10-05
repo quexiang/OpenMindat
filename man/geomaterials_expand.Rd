@@ -7,7 +7,7 @@
 geomaterials_expand(expand_fields, ...)
 }
 \arguments{
-\item{expanded_fields}{list of expand.}
+\item{expanded_fields}{list of expand (Array of strings (Expanded fields)).Select fields to expand.}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -18,7 +18,8 @@ df, a data frame of geomaterials
 : Queries the list of geomaterials that have the given expand.
 }
 \details{
-Items Enum: "description" "type_localities" "localities" "relations" "~all" "*"
+This function releated to the field "expand" of geomaterials.
+The field expand(Items Enum): "description" "type_localities" "localities" "relations" "~all" "*"
 }
 \examples{
 geomaterials_expand(c('description'))

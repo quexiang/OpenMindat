@@ -10,12 +10,15 @@ minerals_ima_list (...)
 \item{..., }{Further named parameters.}
 }
 \value{
-df, data frame of locality type.
+df, data frame of minerals.
 }
 \description{
 retrieve all mineral ima list.
 }
+\details{
+This function is to retrieve the IMA minerals list.
+}
 \examples{
  minerals_ima_list()
- minerals_ima_list(fields = "id,name")
+ minerals_ima_list(ids = c(''),fields = "id,name")
 }

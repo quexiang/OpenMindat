@@ -7,7 +7,7 @@
 geomaterials_search_name(name,...)
 }
 \arguments{
-\item{name}{string,}
+\item{name}{string. Text search supporting wildcards, e.g. qu_rtz, bario*"}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -18,6 +18,7 @@ df, a list of geomaterials
 : Queries the list of geomaterials by a given name.
 }
 \details{
+This function releated to the fields "name" of geomaterials.
 retrieve the geomaterial list that match the given name.
 }
 \examples{

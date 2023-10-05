@@ -18,8 +18,11 @@ df, data frame of locality type.
 retrieve mineral ima list with the given intValue.
 }
 \details{
-Integer
+This function is related to the filed "ima" of ima minerals.
+Integer. 0: "PENDING_PUBLICATION"
+1: "APPROVED"
 }
 \examples{
  minerals_ima_list_ima(1)
+ minerals_ima_list_ima(0)
 }

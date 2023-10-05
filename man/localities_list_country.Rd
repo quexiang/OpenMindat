@@ -18,6 +18,7 @@ df, a data frame of localities
 : Queries the list of localities that are within a given country.
 }
 \details{
+This function releated to the field "country" of localities.
 Enum: "Afghanistan" "Albania" "Algeria" "American Samoa" "Andorra" "Angola" "Anguilla"
 "Antigua and Barbuda" "Argentina" "Armenia" "Aruba" "Ashmore and Cartier Islands" "Australia"
 "Austria" "Azerbaijan" "Bahamas" "Bahrain" "Bangladesh" "Barbados" "Belarus" "Belgium" "Belize"

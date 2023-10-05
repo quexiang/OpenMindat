@@ -4,7 +4,10 @@
 #' @description retrieve all mineral ima list.
 #' @usage minerals_ima_list (...)
 #' @param ..., Further named parameters.
-#' @return df, data frame of locality type.
+#' @return df, data frame of minerals.
+#' @details
+#' This function is to retrieve the IMA minerals list.
+#'
 #' @examples
 #'  minerals_ima_list()
 #'  minerals_ima_list(ids = c(''),fields = "id,name")
@@ -20,6 +23,7 @@ minerals_ima_list<- function(...){
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type.
 #' @details
+#' This function is related to the filed "expand" of ima mineral.
 #' Items Enum: "~all" "*"
 #'
 #' @examples
@@ -38,7 +42,9 @@ minerals_ima_list_expand <- function(expand,...){
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type.
 #' @details
-#' Integer
+#' This function is related to the filed "ima" of ima minerals.
+#' Integer. 0: "PENDING_PUBLICATION"
+#'          1: "APPROVED"
 #' @examples
 #'  minerals_ima_list_ima(1)
 #'  minerals_ima_list_ima(0)
@@ -54,6 +60,7 @@ minerals_ima_list_ima<- function(intValue,...){
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
 #' @details
+#' This function is related to the filed "updated_at" of ima minerals.
 #' retrieve the localities that have the latest updated at the given time.
 #' @examples
 #' minerals_ima_updated_at("2022-03-09 01:13:59")
@@ -68,6 +75,9 @@ minerals_ima_updated_at <- function(updateDate,...){
 #' @param id the mindat ima id
 #' @param ..., Further named parameters.
 #' @return df, data frame of ima mineral by a given id.
+#' @details
+#' This function is related to the filed "id" of ima minerals.
+#'
 #' @examples
 #'  minerals_ima_retrieve(id = 1)
 minerals_ima_retrieve <- function(id,...){

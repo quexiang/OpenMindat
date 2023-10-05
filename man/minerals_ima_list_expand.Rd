@@ -18,6 +18,7 @@ df, data frame of locality type.
 retrieve mineral ima list with the given expand.
 }
 \details{
+This function is related to the filed "expand" of ima mineral.
 Items Enum: "~all" "*"
 }
 \examples{

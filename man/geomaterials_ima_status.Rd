@@ -15,9 +15,10 @@ geomaterials_ima_status(enum_status,...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the geomaterials with your given ima status.
+: Queries the geomaterials with an given ima status.
 }
 \details{
+This function releated to the field "ima_status" of geomaterials.
 retrieve all the geomaterials that match the input IMA notes.
 }
 \examples{

@@ -17,6 +17,9 @@ df, data frame of locality age.
 \description{
 retrieve all locality age list or by its conditions
 }
+\details{
+This function is to retrieve all the locality_age list.
+}
 \examples{
  locality_age_list()
  locality_age_list(fields = "id,name")

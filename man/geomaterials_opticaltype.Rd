@@ -2,12 +2,12 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_opticaltype}
 \alias{geomaterials_opticaltype}
-\title{retrieve the geomaterials that have the given optical types.}
+\title{retrieve the geomaterials that match an given optical type.}
 \usage{
 geomaterials_opticaltype(types, ...)
 }
 \arguments{
-\item{types}{list of the types.Please refer to the details.}
+\item{types}{list of the types for the field of opticaltype. Please refer to the details.}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -15,10 +15,12 @@ geomaterials_opticaltype(types, ...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the geomaterials have the given optical types
+: Queries the geomaterials match an given optical type.
 }
 \details{
-Enum: "Biaxial" "Isotropic" "Uniaxial"
+This function releated to the field "opticaltype" of geomaterials.
+transparent mineral.
+opticaltype(Enum) :"Biaxial" "Isotropic" "Uniaxial"
 }
 \examples{
 geomaterials_opticaltype(c("Biaxial"))

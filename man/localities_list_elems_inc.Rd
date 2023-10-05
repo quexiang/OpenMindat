@@ -18,6 +18,7 @@ df, a data frame of localities
 Queries the list of localities that contain the given elements.
 }
 \details{
+This function releated to the field "elements_inc" of localities.
 This function queries the list of localities that contain the given elements.
 }
 \examples{

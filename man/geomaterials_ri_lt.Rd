@@ -2,12 +2,12 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_ri_lt}
 \alias{geomaterials_ri_lt}
-\title{retrieve the geomaterials that refractive index lower than the given value.}
+\title{retrieve the geomaterials that refractive index lower than an given value(lt).}
 \usage{
 geomaterials_ri_gt(lt, ...)
 }
 \arguments{
-\item{lt}{float value.}
+\item{lt}{float value. Refractive index, to (rimin<=)}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -15,10 +15,11 @@ geomaterials_ri_gt(lt, ...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the geomaterials have the lower refractive index than the given value.
+: Queries the geomaterials have the lower refractive index than an given value(lt).
 }
 \details{
-retrieve the geomaterials with the refractive index lower than the given value.
+This function releated to the field "ri_max" of geomaterials.
+retrieve the geomaterials with the refractive index lower than an given value(lt).
 }
 \examples{
 geomaterials_ri_lt(1.8)

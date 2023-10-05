@@ -2,12 +2,13 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_cleavagetype}
 \alias{geomaterials_cleavagetype}
-\title{geomaterials that have the given cleavagetype}
+\title{geomaterials that match an given cleavagetype}
 \usage{
 geomaterials_cleavagetype(types, ...)
 }
 \arguments{
-\item{types}{vector of given cleavagetype}
+\item{types}{vector of given cleavagetype (array of strings or null).
+The field "cleavage" is used to describe the crystallographic orientation of cleavage directions or planes and quality.}
 
 \item{..., }{Further named parameters.Other optional arguments-Additional arguments.}
 }
@@ -15,9 +16,10 @@ geomaterials_cleavagetype(types, ...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have the specified cleavagetype
+: Queries the list of geomaterials that match an given cleavagetype
 }
 \details{
+This function releated to the field "cleavagetype" of geomaterials.
 Items Enum: "Distinct/Good" "Imperfect/Fair" "None Observed" "Perfect" "Poor/Indistinct" "Very Good"
 }
 \examples{

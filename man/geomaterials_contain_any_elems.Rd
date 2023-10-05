@@ -2,7 +2,7 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_contain_any_elems}
 \alias{geomaterials_contain_any_elems}
-\title{geomaterials that contain any of the given elements}
+\title{geomaterials that contain any one of the given elements}
 \usage{
 geomaterials_contain_any_elems(any_elems, ...)
 }
@@ -12,14 +12,15 @@ geomaterials_contain_any_elems(any_elems, ...)
 \item{..., }{Further named parameters.Other optional arguments-Additional arguments.}
 }
 \value{
-df, a data frame of geomaterials
+df, a data frame of geomaterials.
 }
 \description{
-: Queries the list of geological materials that contain any of the specified elements.
+: Queries the list of geological materials that contain any one of the given elements.
 }
 \details{
-This function queries the list of geological materials that contain any of the specified elements.
-It performs the query operation by looping through each specified element and calling the mindat_geomaterial_list function.
+This function releated to the field "elements_inc" of geomaterials.
+This function queries the list of geological materials that contain any element of an given list (any_elems).
+It performs the query operation by looping through each given element and calling the mindat_geomaterial_list function.
 }
 \examples{
 geomaterials_contain_any_elems(c('H','Be'))

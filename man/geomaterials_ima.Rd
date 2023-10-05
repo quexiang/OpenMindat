@@ -7,7 +7,7 @@
 geomaterials_ima(btrue,...)
 }
 \arguments{
-\item{btrue}{boolean value}
+\item{btrue}{boolean value.TRUE IMA approved, otherwise not approved.}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -18,6 +18,7 @@ df, a data frame of geomaterials
 : Queries the geomaterials within or without the ima.
 }
 \details{
+This function releated to the field "ima" of geomaterials.
 retrieve all the geomaterials that are approved by the IMA or not.
 }
 \examples{

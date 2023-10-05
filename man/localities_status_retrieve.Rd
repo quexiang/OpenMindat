@@ -17,6 +17,9 @@ df, data frame of locality status.
 \description{
 retrieve locality status by its id.
 }
+\details{
+This function is to retrieve the locality_status by an given id of locality.
+}
 \examples{
  localities_status_retrieve(2)
  localities_status_retrieve(id = 2)

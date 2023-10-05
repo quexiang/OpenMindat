@@ -2,12 +2,12 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_streak}
 \alias{geomaterials_streak}
-\title{retrieve the geomaterials that have streak.}
+\title{retrieve the geomaterials that match an given streak.}
 \usage{
 geomaterials_streak(str,...)
 }
 \arguments{
-\item{str}{string. steak}
+\item{str}{string.  The color of the streak (color of powdered mineral)}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -15,9 +15,11 @@ geomaterials_streak(str,...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have the given steak.
+: Queries the list of geomaterials that match an given steak.
 }
 \details{
+This function releated to the fields "steak" of geomaterials.
+The color of the streak (color of powdered mineral).
 retrieve the geomaterials that has the given steak.
 }
 \examples{

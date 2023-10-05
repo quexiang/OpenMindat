@@ -18,6 +18,7 @@ df, a data frame of localities
 : Queries the list of mineral_ima that have the given time
 }
 \details{
+This function is related to the filed "updated_at" of ima minerals.
 retrieve the localities that have the latest updated at the given time.
 }
 \examples{

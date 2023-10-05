@@ -7,7 +7,7 @@
 localitiy_type_retrieve (id,...)
 }
 \arguments{
-\item{id}{the mindat localitiy status id}
+\item{id}{the mindat localitiy id}
 
 \item{..., }{Further named parameters.}
 }
@@ -15,7 +15,10 @@ localitiy_type_retrieve (id,...)
 df, data frame of locality status.
 }
 \description{
-retrieve locality type by its id.
+retrieve locality type by an given id of locality.
+}
+\details{
+This function is to retrieve the locality types by an given id of locality.
 }
 \examples{
  localitiy_type_retrieve(1)

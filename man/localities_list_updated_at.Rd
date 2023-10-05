@@ -18,6 +18,7 @@ df, a data frame of localities
 : Queries the list of localities that have the given time
 }
 \details{
+This function releated to all the fields "updated_at" of localities.
 retrieve the localities that have the latest updated at the given time.
 }
 \examples{

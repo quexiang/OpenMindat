@@ -2,14 +2,14 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_ri_range}
 \alias{geomaterials_ri_range}
-\title{retrieve the geomaterials whose refractive index is within the given range.}
+\title{retrieve the geomaterials whose refractive index is within an given range(gt,lt).}
 \usage{
 geomaterials_ri_range(gt,lt, ...)
 }
 \arguments{
-\item{gt}{float value}
+\item{gt}{float value. Refractive index, from (rimax>=).}
 
-\item{lt}{float value}
+\item{lt}{float value. Refractive index, to (rimin<=)}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -17,9 +17,10 @@ geomaterials_ri_range(gt,lt, ...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have refractive index within the given range.
+: Queries the list of geomaterials that have refractive index within an given range(gt,lt).
 }
 \details{
+This function releated to the fields "ri_min" and "ri_max" of geomaterials.
 retrieve all the geomaterials that has the refractive index within the range of (gt,lt).
 }
 \examples{

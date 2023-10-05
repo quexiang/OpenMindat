@@ -7,7 +7,9 @@
 geomaterials_ima(btrue,...)
 }
 \arguments{
-\item{enum_item}{Ima notes: multiple choice (OR) : "GROUP" "INTERMEDIATE" "NAMED_AMPHIBOLE" "PENDING_APPROVAL" "PUBLISHED_WITHOUT_APPROVAL" "REDEFINED" "REJECTED" "RENAMED" "UNNAMED_INVALID" "UNNAMED_VALID"}
+\item{enum_item}{Array of integers or null.
+Ima notes: multiple choice (OR) : "GROUP" "INTERMEDIATE" "NAMED_AMPHIBOLE" "PENDING_APPROVAL"
+"PUBLISHED_WITHOUT_APPROVAL" "REDEFINED" "REJECTED" "RENAMED" "UNNAMED_INVALID" "UNNAMED_VALID"}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -18,6 +20,11 @@ df, a data frame of geomaterials
 : Queries the geomaterials with an given .
 }
 \details{
+This function releated to the field "ima_notes" of geomaterials.
+Rejected by the IMA; Pending approval; IMA Approved Group Name; Redefined by the IMA;
+Renamed by the IMA; Intermediate member of a solid-solution series; Published without approval;
+Unnamed (probably valid); Unnamed (probably invalid); Named Amphibole
+
 retrieve all the geomaterials that match the input IMA notes.
 }
 \examples{

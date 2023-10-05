@@ -7,6 +7,8 @@
 localities_retrieve_id(id,...)
 }
 \arguments{
+\item{id, }{integer. the mindat localitiy id.}
+
 \item{..., }{Further named parameters.Other optional arguments.}
 }
 \value{
@@ -16,6 +18,7 @@ df, a data frame of localities
 : Queries the localitiy by given id.
 }
 \details{
+This function releated to all the fields "id" of localities.
 retrieve the localities by a given id.
 }
 \examples{

@@ -2,12 +2,12 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_hardness_gt}
 \alias{geomaterials_hardness_gt}
-\title{retrieve the geomaterials whose hardness are higher than the given value.}
+\title{retrieve the geomaterials whose hardness are higher than an given value.}
 \usage{
 geomaterials_hardness_gt(hmin, ...)
 }
 \arguments{
-\item{hmin}{float value}
+\item{hmin}{float value of the Mohs scale of mineral hardness, which ranging from 0 to 10.}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -15,10 +15,12 @@ geomaterials_hardness_gt(hmin, ...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have higher hardness than gt.
+: Queries the list of geomaterials that have higher hardness than an given value(hmin).
 }
 \details{
-retrieve all the geomaterials that has higher hardness than the given value.
+This function releated to the field "hardness_min" of geomaterials.
+retrieve all the geomaterials that has higher hardness than the given value(hmin).
+hmin:the given value of minimum Moh's hardness
 }
 \examples{
 geomaterials_hardness_gt(6)

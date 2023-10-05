@@ -7,9 +7,9 @@
 geomaterials_hardness_range(hmin,hmax, ...)
 }
 \arguments{
-\item{hmin}{float value}
+\item{hmin}{float value of the Mohs scale of mineral hardness, which ranging from 0 to 10.}
 
-\item{hmax}{float value}
+\item{hmax}{float value of the Mohs scale of mineral hardness, which ranging from 0 to 10.}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -20,7 +20,10 @@ df, a data frame of geomaterials
 : Queries the list of geomaterials that have hardness within the given range.
 }
 \details{
-retrieve all the geomaterials that has the hardness within the range of (hmin,hmax).
+This function releated to the fields "hardness_min" and "hardness_max" of geomaterials.
+retrieve all the geomaterials that has the hardness within an given range(hmin,hmax).
+hmin:the given value of minimum Moh's hardness
+hamx: maximum Moh's hardness
 }
 \examples{
 geomaterials_hardness_range(3,3.5)

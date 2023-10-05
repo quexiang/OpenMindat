@@ -2,12 +2,12 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_diapheny}
 \alias{geomaterials_diapheny}
-\title{retrieve the geomaterials that have the given diapheny.}
+\title{retrieve the geomaterials that have an given diapheny.}
 \usage{
 geomaterials_diapheny(diapheny, ...)
 }
 \arguments{
-\item{diapheny}{string}
+\item{diapheny}{string. The diaphany of the mineral - transparent; translucent; opaque}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -15,10 +15,11 @@ geomaterials_diapheny(diapheny, ...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have the given diapheny.
+: Queries the list of geomaterials that have an given diapheny.
 }
 \details{
-Items Enum: "Opaque" "Translucent" "Transparent"
+This function releated to the field "diapheny" of geomaterials.
+The diaphany of the mineral(Items Enum): "Opaque" "Translucent" "Transparent"
 }
 \examples{
 geomaterials_diapheny("Opaque")

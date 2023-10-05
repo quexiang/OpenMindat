@@ -18,6 +18,7 @@ df, a data frame of localities
 Queries the list of localities that contain the given expands.
 }
 \details{
+This function releated to the fields "expand" of localities.
 Items Enum: "geomaterials" "~all" "*"
 This function queries the list of localities that contain the given expands.
 }

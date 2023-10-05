@@ -10,10 +10,13 @@ localities_status_list (...)
 \item{..., }{Further named parameters.}
 }
 \value{
-df, data frame of locality age.
+df, data frame of locality status
 }
 \description{
 retrieve all locality status list.
+}
+\details{
+This function is to retrieve all the locality_status list.
 }
 \examples{
  localities_status_list()

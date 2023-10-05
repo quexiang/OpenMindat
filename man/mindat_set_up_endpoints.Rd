@@ -7,7 +7,7 @@
 mindat_set_up_endpoints ()
 }
 \description{
-generate the basic mindat endpoints for current mindat API.
+Set up the basic mindat endpoints for current mindat API.
 }
 \examples{
 mindat_set_up_endpoints()

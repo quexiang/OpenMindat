@@ -7,7 +7,9 @@
 geomeaterials_ordering(ord, ...)
 }
 \arguments{
-\item{ord}{string Enum: "approval_year" "id" "minstats__ms_locentries" "minstats__ms_photos" "name" "updttime" "weighting".}
+\item{ord}{string of field.
+Prepend "-" to the field name for descending order.
+Enum: "approval_year" "id" "minstats__ms_locentries" "minstats__ms_photos" "name" "updttime" "weighting".}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -18,6 +20,9 @@ df, a data frame of geomaterials
 : Queries the geomaterials by an given ordering.
 }
 \details{
+This function releated to the field "ordering" of geomaterials.
+ordering=-id - sort by id descending. Prepend "-" to the field name for descending order.
+fields:"approval_year" "id" "minstats__ms_locentries" "minstats__ms_photos" "name" "updttime" "weighting".
 retrieve the geomaterials by an given ordering.
 }
 \examples{

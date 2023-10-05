@@ -20,6 +20,7 @@ df, a data frame of localities
 Queries the list of localities that contain the given elements,but not contain some other given elements.
 }
 \details{
+This function releated to the fields "elements_inc" and "elements_exc" of localities.
 This function queries the list of localities that contain the given elements,but not contain some other given elements.
 }
 \examples{

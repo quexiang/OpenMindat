@@ -1,5 +1,4 @@
 ################ mindat_localities.R  #################
-
 #' retrieve the localities list that are belong to a given country.
 #' @description : Queries the list of localities that are within a given country.
 #' @usage localities_list_country(intvalue,...)
@@ -7,6 +6,7 @@
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
 #' @details
+#' This function releated to the field "country" of localities.
 #'Enum: "Afghanistan" "Albania" "Algeria" "American Samoa" "Andorra" "Angola" "Anguilla"
 #' "Antigua and Barbuda" "Argentina" "Armenia" "Aruba" "Ashmore and Cartier Islands" "Australia"
 #' "Austria" "Azerbaijan" "Bahamas" "Bahrain" "Bangladesh" "Barbados" "Belarus" "Belgium" "Belize"
@@ -49,6 +49,7 @@ localities_list_country<- function(country,...){
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
 #' @details
+#' This function releated to all the field "description" of localities.
 #' retrieve the localities that contain the given description
 #' @examples
 #' localities_list_description("Chinese")
@@ -64,6 +65,7 @@ localities_list_description<- function(desc,...){
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of localities
 #' @details
+#' This function releated to the field "elements_exc" of localities.
 #' This function queries the list of localities that do contain the specified elements.
 #' @examples
 #' localities_list_elems_exc(c('H','Be'))
@@ -79,6 +81,7 @@ localities_list_elems_exc<- function(exc_elems_list,...){
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of localities
 #' @details
+#' This function releated to the field "elements_inc" of localities.
 #' This function queries the list of localities that contain the given elements.
 #' @examples
 #' localities_list_elems_inc(c('H','Be'))
@@ -95,6 +98,7 @@ localities_list_elems_inc<- function(inc_elems_list,...){
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of localities
 #' @details
+#' This function releated to the fields "elements_inc" and "elements_exc" of localities.
 #' This function queries the list of localities that contain the given elements,but not contain some other given elements.
 #' @examples
 #' localities_list_elems_inc_exc(c('H','Be'),c('O'))
@@ -111,6 +115,7 @@ localities_list_elems_inc_exc <-function(inc_elems_list,exc_elems_list,...){
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of localities
 #' @details
+#' This function releated to the fields "expand" of localities.
 #' Items Enum: "geomaterials" "~all" "*"
 #' This function queries the list of localities that contain the given expands.
 #' @examples
@@ -128,6 +133,7 @@ localities_list_expand <-function(expands,...){
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
 #' @details
+#' This function releated to the fields "txt" of localities.
 #' This function queries the list of localities that contain the given txt name.
 #' @examples
 #' localities_list_txt(c("Chinese"))
@@ -143,6 +149,7 @@ localities_list_txt <-function(txt,...){
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
 #' @details
+#' This function releated to all the fields "updated_at" of localities.
 #' retrieve the localities that have the latest updated at the given time.
 #' @examples
 #' localities_list_updated_at("2022-03-09 01:13:59")
@@ -157,6 +164,7 @@ localities_list_updated_at<-function(updateDate,...){
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
 #' @details
+#' This function releated to  the fields "ids" of localities.
 #' retrieve all the localities.
 #' @examples
 #' localities_list_all()
@@ -168,9 +176,11 @@ localities_list_all<-function(...){
 #' retrieve the localities by a given mindat id.
 #' @description : Queries the localitiy by given id.
 #' @usage localities_retrieve_id(id,...)
+#' @param id, integer. the mindat localitiy id.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
 #' @details
+#' This function releated to all the fields "id" of localities.
 #' retrieve the localities by a given id.
 #' @examples
 #' localities_retrieve_id(id =1)
@@ -183,9 +193,11 @@ localities_retrieve_id<-function(id,...){
 #' locality_age
 #' @description retrieve locality age by its id
 #' @usage locality_age (id)
-#' @param id the mindat localitiy id
+#' @param id, the mindat localitiy id.
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality age.
+#' @details
+#' This function releated to the fields "id" of locality_age and locality.
 #' @examples
 #'  locality_age(id = 222)
 #'  locality_age(id = 222, fields = "id,name")
@@ -200,6 +212,9 @@ locality_age<-function(id,...){
 #' @param id the mindat localitiy age id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality age.
+#' @details
+#' This function is to retrieve all the locality_age list.
+#'
 #' @examples
 #'  locality_age_list()
 #'  locality_age_list(fields = "id,name")
@@ -213,7 +228,10 @@ locality_age_list<-function(...){
 #' @description retrieve all locality status list.
 #' @usage localities_status_list (...)
 #' @param ..., Further named parameters.
-#' @return df, data frame of locality age.
+#' @return df, data frame of locality status
+#' @details
+#' This function is to retrieve all the locality_status list.
+#'
 #' @examples
 #'  localities_status_list()
 #'  localities_status_list(fields = "id,name")
@@ -228,6 +246,9 @@ localities_status_list <-function(...){
 #' @param id the mindat localitiy status id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality status.
+#' @details
+#' This function is to retrieve the locality_status by an given id of locality.
+#'
 #' @examples
 #'  localities_status_retrieve(2)
 #'  localities_status_retrieve(id = 2)
@@ -237,11 +258,14 @@ localities_status_retrieve<- function(id,...){
 }
 
 #' localitiy_type_retrieve
-#' @description retrieve locality type by its id.
+#' @description retrieve locality type by an given id of locality.
 #' @usage localitiy_type_retrieve (id,...)
-#' @param id the mindat localitiy status id
+#' @param id the mindat localitiy id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality status.
+#' @details
+#'  This function is to retrieve the locality types by an given id of locality.
+#'
 #' @examples
 #'  localitiy_type_retrieve(1)
 #'  localitiy_type_retrieve(fields = "id,name")
@@ -255,6 +279,8 @@ localitiy_type_retrieve<- function(id,...){
 #' @usage locality_type_list (...)
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type.
+#' @details
+#' This function is to retrieve the locality types list.
 #' @examples
 #'  locality_type_list()
 #'  locality_type_list(fields = "id,name")

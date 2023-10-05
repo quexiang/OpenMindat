@@ -2,12 +2,12 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_varietyof}
 \alias{geomaterials_varietyof}
-\title{retrieve the geomaterials that have the given varietyof.}
+\title{retrieve the geomaterials that are varieties of an given id of geomaterials.}
 \usage{
 geomaterials_varietyof(intvalue,...)
 }
 \arguments{
-\item{intvalue}{integer,}
+\item{intvalue}{integer, id of mineral that has this variety.}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -15,11 +15,13 @@ geomaterials_varietyof(intvalue,...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have the given varietyof.
+: Queries the list of geomaterials that match the given varietyof.
 }
 \details{
-retrieve the geomaterials that have the given varietyof.
+This function releated to the fields "varietyof" of geomaterials.
+Varieties are geomaterials that have a special distinction from the main geomaterial ie. amethyst var. quartz
+retrieve the geomaterials that are varieties of an given id of geomaterials.
 }
 \examples{
-geomaterials_varietyof(1720)
+geomaterials_varietyof(3777)
 }

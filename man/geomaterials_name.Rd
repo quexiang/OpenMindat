@@ -18,6 +18,7 @@ df, a data frame of geomaterials
 : Queries the geomaterials with a given name.
 }
 \details{
+This function releated to the field "name" of geomaterials.
 retrieve all the geomaterials that match the input IMA notes.
 }
 \examples{

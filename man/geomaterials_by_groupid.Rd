@@ -9,16 +9,17 @@ geomaterials_by_groupid(hmin, ...)
 \arguments{
 \item{..., }{Further named parameters.Other optional arguments.}
 
-\item{gid}{integer value}
+\item{gid}{integer value. The id of the group to which this mineral belongs}
 }
 \value{
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have the given groupid.
+: Queries the list of geomaterials that match an given groupid.
 }
 \details{
-retrieve all the geomaterials that has the given groupid.
+This function releated to the field "groupid" of geomaterials.
+retrieve all the geomaterials that match an given groupid.
 }
 \examples{
 geomaterials_by_groupid(6)

@@ -18,6 +18,7 @@ df, a data frame of localities
 : Queries the list of localities that contain the given description.
 }
 \details{
+This function releated to all the field "description" of localities.
 retrieve the localities that contain the given description
 }
 \examples{

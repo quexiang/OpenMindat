@@ -18,5 +18,10 @@ df, a data frame of geomaterials
 : Queries the geomaterials with a given string matched its given meteoritical_code.
 }
 \details{
-retrieve all the geomaterials that match the input meteoritical_code.
+This function releated to the field "meteoritical_code_exists" of geomaterials.
+Meteoritical code exists. Include non-empty (true) / include empty only (false).
+retrieve all the geomaterials that match the input str_meteoritical_code.
+}
+\examples{
+geomaterials_meteoritical_code("TRUE")
 }

@@ -7,7 +7,8 @@
 geomaterials_colour(colors, ...)
 }
 \arguments{
-\item{colors}{vector of given colors}
+\item{colors}{vector of given colors.
+colors of the mineral or rock - individual minerals at localities can also have color information.}
 
 \item{..., }{Further named parameters.Other optional arguments-Additional arguments.}
 }
@@ -15,10 +16,11 @@ geomaterials_colour(colors, ...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have the specified colors
+: Queries the list of geomaterials that match a given colors.
 }
 \details{
-such: "Brown" "Yellow" "green"
+This function releated to the field "colour" of geomaterials.
+For example: "Brown", "Yellow", "green", "Pink","White","Orange","Blue","Gold","Dark brown","Purple".
 }
 \examples{
 geomaterials_colour(c('Yellow'))

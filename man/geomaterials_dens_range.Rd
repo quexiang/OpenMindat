@@ -2,14 +2,17 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_dens_range}
 \alias{geomaterials_dens_range}
-\title{retrieve the geomaterials whose density are higher and lower than the given value.}
+\title{retrieve the geomaterials whose density are within an given value.}
 \usage{
 geomaterials_dens_range(gt,lt, ...)
 }
 \arguments{
 \item{gt}{float value}
 
-\item{lt}{float value}
+\item{lt}{float value
+dmeas: measured density of the mineral.
+This is either the lower limit (if there is a dmeas2) or average (if there is no dmeas2).
+dmeas2:measured maximum density of mineral}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -17,10 +20,11 @@ geomaterials_dens_range(gt,lt, ...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the list of geomaterials that have lower density than lt.
+: Queries the list of geomaterials that match an given range.
 }
 \details{
-retrieve all the geomaterials that has the density within the range of (gt,lt).
+This function releated to the fields "density_min" and "density_max" of geomaterials.
+retrieve all the geomaterials records that has the density within an given range of (gt,lt).
 }
 \examples{
 geomaterials_dens_range(3,3.5)

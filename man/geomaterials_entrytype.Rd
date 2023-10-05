@@ -18,9 +18,11 @@ df, a data frame of geomaterials
 : Queries the list of geomaterials that have the given entrytype
 }
 \details{
+This function releated to the field "entrytype" of geomaterials.
 Items Enum: 0 1 2 3 4 5 6 7 8
 Multiple choice:
 0- mineral; 1-synonym; 2-variety; 3-mixture; 4-series; 5-grouplist; 6-polytype; 7-rock; 8-commodity
+Releated field: entrytype_text (description of the entrytype).
 }
 \examples{
 geomaterials_entrytype(c('1'))

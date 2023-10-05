@@ -7,9 +7,9 @@
 geomeaterials_non_utf(types, ...)
 }
 \arguments{
-\item{..., }{Further named parameters.Other optional arguments.}
+\item{btrue}{boolean. Include non-UTF mineral names?.Default is TRUE.}
 
-\item{types}{string of the type name.Please refer to the details.}
+\item{..., }{Further named parameters.Other optional arguments.}
 }
 \value{
 df, a data frame of geomaterials
@@ -18,8 +18,10 @@ df, a data frame of geomaterials
 : Queries the geomaterials include non-utf mineral names or not.
 }
 \details{
-retrieve the geomaterials that contain or not contain the non-utf name.
+This function releated to the field "non_utf" of geomaterials.
+retrieve the geomaterials that contain (or not contain) the non-utf name.
 }
 \examples{
 geomeaterials_non_utf(TRUE)
+geomeaterials_non_utf(FALSE)
 }

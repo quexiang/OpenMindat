@@ -13,12 +13,15 @@ geomaterials_contain_all_elems (icl_elms_vector)
 passed to the mindat_geomaterial_list function.}
 }
 \value{
-df, a data frame of geomaterials
+df, a data frame of geomaterials list.
 }
 \description{
 retrieve the geomaterials that contain all of the elements.This function queries
-the list of geological materials that contain the specified elements.
+the list of geomaterials that contain all the given elements.
 It performs the query operation by calling the mindat_geomaterial_list function
+}
+\details{
+This function releated to the field "elements_inc" of geomaterials.
 }
 \examples{
 geomaterials_contain_all_elems(c('H','Be'))

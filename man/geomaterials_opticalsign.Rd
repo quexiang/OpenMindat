@@ -2,12 +2,13 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_opticalsign}
 \alias{geomaterials_opticalsign}
-\title{retrieve the geomaterials that have the given optical signs.}
+\title{retrieve the geomaterials that match an given optical signs.}
 \usage{
 geomaterials_opticalsign(signs, ...)
 }
 \arguments{
-\item{signs}{list of the signs.Please refer to the details.}
+\item{signs}{list of the signs(string or null).
+sign for uniaxial and biaxial minerals: +;-;+/- .Please refer to the details.}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -15,10 +16,11 @@ geomaterials_opticalsign(signs, ...)
 df, a data frame of geomaterials
 }
 \description{
-: Queries the geomaterials have the given optical signs.
+: Queries the geomaterials match an given optical signs.
 }
 \details{
-Enum: "+", "+/-", "-"
+This function releated to the field "opticalsign" of geomaterials.
+Optical sign: single choice (Enum): "+", "+/-", "-"
 }
 \examples{
 geomaterials_opticalsign("+")

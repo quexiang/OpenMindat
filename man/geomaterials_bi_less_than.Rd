@@ -7,7 +7,7 @@
 geomaterials_bi_less_than(lt, ...)
 }
 \arguments{
-\item{lt}{float value}
+\item{lt}{float value.Birifrigence is calculated from refractive index as (rimax-rimin).Range: bi_min - bi_max.}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -18,7 +18,8 @@ df, a data frame of geomaterials
 : Queries the list of geomaterials that have lower birifrigence than lt.
 }
 \details{
-retrieve all the geomaterials that has higher birifrigence than the given birifrigence.
+This function releated to the field "bi_max" of geomaterials.
+retrieve all the geomaterials that has higher birifrigence than the given value(lt).
 }
 \examples{
 geomaterials_bi_less_than(0.8)
