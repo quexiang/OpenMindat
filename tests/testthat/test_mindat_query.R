@@ -1,7 +1,8 @@
+#You should apply for and get your own token from Mindat.org.
+This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6"
+expect_no_error(mindat_connection(This_is_a_temporary_token,page_size = 1500))
 
 test_that("Test mindat_query function", {
-  test_base_token =   "aa9c25fa95d8063908cb2bf186c9e79f"  #Your_token
-  expect_no_error(mindat_connection(test_base_token))
   request_uri = "https://api.mindat.org/geomaterials/6"
   endpoint<-"geomaterials"
   expect_no_error(df <- mindat_query(endpoint, query = c(list(id = 6))))

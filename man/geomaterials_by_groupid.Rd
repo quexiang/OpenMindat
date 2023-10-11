@@ -4,7 +4,7 @@
 \alias{geomaterials_by_groupid}
 \title{retrieve the geomaterials by an given value of groupid.}
 \usage{
-geomaterials_by_groupid(hmin, ...)
+geomaterials_by_groupid(id, ...)
 }
 \arguments{
 \item{..., }{Further named parameters.Other optional arguments.}
@@ -22,6 +22,10 @@ This function releated to the field "groupid" of geomaterials.
 retrieve all the geomaterials that match an given groupid.
 }
 \examples{
+library(httr)
+library(jsonlite)
+This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
+mindat_connection(This_is_a_temporary_token)
+
 geomaterials_by_groupid(6)
-geomaterials_by_groupid(3)
 }

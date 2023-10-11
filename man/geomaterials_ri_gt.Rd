@@ -22,5 +22,10 @@ This function releated to the field "ri_min" of geomaterials.
 retrieve the geomaterials with the refractive index higher than an given value(gt).
 }
 \examples{
+library(httr)
+library(jsonlite)
+This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
+mindat_connection(This_is_a_temporary_token)
+
 geomaterials_ri_gt(1.6)
 }

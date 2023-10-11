@@ -1,4 +1,9 @@
 
+#You should apply for and get your own token from Mindat.org.
+This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6"
+expect_no_error(mindat_connection(This_is_a_temporary_token,page_size = 1500))
+
+
 test_that("Test mindat_make_data_frame function", {
   test_data <-args <- list(ids = "6,7,8",fields ="id,name,updttime,ima_formula,ima_status,ima_notes,key_elements",elements_inc = "H,O")
   expect_no_error(df <- mindat_make_data_frame(test_data))
@@ -14,8 +19,6 @@ test_that("Test mindat_parse_raw_data function", {
 
 
 test_that("Test mindat_extract_response_body function", {
-  test_base_token =   #Your_token
-  mindat_connection(test_base_token)
   request_uri = "https://api.mindat.org/geomaterials/6"
   api_token <- mindat_cache_get('api_token')
   response_data <- GET(request_uri,add_headers('Authorization'= paste('Token ',api_token,sep = "")))
@@ -24,8 +27,6 @@ test_that("Test mindat_extract_response_body function", {
 
 
 test_that("Test mindat_get_data_from_uri function", {
-  test_base_token = #Your_token
-  mindat_connection(test_base_token)
   request_uri = "https://api.mindat.org/geomaterials/6"
   expect_no_error(df <- mindat_get_data_from_uri(request_uri))
   expect_equal(typeof(df), "list")

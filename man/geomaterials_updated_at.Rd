@@ -23,5 +23,10 @@ Last updated datetime in format \%Y-\%m-\%d \%H:\%M:\%S
 retrieve the geomaterials that have the latest updated at the given time.
 }
 \examples{
+library(httr)
+library(jsonlite)
+This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
+mindat_connection(This_is_a_temporary_token)
+
 geomaterials_updated_at("2022-03-09 01:13:59")
 }

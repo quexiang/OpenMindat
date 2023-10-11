@@ -25,6 +25,11 @@ Multiple choice:
 Releated field: entrytype_text (description of the entrytype).
 }
 \examples{
+library(httr)
+library(jsonlite)
+This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
+mindat_connection(This_is_a_temporary_token)
+
 geomaterials_entrytype(c('1'))
 geomaterials_entrytype(c('1','2'))
 }

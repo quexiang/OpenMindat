@@ -26,5 +26,10 @@ hmin:the given value of minimum Moh's hardness
 hamx: maximum Moh's hardness
 }
 \examples{
-geomaterials_hardness_range(3,3.5)
+library(httr)
+library(jsonlite)
+This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
+mindat_connection(This_is_a_temporary_token)
+
+geomaterials_hardness_range(3,3.2)
 }

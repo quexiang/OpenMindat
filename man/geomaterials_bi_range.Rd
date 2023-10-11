@@ -24,5 +24,10 @@ This function releated to the fields "bi_min"and "bi_max" of geomaterials.
 retrieve all the geomaterials that has the birifrigence within the given range of (gt,lt).
 }
 \examples{
+library(httr)
+library(jsonlite)
+This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
+mindat_connection(This_is_a_temporary_token)
+
 geomaterials_bi_range(0.6,0.7)
 }

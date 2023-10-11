@@ -26,6 +26,11 @@ fields:"approval_year" "id" "minstats__ms_locentries" "minstats__ms_photos" "nam
 retrieve the geomaterials by an given ordering.
 }
 \examples{
+library(httr)
+library(jsonlite)
+This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
+mindat_connection(This_is_a_temporary_token)
+
 geomeaterials_ordering("approval_year")
 geomeaterials_ordering("minstats__ms_photos")
 }

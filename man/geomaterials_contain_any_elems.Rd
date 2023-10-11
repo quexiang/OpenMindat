@@ -23,5 +23,10 @@ This function queries the list of geological materials that contain any element 
 It performs the query operation by looping through each given element and calling the mindat_geomaterial_list function.
 }
 \examples{
-geomaterials_contain_any_elems(c('H','Be'))
+library(httr)
+library(jsonlite)
+This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
+mindat_connection(This_is_a_temporary_token)
+
+geomaterials_contain_any_elems(c('Dy','Be'))
 }

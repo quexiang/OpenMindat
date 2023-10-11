@@ -23,6 +23,10 @@ retrieve all the geomaterials that has higher hardness than the given value(hmin
 hmin:the given value of minimum Moh's hardness
 }
 \examples{
-geomaterials_hardness_gt(6)
-geomaterials_hardness_gt(3)
+library(httr)
+library(jsonlite)
+This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
+mindat_connection(This_is_a_temporary_token)
+
+geomaterials_hardness_gt(9)
 }

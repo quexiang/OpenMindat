@@ -24,5 +24,10 @@ This function releated to the fields "ri_min" and "ri_max" of geomaterials.
 retrieve all the geomaterials that has the refractive index within the range of (gt,lt).
 }
 \examples{
-geomaterials_ri_range(1.6,1.8)
+library(httr)
+library(jsonlite)
+This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
+mindat_connection(This_is_a_temporary_token)
+
+geomaterials_ri_range(1.7,1.8)
 }

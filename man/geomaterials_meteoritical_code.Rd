@@ -23,5 +23,10 @@ Meteoritical code exists. Include non-empty (true) / include empty only (false).
 retrieve all the geomaterials that match the input str_meteoritical_code.
 }
 \examples{
+library(httr)
+library(jsonlite)
+This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
+mindat_connection(This_is_a_temporary_token)
+
 geomaterials_meteoritical_code("TRUE")
 }
