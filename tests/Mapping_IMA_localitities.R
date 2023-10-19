@@ -1,5 +1,29 @@
 # Template for
+
+library(httr)
+library(jsonlite)
+library(OpenMindat)
 library(tidyverse)
+library(sf)
+library(mapview)
+####demo1####
+# starbucks <- read_csv("https://raw.githubusercontent.com/libjohn/mapping-with-R/master/data/All_Starbucks_Locations_in_the_US_-_Map.csv")
+# starbucksNC <- starbucks  %>% filter(State == "NC")
+# starbucksNC %>% glimpse()
+# mapview(starbucksNC, xcol = "Longitude", ycol = "Latitude", crs = 4269, grid = FALSE)
+
+
+
+######## demo1  Element localitities ########
+#You should get a token from mindat.org
+test_base_token = "2082edf7b8dab2b9887f3c2393e822c6"
+mindat_connection(test_base_token,page_size = 1500)
+df_elements <- localities_list_elems_inc(c("Dy"))
+mapview(df_elements, xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
+
+
+
+
 
 # create data for world coordinates using map_data() function
 world_coordinates <- map_data("world")

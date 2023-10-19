@@ -53,7 +53,7 @@ test_that("Test geomaterials_dens_greater_than function", {
 
 
 test_that("Test geomaterials_dens_less_than function", {
-  expect_no_error(df <- geomaterials_dens_less_than(0.2))
+  expect_no_error(df <- geomaterials_dens_less_than(2))
   expect_equal(typeof(df), "list")
 })
 
@@ -100,7 +100,7 @@ test_that("Test geomaterials_hardness_lt function", {
 })
 
 test_that("Test geomaterials_hardness_range function", {
-  expect_no_error(df <- geomaterials_hardness_range(1,1.2))
+  expect_no_error(df <- geomaterials_hardness_range(3,3.2))
   expect_equal(typeof(df), "list")
 })
 
@@ -117,7 +117,7 @@ test_that("Test geomaterials_lustretype function", {
 })
 
 test_that("Test geomeaterials_non_utf function", {
-  expect_no_error(df <- geomeaterials_non_utf(FALSE),fields = "id,name,non_utf")
+  expect_no_error(df <- geomeaterials_non_utf(TRUE,fields = "id,name,non_utf"))
   expect_equal(typeof(df), "list")
 })
 

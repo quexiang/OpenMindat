@@ -31,7 +31,10 @@ test_that("Test build_uri function", {
   config <- c(endpoint_base = "geomaterials/")
   default_uri_builder("https://api.mindat.org",config)
   mindat_api_endpoint("geomaterials","geomaterials/",default_uri_builder)
-  expect_equal(build_uri("geomaterials",fields = "id,name",api_base = "https://api.mindat.org"),"https://api.mindat.org/geomaterials/?fields=id,name")
+  page_size <- mindat_cache_get('page_size')
+  qs<- "https://api.mindat.org/geomaterials/?fields=id,name/"
+  qs <- paste(qs,'?', 'page_size', "=", page_size, sep = "")
+  expect_equal(build_uri("geomaterials",fields = "id,name",api_base = "https://api.mindat.org"),qs)
 })
 
 

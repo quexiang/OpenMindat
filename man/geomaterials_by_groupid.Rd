@@ -7,9 +7,9 @@
 geomaterials_by_groupid(id, ...)
 }
 \arguments{
-\item{..., }{Further named parameters.Other optional arguments.}
-
 \item{gid}{integer value. The id of the group to which this mineral belongs}
+
+\item{..., }{Further named parameters.Other optional arguments.}
 }
 \value{
 df, a data frame of geomaterials

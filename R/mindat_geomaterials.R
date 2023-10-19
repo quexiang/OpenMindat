@@ -513,7 +513,7 @@ geomaterials_fracturetype <- function(types,...){
 #' mindat_connection(This_is_a_temporary_token)
 #'
 #' geomaterials_by_groupid(6)
-geomaterials_by_groupid<- function(id,...){
+geomaterials_by_groupid<- function(gid,...){
 
   df_out <- mindat_geomaterial_list(ids = c(''),groupid = gid,...)
   df_out
