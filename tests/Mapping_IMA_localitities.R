@@ -6,23 +6,42 @@ library(OpenMindat)
 library(tidyverse)
 library(sf)
 library(mapview)
-####demo1####
-# starbucks <- read_csv("https://raw.githubusercontent.com/libjohn/mapping-with-R/master/data/All_Starbucks_Locations_in_the_US_-_Map.csv")
-# starbucksNC <- starbucks  %>% filter(State == "NC")
-# starbucksNC %>% glimpse()
-# mapview(starbucksNC, xcol = "Longitude", ycol = "Latitude", crs = 4269, grid = FALSE)
 
 
-
-######## demo1  Element localitities ########
 #You should get a token from mindat.org
 test_base_token = "2082edf7b8dab2b9887f3c2393e822c6"
 mindat_connection(test_base_token,page_size = 1500)
-df_elements <- localities_list_elems_inc(c("Dy"))
+
+######## demo1 localitities contain, not contain, contain but without some elements ########
+df_elements <- localities_list_elems_inc(c("As"))#"Dy","Li"
 mapview(df_elements, xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
 
 
+####### demo2 localities within a country ##########
+localities_list_country
+df_country <- localities_list_country(c("China"))
+mapview(df_country, xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
 
+####### demo3 localities matched the input description ##########
+df_desc <- localities_list_description("volcano")
+mapview(df_desc, xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
+
+####### demo4 localities description ##########
+df_imalist <- minerals_ima_list_ima(1)
+df_tp_locs <-df_imalist$type_localities
+
+df_out <- data.frame()
+for (elements in df_tp_locs) {
+  elm_id_list <- as.list(elements)
+  for (elm in elm_id_list){
+    df_cur_locality <- localities_retrieve_id(elm)
+    df_out <- rbind(df_out,df_cur_locality)
+  }
+}
+df_out2 <- df_out
+df_out2$longitude <- as.numeric(df_out2$longitude)
+df_out2$latitude <- as.numeric(df_out2$latitude)
+mapview(df_out2, xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
 
 
 # create data for world coordinates using map_data() function
@@ -54,3 +73,4 @@ geom_map(
 
   # legend.position as none removes the legend
   theme(legend.position="none")
+

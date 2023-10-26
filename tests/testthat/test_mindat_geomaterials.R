@@ -19,6 +19,11 @@ test_that("Test geomaterials_contain_all_but_not_elems function", {
   expect_equal(typeof(df), "list")
 })
 
+test_that("Test geomaterials_contain_any_but_not_elems function", {
+  expect_no_error(df <- geomaterials_contain_any_but_not_elems(c('H','Be'),c('O')))
+  expect_equal(typeof(df), "list")
+})
+
 test_that("Test geomaterials_contain_any_elems function", {
   expect_no_error(df <- geomaterials_contain_any_elems(c('Dy','Be')))
   expect_equal(typeof(df), "list")

@@ -88,7 +88,34 @@ geomaterials_contain_any_elems <- function(any_elems,...){
   df_out <- data.frame()
   for (elem in any_elems){
     df <- mindat_geomaterial_list(ids = c(''),elements_inc = c(elem),...)
-    df_out <- rbind(df_out,df)
+    df_out <- unique(rbind(df_out,df))
+  }
+  df_out
+}
+
+#' geomaterials that contain any one of the given elements
+#' @description : Queries the list of geological materials that contain any one of the given elements.
+#' @usage geomaterials_contain_any_elems(any_elems, ...)
+#' @param any_elems_vector vector of elements.
+#' @param ecl_elms_vector
+#' @param ..., Further named parameters.Other optional arguments-Additional arguments.
+#' @return df, a data frame of geomaterials.
+#' @details
+#' This function releated to the field "elements_inc" of geomaterials.
+#' This function queries the list of geological materials that contain any element of an given list (any_elems).
+#' It performs the query operation by looping through each given element and calling the mindat_geomaterial_list function.
+#' @examples
+#' library(httr)
+#' library(jsonlite)
+#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
+#' mindat_connection(This_is_a_temporary_token)
+#'
+#' geomaterials_contain_any_but_not_elems(c('Dy','Be'),c('O'))
+geomaterials_contain_any_but_not_elems <- function(any_elems_vector,ecl_elms_vector,...){
+  df_out <- data.frame()
+  for (elem in any_elems_vector){
+    df <- mindat_geomaterial_list(ids = c(''),elements_inc = c(elem),elements_exc = ecl_elms_vector,...)
+    df_out <- unique(rbind(df_out,df))
   }
   df_out
 }
