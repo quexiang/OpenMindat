@@ -22,7 +22,7 @@ Or download the source code locally and install it as follows:
 
   1. Download all the source codes and Open the OpenMindat.Rproj with RStudio.
   
-  2. Install packages `usethis`,`httr`, and `jsonlite`. 
+  2. Install packages `usethis`,`httr`,`readxl`, and `jsonlite`. 
   
   3. Currently the `OpenMindat` package can be installed from source files. Select the `Install Package` in the `Build` menu of RStudio (Ctrl + Shift + B). 
 
@@ -31,18 +31,20 @@ Then, you can create a new file to load the dependent package, and then call the
 
 1. Create a New R Script (Ctrl + Shift + N).
 
-2. Load the packages `OpenMindat`, `usethis`,`httr`, and `jsonlite`. 
+2. Load the packages `OpenMindat`, `usethis`,`httr`,`readxl`, and `jsonlite`. 
 
 
 ```coffee
 #install.packages("httr")
 #install.packages("jsonlite")
 #install.packages("usethis")
+#install.packages("readxl")
 #install.packages("OpenMindat")
 library(OpenMindat)
 library(httr)
 library(usethis)
 library(jsonlite)
+library(readxl)
 ```
 
 **Set up API connection with your Mindat API token and use the functions**
