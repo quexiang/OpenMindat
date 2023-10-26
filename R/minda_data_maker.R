@@ -48,7 +48,7 @@ ConvertDF2JsonLD<- function(inputdata,template = "OpenMindat_Schema_JSON-LD.xlsx
     str_fld <- paste("\"",i_ctx,sep = "")
     str_fld <- paste(str_fld,"\"",sep = "")
     str_url <- paste("\"",context_settings[context_settings$context_name == i_ctx ,]$context_url,sep = "")
-    str_url<-paste(str_url,"\"")
+    str_url<-paste(str_url,"\"",sep="")
     cur_context<- paste(str_fld,str_url,sep = ":")
     cur_context<- paste(cur_context,",\n")
     str_context<- paste(str_context,cur_context,sep = " ")
