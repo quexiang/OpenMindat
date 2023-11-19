@@ -12,6 +12,3 @@ set_api_base (api_base)
 \description{
 set base uri of current environment
 }
-\examples{
-set_api_base("https://api.mindat.org")
-}

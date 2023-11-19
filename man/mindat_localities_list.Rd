@@ -15,7 +15,3 @@ df. data frame of localities list.
 \description{
 retrieve localities list
 }
-\examples{
- mindat_localities_list()
- mindat_localities_list(ids = c('3','5','7','9','222'))
-}

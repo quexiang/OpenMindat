@@ -15,7 +15,3 @@ df, data frame of locality type list
 \description{
 retrieve all locality type list
 }
-\examples{
- mindat_locality_type_list()
- mindat_locality_type_list(fields = "id,name")
-}

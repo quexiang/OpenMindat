@@ -24,11 +24,3 @@ This function releated to all the fields of geomaterials.
 e.g. meteoritical_code_exists.Meteoritical code exists. Include non-empty (true) / include empty only (false)
 retrieve the geomaterial list with an empty or not empty of a given field.
 }
-\examples{
-library(httr)
-library(jsonlite)
-This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-mindat_connection(This_is_a_temporary_token)
-
-geomaterials_field_exists("meteoritical_code")
-}

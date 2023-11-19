@@ -15,6 +15,3 @@ df, data frame of locality type list
 \description{
 retrieve all the geomaterial list or the geomaterial by given conditions.
 }
-\examples{
-mindat_geomaterial_list()
-}

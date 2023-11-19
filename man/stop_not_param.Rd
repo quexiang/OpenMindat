@@ -15,6 +15,3 @@ stop_not_param (comp_params, query)
 if the query param is not in the list of mindat api, stop and report the errors.Throws error if a parameter is not found in query.
 This function needs to be improved. For different endpoints of mindat.org API, the fields that can be queried are different.
 }
-\examples{
-stop_not_param(comp_params,query)
-}

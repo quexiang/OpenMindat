@@ -27,11 +27,3 @@ Here is a list of all elements that can make up geomaterials:'H','Li', 'Be', 'B'
 'Ir', 'Pt', 'Au','Hg','Tl', 'Pb', 'Bi', 'Th', 'U'
 It performs the query operation by calling the mindat_geomaterial_list function
 }
-\examples{
-library(httr)
-library(jsonlite)
-This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-mindat_connection(This_is_a_temporary_token)
-
-geomaterials_contain_only_elems(c('Si','O'))
-}

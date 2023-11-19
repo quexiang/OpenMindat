@@ -21,6 +21,3 @@ Queries the list of localities that contain the given txt name.
 This function releated to the fields "txt" of localities.
 This function queries the list of localities that contain the given txt name.
 }
-\examples{
-localities_list_txt(c("Chinese"))
-}

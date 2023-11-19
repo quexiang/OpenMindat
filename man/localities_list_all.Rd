@@ -19,6 +19,3 @@ df, a data frame of localities
 This function releated to  the fields "ids" of localities.
 retrieve all the localities.
 }
-\examples{
-localities_list_all()
-}

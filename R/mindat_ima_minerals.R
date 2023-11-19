@@ -7,10 +7,6 @@
 #' @return df, data frame of minerals.
 #' @details
 #' This function is to retrieve the IMA minerals list.
-#'
-#' @examples
-#'  minerals_ima_list()
-#'  minerals_ima_list(ids = c(''),fields = "id,name")
 minerals_ima_list<- function(...){
   df_out <- mindat_mineral_ima_list(...)
   df_out
@@ -25,10 +21,6 @@ minerals_ima_list<- function(...){
 #' @details
 #' This function is related to the filed "expand" of ima mineral.
 #' Items Enum: "~all" "*"
-#'
-#' @examples
-#'  minerals_ima_list_expand("~all")
-#'  minerals_ima_list_expand("~all",fields = "id,name")
 minerals_ima_list_expand <- function(expand,...){
   query_expand <- c(expand, list(...))
   df_out <-mindat_mineral_ima_list(ids = c(''),expand = query_expand)
@@ -45,9 +37,6 @@ minerals_ima_list_expand <- function(expand,...){
 #' This function is related to the filed "ima" of ima minerals.
 #' Integer. 0: "PENDING_PUBLICATION"
 #'          1: "APPROVED"
-#' @examples
-#'  minerals_ima_list_ima(1)
-#'  minerals_ima_list_ima(0)
 minerals_ima_list_ima<- function(intValue,...){
   df_out <-mindat_mineral_ima_list(ids = c(''),ima = intValue,...)
   df_out
@@ -62,8 +51,6 @@ minerals_ima_list_ima<- function(intValue,...){
 #' @details
 #' This function is related to the filed "updated_at" of ima minerals.
 #' retrieve the localities that have the latest updated at the given time.
-#' @examples
-#' minerals_ima_updated_at("2022-03-09 01:13:59")
 minerals_ima_updated_at <- function(updateDate,...){
   df_out <-mindat_mineral_ima_list(ids = c(''),updated_at = updateDate,...)
   df_out
@@ -77,9 +64,6 @@ minerals_ima_updated_at <- function(updateDate,...){
 #' @return df, data frame of ima mineral by a given id.
 #' @details
 #' This function is related to the filed "id" of ima minerals.
-#'
-#' @examples
-#'  minerals_ima_retrieve(id = 1)
 minerals_ima_retrieve <- function(id,...){
   df_out <- mindat_mineral_ima(id,...)
   df_out

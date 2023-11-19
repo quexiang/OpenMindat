@@ -8,23 +8,135 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-### Overview
 Mindat.org is the world's largest open database of minerals, rocks, meteorites and the localities they come from.Mindat.org is run by the not-for-profit.
 
 Learn  Learn more about rocks and minerals, their origins and their uses: [Enter our learning center](https://www.mindat.org/a/learn).
 
-1.Rocks and Meteorites
-2.Popular Minerals 
+OpenMindat is a package for retrieving and processing data from mindat.org database through its open data API.
 
-### Community
-1.Photography  We have 1,280,073 photographs uploaded by our community.
-2.Support us  We can't continue without your financial support. We are a 501(c)(3) non-profit
-3.Events  Our calendar of important events for the mineral community.
-4.Museums  Our directory of mineral museums and public collections worldwide.
+Mindat and University of Idaho collaborate on  OpenMindat Project.
 
 
+### Get started
+####  Load libraries
+The OpenMindat R package require the following libraries:
+```{r setup}
+library(httr)
+library(jsonlite)
+library(OpenMindat)
+library("stringr")
+library(readxl)
+```
 
+####  Initializing API Call
+Users can set the `page_size` from 0 to 1500 (default is 800). The Mindat API returns the largest record size per request.
 
+```{r}
+test_base_token = "9ce67655d74bcd981e937be80dcea9cb"
+#mindat_connection(test_base_token,page_size = 1500)
+```
+
+####  1. Qurey Geomaterials
+##### by chemical elements:
+(1) query geomaterials records that contain any elements in a given list: 
+```{r}
+#geomaterials_contain_any_elems (c('Fe','S'),fields ="id,name,mindat_formula,elements,sigelements")
+```
+(2) query geomaterials records that contain all of the elements in a given list: 
+```{r}
+#geomaterials_contain_all_elems (c('Fe','S'),fields ="id,name,mindat_formula,elements,sigelements")
+```
+(3) query geomaterials records that only contain the elements in a given list:
+```{r}
+#geomaterials_contain_only_elems (c('Fe','S'),fields ="id,name,mindat_formula,elements,sigelements")
+```
+(4) query geomaterials records that not contain any of the elements in a given list:
+```{r}
+#geomaterials_not_contain_elems (c('Fe','S','O'),fields ="id,name,mindat_formula,elements,sigelements")
+```
+(5) query geomaterials records that contain all the elements in the first given list,but not contain the elements in the second given list:
+```{r}
+#geomaterials_contain_all_but_not_elems(c('Fe','S'), c('O'),fields ="id,name,mindat_formula,elements,sigelements")
+```
+(6) query geomaterials records that contain any of the elements in the first given list,but not the elements in the second given list:
+```{r}
+#geomaterials_contain_any_but_not_elems(c('Fe','S'), c('O'),fields ="id,name,mindat_formula,elements,sigelements")
+```
+#### by physical properties:
+(7) query geomaterials records that have hardness within a given range: 
+```{r}
+#geomaterials_hardness_range(3,3.5,fields="id,name,hmin,hmax,hardtype,commenthard")
+```
+(8) query geomaterials records that have hardness higher than a given value: 
+```{r}
+#geomaterials_hardness_gt(9,fields="id,name,hmin,hmax,hardtype,commenthard")
+```
+(9) query geomaterials records that have hardness lower than a given value: 
+```{r}
+#geomaterials_hardness_lt(9,fields="id,name,hmin,hmax,hardtype,commenthard")
+```
+(10) query geomaterials records that have density within a given range: 
+```{r}
+#geomaterials_dens_range(3,3.2,fields="id,name,dmeas,dmeas2,dmeaserror,dcalcerror")
+```
+(11) query geomaterials records that have birefringence within a given range: 
+```{r}
+#geomaterials_bi_range(0.6,0.7,fields = "id,name,rimin,rimax,opticalbirefringence,opticalbireflectance")
+```
+(12) query geomaterials records that have optical2v within a given range:
+```{r}
+#geomaterials_optical2v_range(9,10,fields = "id,name,optical2vmeasured,optical2vmeasured2,optical2vcalc,optical2vcalc2,optical2vcalcerror,optical2vmeasurederror")
+```
+(13) query geomaterials records that have a given crystal system
+```{r}
+#geomaterials_crystal_system(c("Icosahedral"),fields = "id,name,elements,csystem,cleavagetype,commentcrystal")
+```
+(14) query geomaterials records that have a given fracturetype
+```{r}
+#geomaterials_fracturetype(c("Step-Like"),fields = "id,name,fracturetype,elements,csystem,crystal_system,cleavagetype")
+```
+(15) query geomaterials records that have a list of given colours
+```{r}
+#geomaterials_colour(c("bright blue"),fields = "id,name,elements,csystem,colour,opticalcolour,commentcolor")
+```
+(16) query the geomaterials records that match an given steak.
+```{r}
+#geomaterials_streak(c("orange"),fields = "id,name,elements,csystem,colour,opticalcolour,commentcolor,streak")
+```
+(17) query the geomaterials records that match an given diapheny.
+```{r}
+#geomaterials_diapheny("Transparent",fields = "id,name,elements,csystem,colour,diapheny")
+```
+(18) query the geomaterials records that match an given lustretype.
+```{r}
+#geomaterials_lustretype(c("Sub-Adamantine"),fields = "id,name,elements,csystem,cleavage,cleavagetype,rimin,rimax,lustre,lustretype")
+```
+(19)query the geomaterials records by names, fields:
+```{r}
+#geomaterials_meteoritical_code_exists("true",fields ="id,name,meteoritical_code,meteoritical_code_exists")
+#geomaterials_search_name("Quartz",fields = "id,name")
+#geomaterials_name("qu_rtz",fields = "id,name")
+#geomaterials_name("qu*",fields = "id,name")
+```
+
+####  2. Qurey Localities
+```{r}
+#localities_list_country("Norway")
+#localities_list_description("volcano")
+#localities_list_elems_inc(c("Dy"))
+#localities_list_elems_inc_exc(c("Dy"),c("Li"))
+#locality_age_list()
+```
+####  3. Qurey IMA Minerals
+```{r}
+#minerals_ima_list()
+#minerals_ima_list_ima(0)
+```
+####  4. Save the retrieved R dataframe as a specified format file.
+```{r}
+#saveMindatDataAs(df,"df_geomaterials.ttl")
+#saveMindatDataAs(df,"df_geomaterials.jsonld")
+```
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -32,9 +144,4 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
-
-```{r setup}
-library(OpenMindat)
-```
-
 

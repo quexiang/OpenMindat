@@ -12,6 +12,3 @@ set_page_size (page_size)
 \description{
 set the page_size of response records.
 }
-\examples{
-set_api_token("ad9c15fa95d8063908cb5bf186c9e79f")
-}

@@ -17,7 +17,3 @@ df, data frame of locality status
 \description{
 retrieve all locality status by its id
 }
-\examples{
- mindat_locality_status(id = 222)
- mindat_locality_status(fields = "id,name")
-}

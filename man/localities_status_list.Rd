@@ -18,7 +18,3 @@ retrieve all locality status list.
 \details{
 This function is to retrieve all the locality_status list.
 }
-\examples{
- localities_status_list()
- localities_status_list(fields = "id,name")
-}

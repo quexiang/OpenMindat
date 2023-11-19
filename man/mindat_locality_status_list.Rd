@@ -15,7 +15,3 @@ df, data frame of locality status list
 \description{
 retrieve all locality status list
 }
-\examples{
- mindat_locality_status_list()
- mindat_locality_status_list(fields = "id,name")
-}

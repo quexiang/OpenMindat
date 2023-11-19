@@ -12,6 +12,3 @@ set_api_token (api_token)
 \description{
 set the token of current environment
 }
-\examples{
-set_api_token("ad9c15fa95d8063908cb5bf186c9e79f")
-}

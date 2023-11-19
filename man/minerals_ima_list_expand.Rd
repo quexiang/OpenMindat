@@ -21,7 +21,3 @@ retrieve mineral ima list with the given expand.
 This function is related to the filed "expand" of ima mineral.
 Items Enum: "~all" "*"
 }
-\examples{
- minerals_ima_list_expand("~all")
- minerals_ima_list_expand("~all",fields = "id,name")
-}

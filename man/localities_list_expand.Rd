@@ -22,7 +22,3 @@ This function releated to the fields "expand" of localities.
 Items Enum: "geomaterials" "~all" "*"
 This function queries the list of localities that contain the given expands.
 }
-\examples{
-localities_list_expand(c("geomaterials"))
-localities_list_expand(c("~all"))
-}

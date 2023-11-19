@@ -21,6 +21,3 @@ Queries the list of localities that contain the given elements.
 This function releated to the field "elements_inc" of localities.
 This function queries the list of localities that contain the given elements.
 }
-\examples{
-localities_list_elems_inc(c('H','Be'))
-}

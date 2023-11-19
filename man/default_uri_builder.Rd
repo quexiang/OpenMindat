@@ -19,6 +19,3 @@ uri string
 \description{
 Create a default uri builder which can create the request uri according to the query conditions.
 }
-\examples{
-default_uri_builder()
-}

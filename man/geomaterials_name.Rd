@@ -21,12 +21,3 @@ df, a data frame of geomaterials
 This function releated to the field "name" of geomaterials.
 retrieve all the geomaterials that match the input IMA notes.
 }
-\examples{
-library(httr)
-library(jsonlite)
-This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-mindat_connection(This_is_a_temporary_token)
-
-geomaterials_name("qu_rtz")
-geomaterials_name("qu*")
-}

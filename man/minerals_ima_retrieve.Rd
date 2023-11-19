@@ -20,6 +20,3 @@ retrieve mineral ima by its id.
 \details{
 This function is related to the filed "id" of ima minerals.
 }
-\examples{
- minerals_ima_retrieve(id = 1)
-}

@@ -17,6 +17,3 @@ df, a data frame of country
 \description{
 retrieve the country by given its id.
 }
-\examples{
-mindat_country(id = 1)
-}

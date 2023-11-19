@@ -4,9 +4,6 @@
 #' @description Convert the mindat R dataframe to JSON-LD string
 #' @usage getExtension (file)
 #' @param filename R dataframe of retrieived data from Mindat database.
-#' @examples
-#' getExtension("filename_test.jsonld")
-#'
 getExtension <- function(filename){
   ext<- strsplit(filename, ".", fixed=T)[[1]][-1]
   ext
@@ -17,8 +14,6 @@ getExtension <- function(filename){
 #' @usage ConvertDF2JsonLD (DataFrame)
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param template filepath to the template
-#' @examples
-#' ConvertDF2JsonLD(mindat_geomaterial_list(ids = c('3','3337'),fields = "id,name"))
 #'
 ConvertDF2JsonLD<- function(inputdata,template = "OpenMindat_Schema_JSON-LD.xlsx"){
   #read a document files  template for output the 'JSON-LD' as references
@@ -124,9 +119,6 @@ ConvertDF2JsonLD<- function(inputdata,template = "OpenMindat_Schema_JSON-LD.xlsx
 #' @usage ConvertDF2TTL (DataFrame)
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param template filepath to the template
-#' @examples
-#' ConvertDF2TTL(mindat_geomaterial_list(ids = c('3','3337'),fields = "id,name"))
-#'
 ConvertDF2TTL<- function(inputdata,template = "OpenMindat_Schema_TTL.xlsx"){
   fields_settings  <- read_excel(template,sheet ='fields_settings')
   prefix_settings <- read_excel(template,sheet ='prefix')
@@ -219,8 +211,6 @@ ConvertDF2TTL<- function(inputdata,template = "OpenMindat_Schema_TTL.xlsx"){
 #' @usage saveMindatDataAs (filename,format = 'csv')
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param outputfname string. the output file name.
-#' @examples
-#' saveMindatDataAs("out.csv")
 saveMindatDataAs <-function(inputdata,outputfname){
   fmt <- getExtension(outputfname)
   if (fmt == 'csv'){

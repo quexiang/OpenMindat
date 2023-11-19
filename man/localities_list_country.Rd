@@ -48,6 +48,3 @@ Enum: "Afghanistan" "Albania" "Algeria" "American Samoa" "Andorra" "Angola" "Ang
 "United States" "Uruguay" "Uzbekistan" "Vanuatu (Republic of Vanuatu; New Hebrides) " "Venezuela" "Vietnam" "Western Sahara"
 "Western Samoa" "Yemen" "Zambia" "Zimbabwe"
 }
-\examples{
-localities_list_country("China")
-}

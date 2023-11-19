@@ -10,13 +10,6 @@
 #' @return df, a data frame of geomaterials list.
 #' @details
 #' This function releated to the field "elements_inc" of geomaterials.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_contain_all_elems(c('Fe','S'))
 geomaterials_contain_all_elems<- function(icl_elms_vector,...){
   df <- mindat_geomaterial_list(ids = c(''),elements_inc = icl_elms_vector,...)
   df
@@ -30,17 +23,10 @@ geomaterials_contain_all_elems<- function(icl_elms_vector,...){
 #' @return df, a data frame of geomaterials list.
 #' @details
 #' This function releated to the field "elements_exc" of geomaterials.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_not_contain_elems(c('H','O',"Si","Al","Fe"))
 geomaterials_not_contain_elems <- function(ecl_elms_vector,...){
   df <- mindat_geomaterial_list(ids = c(''),elements_exc = ecl_elms_vector,...)
   df
-}#(c('H','Be'))
+}
 
 #' geomaterials that contain some elements but not some other elements.
 #' @description Queries the list of geomaterials that contain all the given elements listed in icl_elm_vector,
@@ -55,13 +41,6 @@ geomaterials_not_contain_elems <- function(ecl_elms_vector,...){
 #' This function queries the list of geological materials that contain an given list of elements (icl_elm_vector),
 #' but not contain the other list of elements (ecl_elms_vector).
 #' It performs the query operation by calling the mindat_geomaterial_list function.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_contain_all_but_not_elems(c('H','Be'),c('O'))
 geomaterials_contain_all_but_not_elems <- function(icl_elm_vector,ecl_elms_vector,...){
   df <- mindat_geomaterial_list(ids = c(''),elements_inc = icl_elm_vector,elements_exc = ecl_elms_vector,...)
   df
@@ -77,13 +56,6 @@ geomaterials_contain_all_but_not_elems <- function(icl_elm_vector,ecl_elms_vecto
 #' This function releated to the field "elements_inc" of geomaterials.
 #' This function queries the list of geological materials that contain any element of an given list (any_elems).
 #' It performs the query operation by looping through each given element and calling the mindat_geomaterial_list function.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_contain_any_elems(c('Dy','Be'))
 geomaterials_contain_any_elems <- function(any_elems,...){
   df_out <- data.frame()
   for (elem in any_elems){
@@ -96,21 +68,14 @@ geomaterials_contain_any_elems <- function(any_elems,...){
 #' geomaterials that contain any one of the given elements
 #' @description : Queries the list of geological materials that contain any one of the given elements.
 #' @usage geomaterials_contain_any_elems(any_elems, ...)
-#' @param any_elems_vector vector of elements.
-#' @param ecl_elms_vector
+#' @param any_elems_vector vector of elements. vector of any elements contained.
+#' @param ecl_elms_vector  vector of elements. vector of any elements excluded.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of geomaterials.
 #' @details
 #' This function releated to the field "elements_inc" of geomaterials.
 #' This function queries the list of geological materials that contain any element of an given list (any_elems).
 #' It performs the query operation by looping through each given element and calling the mindat_geomaterial_list function.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_contain_any_but_not_elems(c('Dy','Be'),c('O'))
 geomaterials_contain_any_but_not_elems <- function(any_elems_vector,ecl_elms_vector,...){
   df_out <- data.frame()
   for (elem in any_elems_vector){
@@ -127,13 +92,6 @@ geomaterials_contain_any_but_not_elems <- function(any_elems_vector,ecl_elms_vec
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments that can be
 #' passed to the mindat_geomaterial_list function.
 #' @return df, a data frame of geomaterials.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_contain_only_elems(c('Si','O'))
 #' @details
 #' This function releated to the fields "elements_inc" and "elements_exc" of geomaterials.
 #' Here is a list of all elements that can make up geomaterials:'H','Li', 'Be', 'B', 'C', 'N', 'O', 'F',
@@ -164,13 +122,6 @@ geomaterials_contain_only_elems<- function(icl_only_elms_vector,...){
 #' @details
 #' This function releated to the field "cleavagetype" of geomaterials.
 #' Items Enum: "Distinct/Good" "Imperfect/Fair" "None Observed" "Perfect" "Poor/Indistinct" "Very Good"
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_cleavagetype(c('Perfect'))
 geomaterials_cleavagetype <- function(types,...){
   if(length(types)>1){
     # merge_types<- paste(types,"&",sep = "",collapse ='')
@@ -199,13 +150,6 @@ geomaterials_cleavagetype <- function(types,...){
 #' @details
 #' This function releated to the field "colour" of geomaterials.
 #' For example: "Brown", "Yellow", "green", "Pink","White","Orange","Blue","Gold","Dark brown","Purple".
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_colour(c('Yellow'))
 geomaterials_colour<- function(colors,...){
   if(length(colors)>1){
     df_out <- data.frame()
@@ -232,13 +176,6 @@ geomaterials_colour<- function(colors,...){
 #' @details
 #' This function releated to the field "crystal_system" of geomaterials.
 #' Items Enum: "Amorphous" "Hexagonal" "Icosahedral" "Isometric" "Monoclinic" "Orthorhombic" "Tetragonal" "Triclinic" "Trigonal"
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_crystal_system(c('Triclinic'))
 geomaterials_crystal_system <- function(crystals,...){
   if(length(crystals)>1){
     df_out <- data.frame()
@@ -263,13 +200,6 @@ geomaterials_crystal_system <- function(crystals,...){
 #' @details
 #' This function releated to the field "bi_min" of geomaterials.
 #' retrieve all the geomaterials that has higher birifrigence than the given value(gt).
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_bi_greater_than(0.3)
 geomaterials_bi_greater_than<- function(gt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),bi_min = gt,...)
   df_out
@@ -284,13 +214,6 @@ geomaterials_bi_greater_than<- function(gt,...){
 #' @details
 #' This function releated to the field "bi_max" of geomaterials.
 #' retrieve all the geomaterials that has higher birifrigence than the given value(lt).
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_bi_less_than(0.8)
 geomaterials_bi_less_than<- function(lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),bi_max = lt,...)
   df_out
@@ -306,13 +229,6 @@ geomaterials_bi_less_than<- function(lt,...){
 #' @details
 #' This function releated to the fields "bi_min"and "bi_max" of geomaterials.
 #' retrieve all the geomaterials that has the birifrigence within the given range of (gt,lt).
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_bi_range(0.6,0.7)
 geomaterials_bi_range <- function(gt,lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),bi_min = gt,bi_max = lt,...)
   df_out
@@ -331,13 +247,6 @@ geomaterials_bi_range <- function(gt,lt,...){
 #' @details
 #' This function releated to the field "density_min" of geomaterials.
 #' retrieve all the geomaterials that has higher density than the given density(gt).
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_dens_greater_than(6)
 geomaterials_dens_greater_than<- function(gt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),density_min = gt,...)
   df_out
@@ -355,13 +264,6 @@ geomaterials_dens_greater_than<- function(gt,...){
 #' @details
 #' This function releated to the field "density_max" of geomaterials.
 #' retrieve all the geomaterials that has higher density than the given density(lt).
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_dens_less_than(2)
 geomaterials_dens_less_than<- function(lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),density_max = lt,...)
   df_out
@@ -380,13 +282,6 @@ geomaterials_dens_less_than<- function(lt,...){
 #' @details
 #' This function releated to the fields "density_min" and "density_max" of geomaterials.
 #' retrieve all the geomaterials records that has the density within an given range of (gt,lt).
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_dens_range(3,3.5)
 geomaterials_dens_range <- function(gt,lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),density_min = gt,density_max = lt,...)
   df_out
@@ -401,13 +296,6 @@ geomaterials_dens_range <- function(gt,lt,...){
 #' @details
 #' This function releated to the field "diapheny" of geomaterials.
 #' The diaphany of the mineral(Items Enum): "Opaque" "Translucent" "Transparent"
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_diapheny("Opaque")
 geomaterials_diapheny <- function(diapheny,...){
   if(length(diapheny)>1){
     df_out <- data.frame()
@@ -436,14 +324,6 @@ geomaterials_diapheny <- function(diapheny,...){
 #' Multiple choice:
 #' 0- mineral; 1-synonym; 2-variety; 3-mixture; 4-series; 5-grouplist; 6-polytype; 7-rock; 8-commodity
 #' Releated field: entrytype_text (description of the entrytype).
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_entrytype(c('1'))
-#' geomaterials_entrytype(c('1','2'))
 geomaterials_entrytype <- function(types,...){
   if(length(types)>1){
     df_out <- data.frame()
@@ -468,14 +348,6 @@ geomaterials_entrytype <- function(types,...){
 #' @details
 #' This function releated to the field "expand" of geomaterials.
 #' The field expand(Items Enum): "description" "type_localities" "localities" "relations" "~all" "*"
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_expand(c('description'))
-#' geomaterials_expand(c('type_localities','localities'))
 geomaterials_expand <- function(expanded_fields,...){
   if(length(expanded_fields)>1){
     df_out <- data.frame()
@@ -501,13 +373,6 @@ geomaterials_expand <- function(expanded_fields,...){
 #' @details
 #' This function releated to the field "fracturetype" of geomaterials.
 #' fracturetype(Items Enum): "Conchoidal" "Fibrous" "Hackly" "Irregular/Uneven" "Micaceous" "None observed" "Splintery" "Step-Like" "Sub-Conchoidal"
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_fracturetype(c('Conchoidal','Fibrous'))
 geomaterials_fracturetype <- function(types,...){
   if(length(types)>1){
     df_out <- data.frame()
@@ -533,13 +398,6 @@ geomaterials_fracturetype <- function(types,...){
 #' @details
 #' This function releated to the field "groupid" of geomaterials.
 #' retrieve all the geomaterials that match an given groupid.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_by_groupid(6)
 geomaterials_by_groupid<- function(gid,...){
 
   df_out <- mindat_geomaterial_list(ids = c(''),groupid = gid,...)
@@ -557,13 +415,6 @@ geomaterials_by_groupid<- function(gid,...){
 #' This function releated to the field "hardness_min" of geomaterials.
 #' retrieve all the geomaterials that has higher hardness than the given value(hmin).
 #' hmin:the given value of minimum Moh's hardness
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_hardness_gt(9)
 geomaterials_hardness_gt<- function(hmin,...){
 
   df_out <- mindat_geomaterial_list(ids = c(''),hardness_min = hmin,...)
@@ -581,13 +432,6 @@ geomaterials_hardness_gt<- function(hmin,...){
 #' This function releated to the field "hardness_max" of geomaterials.
 #' retrieve all the geomaterials that has lower hardness than an given value(hmax).
 #' hamx: maximum Moh's hardness
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_hardness_lt(1.5)
 geomaterials_hardness_lt<- function(hmax,...){
   df_out <- mindat_geomaterial_list(ids = c(''),hardness_max = hmax,...)
   df_out
@@ -606,13 +450,6 @@ geomaterials_hardness_lt<- function(hmax,...){
 #' retrieve all the geomaterials that has the hardness within an given range(hmin,hmax).
 #' hmin:the given value of minimum Moh's hardness
 #' hamx: maximum Moh's hardness
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_hardness_range(3,3.2)
 geomaterials_hardness_range<-function(hmin,hmax,...){
   df_out <- mindat_geomaterial_list(ids = c(''),hardness_min =hmin ,hardness_max = hmax,...)
   df_out
@@ -627,14 +464,6 @@ geomaterials_hardness_range<-function(hmin,hmax,...){
 #' @details
 #' This function releated to the field "ima" of geomaterials.
 #' retrieve all the geomaterials that are approved by the IMA or not.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_ima(TRUE)
-#' geomaterials_ima(FALSE)
 geomaterials_ima<- function(btrue =TRUE,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ima = btrue,...)
   df_out
@@ -655,8 +484,6 @@ geomaterials_ima<- function(btrue =TRUE,...){
 #' Unnamed (probably valid); Unnamed (probably invalid); Named Amphibole
 #'
 #' retrieve all the geomaterials that match the input IMA notes.
-#' @examples
-#' geomaterials_ima_notes("PUBLISHED_WITHOUT_APPROVAL")
 geomaterials_ima_notes<- function(enum_item,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ima_notes = enum_item,...)
   df_out
@@ -671,13 +498,6 @@ geomaterials_ima_notes<- function(enum_item,...){
 #' @details
 #' This function releated to the field "ima_status" of geomaterials.
 #' retrieve all the geomaterials that match the input IMA notes.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_ima_status("PENDING_PUBLICATION")
 geomaterials_ima_status<- function(enum_status,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ima_status = enum_status,...)
   df_out
@@ -692,15 +512,6 @@ geomaterials_ima_status<- function(enum_status,...){
 #' @details
 #' This function releated to the field "name" of geomaterials.
 #' retrieve all the geomaterials that match the input IMA notes.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_name("qu_rtz")
-#' geomaterials_name("qu*")
-
 geomaterials_name<- function(str_name,...){
   df_out <- mindat_geomaterial_list(ids = c(''),name = str_name,...)
   df_out
@@ -717,13 +528,6 @@ geomaterials_name<- function(str_name,...){
 #' This function releated to the field "meteoritical_code_exists" of geomaterials.
 #' Meteoritical code exists. Include non-empty (true) / include empty only (false).
 #' retrieve all the geomaterials that match the input str_meteoritical_code.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_meteoritical_code("TRUE")
 geomaterials_meteoritical_code<- function(str_meteoritical_code,...){
   df_out <- mindat_geomaterial_list(ids = c(''), meteoritical_code_exists = str_meteoritical_code,...)
   df_out
@@ -741,14 +545,6 @@ geomaterials_meteoritical_code<- function(str_meteoritical_code,...){
 #' lustretype(Items Enum): "Adamantine" "Dull" "Earthy" "Greasy" "Metallic" "Pearly" "Resinous" "Silky"
 #' "Sub-Adamantine" "Sub-Metallic" "Sub-Vitreous" "Vitreous" "Waxy"
 #' multiple choice (AND)
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_lustretype(c("Adamantine"))
-#' geomaterials_lustretype(c("Adamantine","Dull"))
 geomaterials_lustretype <- function(types,...){
   if(length(types)>1){
     df_out <- data.frame()
@@ -777,14 +573,6 @@ geomaterials_lustretype <- function(types,...){
 #' ordering=-id - sort by id descending. Prepend "-" to the field name for descending order.
 #' fields:"approval_year" "id" "minstats__ms_locentries" "minstats__ms_photos" "name" "updttime" "weighting".
 #' retrieve the geomaterials by an given ordering.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomeaterials_ordering("approval_year")
-#' geomeaterials_ordering("minstats__ms_photos")
 geomeaterials_ordering<- function(ord,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ordering = ord,...)
   df_out
@@ -801,13 +589,6 @@ geomeaterials_ordering<- function(ord,...){
 #' @details
 #' This function releated to the field "polytypeof" of geomaterials.
 #' retrieve the geomaterials with an given id of polytypeof.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_polytypeof(0) #geomaterials_polytypeof(3777)
 geomaterials_polytypeof<- function(ptype,...){
   df_out <- mindat_geomaterial_list(ids = c(''),polytypeof = ptype,...)
   df_out
@@ -826,13 +607,6 @@ geomaterials_polytypeof<- function(ptype,...){
 #' optical2vcalc2:The calculated 2V angle maximum of biaxial minerals
 #' optical2vmeasured:The measured 2V angle minimum or average of biaxial minerals
 #' optical2vmeasured2:The measured 2V angle maximum of biaxial minerals
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_optical2v_max(40)
 geomaterials_optical2v_max<- function(lt,...){
     df_out <- mindat_geomaterial_list(ids = c(''),optical2v_max = lt,...)
     df_out
@@ -851,13 +625,6 @@ geomaterials_optical2v_max<- function(lt,...){
 #' optical2vcalc2:The calculated 2V angle maximum of biaxial minerals
 #' optical2vmeasured:The measured 2V angle minimum or average of biaxial minerals
 #' optical2vmeasured2:The measured 2V angle maximum of biaxial minerals
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_optical2v_min(40)
 geomaterials_optical2v_min<- function(gt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),optical2v_min = gt,...)
   df_out
@@ -877,13 +644,6 @@ geomaterials_optical2v_min<- function(gt,...){
 #' optical2vcalc2:The calculated 2V angle maximum of biaxial minerals
 #' optical2vmeasured:The measured 2V angle minimum or average of biaxial minerals
 #' optical2vmeasured2:The measured 2V angle maximum of biaxial minerals
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_optical2v_range(40,60)
 geomaterials_optical2v_range<- function(gt,lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),optical2v_min = gt,optical2v_max = lt,...)
   df_out
@@ -901,13 +661,6 @@ geomaterials_optical2v_range<- function(gt,lt,...){
 #' @details
 #' This function releated to the field "opticalsign" of geomaterials.
 #' Optical sign: single choice (Enum): "+", "+/-", "-"
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_opticalsign("-")
 geomaterials_opticalsign<- function(signs,...){
   if(length(signs)>1){
     df_out <- data.frame()
@@ -934,13 +687,6 @@ geomaterials_opticalsign<- function(signs,...){
 #' This function releated to the field "opticaltype" of geomaterials.
 #' transparent mineral.
 #' opticaltype(Enum) :"Biaxial" "Isotropic" "Uniaxial"
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_opticaltype(c("Biaxial", "Isotropic"))
 geomaterials_opticaltype <- function(types,...){
   if(length(types)>1){
     df_out <- data.frame()
@@ -965,19 +711,10 @@ geomaterials_opticaltype <- function(types,...){
 #' @details
 #' This function releated to the field "non_utf" of geomaterials.
 #' retrieve the geomaterials that contain (or not contain) the non-utf name.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomeaterials_non_utf(TRUE)
 geomeaterials_non_utf<- function(btrue =TRUE,...){
   df_out <- mindat_geomaterial_list(ids = c(''),non_utf = btrue,...)
   df_out
 }
-
-
 
 #' retrieve the geomaterials that refractive index higher than an given value(gt).
 #' @description : Queries the geomaterials have the higher refractive index than an given value(gt).
@@ -988,13 +725,6 @@ geomeaterials_non_utf<- function(btrue =TRUE,...){
 #' @details
 #' This function releated to the field "ri_min" of geomaterials.
 #' retrieve the geomaterials with the refractive index higher than an given value(gt).
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_ri_gt(1.6)
 geomaterials_ri_gt <- function(gt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ri_min = gt,...)
   df_out
@@ -1009,13 +739,6 @@ geomaterials_ri_gt <- function(gt,...){
 #' @details
 #' This function releated to the field "ri_max" of geomaterials.
 #' retrieve the geomaterials with the refractive index lower than an given value(lt).
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_ri_lt(1.8)
 geomaterials_ri_lt <- function(lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ri_max = lt,...)
   df_out
@@ -1031,13 +754,6 @@ geomaterials_ri_lt <- function(lt,...){
 #' @details
 #' This function releated to the fields "ri_min" and "ri_max" of geomaterials.
 #' retrieve all the geomaterials that has the refractive index within the range of (gt,lt).
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_ri_range(1.7,1.8)
 geomaterials_ri_range <- function(gt,lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ri_min = gt,ri_max = lt,...)
   df_out
@@ -1053,13 +769,6 @@ geomaterials_ri_range <- function(gt,lt,...){
 #' This function releated to the fields "steak" of geomaterials.
 #' The color of the streak (color of powdered mineral).
 #' retrieve the geomaterials that has the given steak.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_streak("black")
 geomaterials_streak <- function(str,...){
   df_out <- mindat_geomaterial_list(ids = c(''),streak = str,...)
   df_out
@@ -1075,14 +784,6 @@ geomaterials_streak <- function(str,...){
 #' This function releated to the fields "synid" of geomaterials.
 #' The id of the geomaterial that is the synonym of this record (this geomaterial cannot be added to a locality).
 #' retrieve the geomaterials that has an given synid.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_synid(0)
-#' geomaterials_synid(2897)
 geomaterials_synid <- function(idnum,...){
   df_out <- mindat_geomaterial_list(ids = c(''),synid = idnum,...)
   df_out
@@ -1098,13 +799,6 @@ geomaterials_synid <- function(idnum,...){
 #' This function releated to the fields "updated_at" of geomaterials.
 #' Last updated datetime in format %Y-%m-%d %H:%M:%S
 #' retrieve the geomaterials that have the latest updated at the given time.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_updated_at("2022-03-09 01:13:59")
 geomaterials_updated_at <- function(strDate,...){
   df_out <- mindat_geomaterial_list(ids = c(''),updated_at = strDate,...)
   df_out
@@ -1120,13 +814,6 @@ geomaterials_updated_at <- function(strDate,...){
 #' This function releated to the fields "varietyof" of geomaterials.
 #' Varieties are geomaterials that have a special distinction from the main geomaterial ie. amethyst var. quartz
 #' retrieve the geomaterials that are varieties of an given id of geomaterials.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_varietyof(3777)
 geomaterials_varietyof<- function(intvalue,...){
   df_out <- mindat_geomaterial_list(ids = c(''),varietyof = intvalue,...)
   df_out
@@ -1141,13 +828,6 @@ geomaterials_varietyof<- function(intvalue,...){
 #' @details
 #' This function releated to the fields "name" of geomaterials.
 #' retrieve the geomaterial list that match the given name.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_search_name("Quartz")
 geomaterials_search_name<- function(name,...){
   df_out <- mindat_geomaterial_search(q = name,...)
   df_out
@@ -1165,13 +845,6 @@ geomaterials_search_name<- function(name,...){
 #' This function releated to all the fields of geomaterials.
 #' e.g. meteoritical_code_exists.Meteoritical code exists. Include non-empty (true) / include empty only (false)
 #' retrieve the geomaterial list with an empty or not empty of a given field.
-#' @examples
-#' library(httr)
-#' library(jsonlite)
-#' This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-#' mindat_connection(This_is_a_temporary_token)
-#'
-#' geomaterials_field_exists("meteoritical_code")
 geomaterials_field_exists<- function(fieldname,bexists,...){
   if (bexists == TRUE){
     filed_str<-paste(fieldname,'_exists=true',sep="")

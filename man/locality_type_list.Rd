@@ -18,7 +18,3 @@ retrieve all locality type list.
 \details{
 This function is to retrieve the locality types list.
 }
-\examples{
- locality_type_list()
- locality_type_list(fields = "id,name")
-}

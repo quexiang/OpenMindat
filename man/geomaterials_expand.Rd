@@ -21,12 +21,3 @@ df, a data frame of geomaterials
 This function releated to the field "expand" of geomaterials.
 The field expand(Items Enum): "description" "type_localities" "localities" "relations" "~all" "*"
 }
-\examples{
-library(httr)
-library(jsonlite)
-This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-mindat_connection(This_is_a_temporary_token)
-
-geomaterials_expand(c('description'))
-geomaterials_expand(c('type_localities','localities'))
-}

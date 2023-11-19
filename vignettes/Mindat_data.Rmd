@@ -16,58 +16,53 @@ knitr::opts_chunk$set(
 )
 ```
 
-## Mindat Info
-
-Note the various macros within the `vignette` section of the metadata block above. 
-
-## Basical Objects
-
-The `html_vignette` template includes a basic CSS theme. 
-    output: 
-      rmarkdown::html_vignette:
-        css: mystyles.css
-
-
-## Data structure
-
-datasets are data frames made up of **rows** and **columns**. The columns are almost always labeled and the rows are sometimes labeled. The following code provides some data about an IMA_minerals in a format commonly seen in the wild. The table has three columns and four rows, and both rows and columns are labeled.
-
+## Load libraries 
 ```{r}
-library(OpenMindat)
-
-
+#library(httr)
+#library(jsonlite)
+#library(OpenMindat)
+#library(tidyverse)
+#library(sf)
+#library(mapview)
 ```
 
-### Data semantics
-
-Some Descriptions 
-
-## Figures
-
-The figure sizes have been customised so that you can easily put two images side-by-side. 
-
-```{r, fig.show='hold'}
-#plot(1:10)
-
+## Connect to the Mindat API 
+```{r}
+#mindat_connection("3214e7170011236535c9a6e17d4ebd69", page_size = 1500)
 ```
 
-You can enable figure captions by `fig_caption: yes` in YAML:
+## Demo 1- Map the retieved Localities that contains As
+```{r}
+#mapview(localities_list_elems_inc(c("As")), xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)#"Dy","Li"
+```
 
-    output:
-      rmarkdown::html_vignette:
-        fig_caption: yes
 
-Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
+## Demo 2- Map the retieved Localities within an given country
+```{r}
+#mapview(localities_list_country(c("Sweden")), xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
+```
+
+## Demo 3- Map the retieved Localities that contains the input description. 
+```{r}
+#mapview(localities_list_description("volcano"), xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
+```
+
+## Demo 4- Map the retieved Localities that contains the input description. 
+```{r}
+#df_elements<-minerals_ima_list_ima(1)$type_localities
+#df_out <- data.frame()
+#for (elements in df_elements) {
+#  elm_id_list <- as.list(elements)
+#  for (elm in elm_id_list){
+#    df_cur_locality <- localities_retrieve_id(elm)
+#    df_out <- rbind(df_out,df_cur_locality)
+#  }
+#}
+#df_out$longitude <- as.numeric(df_out$longitude)
+#df_out$latitude <- as.numeric(df_out$latitude)
+#mapview(df_out2, xcol = "longitude", ycol = "latitude", crs = 4269, grid = FALSE)
+```
 
 ## More Examples
 
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
-
-```{r, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
-```
-
-Also a quote using `>`:
-
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))
+Please refer to: https://github.com/quexiang/OpenMindat

@@ -17,7 +17,3 @@ df, data frame of locality
 \description{
 retrieve locality by its id
 }
-\examples{
- mindat_localitiy(id = 222)
- mindat_localitiy(id = 222, fields = "id,name")
-}

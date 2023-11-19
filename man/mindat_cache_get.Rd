@@ -15,7 +15,3 @@ cached value. A string, list or other objects.
 \description{
 Retrieve the value of the cache named varname in current environment.
 }
-\examples{
-mindat_cache_get("api_test")
-mindat_cache_get("api_token")
-}

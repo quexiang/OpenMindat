@@ -15,7 +15,3 @@ df, data frame of mineral list.
 \description{
 retrieve ima mineral list
 }
-\examples{
- mindat_mineral_ima_list()
- mindat_mineral_ima_list(ids = c('3','5','7','9','222'))
-}

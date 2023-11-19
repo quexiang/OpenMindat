@@ -22,11 +22,3 @@ df, a data frame of geomaterials
 This function releated to the field "cleavagetype" of geomaterials.
 Items Enum: "Distinct/Good" "Imperfect/Fair" "None Observed" "Perfect" "Poor/Indistinct" "Very Good"
 }
-\examples{
-library(httr)
-library(jsonlite)
-This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6" #You should apply for and get your own token from Mindat.org.
-mindat_connection(This_is_a_temporary_token)
-
-geomaterials_cleavagetype(c('Perfect'))
-}

@@ -23,7 +23,3 @@ uri string
 \description{
 build a request uri based on .
 }
-\examples{
-build_uri("geomaterials","geomaterials/\%s",default_uri_builder,c(''))
-build_uri('minerals_ima_list', 'minerals_ima/\%s', uri_builder = mindat_uri_builder)
-}

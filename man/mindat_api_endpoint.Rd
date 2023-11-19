@@ -23,6 +23,3 @@ uri string
 \description{
 Setup up a api endpoint.
 }
-\examples{
-mindat_api_endpoint("geomaterials","geomaterials/\%s",default_uri_builder,c(''))
-}

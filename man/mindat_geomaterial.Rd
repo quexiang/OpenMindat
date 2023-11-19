@@ -17,6 +17,3 @@ df, data frame of locality type list
 \description{
 retrieve  geomaterial  by its id
 }
-\examples{
-mindat_geomaterial(id = 1)
-}

@@ -20,7 +20,3 @@ retrieve locality age by its id
 \details{
 This function releated to the fields "id" of locality_age and locality.
 }
-\examples{
- locality_age(id = 222)
- locality_age(id = 222, fields = "id,name")
-}

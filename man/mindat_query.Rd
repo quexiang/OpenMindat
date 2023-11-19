@@ -15,6 +15,3 @@ df query resutls in data frame format.
 \description{
 Basic function for query dataset at a specified endpoit.
 }
-\examples{
- mindat_query('minerals_ima', query = c(list(id = id)))
-}

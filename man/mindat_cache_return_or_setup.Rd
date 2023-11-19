@@ -17,6 +17,3 @@ If not, eval the function and return cached function.
 Check whether the current environment has the cached function named varname,if has, return it.
 if not, setup up a new cache function named varname.
 }
-\examples{
-mindat_cache_return_or_setup("end_point",function(){return (list())})
-}

@@ -12,7 +12,3 @@ mindat_cache_delete(varname)
 \description{
 Remove (clear) the cache named varname in current environment.
 }
-\examples{
-mindat_cache_delete("api_test")
-mindat_cache_delete("api_token")
-}

@@ -15,7 +15,3 @@ Boolean value. if the varname is found in current environment cache, return True
 \description{
 Check whether or not the current environment has the cache named varname.
 }
-\examples{
-mindat_cache_has("api_test")
-mindat_cache_has("api_token")
-}

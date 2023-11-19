@@ -21,6 +21,3 @@ Queries the list of localities that do not contain the given elements.
 This function releated to the field "elements_exc" of localities.
 This function queries the list of localities that do contain the specified elements.
 }
-\examples{
-localities_list_elems_exc(c('H','Be'))
-}

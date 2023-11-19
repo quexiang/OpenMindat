@@ -15,6 +15,3 @@ df. query resutls in data frame format.
 \description{
 retrieve ima mineral by its id.
 }
-\examples{
- mindat_mineral_ima(id = 6)
-}

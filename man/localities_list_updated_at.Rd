@@ -21,6 +21,3 @@ df, a data frame of localities
 This function releated to all the fields "updated_at" of localities.
 retrieve the localities that have the latest updated at the given time.
 }
-\examples{
-localities_list_updated_at("2022-03-09 01:13:59")
-}

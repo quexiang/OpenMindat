@@ -27,6 +27,3 @@ Unnamed (probably valid); Unnamed (probably invalid); Named Amphibole
 
 retrieve all the geomaterials that match the input IMA notes.
 }
-\examples{
-geomaterials_ima_notes("PUBLISHED_WITHOUT_APPROVAL")
-}

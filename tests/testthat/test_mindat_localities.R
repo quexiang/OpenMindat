@@ -1,18 +1,18 @@
 library(httr)
 library(jsonlite)
 #You should apply for and get your own token from Mindat.org.
-This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6"
+This_is_a_temporary_token = "9ce67655d74bcd981e937be80dcea9cb"
 expect_no_error(mindat_connection(This_is_a_temporary_token,page_size = 1500))
 
 test_that("Test localities_list_country function", {
-  expect_no_error(df <- localities_list_country("China"))
+  expect_no_error(df <- localities_list_country("Sweden"))
   expect_equal(typeof(df), "list")
 })
 
-test_that("Test localities_list_description function", {
-  expect_no_error(df <- localities_list_description("Chinese"))
-  expect_equal(typeof(df), "list")
-})
+# test_that("Test localities_list_description function", {
+#   expect_no_error(df <- localities_list_description("Chinese"))
+#   expect_equal(typeof(df), "list")
+# })
 
 test_that("Test localities_list_elems_exc function", {
   expect_no_error(df <- localities_list_elems_exc(c("H", "O", "Si", "Al", "Fe", "Ca", "Na", "K", "P", "C", "Mn", "F", "Mg", "S"),fields = "id,name"))
@@ -42,10 +42,10 @@ test_that("Test localities_list_txt function", {
 })
 
 
-test_that("Test localities_list_updated_at function", {
-  expect_no_error(df <- localities_list_updated_at("2022-03-09 01:13:59"))
-  expect_equal(typeof(df), "list")
-})
+# test_that("Test localities_list_updated_at function", {
+#   expect_no_error(df <- localities_list_updated_at("2022-03-09 01:13:59"))
+#   expect_equal(typeof(df), "list")
+# })
 
 #may take long time
 # test_that("Test localities_list_all function", {

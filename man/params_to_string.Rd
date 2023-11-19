@@ -15,6 +15,3 @@ str .
 \description{
 Prase params to string,so that the query function can deal with the other exteranl condition set by the users.
 }
-\examples{
- params_to_string(params)
-}

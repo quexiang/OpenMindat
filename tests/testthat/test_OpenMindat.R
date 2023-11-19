@@ -1,5 +1,5 @@
 #You should apply for and get your own token from Mindat.org.
-This_is_a_temporary_token = "2082edf7b8dab2b9887f3c2393e822c6"
+This_is_a_temporary_token = "9ce67655d74bcd981e937be80dcea9cb"
 
 test_that("Initializing Mindat API with only token", {
   expect_no_error(mindat_connection(This_is_a_temporary_token))
