@@ -10,6 +10,7 @@
 #' @return df, a data frame of geomaterials list.
 #' @details
 #' This function releated to the field "elements_inc" of geomaterials.
+#' @export
 geomaterials_contain_all_elems<- function(icl_elms_vector,...){
   df <- mindat_geomaterial_list(ids = c(''),elements_inc = icl_elms_vector,...)
   df
@@ -23,6 +24,7 @@ geomaterials_contain_all_elems<- function(icl_elms_vector,...){
 #' @return df, a data frame of geomaterials list.
 #' @details
 #' This function releated to the field "elements_exc" of geomaterials.
+#' @export
 geomaterials_not_contain_elems <- function(ecl_elms_vector,...){
   df <- mindat_geomaterial_list(ids = c(''),elements_exc = ecl_elms_vector,...)
   df
@@ -41,6 +43,7 @@ geomaterials_not_contain_elems <- function(ecl_elms_vector,...){
 #' This function queries the list of geological materials that contain an given list of elements (icl_elm_vector),
 #' but not contain the other list of elements (ecl_elms_vector).
 #' It performs the query operation by calling the mindat_geomaterial_list function.
+#' @export
 geomaterials_contain_all_but_not_elems <- function(icl_elm_vector,ecl_elms_vector,...){
   df <- mindat_geomaterial_list(ids = c(''),elements_inc = icl_elm_vector,elements_exc = ecl_elms_vector,...)
   df
@@ -56,6 +59,7 @@ geomaterials_contain_all_but_not_elems <- function(icl_elm_vector,ecl_elms_vecto
 #' This function releated to the field "elements_inc" of geomaterials.
 #' This function queries the list of geological materials that contain any element of an given list (any_elems).
 #' It performs the query operation by looping through each given element and calling the mindat_geomaterial_list function.
+#' @export
 geomaterials_contain_any_elems <- function(any_elems,...){
   df_out <- data.frame()
   for (elem in any_elems){
@@ -76,6 +80,7 @@ geomaterials_contain_any_elems <- function(any_elems,...){
 #' This function releated to the field "elements_inc" of geomaterials.
 #' This function queries the list of geological materials that contain any element of an given list (any_elems).
 #' It performs the query operation by looping through each given element and calling the mindat_geomaterial_list function.
+#' @export
 geomaterials_contain_any_but_not_elems <- function(any_elems_vector,ecl_elms_vector,...){
   df_out <- data.frame()
   for (elem in any_elems_vector){
@@ -100,6 +105,7 @@ geomaterials_contain_any_but_not_elems <- function(any_elems_vector,ecl_elms_vec
 #' 'Sb', 'Te', 'I', 'Cs',Ba', 'La', 'Ce', 'Nd', 'Sm', 'Gd', 'Dy', 'Er','Yb', 'Hf', 'Ta', 'W', 'Re', 'Os',
 #' 'Ir', 'Pt', 'Au','Hg','Tl', 'Pb', 'Bi', 'Th', 'U'
 #'  It performs the query operation by calling the mindat_geomaterial_list function
+#'  @export
 geomaterials_contain_only_elems<- function(icl_only_elms_vector,...){
   all_mineral_vector <- c('H','Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Na', 'Mg', 'Al','Si', 'P', 'S','Cl',
      'K', 'Ca', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge','As','Se', 'Br',
@@ -122,6 +128,7 @@ geomaterials_contain_only_elems<- function(icl_only_elms_vector,...){
 #' @details
 #' This function releated to the field "cleavagetype" of geomaterials.
 #' Items Enum: "Distinct/Good" "Imperfect/Fair" "None Observed" "Perfect" "Poor/Indistinct" "Very Good"
+#' @export
 geomaterials_cleavagetype <- function(types,...){
   if(length(types)>1){
     # merge_types<- paste(types,"&",sep = "",collapse ='')
@@ -150,6 +157,7 @@ geomaterials_cleavagetype <- function(types,...){
 #' @details
 #' This function releated to the field "colour" of geomaterials.
 #' For example: "Brown", "Yellow", "green", "Pink","White","Orange","Blue","Gold","Dark brown","Purple".
+#' @export
 geomaterials_colour<- function(colors,...){
   if(length(colors)>1){
     df_out <- data.frame()
@@ -176,6 +184,7 @@ geomaterials_colour<- function(colors,...){
 #' @details
 #' This function releated to the field "crystal_system" of geomaterials.
 #' Items Enum: "Amorphous" "Hexagonal" "Icosahedral" "Isometric" "Monoclinic" "Orthorhombic" "Tetragonal" "Triclinic" "Trigonal"
+#' @export
 geomaterials_crystal_system <- function(crystals,...){
   if(length(crystals)>1){
     df_out <- data.frame()
@@ -200,6 +209,7 @@ geomaterials_crystal_system <- function(crystals,...){
 #' @details
 #' This function releated to the field "bi_min" of geomaterials.
 #' retrieve all the geomaterials that has higher birifrigence than the given value(gt).
+#' @export
 geomaterials_bi_greater_than<- function(gt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),bi_min = gt,...)
   df_out
@@ -214,6 +224,7 @@ geomaterials_bi_greater_than<- function(gt,...){
 #' @details
 #' This function releated to the field "bi_max" of geomaterials.
 #' retrieve all the geomaterials that has higher birifrigence than the given value(lt).
+#' @export
 geomaterials_bi_less_than<- function(lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),bi_max = lt,...)
   df_out
@@ -229,6 +240,7 @@ geomaterials_bi_less_than<- function(lt,...){
 #' @details
 #' This function releated to the fields "bi_min"and "bi_max" of geomaterials.
 #' retrieve all the geomaterials that has the birifrigence within the given range of (gt,lt).
+#' @export
 geomaterials_bi_range <- function(gt,lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),bi_min = gt,bi_max = lt,...)
   df_out
@@ -247,6 +259,7 @@ geomaterials_bi_range <- function(gt,lt,...){
 #' @details
 #' This function releated to the field "density_min" of geomaterials.
 #' retrieve all the geomaterials that has higher density than the given density(gt).
+#' @export
 geomaterials_dens_greater_than<- function(gt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),density_min = gt,...)
   df_out
@@ -264,6 +277,7 @@ geomaterials_dens_greater_than<- function(gt,...){
 #' @details
 #' This function releated to the field "density_max" of geomaterials.
 #' retrieve all the geomaterials that has higher density than the given density(lt).
+#' @export
 geomaterials_dens_less_than<- function(lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),density_max = lt,...)
   df_out
@@ -282,6 +296,7 @@ geomaterials_dens_less_than<- function(lt,...){
 #' @details
 #' This function releated to the fields "density_min" and "density_max" of geomaterials.
 #' retrieve all the geomaterials records that has the density within an given range of (gt,lt).
+#' @export
 geomaterials_dens_range <- function(gt,lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),density_min = gt,density_max = lt,...)
   df_out
@@ -296,6 +311,7 @@ geomaterials_dens_range <- function(gt,lt,...){
 #' @details
 #' This function releated to the field "diapheny" of geomaterials.
 #' The diaphany of the mineral(Items Enum): "Opaque" "Translucent" "Transparent"
+#' @export
 geomaterials_diapheny <- function(diapheny,...){
   if(length(diapheny)>1){
     df_out <- data.frame()
@@ -324,6 +340,7 @@ geomaterials_diapheny <- function(diapheny,...){
 #' Multiple choice:
 #' 0- mineral; 1-synonym; 2-variety; 3-mixture; 4-series; 5-grouplist; 6-polytype; 7-rock; 8-commodity
 #' Releated field: entrytype_text (description of the entrytype).
+#' @export
 geomaterials_entrytype <- function(types,...){
   if(length(types)>1){
     df_out <- data.frame()
@@ -348,6 +365,7 @@ geomaterials_entrytype <- function(types,...){
 #' @details
 #' This function releated to the field "expand" of geomaterials.
 #' The field expand(Items Enum): "description" "type_localities" "localities" "relations" "~all" "*"
+#' @export
 geomaterials_expand <- function(expanded_fields,...){
   if(length(expanded_fields)>1){
     df_out <- data.frame()
@@ -373,6 +391,7 @@ geomaterials_expand <- function(expanded_fields,...){
 #' @details
 #' This function releated to the field "fracturetype" of geomaterials.
 #' fracturetype(Items Enum): "Conchoidal" "Fibrous" "Hackly" "Irregular/Uneven" "Micaceous" "None observed" "Splintery" "Step-Like" "Sub-Conchoidal"
+#' @export
 geomaterials_fracturetype <- function(types,...){
   if(length(types)>1){
     df_out <- data.frame()
@@ -398,6 +417,7 @@ geomaterials_fracturetype <- function(types,...){
 #' @details
 #' This function releated to the field "groupid" of geomaterials.
 #' retrieve all the geomaterials that match an given groupid.
+#' @export
 geomaterials_by_groupid<- function(gid,...){
 
   df_out <- mindat_geomaterial_list(ids = c(''),groupid = gid,...)
@@ -415,6 +435,7 @@ geomaterials_by_groupid<- function(gid,...){
 #' This function releated to the field "hardness_min" of geomaterials.
 #' retrieve all the geomaterials that has higher hardness than the given value(hmin).
 #' hmin:the given value of minimum Moh's hardness
+#' @export
 geomaterials_hardness_gt<- function(hmin,...){
 
   df_out <- mindat_geomaterial_list(ids = c(''),hardness_min = hmin,...)
@@ -432,6 +453,7 @@ geomaterials_hardness_gt<- function(hmin,...){
 #' This function releated to the field "hardness_max" of geomaterials.
 #' retrieve all the geomaterials that has lower hardness than an given value(hmax).
 #' hamx: maximum Moh's hardness
+#' @export
 geomaterials_hardness_lt<- function(hmax,...){
   df_out <- mindat_geomaterial_list(ids = c(''),hardness_max = hmax,...)
   df_out
@@ -450,6 +472,7 @@ geomaterials_hardness_lt<- function(hmax,...){
 #' retrieve all the geomaterials that has the hardness within an given range(hmin,hmax).
 #' hmin:the given value of minimum Moh's hardness
 #' hamx: maximum Moh's hardness
+#' @export
 geomaterials_hardness_range<-function(hmin,hmax,...){
   df_out <- mindat_geomaterial_list(ids = c(''),hardness_min =hmin ,hardness_max = hmax,...)
   df_out
@@ -464,6 +487,7 @@ geomaterials_hardness_range<-function(hmin,hmax,...){
 #' @details
 #' This function releated to the field "ima" of geomaterials.
 #' retrieve all the geomaterials that are approved by the IMA or not.
+#' @export
 geomaterials_ima<- function(btrue =TRUE,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ima = btrue,...)
   df_out
@@ -484,6 +508,7 @@ geomaterials_ima<- function(btrue =TRUE,...){
 #' Unnamed (probably valid); Unnamed (probably invalid); Named Amphibole
 #'
 #' retrieve all the geomaterials that match the input IMA notes.
+#' @export
 geomaterials_ima_notes<- function(enum_item,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ima_notes = enum_item,...)
   df_out
@@ -498,6 +523,7 @@ geomaterials_ima_notes<- function(enum_item,...){
 #' @details
 #' This function releated to the field "ima_status" of geomaterials.
 #' retrieve all the geomaterials that match the input IMA notes.
+#' @export
 geomaterials_ima_status<- function(enum_status,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ima_status = enum_status,...)
   df_out
@@ -512,6 +538,7 @@ geomaterials_ima_status<- function(enum_status,...){
 #' @details
 #' This function releated to the field "name" of geomaterials.
 #' retrieve all the geomaterials that match the input IMA notes.
+#' @export
 geomaterials_name<- function(str_name,...){
   df_out <- mindat_geomaterial_list(ids = c(''),name = str_name,...)
   df_out
@@ -528,6 +555,7 @@ geomaterials_name<- function(str_name,...){
 #' This function releated to the field "meteoritical_code_exists" of geomaterials.
 #' Meteoritical code exists. Include non-empty (true) / include empty only (false).
 #' retrieve all the geomaterials that match the input str_meteoritical_code.
+#' @export
 geomaterials_meteoritical_code<- function(str_meteoritical_code,...){
   df_out <- mindat_geomaterial_list(ids = c(''), meteoritical_code_exists = str_meteoritical_code,...)
   df_out
@@ -545,6 +573,7 @@ geomaterials_meteoritical_code<- function(str_meteoritical_code,...){
 #' lustretype(Items Enum): "Adamantine" "Dull" "Earthy" "Greasy" "Metallic" "Pearly" "Resinous" "Silky"
 #' "Sub-Adamantine" "Sub-Metallic" "Sub-Vitreous" "Vitreous" "Waxy"
 #' multiple choice (AND)
+#' @export
 geomaterials_lustretype <- function(types,...){
   if(length(types)>1){
     df_out <- data.frame()
@@ -573,6 +602,7 @@ geomaterials_lustretype <- function(types,...){
 #' ordering=-id - sort by id descending. Prepend "-" to the field name for descending order.
 #' fields:"approval_year" "id" "minstats__ms_locentries" "minstats__ms_photos" "name" "updttime" "weighting".
 #' retrieve the geomaterials by an given ordering.
+#' @export
 geomeaterials_ordering<- function(ord,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ordering = ord,...)
   df_out
@@ -589,6 +619,7 @@ geomeaterials_ordering<- function(ord,...){
 #' @details
 #' This function releated to the field "polytypeof" of geomaterials.
 #' retrieve the geomaterials with an given id of polytypeof.
+#' @export
 geomaterials_polytypeof<- function(ptype,...){
   df_out <- mindat_geomaterial_list(ids = c(''),polytypeof = ptype,...)
   df_out
@@ -607,6 +638,7 @@ geomaterials_polytypeof<- function(ptype,...){
 #' optical2vcalc2:The calculated 2V angle maximum of biaxial minerals
 #' optical2vmeasured:The measured 2V angle minimum or average of biaxial minerals
 #' optical2vmeasured2:The measured 2V angle maximum of biaxial minerals
+#' @export
 geomaterials_optical2v_max<- function(lt,...){
     df_out <- mindat_geomaterial_list(ids = c(''),optical2v_max = lt,...)
     df_out
@@ -625,6 +657,7 @@ geomaterials_optical2v_max<- function(lt,...){
 #' optical2vcalc2:The calculated 2V angle maximum of biaxial minerals
 #' optical2vmeasured:The measured 2V angle minimum or average of biaxial minerals
 #' optical2vmeasured2:The measured 2V angle maximum of biaxial minerals
+#' @export
 geomaterials_optical2v_min<- function(gt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),optical2v_min = gt,...)
   df_out
@@ -644,6 +677,7 @@ geomaterials_optical2v_min<- function(gt,...){
 #' optical2vcalc2:The calculated 2V angle maximum of biaxial minerals
 #' optical2vmeasured:The measured 2V angle minimum or average of biaxial minerals
 #' optical2vmeasured2:The measured 2V angle maximum of biaxial minerals
+#' @export
 geomaterials_optical2v_range<- function(gt,lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),optical2v_min = gt,optical2v_max = lt,...)
   df_out
@@ -661,6 +695,7 @@ geomaterials_optical2v_range<- function(gt,lt,...){
 #' @details
 #' This function releated to the field "opticalsign" of geomaterials.
 #' Optical sign: single choice (Enum): "+", "+/-", "-"
+#' @export
 geomaterials_opticalsign<- function(signs,...){
   if(length(signs)>1){
     df_out <- data.frame()
@@ -687,6 +722,7 @@ geomaterials_opticalsign<- function(signs,...){
 #' This function releated to the field "opticaltype" of geomaterials.
 #' transparent mineral.
 #' opticaltype(Enum) :"Biaxial" "Isotropic" "Uniaxial"
+#' @export
 geomaterials_opticaltype <- function(types,...){
   if(length(types)>1){
     df_out <- data.frame()
@@ -711,6 +747,7 @@ geomaterials_opticaltype <- function(types,...){
 #' @details
 #' This function releated to the field "non_utf" of geomaterials.
 #' retrieve the geomaterials that contain (or not contain) the non-utf name.
+#' @export
 geomeaterials_non_utf<- function(btrue =TRUE,...){
   df_out <- mindat_geomaterial_list(ids = c(''),non_utf = btrue,...)
   df_out
@@ -725,6 +762,7 @@ geomeaterials_non_utf<- function(btrue =TRUE,...){
 #' @details
 #' This function releated to the field "ri_min" of geomaterials.
 #' retrieve the geomaterials with the refractive index higher than an given value(gt).
+#' @export
 geomaterials_ri_gt <- function(gt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ri_min = gt,...)
   df_out
@@ -739,6 +777,7 @@ geomaterials_ri_gt <- function(gt,...){
 #' @details
 #' This function releated to the field "ri_max" of geomaterials.
 #' retrieve the geomaterials with the refractive index lower than an given value(lt).
+#' @export
 geomaterials_ri_lt <- function(lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ri_max = lt,...)
   df_out
@@ -754,6 +793,7 @@ geomaterials_ri_lt <- function(lt,...){
 #' @details
 #' This function releated to the fields "ri_min" and "ri_max" of geomaterials.
 #' retrieve all the geomaterials that has the refractive index within the range of (gt,lt).
+#' @export
 geomaterials_ri_range <- function(gt,lt,...){
   df_out <- mindat_geomaterial_list(ids = c(''),ri_min = gt,ri_max = lt,...)
   df_out
@@ -769,6 +809,7 @@ geomaterials_ri_range <- function(gt,lt,...){
 #' This function releated to the fields "steak" of geomaterials.
 #' The color of the streak (color of powdered mineral).
 #' retrieve the geomaterials that has the given steak.
+#' @export
 geomaterials_streak <- function(str,...){
   df_out <- mindat_geomaterial_list(ids = c(''),streak = str,...)
   df_out
@@ -784,6 +825,7 @@ geomaterials_streak <- function(str,...){
 #' This function releated to the fields "synid" of geomaterials.
 #' The id of the geomaterial that is the synonym of this record (this geomaterial cannot be added to a locality).
 #' retrieve the geomaterials that has an given synid.
+#' @export
 geomaterials_synid <- function(idnum,...){
   df_out <- mindat_geomaterial_list(ids = c(''),synid = idnum,...)
   df_out
@@ -799,6 +841,7 @@ geomaterials_synid <- function(idnum,...){
 #' This function releated to the fields "updated_at" of geomaterials.
 #' Last updated datetime in format %Y-%m-%d %H:%M:%S
 #' retrieve the geomaterials that have the latest updated at the given time.
+#' @export
 geomaterials_updated_at <- function(strDate,...){
   df_out <- mindat_geomaterial_list(ids = c(''),updated_at = strDate,...)
   df_out
@@ -814,6 +857,7 @@ geomaterials_updated_at <- function(strDate,...){
 #' This function releated to the fields "varietyof" of geomaterials.
 #' Varieties are geomaterials that have a special distinction from the main geomaterial ie. amethyst var. quartz
 #' retrieve the geomaterials that are varieties of an given id of geomaterials.
+#' @export
 geomaterials_varietyof<- function(intvalue,...){
   df_out <- mindat_geomaterial_list(ids = c(''),varietyof = intvalue,...)
   df_out
@@ -828,6 +872,7 @@ geomaterials_varietyof<- function(intvalue,...){
 #' @details
 #' This function releated to the fields "name" of geomaterials.
 #' retrieve the geomaterial list that match the given name.
+#' @export
 geomaterials_search_name<- function(name,...){
   df_out <- mindat_geomaterial_search(q = name,...)
   df_out
@@ -845,6 +890,7 @@ geomaterials_search_name<- function(name,...){
 #' This function releated to all the fields of geomaterials.
 #' e.g. meteoritical_code_exists.Meteoritical code exists. Include non-empty (true) / include empty only (false)
 #' retrieve the geomaterial list with an empty or not empty of a given field.
+#' @export
 geomaterials_field_exists<- function(fieldname,bexists,...){
   if (bexists == TRUE){
     filed_str<-paste(fieldname,'_exists=true',sep="")

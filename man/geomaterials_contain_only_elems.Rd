@@ -26,4 +26,5 @@ Here is a list of all elements that can make up geomaterials:'H','Li', 'Be', 'B'
 'Sb', 'Te', 'I', 'Cs',Ba', 'La', 'Ce', 'Nd', 'Sm', 'Gd', 'Dy', 'Er','Yb', 'Hf', 'Ta', 'W', 'Re', 'Os',
 'Ir', 'Pt', 'Au','Hg','Tl', 'Pb', 'Bi', 'Th', 'U'
 It performs the query operation by calling the mindat_geomaterial_list function
+@export
 }

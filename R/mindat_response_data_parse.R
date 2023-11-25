@@ -9,6 +9,7 @@ usethis::use_import_from("httr", "GET")
 #' @usage mindat_make_data_frame (reg_list)
 #' @param reg_list response json data to list format obj.
 #' @return df_out, R data frame
+#' @export
 mindat_make_data_frame<-function(reg_list){
   if (is.list(reg_list)){
     #df_out <- data.frame(reg_list)
@@ -41,6 +42,7 @@ mindat_make_data_frame<-function(reg_list){
 #' @usage mindat_parse_raw_data (raw_data)
 #' @param raw_data content of the response body
 #' @return df_out, R data frame
+#' @export
 mindat_parse_raw_data<-function(raw_data){
   data_list <- fromJSON(raw_data)
   if ("results" %in% names(data_list) ){
@@ -78,6 +80,7 @@ mindat_parse_raw_data<-function(raw_data){
 #' @param response response json
 #' @return if status of the response is sucess (200),return the all_data_text(the content of response).
 #' Otherwise,report the errors.
+#' @export
 mindat_extract_response_body<-function(response){
   if (200 == status_code(response)){
     # Content in the API
@@ -95,6 +98,7 @@ mindat_extract_response_body<-function(response){
 #' @usage mindat_get_data_from_uri (uri)
 #' @param uri request uri
 #' @return df. R data frame of the request uri.
+#' @export
 mindat_get_data_from_uri<-function(uri){
   if(mindat_cache_has('api_token')){
     api_token <- mindat_cache_get('api_token')
@@ -112,6 +116,7 @@ mindat_get_data_from_uri<-function(uri){
 #' @usage mindat_build_querystring (args)
 #' @param args query args.
 #' @return qs. generated query string.
+#' @export
 mindat_build_querystring<-function(args){
   qs <- ''
   for (argName in names(args)) {

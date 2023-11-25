@@ -11,13 +11,22 @@ Mindat and University of Idaho collaborate on '[OpenMindat](https://www.mindat.o
 
 **Install and load necessary packages**
 
-This package can be installed directly through devtools:
+This package can be installed directly through the `remotes` package:
+
+```coffee
+install.packages("remotes")
+remotes::install_github("quexiang/OpenMindat")
+```
+
+
+Or through devtools:
 
 ```coffee
 install.packages("devtools")
 library("devtools")
 install_github("quexiang/OpenMindat")
 ```
+
 Or download the source code locally and install it as follows:
 
   1. Download all the source codes and Open the OpenMindat.Rproj with RStudio.

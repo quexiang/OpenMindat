@@ -7,6 +7,7 @@
 #' @return df, data frame of minerals.
 #' @details
 #' This function is to retrieve the IMA minerals list.
+#' @export
 minerals_ima_list<- function(...){
   df_out <- mindat_mineral_ima_list(...)
   df_out
@@ -21,6 +22,7 @@ minerals_ima_list<- function(...){
 #' @details
 #' This function is related to the filed "expand" of ima mineral.
 #' Items Enum: "~all" "*"
+#' @export
 minerals_ima_list_expand <- function(expand,...){
   query_expand <- c(expand, list(...))
   df_out <-mindat_mineral_ima_list(ids = c(''),expand = query_expand)
@@ -37,6 +39,7 @@ minerals_ima_list_expand <- function(expand,...){
 #' This function is related to the filed "ima" of ima minerals.
 #' Integer. 0: "PENDING_PUBLICATION"
 #'          1: "APPROVED"
+#' @export
 minerals_ima_list_ima<- function(intValue,...){
   df_out <-mindat_mineral_ima_list(ids = c(''),ima = intValue,...)
   df_out
@@ -64,6 +67,7 @@ minerals_ima_updated_at <- function(updateDate,...){
 #' @return df, data frame of ima mineral by a given id.
 #' @details
 #' This function is related to the filed "id" of ima minerals.
+#' @export
 minerals_ima_retrieve <- function(id,...){
   df_out <- mindat_mineral_ima(id,...)
   df_out

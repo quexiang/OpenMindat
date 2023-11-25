@@ -35,6 +35,7 @@
 #' "Turks And Caicos Islands" "Tuvalu" "U.S. Virgin Islands" "Uganda" "Ukraine" "United Arab Emirates" "United Kingdom"
 #' "United States" "Uruguay" "Uzbekistan" "Vanuatu (Republic of Vanuatu; New Hebrides) " "Venezuela" "Vietnam" "Western Sahara"
 #' "Western Samoa" "Yemen" "Zambia" "Zimbabwe"
+#' @export
 localities_list_country<- function(country,...){
   df_out <- mindat_localities_list(ids = c(''),country = country,...)
   df_out
@@ -49,6 +50,7 @@ localities_list_country<- function(country,...){
 #' @details
 #' This function releated to all the field "description" of localities.
 #' retrieve the localities that contain the given description
+#' @export
 localities_list_description<- function(desc,...){
   df_out <- mindat_localities_list(ids = c(''),description = desc,...)
   df_out
@@ -63,6 +65,7 @@ localities_list_description<- function(desc,...){
 #' @details
 #' This function releated to the field "elements_exc" of localities.
 #' This function queries the list of localities that do contain the specified elements.
+#' @export
 localities_list_elems_exc<- function(exc_elems_list,...){
   df_out <- mindat_localities_list(ids = c(''),elements_exc = exc_elems_list,...)
   df_out
@@ -77,6 +80,7 @@ localities_list_elems_exc<- function(exc_elems_list,...){
 #' @details
 #' This function releated to the field "elements_inc" of localities.
 #' This function queries the list of localities that contain the given elements.
+#' @export
 localities_list_elems_inc<- function(inc_elems_list,...){
   df_out <- mindat_localities_list(ids = c(''),elements_inc = inc_elems_list,...)
   df_out
@@ -92,6 +96,7 @@ localities_list_elems_inc<- function(inc_elems_list,...){
 #' @details
 #' This function releated to the fields "elements_inc" and "elements_exc" of localities.
 #' This function queries the list of localities that contain the given elements,but not contain some other given elements.
+#' @export
 localities_list_elems_inc_exc <-function(inc_elems_list,exc_elems_list,...){
   df_out <- mindat_localities_list(ids = c(''),elements_inc = inc_elems_list, elements_exc = exc_elems_list,...)
   df_out
@@ -108,6 +113,7 @@ localities_list_elems_inc_exc <-function(inc_elems_list,exc_elems_list,...){
 #' This function releated to the fields "expand" of localities.
 #' Items Enum: "geomaterials" "~all" "*"
 #' This function queries the list of localities that contain the given expands.
+#' @export
 localities_list_expand <-function(expands,...){
   df_out <- mindat_localities_list(ids = c(''), expand = expands,...)
   df_out
@@ -122,6 +128,7 @@ localities_list_expand <-function(expands,...){
 #' @details
 #' This function releated to the fields "txt" of localities.
 #' This function queries the list of localities that contain the given txt name.
+#' @export
 localities_list_txt <-function(txt,...){
   df_out <- mindat_localities_list(ids = c(''),txt = txt,...)
   df_out
@@ -136,6 +143,7 @@ localities_list_txt <-function(txt,...){
 #' @details
 #' This function releated to all the fields "updated_at" of localities.
 #' retrieve the localities that have the latest updated at the given time.
+#' @export
 localities_list_updated_at<-function(updateDate,...){
   df_out <- mindat_localities_list(ids = c(''),updated_at = updateDate,...)
   df_out
@@ -149,6 +157,7 @@ localities_list_updated_at<-function(updateDate,...){
 #' @details
 #' This function releated to  the fields "ids" of localities.
 #' retrieve all the localities.
+#' @export
 localities_list_all<-function(...){
   df_out <- mindat_localities_list(ids = c(''),...)
   df_out
@@ -163,6 +172,7 @@ localities_list_all<-function(...){
 #' @details
 #' This function releated to all the fields "id" of localities.
 #' retrieve the localities by a given id.
+#' @export
 localities_retrieve_id<-function(id,...){
   df_out <- mindat_localitiy(id,...)
   df_out
@@ -177,6 +187,7 @@ localities_retrieve_id<-function(id,...){
 #' @return df, data frame of locality age.
 #' @details
 #' This function releated to the fields "id" of locality_age and locality.
+#' @export
 locality_age<-function(id,...){
   l<-list(...)
   mindat_query('locality_age', query = c(list(id = id), l))
@@ -190,6 +201,7 @@ locality_age<-function(id,...){
 #' @return df, data frame of locality age.
 #' @details
 #' This function is to retrieve all the locality_age list.
+#' @export
 locality_age_list<-function(...){
   l<-list(...)
   mindat_query('locality_age_list', query = l)
@@ -203,6 +215,7 @@ locality_age_list<-function(...){
 #' @return df, data frame of locality status
 #' @details
 #' This function is to retrieve all the locality_status list.
+#' @export
 localities_status_list <-function(...){
   df_out <- mindat_locality_status_list(...)
   df_out
@@ -216,6 +229,7 @@ localities_status_list <-function(...){
 #' @return df, data frame of locality status.
 #' @details
 #' This function is to retrieve the locality_status by an given id of locality.
+#' @export
 localities_status_retrieve<- function(id,...){
   df_out <- mindat_locality_status(id,...)
   df_out
@@ -229,6 +243,7 @@ localities_status_retrieve<- function(id,...){
 #' @return df, data frame of locality status.
 #' @details
 #'  This function is to retrieve the locality types by an given id of locality.
+#'  @export
 localitiy_type_retrieve<- function(id,...){
   df_out <- mindat_locality_type(id,...)
   df_out
@@ -241,6 +256,7 @@ localitiy_type_retrieve<- function(id,...){
 #' @return df, data frame of locality type.
 #' @details
 #' This function is to retrieve the locality types list.
+#' @export
 locality_type_list <- function(...){
   df_out <- mindat_locality_type_list(...)
   df_out

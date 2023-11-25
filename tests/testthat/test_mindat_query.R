@@ -19,8 +19,7 @@ test_that("Test params_to_string function", {
 
 
 test_that("Test mindat_mineral_ima function", {
-  test_base_token =  #Your_token
-  expect_no_error(mindat_connection(test_base_token))
+  #expect_no_error(mindat_connection(This_is_a_temporary_token))
   expect_no_error(df <- mindat_mineral_ima(1))
   expect_equal(typeof(df), "list")
 })

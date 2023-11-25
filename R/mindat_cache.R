@@ -8,6 +8,7 @@ mindat_cache <- new.env()
 #' @usage mindat_cache_set(varname, value)
 #' @param varname  string. The cached varname.
 #' @param value  string.
+#' @export
 mindat_cache_set<-function(varname, value)
 {
   assign(varname, value, envir = mindat_cache)
@@ -18,6 +19,7 @@ mindat_cache_set<-function(varname, value)
 #' @usage mindat_cache_get(varname)
 #' @param varname  string
 #' @returns cached value. A string, list or other objects.
+#' @export
 mindat_cache_get<-function(varname)
 {
   return (get(varname, envir=mindat_cache))
@@ -27,6 +29,7 @@ mindat_cache_get<-function(varname)
 #' @description Remove (clear) the cache named varname in current environment.
 #' @usage mindat_cache_delete(varname)
 #' @param varname string input a cached name.Set a cached value empty by the given varname. A string, list or other objects.
+#' @export
 mindat_cache_delete<-function(varname)
 {
   assign(varname, NULL, envir = mindat_cache)
@@ -35,6 +38,7 @@ mindat_cache_delete<-function(varname)
 #' Remove all cached values
 #' @description Clear all current cached values. Set current environment cache empty.
 #' @usage mindt_cache_empty()
+#' @export
 mindat_cache_empty<-function(){
   rm(list = ls(envir = mindat_cache))
 }
@@ -44,6 +48,7 @@ mindat_cache_empty<-function(){
 #' @usage mindat_cache_has(varname)
 #' @param varname string.
 #' @returns Boolean value. if the varname is found in current environment cache, return True otherwise return False.
+#' @export
 mindat_cache_has <-function(varname)
 {
   if(!exists(varname, envir= mindat_cache)){
@@ -62,6 +67,7 @@ mindat_cache_has <-function(varname)
 #' @param varname string.
 #' @returns If the varname is found in current environment cache, return cached function.
 #'          If not, eval the function and return cached function.
+#' @export
 mindat_cache_return_or_setup<-function(varname, setupfun)
 {
   if(!mindat_cache_has(varname))
