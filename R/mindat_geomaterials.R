@@ -105,7 +105,7 @@ geomaterials_contain_any_but_not_elems <- function(any_elems_vector,ecl_elms_vec
 #' 'Sb', 'Te', 'I', 'Cs',Ba', 'La', 'Ce', 'Nd', 'Sm', 'Gd', 'Dy', 'Er','Yb', 'Hf', 'Ta', 'W', 'Re', 'Os',
 #' 'Ir', 'Pt', 'Au','Hg','Tl', 'Pb', 'Bi', 'Th', 'U'
 #'  It performs the query operation by calling the mindat_geomaterial_list function
-#'  @export
+#' @export
 geomaterials_contain_only_elems<- function(icl_only_elms_vector,...){
   all_mineral_vector <- c('H','Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Na', 'Mg', 'Al','Si', 'P', 'S','Cl',
      'K', 'Ca', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge','As','Se', 'Br',
