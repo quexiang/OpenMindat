@@ -1,0 +1,22 @@
+{ 
+ "@context":{ "mindat":"https://mindat.org/" ,
+ "schema":"https://schema.org/" ,
+ "gsog":"https://w3id.org/gso/geology/" },"@graph":[{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 1282 " ,
+" identifier ":" 1:1:1282:5 " ,
+" mindat:name ":" Diamond " ,
+" mindat:ima_formula ":" C " }
+ ,{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 43792 " ,
+" identifier ":" 1:1:43792:7 " ,
+" mindat:name ":" Qingsongite " ,
+" mindat:ima_formula ":" BN " }
+ ,{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 52913 " ,
+" identifier ":" 1:1:52913:0 " ,
+" mindat:name ":" Uakitite " ,
+" mindat:ima_formula ":" VN " }
+ ] }

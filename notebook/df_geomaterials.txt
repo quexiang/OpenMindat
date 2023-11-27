@@ -1,0 +1,4 @@
+""	"id"	"longid"	"name"	"ima_formula"
+"1"	1282	"1:1:1282:5"	"Diamond"	"C"
+"2"	43792	"1:1:43792:7"	"Qingsongite"	"BN"
+"3"	52913	"1:1:52913:0"	"Uakitite"	"VN"

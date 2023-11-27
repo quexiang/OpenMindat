@@ -1,10 +1,12 @@
 
 ########## mindat_data_parse.R ############
+#' @import httr
 #' @importFrom httr GET
 #' @name GET
 usethis::use_import_from("httr", "GET")
 
 #' mindat_make_data_frame
+#' @import httr
 #' @description convert the response json to dataframe of R
 #' @usage mindat_make_data_frame (reg_list)
 #' @param reg_list response json data to list format obj.
@@ -37,6 +39,7 @@ mindat_make_data_frame<-function(reg_list){
 }
 
 #' mindat_parse_raw_data
+#' @import jsonlite
 #' @description parse the raw response of json to dataframe of R. If the raw_data obtained from the response is paged,
 #' request all the pages and then add them into the df_out data frame.
 #' @usage mindat_parse_raw_data (raw_data)
@@ -75,6 +78,7 @@ mindat_parse_raw_data<-function(raw_data){
 }
 
 #' mindat_extract_response_body
+#' @import jsonlite
 #' @description .
 #' @usage mindat_extract_response_body (response)
 #' @param response response json
@@ -94,6 +98,7 @@ mindat_extract_response_body<-function(response){
 }
 
 #' mindat_get_data_from_uri
+#' @import httr
 #' @description retrieve data from the uri.
 #' @usage mindat_get_data_from_uri (uri)
 #' @param uri request uri
@@ -112,6 +117,7 @@ mindat_get_data_from_uri<-function(uri){
 }
 
 #' mindat_build_querystring
+#' @import httr
 #' @description Build query string based on the query conditions.
 #' @usage mindat_build_querystring (args)
 #' @param args query args.
