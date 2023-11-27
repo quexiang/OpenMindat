@@ -16,8 +16,12 @@ getExtension <- function(filename){
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param template filepath to the template
 #' @export
-ConvertDF2JsonLD<- function(inputdata,template = "/inst/extdata/OpenMindat_Schema_JSON-LD.xlsx"){
+ConvertDF2JsonLD<- function(inputdata,template = NULL ){ #"/inst/extdata/OpenMindat_Schema_JSON-LD.xlsx"
   #read a document files  template for output the 'JSON-LD' as references
+  if (is.null(template)) {
+      template = system.file("extdata", path = "OpenMindat_Schema_JSON-LD.xlsx", package = "OpenMindat", mustWork = TRUE)
+  }
+
   fields_settings  <- read_excel(template,sheet ='fields_settings')
   context_settings <- read_excel(template,sheet ='context')
 
@@ -121,7 +125,12 @@ ConvertDF2JsonLD<- function(inputdata,template = "/inst/extdata/OpenMindat_Schem
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param template filepath to the template
 #' @export
-ConvertDF2TTL<- function(inputdata,template = "/inst/extdata/OpenMindat_Schema_TTL.xlsx"){
+ConvertDF2TTL<- function(inputdata,template = NULL){
+
+  if (is.null(template)) {
+    template = system.file("extdata", path = "OpenMindat_Schema_TTL.xlsx", package = "OpenMindat", mustWork = TRUE)
+  }
+
   fields_settings  <- read_excel(template,sheet ='fields_settings')
   prefix_settings <- read_excel(template,sheet ='prefix')
 
