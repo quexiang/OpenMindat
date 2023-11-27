@@ -1,0 +1,76 @@
+{ 
+ "@context":{ "mindat":"https://mindat.org/" ,
+ "schema":"https://schema.org/" ,
+ "gsog":"https://w3id.org/gso/geology/" },"@graph":[{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 42155 " ,
+" mindat:name ":" Cuarzo opalescente " ,
+" mindat:ima_status ":" 0 " ,
+" mindat:synid ":" 42133 " }
+ ,{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 48322 " ,
+" mindat:name ":" Quartz-anorthosite " ,
+" mindat:ima_status ":" 0 " ,
+" mindat:synid ":" 0 " }
+ ,{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 49116 " ,
+" mindat:name ":" Quartz-arenite " ,
+" mindat:ima_status ":" 0 " ,
+" mindat:synid ":" 0 " }
+ ,{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 50617 " ,
+" mindat:name ":" Quartz dolerite " ,
+" mindat:ima_status ":" 0 " ,
+" mindat:synid ":" 0 " }
+ ,{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 26639 " ,
+" mindat:name ":" Quartz fumée " ,
+" mindat:ima_status ":" 0 " ,
+" mindat:synid ":" 3689 " }
+ ,{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 39374 " ,
+" mindat:name ":" Quartz Gwindel " ,
+" mindat:ima_status ":" 0 " ,
+" mindat:synid ":" 0 " }
+ ,{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 42388 " ,
+" mindat:name ":" Quartz Helicoidal " ,
+" mindat:ima_status ":" 0 " ,
+" mindat:synid ":" 39374 " }
+ ,{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 3338 " ,
+" mindat:name ":" Quartzine " ,
+" mindat:ima_status ":" 0 " ,
+" mindat:synid ":" 0 " }
+ ,{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 48469 " ,
+" mindat:name ":" Quartz-latite " ,
+" mindat:ima_status ":" 0 " ,
+" mindat:synid ":" 0 " }
+ ,{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 53334 " ,
+" mindat:name ":" Quartz phyllite " ,
+" mindat:ima_status ":" 0 " ,
+" mindat:synid ":" 0 " }
+ ,{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 48211 " ,
+" mindat:name ":" Quartz-syenite " ,
+" mindat:ima_status ":" 0 " ,
+" mindat:synid ":" 0 " }
+ ,{ 
+ "@type":"mindat:Geomaterials " , "@type":"schema:Dataset " , "@type":"gsog:Mineral_Material " ,
+" mindat:id ":" 42342 " ,
+" mindat:name ":" Wurtzite-15R " ,
+" mindat:ima_status ":" 0 " ,
+" mindat:synid ":" 0 " }
+ ] }

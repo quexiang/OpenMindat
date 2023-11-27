@@ -4,7 +4,8 @@ Title: Quickly access the required data based on mindat API
 Version: 1.0.0
 Imports:
     httr (>= 1.4.4),
-    jsonlite (>= 1.8.4)
+    jsonlite (>= 1.8.4),
+    stringr
 Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 Config/testthat/edition: 3
 usethis::use_testthat(3)

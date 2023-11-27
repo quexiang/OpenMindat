@@ -11,6 +11,7 @@ getExtension <- function(filename){
 }
 
 #' Output file as a given format
+#' @import stringr
 #' @description Convert the mindat R dataframe to JSON-LD string
 #' @usage ConvertDF2JsonLD (DataFrame)
 #' @param inputdata R dataframe of retrieived data from Mindat database.
@@ -120,6 +121,7 @@ ConvertDF2JsonLD<- function(inputdata,template = NULL ){ #"/inst/extdata/OpenMin
 }
 
 #' Convert a dataframe to a string of TTL format
+#' @import stringr
 #' @description Convert the mindat R dataframe to TTL string
 #' @usage ConvertDF2TTL (DataFrame)
 #' @param inputdata R dataframe of retrieived data from Mindat database.
