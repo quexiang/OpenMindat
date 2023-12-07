@@ -77,8 +77,11 @@ resp_materials_elms_df <- geomaterials_contain_all_elems(c('Be','Cr'))
 #query the geomaterials that contain any of the elemnts(e.g. Be,Cr):
 resp_materials_elms_df <- geomaterials_contain_any_elems(c('Be','Cr'))
 
-#query the geomaterials that contain all of the elemnts(e.g. Be,Cr) without the element (e.g. H):
-resp_materials_elms_df <- geomaterials_contain_all_and_without_elems(c('Be','Cr'),c('H'))
+#query the geomaterials that contain all of the elemnts(e.g. Be,Cr) but without the element (e.g. H):
+resp_materials_elms_df <- geomaterials_contain_all_but_not_elems(c('Be','Cr'),c('H'))
+
+#query the geomaterials that contain any of the elemnts(e.g. Be,Cr) but without the element (e.g. H):
+resp_materials_elms_df <- geomaterials_contain_any_but_not_elems(c('Be','Cr'),c('H'))
 
 #query the geomaterials by given crystal system (e.g. Hexagonal):
 resp_materials_crystalsys_df <- geomaterials_crystal_system(c("Hexagonal"))
