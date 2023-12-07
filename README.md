@@ -69,8 +69,8 @@ mindat_connection("YourToken") #including the quotation marks
 
 3. You can now retrieve datasets of interest using functions in the `OpenMindat` package. Below are a few examples.
 
+(1) Retrieve geomaterials records by chemical elements：
 ```coffee
-
 #query the geomaterials that contain all of the elements (e.g. Be, Cr):
 resp_materials_elms_df <- geomaterials_contain_all_elems(c('Be','Cr'))
 
@@ -82,7 +82,10 @@ resp_materials_elms_df <- geomaterials_contain_all_but_not_elems(c('Be','Cr'),c(
 
 #query the geomaterials that contain any of the elemnts(e.g. Be,Cr) but without the element (e.g. H):
 resp_materials_elms_df <- geomaterials_contain_any_but_not_elems(c('Be','Cr'),c('H'))
+```
 
+(2) Retrieve geomaterials records by physical properties:
+```coffee
 #query the geomaterials by given crystal system (e.g. Hexagonal):
 resp_materials_crystalsys_df <- geomaterials_crystal_system(c("Hexagonal"))
 
@@ -100,7 +103,25 @@ resp_materials_hard_df <- geomaterials_hardness_range(1,1.2)
 
 #query the mindat geomaterials by a given id, e.g.6: 
 resp_materials_id_df <- mindat_geomaterial(id=6)
+```
 
+(3) Retrieve geomaterials records by wildcard names and others:
+```coffee
+df1<-geomaterials_search_name("Quartz")
+df2<-geomaterials_name("qu_rtz")
+df3<-geomaterials_name("_u_r_z")
+df4<-geomaterials_name("qu*")
+df5<- geomaterials_field_exists("meteoritical_code",TRUE)
+df6<-mindat_geomaterial(id=3337)
+df7<-geomaterials_varietyof(3337)
+df8<-geomaterials_entrytype(c('2'))
+```
+(4) Retrieve geomaterials records by combined conditions:
+```coffee
+df<-geomaterials_contain_all_elems(c('Li','O'), hardness_min = 5.8, hardness_max = 6, crystal_system = "Triclinic",ima_status = "APPROVED",entrytype = 0)
+```
+(5) Retrieve IMA minerals:
+```coffee
 #query all the IMA list
 df_ima_minerals <- minerals_ima_list()
 
@@ -110,14 +131,29 @@ df_ima_minerals <- minerals_ima_list(fields = "name")
 #query the IMA minerals by a given id e.g. 1 :
 df_ima_minerals <- minerals_ima_retrieve(id =1)
 
+```
+(6) Retrieve Localities by descriptions and elements:
+```coffee
 #query localities in a given country (e.g. China):
 df_localities <- localities_list_country("China")
 
+#query localities that contain a given description:
+df_volcano<-localities_list_description("volcano")
+
 #query localities contain the elements(e.g. Be,Si) withou the elements(e.g. H,Al) :
 df_loc_inc_exc <- localities_list_elems_inc_exc(c("Be","Si"),c("H","Al"))
+```
+(7) Output the retrieved R dataframe to files:
+```coffee
+df<-geomaterials_hardness_gt(9.8,fields = "id,longid,name,ima_formula")
+library(readxl)
+out<- ConvertDF2JsonLD(df)
+saveMindatDataAs(df,"df_geomaterials.jsonld")
+saveMindatDataAs(df,"df_geomaterials.ttl")
+saveMindatDataAs(df,"df_geomaterials.txt")
+saveMindatDataAs(df,"df_geomaterials.csv")
 
 ```
-
 
 **Documention of function list**
 
