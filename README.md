@@ -145,13 +145,14 @@ df_loc_inc_exc <- localities_list_elems_inc_exc(c("Be","Si"),c("H","Al"))
 ```
 (7) Output the retrieved R dataframe to files:
 ```coffee
-df<-geomaterials_hardness_gt(9.8,fields = "id,longid,name,ima_formula")
-library(readxl)
-out<- ConvertDF2JsonLD(df)
-saveMindatDataAs(df,"df_geomaterials.jsonld")
-saveMindatDataAs(df,"df_geomaterials.ttl")
-saveMindatDataAs(df,"df_geomaterials.txt")
-saveMindatDataAs(df,"df_geomaterials.csv")
+
+  df <- geomaterials_hardness_gt(9.8,fields = "id,longid,name,ima_formula")
+  library(readxl)
+  out <- ConvertDF2JsonLD(df)
+  saveMindatDataAs(df,"df_geomaterials.jsonld")
+  saveMindatDataAs(df,"df_geomaterials.ttl")
+  saveMindatDataAs(df,"df_geomaterials.txt")
+  saveMindatDataAs(df,"df_geomaterials.csv")
 
 ```
 
