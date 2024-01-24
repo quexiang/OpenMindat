@@ -1,7 +1,7 @@
 Package: OpenMindat
 Type: Package
 Title: Quickly access the required data based on mindat API
-Version: 1.0.0
+Version: 0.0.9
 Imports:
     httr (>= 1.4.4),
     jsonlite (>= 1.8.4),
