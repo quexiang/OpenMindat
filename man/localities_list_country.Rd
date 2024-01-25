@@ -4,7 +4,7 @@
 \alias{localities_list_country}
 \title{retrieve the localities list that are belong to a given country.}
 \usage{
-localities_list_country(intvalue,...)
+localities_list_country("Egypt")
 }
 \arguments{
 \item{country}{name of country,}

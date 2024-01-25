@@ -4,7 +4,7 @@
 \alias{build_uri}
 \title{build uri}
 \usage{
-build_uri(name,endpoint_base,...,default_uri_builder,c(fields))
+build_uri(endpoint,list(),NULL)
 }
 \arguments{
 \item{endpoint}{list.}

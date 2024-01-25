@@ -1,7 +1,7 @@
 ################ mindat_localities.R  #################
 #' retrieve the localities list that are belong to a given country.
 #' @description : Queries the list of localities that are within a given country.
-#' @usage localities_list_country(intvalue,...)
+#' @usage localities_list_country("Egypt")
 #' @param country name of country,
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
@@ -181,8 +181,8 @@ localities_retrieve_id<-function(id,...){
 
 #' locality_age
 #' @description retrieve locality age by its id
-#' @usage locality_age (id)
-#' @param id, the mindat localitiy id.
+#' @usage locality_age (1)
+#' @param id, the mindat localitiy age id.
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality age.
 #' @details
@@ -223,7 +223,7 @@ localities_status_list <-function(...){
 
 #' localities_status_retrieve
 #' @description retrieve locality status by its id.
-#' @usage localities_status_retrieve (...)
+#' @usage localities_status_retrieve (1)
 #' @param id the mindat localitiy status id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality status.

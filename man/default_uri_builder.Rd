@@ -4,7 +4,7 @@
 \alias{default_uri_builder}
 \title{Create a default uri builder.}
 \usage{
-default_uri_builder(api_base_uri,config,...,querystring=c(''))
+default_uri_builder(api_base_uri,config,querystring=c(''))
 }
 \arguments{
 \item{api_base_uri}{string. The mindat api base uri.}

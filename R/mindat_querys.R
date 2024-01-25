@@ -127,7 +127,7 @@ mindat_locality_type<-function(id,...){
 
 #' mindat_geomaterial
 #' @description retrieve  geomaterial  by its id
-#' @usage mindat_geomaterial (id)
+#' @usage mindat_geomaterial (1)
 #' @param id geomaterial id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type list
@@ -153,7 +153,7 @@ mindat_geomaterial_varieties<-function(id,...){
 
 #' mindat_geomaterial_list
 #' @description retrieve all the geomaterial list or the geomaterial by given conditions.
-#' @usage mindat_geomaterial_list ()
+#' @usage mindat_geomaterial_list()
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type list
 #' @export

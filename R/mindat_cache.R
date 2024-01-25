@@ -37,7 +37,7 @@ mindat_cache_delete<-function(varname)
 
 #' Remove all cached values
 #' @description Clear all current cached values. Set current environment cache empty.
-#' @usage mindt_cache_empty()
+#' @usage mindat_cache_empty()
 #' @export
 mindat_cache_empty<-function(){
   rm(list = ls(envir = mindat_cache))

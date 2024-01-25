@@ -20,7 +20,7 @@ Author@R:
 Maintainer: The package maintainer <xiangq@uidaho.edu> or <quexiang@fafu.edu.cn>
 Description: The goal of OpenMindat R package is to provide functions for users or machines to quickly and easily retrieve datasets from the mindat.org API (https://api.mindat.org/).
 VignetteBuilder: knitr
-License: use_mit_license() + LICENSE 
+License: use_mit_license(),LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

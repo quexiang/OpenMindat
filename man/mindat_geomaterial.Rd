@@ -4,7 +4,7 @@
 \alias{mindat_geomaterial}
 \title{mindat_geomaterial}
 \usage{
-mindat_geomaterial (id)
+mindat_geomaterial (1)
 }
 \arguments{
 \item{id}{geomaterial id}

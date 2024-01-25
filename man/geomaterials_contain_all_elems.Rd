@@ -4,7 +4,7 @@
 \alias{geomaterials_contain_all_elems}
 \title{geomaterials_contain_all_elems}
 \usage{
-geomaterials_contain_all_elems (icl_elms_vector)
+geomaterials_contain_all_elems(c("Pb","Sr"))
 }
 \arguments{
 \item{icl_elms_vector, }{vector of elements.}

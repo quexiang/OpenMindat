@@ -4,7 +4,7 @@
 \alias{geomaterials_ri_lt}
 \title{retrieve the geomaterials that refractive index lower than an given value(lt).}
 \usage{
-geomaterials_ri_gt(lt, ...)
+geomaterials_ri_gt(0.02)
 }
 \arguments{
 \item{lt}{float value. Refractive index, to (rimin<=)}

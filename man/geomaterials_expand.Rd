@@ -4,7 +4,7 @@
 \alias{geomaterials_expand}
 \title{retrieve the geomaterials that have the given expand.}
 \usage{
-geomaterials_expand(expand_fields, ...)
+geomaterials_expand("~all")
 }
 \arguments{
 \item{expanded_fields}{list of expand (Array of strings (Expanded fields)).Select fields to expand.}

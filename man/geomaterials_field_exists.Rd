@@ -4,7 +4,7 @@
 \alias{geomaterials_field_exists}
 \title{retrieve the geomaterials records of empty or not empty of a given field.}
 \usage{
-geomaterials_field_exists(fieldname,...)
+geomaterials_field_exists("meteoritical_code")
 }
 \arguments{
 \item{fieldname}{string}

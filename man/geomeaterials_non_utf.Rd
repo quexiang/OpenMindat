@@ -4,7 +4,7 @@
 \alias{geomeaterials_non_utf}
 \title{retrieve the geomaterials that include non-utf mineral names or not.}
 \usage{
-geomeaterials_non_utf(types, ...)
+geomeaterials_non_utf(TRUE)
 }
 \arguments{
 \item{btrue}{boolean. Include non-UTF mineral names?.Default is TRUE.}

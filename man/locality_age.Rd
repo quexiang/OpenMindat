@@ -4,10 +4,10 @@
 \alias{locality_age}
 \title{locality_age}
 \usage{
-locality_age (id)
+locality_age (1)
 }
 \arguments{
-\item{id, }{the mindat localitiy id.}
+\item{id, }{the mindat localitiy age id.}
 
 \item{..., }{Further named parameters.}
 }

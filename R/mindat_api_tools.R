@@ -1,7 +1,7 @@
 ########### mindat_api_tools.R #############
 #' Create a default uri builder.
 #' @description Create a default uri builder which can create the request uri according to the query conditions.
-#' @usage default_uri_builder(api_base_uri,config,...,querystring=c(''))
+#' @usage default_uri_builder(api_base_uri,config,querystring=c(''))
 #' @param api_base_uri string. The mindat api base uri.
 #' @param config list of configuration.
 #' @param querystring query string.
@@ -59,7 +59,7 @@ stop_not_param<-function(comp_params, query){
 
 #' build uri
 #' @description build a request uri based on .
-#' @usage build_uri(name,endpoint_base,...,default_uri_builder,c(fields))
+#' @usage build_uri(endpoint,list(),NULL)
 #' @param name string .
 #' @param endpoint list.
 #' @param uri_builder function default is the default_uri_builder.

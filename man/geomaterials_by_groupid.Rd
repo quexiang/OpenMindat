@@ -4,7 +4,7 @@
 \alias{geomaterials_by_groupid}
 \title{retrieve the geomaterials by an given value of groupid.}
 \usage{
-geomaterials_by_groupid(id, ...)
+geomaterials_by_groupid(gid)
 }
 \arguments{
 \item{gid}{integer value. The id of the group to which this mineral belongs}
