@@ -3,3 +3,8 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^cran-comments\.md$
+^README.Rmd
+^NEWS.Rmd
+^NEWS.html
+^notebook$

@@ -3,7 +3,28 @@
 #' @import httr
 #' @importFrom httr GET
 #' @name GET
+#' @title the function is form the httr GET function.
 usethis::use_import_from("httr", "GET")
+
+#' @import utils
+#' @importFrom utils URLencode
+#' @name URLencode
+#' @title the function is form the utils URLencode function.
+usethis::use_import_from("utils", "URLencode")
+
+
+#' @import utils
+#' @importFrom utils str
+#' @name str
+#' @title the function is form the utils str function.
+usethis::use_import_from("utils", "str")
+
+#' @import utils
+#' @importFrom utils write.table
+#' @name write.table
+#' @title the function is form the utils write.table function.
+usethis::use_import_from("utils", "write.table")
+#importFrom("utils", "URLencode", "str", "write.table")
 
 #' mindat_make_data_frame
 #' @import httr
@@ -24,7 +45,7 @@ mindat_make_data_frame<-function(reg_list){
     next_url<- reg_list$`next`
     while(!is.null(next_url)){
       query<-list(format= "json")
-      all_data2<-GET(next_url,add_headers('Authorization'= paste('Token ',YOUR_API_KEY,sep = "")),query = query)
+      all_data2<-GET(next_url,add_headers('Authorization'= paste('Token ','YOUR_API_KEY',sep = "")),query = query)
       str(content(all_data2))
       all_data2_text <- content(all_data2,"text", encoding = "UTF-8")
       #all_data2_json <- fromJSON(readLines(all_data2_text),flatten = TRUE, warn=F)
@@ -118,6 +139,7 @@ mindat_get_data_from_uri<-function(uri){
 
 #' mindat_build_querystring
 #' @import httr
+#' @import stringi
 #' @description Build query string based on the query conditions.
 #' @usage mindat_build_querystring (args)
 #' @param args query args.

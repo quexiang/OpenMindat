@@ -5,6 +5,9 @@ Version: 0.0.9
 Imports:
     httr (>= 1.4.4),
     jsonlite (>= 1.8.4),
+    readxl (>= 1.4.3),
+    utils,
+    stringi,
     stringr
 Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 Config/testthat/edition: 3
@@ -15,9 +18,9 @@ Author@R:
       person(given = "Xiaogang",family = "Ma",email = "max@uidaho.edu",role = ("aut"),comment = c(ORCID = "0000-0002-9110-7369"))
     )
 Maintainer: The package maintainer <xiangq@uidaho.edu> or <quexiang@fafu.edu.cn>
-Description: The openmindat R package mainly provides functions for users or machines to quickly and easily retrieve datasets from the mindat.org API (https://api.mindat.org/).
+Description: The goal of OpenMindat R package is to provide functions for users or machines to quickly and easily retrieve datasets from the mindat.org API (https://api.mindat.org/).
 VignetteBuilder: knitr
-License: 'use_mit_license()' MIT license
+License: use_mit_license() + LICENSE 
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
