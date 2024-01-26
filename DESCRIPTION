@@ -11,7 +11,7 @@ Imports:
     stringr
 Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 Config/testthat/edition: 3
-usethis::use_testthat(3)
+usethis: :use_testthat(3)
 Author: Xiang Que & Xiaogang Ma
 Author@R: 
     c(person(given = "Xiang",family = "Que",email = "xiangq@uidaho.edu",role = ("aut","cre"), comment = c(ORCID = "0000-0002-5687-8627")),
@@ -20,10 +20,10 @@ Author@R:
 Maintainer: The package maintainer <xiangq@uidaho.edu> or <quexiang@fafu.edu.cn>
 Description: The goal of OpenMindat R package is to provide functions for users or machines to quickly and easily retrieve datasets from the mindat.org API (https://api.mindat.org/).
 VignetteBuilder: knitr
-License: use_mit_license()
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 URL: https://github.com/quexiang/OpenMindat
 BugReports: https://github.com/quexiang/OpenMindat/issues
+License: MIT + file LICENSE
