@@ -4,7 +4,7 @@
 \alias{mindat_countries}
 \title{mindat_countries}
 \usage{
-mindat_countries ()
+mindat_countries (...)
 }
 \arguments{
 \item{..., }{Further named parameters.}

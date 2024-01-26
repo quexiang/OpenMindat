@@ -65,6 +65,7 @@ mindat_cache_has <-function(varname)
 #'              if not, setup up a new cache function named varname.
 #' @usage mindat_cache_return_or_setup(varname,setupfun)
 #' @param varname string.
+#' @param setupfun boolean, if the cached is a setup function.
 #' @returns If the varname is found in current environment cache, return cached function.
 #'          If not, eval the function and return cached function.
 #' @export

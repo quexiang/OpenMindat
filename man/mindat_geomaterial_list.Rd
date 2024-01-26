@@ -4,7 +4,7 @@
 \alias{mindat_geomaterial_list}
 \title{mindat_geomaterial_list}
 \usage{
-mindat_geomaterial_list()
+mindat_geomaterial_list(...)
 }
 \arguments{
 \item{..., }{Further named parameters.}

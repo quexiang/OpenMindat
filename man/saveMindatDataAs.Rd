@@ -4,7 +4,7 @@
 \alias{saveMindatDataAs}
 \title{Output file as a given format}
 \usage{
-saveMindatDataAs (filename,format = 'csv')
+saveMindatDataAs (inputdata,outputfname)
 }
 \arguments{
 \item{inputdata}{R dataframe of retrieived data from Mindat database.}

@@ -1,7 +1,7 @@
 ########### mindat_api_tools.R #############
 #' Create a default uri builder.
 #' @description Create a default uri builder which can create the request uri according to the query conditions.
-#' @usage default_uri_builder(api_base_uri,config,querystring=c(''))
+#' @usage default_uri_builder(api_base_uri,config, querystring = '')
 #' @param api_base_uri string. The mindat api base uri.
 #' @param config list of configuration.
 #' @param querystring query string.
@@ -17,20 +17,20 @@ default_uri_builder<-function(api_base_uri,config, querystring = ''){
 
 #' set up a api endpoint named name
 #' @description Setup up a api endpoint.
-#' @usage mindat_api_endpoint(name,endpoint_base,...,default_uri_builder,c(fields))
+#' @usage mindat_api_endpoint(name,epb,ubuilder = default_uri_builder,qparams=list(),...)
 #' @param name string .
-#' @param endpoint_base list.
+#' @param epb list.
+#' @param ubuilder function default is the default_uri_builder.
+#' @param qparams list.
 #' @param ... Further named parameters, other conditions.
-#' @param uri_builder function default is the default_uri_builder.
-#' @param query_params list.
 #' @returns uri string
-mindat_api_endpoint<-function(name, endpoint_base, uri_builder = default_uri_builder,query_params = list(),...){
-  if(!is.function(uri_builder)){
-    stop("uri_builder must be a function")
+mindat_api_endpoint<-function(name,epb,ubuilder = default_uri_builder,qparams=list(),...){
+  if(!is.function(ubuilder)){
+    stop("ubuilder must be a function")
   }
 
-  config <- c(list(...), endpoint_base = endpoint_base, uri_builder = uri_builder,
-              query_params = query_params)
+  config <- c(list(...), epb = epb, ubuilder = ubuilder,
+              qparams = qparams)
 
   api_end_points<-mindat_cache_return_or_setup('api_end_points', function(){
     return (list())
@@ -59,11 +59,10 @@ stop_not_param<-function(comp_params, query){
 
 #' build uri
 #' @description build a request uri based on .
-#' @usage build_uri(endpoint,list(),NULL)
-#' @param name string .
+#' @usage build_uri(endpoint,query = list(),api_base = NULL,...)
 #' @param endpoint list.
-#' @param uri_builder function default is the default_uri_builder.
-#' @param query_params list.
+#' @param query list, query conditions.
+#' @param api_base string, base url for mindat api
 #' @param ... Further named parameters, other conditions.
 #' @returns uri string
 build_uri<-function(endpoint, query = list(), api_base = NULL,...){

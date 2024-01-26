@@ -4,10 +4,12 @@
 \alias{mindat_query}
 \title{mindat_query}
 \usage{
-mindat_query (endpoint,query)
+mindat_query (endpoint, query = list())
 }
 \arguments{
 \item{endpoint}{query endpoint, e.g.'minerals_ima'.}
+
+\item{query}{list for query conditions.}
 }
 \value{
 df query resutls in data frame format.

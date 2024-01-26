@@ -8,6 +8,8 @@ mindat_cache_return_or_setup(varname,setupfun)
 }
 \arguments{
 \item{varname}{string.}
+
+\item{setupfun}{boolean, if the cached is a setup function.}
 }
 \value{
 If the varname is found in current environment cache, return cached function.

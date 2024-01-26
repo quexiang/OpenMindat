@@ -4,7 +4,7 @@
 \alias{mindat_localitiy}
 \title{mindat_localitiy}
 \usage{
-mindat_localitiy (id)
+mindat_localitiy (id,...)
 }
 \arguments{
 \item{id}{the mindat localitiy id}

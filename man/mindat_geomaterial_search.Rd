@@ -4,7 +4,7 @@
 \alias{mindat_geomaterial_search}
 \title{mindat_geomaterial_search}
 \usage{
-mindat_geomaterial_search (name)
+mindat_geomaterial_search (...)
 }
 \arguments{
 \item{..., }{Further named parameters.}

@@ -4,7 +4,7 @@
 \alias{geomaterials_meteoritical_code}
 \title{retrieve the geomaterials matched a given string in its meteoritical code.}
 \usage{
-geomaterials_meteoritical_code(str_name,...)
+geomaterials_meteoritical_code(str_meteoritical_code,...)
 }
 \arguments{
 \item{str_meteoritical_code}{Text search supporting: _ as wildcards.}

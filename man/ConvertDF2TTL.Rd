@@ -4,7 +4,7 @@
 \alias{ConvertDF2TTL}
 \title{Convert a dataframe to a string of TTL format}
 \usage{
-ConvertDF2TTL (inputdata)
+ConvertDF2TTL (inputdata,template = NULL)
 }
 \arguments{
 \item{inputdata}{R dataframe of retrieived data from Mindat database.}

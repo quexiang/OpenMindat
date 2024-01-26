@@ -4,7 +4,7 @@
 \alias{geomaterials_contain_only_elems}
 \title{geomaterials_contain_only_elems}
 \usage{
-geomaterials_contain_only_elems (c("Sr","Pb"))
+geomaterials_contain_only_elems (icl_only_elms_vector,...)
 }
 \arguments{
 \item{icl_only_elms_vector, }{vector of elements.}

@@ -8,8 +8,6 @@ locality_age_list (...)
 }
 \arguments{
 \item{..., }{Further named parameters.}
-
-\item{id}{the mindat localitiy age id}
 }
 \value{
 df, data frame of locality age.

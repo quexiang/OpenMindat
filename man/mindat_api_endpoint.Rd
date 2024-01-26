@@ -4,16 +4,16 @@
 \alias{mindat_api_endpoint}
 \title{set up a api endpoint named name}
 \usage{
-mindat_api_endpoint(name,endpoint_base,...,default_uri_builder,c(fields))
+mindat_api_endpoint(name,epb,ubuilder = default_uri_builder,qparams=list(),...)
 }
 \arguments{
 \item{name}{string .}
 
-\item{endpoint_base}{list.}
+\item{epb}{list.}
 
-\item{uri_builder}{function default is the default_uri_builder.}
+\item{ubuilder}{function default is the default_uri_builder.}
 
-\item{query_params}{list.}
+\item{qparams}{list.}
 
 \item{...}{Further named parameters, other conditions.}
 }

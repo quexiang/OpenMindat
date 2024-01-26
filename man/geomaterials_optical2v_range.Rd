@@ -4,7 +4,7 @@
 \alias{geomaterials_optical2v_range}
 \title{retrieve the geomaterials that has the given range of optical 2v.}
 \usage{
-geomaterials_optical2v_range(0.03)
+geomaterials_optical2v_range(gt,lt,...)
 }
 \arguments{
 \item{gt}{given value of minimum of optical 2v of mineral.Please refer to the details.}

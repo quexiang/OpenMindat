@@ -4,7 +4,7 @@
 \alias{localities_status_retrieve}
 \title{localities_status_retrieve}
 \usage{
-localities_status_retrieve (1)
+localities_status_retrieve (id,...)
 }
 \arguments{
 \item{id}{the mindat localitiy status id}

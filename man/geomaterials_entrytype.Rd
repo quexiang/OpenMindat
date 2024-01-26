@@ -4,7 +4,7 @@
 \alias{geomaterials_entrytype}
 \title{retrieve the geomaterials that have the given entrytype}
 \usage{
-geomaterials_entrytype(1)
+geomaterials_entrytype(types,...)
 }
 \arguments{
 \item{types}{list of entry types.}

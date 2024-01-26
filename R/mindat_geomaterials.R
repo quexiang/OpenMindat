@@ -3,7 +3,7 @@
 #' @description retrieve the geomaterials that contain all of the elements.This function queries
 #' the list of geomaterials that contain all the given elements.
 #' It performs the query operation by calling the mindat_geomaterial_list function
-#' @usage geomaterials_contain_all_elems(c("Pb","Sr"))
+#' @usage geomaterials_contain_all_elems(icl_elms_vector,...)
 #' @param icl_elms_vector, vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments that can be
 #' passed to the mindat_geomaterial_list function.
@@ -71,7 +71,7 @@ geomaterials_contain_any_elems <- function(any_elems,...){
 
 #' geomaterials that contain any one of the given elements
 #' @description : Queries the list of geological materials that contain any one of the given elements.
-#' @usage geomaterials_contain_any_elems(any_elems, ...)
+#' @usage geomaterials_contain_any_but_not_elems(any_elems_vector,ecl_elms_vector,...)
 #' @param any_elems_vector vector of elements. vector of any elements contained.
 #' @param ecl_elms_vector  vector of elements. vector of any elements excluded.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
@@ -92,7 +92,7 @@ geomaterials_contain_any_but_not_elems <- function(any_elems_vector,ecl_elms_vec
 
 #' geomaterials_contain_only_elems
 #' @description retrieve the geomaterials that only contain elements in an given list (icl_only_elms_vector).
-#' @usage geomaterials_contain_only_elems (c("Sr","Pb"))
+#' @usage geomaterials_contain_only_elems (icl_only_elms_vector,...)
 #' @param icl_only_elms_vector, vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments that can be
 #' passed to the mindat_geomaterial_list function.
@@ -330,7 +330,7 @@ geomaterials_diapheny <- function(diapheny,...){
 
 #' retrieve the geomaterials that have the given entrytype
 #' @description : Queries the list of geomaterials that have the given entrytype
-#' @usage geomaterials_entrytype(1)
+#' @usage geomaterials_entrytype(types,...)
 #' @param types list of entry types.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
@@ -358,7 +358,7 @@ geomaterials_entrytype <- function(types,...){
 
 #' retrieve the geomaterials that have the given expand.
 #' @description : Queries the list of geomaterials that have the given expand.
-#' @usage geomaterials_expand("~all")
+#' @usage geomaterials_expand(expanded_fields,...)
 #' @param expanded_fields list of expand (Array of strings (Expanded fields)).Select fields to expand.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
@@ -410,7 +410,7 @@ geomaterials_fracturetype <- function(types,...){
 
 #' retrieve the geomaterials by an given value of groupid.
 #' @description : Queries the list of geomaterials that match an given groupid.
-#' @usage geomaterials_by_groupid(gid)
+#' @usage geomaterials_by_groupid(gid,...)
 #' @param gid integer value. The id of the group to which this mineral belongs
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
@@ -495,7 +495,7 @@ geomaterials_ima<- function(btrue =TRUE,...){
 
 #' retrieve the geomaterials match given notes.
 #' @description : Queries the geomaterials with an given .
-#' @usage geomaterials_ima(btrue,...)
+#' @usage geomaterials_ima_notes(enum_item,...)
 #' @param enum_item  	Array of integers or null.
 #' Ima notes: multiple choice (OR) : "GROUP" "INTERMEDIATE" "NAMED_AMPHIBOLE" "PENDING_APPROVAL"
 #'  "PUBLISHED_WITHOUT_APPROVAL" "REDEFINED" "REJECTED" "RENAMED" "UNNAMED_INVALID" "UNNAMED_VALID"
@@ -547,7 +547,7 @@ geomaterials_name<- function(str_name,...){
 
 #' retrieve the geomaterials matched a given string in its meteoritical code.
 #' @description : Queries the geomaterials with a given string matched its given meteoritical_code.
-#' @usage geomaterials_meteoritical_code(str_name,...)
+#' @usage geomaterials_meteoritical_code(str_meteoritical_code,...)
 #' @param str_meteoritical_code Text search supporting: _ as wildcards.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
@@ -666,7 +666,7 @@ geomaterials_optical2v_min<- function(gt,...){
 
 #' retrieve the geomaterials that has the given range of optical 2v.
 #' @description : Queries the geomaterials have the higher optical 2v value than the given lt.
-#' @usage geomaterials_optical2v_range(0.03)
+#' @usage geomaterials_optical2v_range(gt,lt,...)
 #' @param gt given value of minimum of optical 2v of mineral.Please refer to the details.
 #' @param lt an given value of maximum of optical 2v of mineral.Please refer to the details.
 #' @param ..., Further named parameters.Other optional arguments.
@@ -740,7 +740,7 @@ geomaterials_opticaltype <- function(types,...){
 
 #' retrieve the geomaterials that include non-utf mineral names or not.
 #' @description : Queries the geomaterials include non-utf mineral names or not.
-#' @usage geomeaterials_non_utf(TRUE)
+#' @usage geomeaterials_non_utf(btrue =TRUE,...)
 #' @param btrue boolean. Include non-UTF mineral names?.Default is TRUE.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
@@ -770,7 +770,7 @@ geomaterials_ri_gt <- function(gt,...){
 
 #' retrieve the geomaterials that refractive index lower than an given value(lt).
 #' @description : Queries the geomaterials have the lower refractive index than an given value(lt).
-#' @usage geomaterials_ri_gt(0.02)
+#' @usage geomaterials_ri_lt(lt,...)
 #' @param lt float value. Refractive index, to (rimin<=)
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
@@ -881,7 +881,7 @@ geomaterials_search_name<- function(name,...){
 
 #' retrieve the geomaterials records of empty or not empty of a given field.
 #' @description : Queries the list of geomaterials with an empty or not empty of a given field.
-#' @usage geomaterials_field_exists("meteoritical_code")
+#' @usage geomaterials_field_exists(fieldname,bexists,...)
 #' @param fieldname string
 #' @param bexists bool
 #' @param ..., Further named parameters.Other optional arguments.

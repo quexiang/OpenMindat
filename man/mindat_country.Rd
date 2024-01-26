@@ -4,7 +4,7 @@
 \alias{mindat_country}
 \title{mindat_country}
 \usage{
-mindat_country (id)
+mindat_country (id,...)
 }
 \arguments{
 \item{id, }{country id in mindat.}

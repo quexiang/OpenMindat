@@ -4,7 +4,7 @@
 \alias{ConvertDF2JsonLD}
 \title{Output file as a given format}
 \usage{
-ConvertDF2JsonLD (inputdata)
+ConvertDF2JsonLD(inputdata,template = NULL)
 }
 \arguments{
 \item{inputdata}{R dataframe of retrieived data from Mindat database.}

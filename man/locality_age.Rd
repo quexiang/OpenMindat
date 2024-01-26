@@ -4,7 +4,7 @@
 \alias{locality_age}
 \title{locality_age}
 \usage{
-locality_age (1)
+locality_age (id,...)
 }
 \arguments{
 \item{id, }{the mindat localitiy age id.}

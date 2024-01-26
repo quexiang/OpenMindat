@@ -4,7 +4,7 @@
 \alias{mindat_locality_type}
 \title{mindat_locality_type}
 \usage{
-mindat_locality_type (...)
+mindat_locality_type (id,...)
 }
 \arguments{
 \item{id}{locality type id}

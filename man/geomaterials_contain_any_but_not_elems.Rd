@@ -4,7 +4,7 @@
 \alias{geomaterials_contain_any_but_not_elems}
 \title{geomaterials that contain any one of the given elements}
 \usage{
-geomaterials_contain_any_elems(any_elems, ...)
+geomaterials_contain_any_but_not_elems(any_elems_vector,ecl_elms_vector,...)
 }
 \arguments{
 \item{any_elems_vector}{vector of elements. vector of any elements contained.}

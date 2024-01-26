@@ -1,8 +1,9 @@
 ########### mindat_querys.R #############
 #' mindat_query
 #' @description Basic function for query dataset at a specified endpoit.
-#' @usage mindat_query (endpoint,query)
+#' @usage mindat_query (endpoint, query = list())
 #' @param endpoint query endpoint, e.g.'minerals_ima'.
+#' @param query list for query conditions.
 #' @return df query resutls in data frame format.
 #' @export
 mindat_query<-function(endpoint, query = list()){
@@ -35,18 +36,19 @@ params_to_string<-function(params){
 
 #' mindat_mineral_ima
 #' @description retrieve ima mineral by its id.
-#' @usage mindat_mineral_ima (id )
+#' @usage mindat_mineral_ima (id,...)
 #' @param id mindat id
+#' @param ..., Further parameters.
 #' @return df. query resutls in data frame format.
 #' @export
-mindat_mineral_ima<-function(id, ...){
+mindat_mineral_ima<-function(id,...){
   l<-list(...)
   mindat_query('minerals_ima', query = c(list(id = id), l))
 }
 
 #' mindat_mineral_ima_list
 #' @description retrieve ima mineral list
-#' @usage mindat_mineral_ima (...)
+#' @usage mindat_mineral_ima_list (...)
 #' @param ... , Further named parameters.
 #' @return df, data frame of mineral list.
 #' @export
@@ -68,7 +70,7 @@ mindat_localities_list<-function(...){
 
 #' mindat_localitiy
 #' @description retrieve locality by its id
-#' @usage mindat_localitiy (id)
+#' @usage mindat_localitiy (id,...)
 #' @param id the mindat localitiy id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality
@@ -80,7 +82,7 @@ mindat_localitiy<-function(id,...){
 
 #' mindat_locality_status
 #' @description retrieve all locality status by its id
-#' @usage mindat_locality_status (...)
+#' @usage mindat_locality_status (id,...)
 #' @param id the mindat localitiy status id.
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality status
@@ -114,7 +116,7 @@ mindat_locality_type_list<-function(...){
 
 #' mindat_locality_type
 #' @description retrieve  locality type by its id
-#' @usage mindat_locality_type (...)
+#' @usage mindat_locality_type (id,...)
 #' @param id locality type id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type list
@@ -127,7 +129,7 @@ mindat_locality_type<-function(id,...){
 
 #' mindat_geomaterial
 #' @description retrieve  geomaterial  by its id
-#' @usage mindat_geomaterial (1)
+#' @usage mindat_geomaterial (id,...)
 #' @param id geomaterial id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type list
@@ -140,7 +142,7 @@ mindat_geomaterial<-function(id,...){
 
 #' mindat_geomaterial_varieties
 #' @description retrieve the geomaterial varieties by the id of geomaterial.
-#' @usage mindat_geomaterial_varieties (id)
+#' @usage mindat_geomaterial_varieties (id,...)
 #' @param id geomaterial id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type list
@@ -153,7 +155,7 @@ mindat_geomaterial_varieties<-function(id,...){
 
 #' mindat_geomaterial_list
 #' @description retrieve all the geomaterial list or the geomaterial by given conditions.
-#' @usage mindat_geomaterial_list()
+#' @usage mindat_geomaterial_list(...)
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type list
 #' @export
@@ -167,7 +169,7 @@ mindat_geomaterial_list<-function(...){
 
 #' mindat_geomaterial_search
 #' @description retrieve all the geomaterial list or the geomaterial by given conditions.
-#' @usage mindat_geomaterial_search (name)
+#' @usage mindat_geomaterial_search (...)
 #' @param ..., Further named parameters.
 #' @return df, data frame of geomaterials mathch the search
 #' @export
@@ -181,7 +183,7 @@ mindat_geomaterial_search<-function(...){
 
 #' mindat_country
 #' @description retrieve the country by given its id.
-#' @usage mindat_country (id)
+#' @usage mindat_country (id,...)
 #' @param id, country id in mindat.
 #' @param ..., Further named parameters.
 #' @return df, a data frame of country
@@ -193,7 +195,7 @@ mindat_country<-function(id,...){
 
 #' mindat_countries
 #' @description retrieve all countries list or the contries by given conditions.
-#' @usage mindat_countries ()
+#' @usage mindat_countries (...)
 #' @param ..., Further named parameters.
 #' @return df, data frame of countries list
 #' @export

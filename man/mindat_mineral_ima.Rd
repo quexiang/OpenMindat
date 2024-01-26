@@ -4,10 +4,12 @@
 \alias{mindat_mineral_ima}
 \title{mindat_mineral_ima}
 \usage{
-mindat_mineral_ima (id )
+mindat_mineral_ima (id,...)
 }
 \arguments{
 \item{id}{mindat id}
+
+\item{..., }{Further parameters.}
 }
 \value{
 df. query resutls in data frame format.

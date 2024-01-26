@@ -4,7 +4,7 @@
 \alias{geomaterials_ima_notes}
 \title{retrieve the geomaterials match given notes.}
 \usage{
-geomaterials_ima(btrue,...)
+geomaterials_ima_notes(enum_item,...)
 }
 \arguments{
 \item{enum_item}{Array of integers or null.

@@ -4,7 +4,7 @@
 \alias{mindat_locality_status}
 \title{mindat_locality_status}
 \usage{
-mindat_locality_status (...)
+mindat_locality_status (id,...)
 }
 \arguments{
 \item{id}{the mindat localitiy status id.}

@@ -3,7 +3,7 @@
 
 #' Output the file extension of a filename
 #' @description Convert the mindat R dataframe to JSON-LD string
-#' @usage getExtension (file)
+#' @usage getExtension (filename)
 #' @param filename R dataframe of retrieived data from Mindat database.
 #' @export
 getExtension <- function(filename){
@@ -15,7 +15,7 @@ getExtension <- function(filename){
 #' @import stringr
 #' @import readxl
 #' @description Convert the mindat R dataframe to JSON-LD string
-#' @usage ConvertDF2JsonLD (inputdata)
+#' @usage ConvertDF2JsonLD(inputdata,template = NULL)
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param template filepath to the template
 #' @export
@@ -126,7 +126,7 @@ ConvertDF2JsonLD<- function(inputdata,template = NULL ){ #"/inst/extdata/OpenMin
 #' @import stringr
 #' @import readxl
 #' @description Convert the mindat R dataframe to TTL string
-#' @usage ConvertDF2TTL (inputdata)
+#' @usage ConvertDF2TTL (inputdata,template = NULL)
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param template filepath to the template
 #' @export
@@ -224,7 +224,7 @@ ConvertDF2TTL<- function(inputdata,template = NULL){
 
 #' Output file as a given format
 #' @description Save the mindat R dataframe to a specify format
-#' @usage saveMindatDataAs (filename,format = 'csv')
+#' @usage saveMindatDataAs (inputdata,outputfname)
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param outputfname string. the output file name.
 #' @export

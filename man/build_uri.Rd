@@ -4,18 +4,16 @@
 \alias{build_uri}
 \title{build uri}
 \usage{
-build_uri(endpoint,list(),NULL)
+build_uri(endpoint,query = list(),api_base = NULL,...)
 }
 \arguments{
 \item{endpoint}{list.}
 
+\item{query}{list, query conditions.}
+
+\item{api_base}{string, base url for mindat api}
+
 \item{...}{Further named parameters, other conditions.}
-
-\item{name}{string .}
-
-\item{uri_builder}{function default is the default_uri_builder.}
-
-\item{query_params}{list.}
 }
 \value{
 uri string
