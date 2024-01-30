@@ -58,7 +58,7 @@ ConvertDF2JsonLD<- function(inputdata,template = NULL ){ #"/inst/extdata/OpenMin
   }
   type_list <-unique(type_list)
 
-  str_context <- "\"@context\":{"
+  str_context <- "\"@context\":{\n"
   for (i_ctx in contex_list){
     str_fld <- paste("\"",i_ctx,sep = "")
     str_fld <- paste(str_fld,"\"",sep = "")
@@ -70,6 +70,8 @@ ConvertDF2JsonLD<- function(inputdata,template = NULL ){ #"/inst/extdata/OpenMin
   }
   str_context<- str_sub(str_context,end = -3)
   str_context<- paste(str_context,"}",sep = "")
+
+
 
   print_fields_list <- list()
   for (clo_name in d_clo_list){
@@ -87,13 +89,18 @@ ConvertDF2JsonLD<- function(inputdata,template = NULL ){ #"/inst/extdata/OpenMin
   str_graph <- "\"@graph\":["
   for (idf in 1:nrow(inputdata)){
     cur_str <- "{ \n"
+    cur_type <-"\"@type\":["
+
     for(itp in type_list){
       str_itp <- paste("\"",itp,sep = "")
-      str_itp <- paste(str_itp,"\"")
-      cur_type <- paste("\"@type\"",str_itp, sep = ":" )
-      cur_str <- paste(cur_str,cur_type)
-      cur_str<- paste(cur_str,",")
+      str_itp <- paste(str_itp,"\",")
+      cur_type <- paste(cur_type,str_itp, sep = "" )
+      #cur_str <- paste(cur_str,cur_type)
+      #cur_str<- paste(cur_str,",")
     }
+    cur_type<- str_sub(cur_type,end = -2)
+    cur_type <- paste(cur_type,"],", sep = "" )
+    cur_str <- paste(cur_str,cur_type)
 
     for (c_idx in 1:length(print_fields_list)){
       cur_field <- paste("\"",print_fields_list[c_idx])
@@ -117,7 +124,7 @@ ConvertDF2JsonLD<- function(inputdata,template = NULL ){ #"/inst/extdata/OpenMin
 
   str_out <-"{ \n"
   str_out<- paste(str_out,str_context)
-  str_out<- paste(str_out,str_graph,sep = ",")
+  str_out<- paste(str_out,str_graph,sep = ",\n")
   str_out <-paste(str_out,"}")
   str_out
 }

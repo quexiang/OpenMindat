@@ -6,6 +6,7 @@
 #' @param config list of configuration.
 #' @param querystring query string.
 #' @returns uri string
+#' @noRd
 default_uri_builder<-function(api_base_uri,config, querystring = ''){
   endpoint_base <- config[['endpoint_base']]
   uri <- paste(api_base_uri, '/', endpoint_base, sep = "")
@@ -24,13 +25,14 @@ default_uri_builder<-function(api_base_uri,config, querystring = ''){
 #' @param qparams list.
 #' @param ... Further named parameters, other conditions.
 #' @returns uri string
+#' @noRd
 mindat_api_endpoint<-function(name,epb,ubuilder = default_uri_builder,qparams=list(),...){
   if(!is.function(ubuilder)){
     stop("ubuilder must be a function")
   }
 
-  config <- c(list(...), epb = epb, ubuilder = ubuilder,
-              qparams = qparams)
+  config <- c(list(...), endpoint_base = epb, uri_builder = ubuilder,
+              query_params = qparams)
 
   api_end_points<-mindat_cache_return_or_setup('api_end_points', function(){
     return (list())
@@ -48,6 +50,7 @@ mindat_api_endpoint<-function(name,epb,ubuilder = default_uri_builder,qparams=li
 #' @usage stop_not_param (comp_params, query)
 #' @param comp_params list. list of compulsory, the internal params in the mindat api.
 #' @param query list of query name/value pairs.
+#' @noRd
 stop_not_param<-function(comp_params, query){
  q_params <- names(query)
  for(c_param in comp_params) {
@@ -65,6 +68,7 @@ stop_not_param<-function(comp_params, query){
 #' @param api_base string, base url for mindat api
 #' @param ... Further named parameters, other conditions.
 #' @returns uri string
+#' @noRd
 build_uri<-function(endpoint, query = list(), api_base = NULL,...){
   # passed or global
   if(is.null(api_base)){
@@ -96,6 +100,7 @@ build_uri<-function(endpoint, query = list(), api_base = NULL,...){
 #' @description set base uri of current environment
 #' @usage set_api_base (api_base)
 #' @param api_base string. The base uri of mindat api.
+#' @export
 set_api_base<-function(api_base){
   mindat_cache_set('api_base', api_base)
 }
@@ -104,6 +109,7 @@ set_api_base<-function(api_base){
 #' @description set the token of current environment
 #' @usage set_api_token (api_token)
 #' @param api_token string. The token of mindat api.
+#' @export
 set_api_token<-function(api_token){
   mindat_cache_set('api_token', api_token)
 }
@@ -112,6 +118,7 @@ set_api_token<-function(api_token){
 #' @description set the page_size of response records.
 #' @usage set_page_size (page_size)
 #' @param page_size string. The token of mindat api.
+#' @export
 set_page_size<-function(page_size = 800){
   mindat_cache_set('page_size', page_size)
 }

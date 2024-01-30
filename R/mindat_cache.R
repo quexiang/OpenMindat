@@ -1,6 +1,7 @@
 ############  mindat_cache.R  #################
 #' Create a cache environment named midnat_cache
 #' @description Create a new mindat cache environment.
+#' @noRd
 mindat_cache <- new.env()
 
 #' Set cache name and value

@@ -4,12 +4,14 @@
 #' @importFrom httr GET
 #' @name GET
 #' @title the function is form the httr GET function.
+#' @noRd
 usethis::use_import_from("httr", "GET")
 
 #' @import utils
 #' @importFrom utils URLencode
 #' @name URLencode
 #' @title the function is form the utils URLencode function.
+#' @noRd
 usethis::use_import_from("utils", "URLencode")
 
 
@@ -17,12 +19,14 @@ usethis::use_import_from("utils", "URLencode")
 #' @importFrom utils str
 #' @name str
 #' @title the function is form the utils str function.
+#' @noRd
 usethis::use_import_from("utils", "str")
 
 #' @import utils
 #' @importFrom utils write.table
 #' @name write.table
 #' @title the function is form the utils write.table function.
+#' @noRd
 usethis::use_import_from("utils", "write.table")
 #importFrom("utils", "URLencode", "str", "write.table")
 
