@@ -14,3 +14,9 @@ ConvertDF2TTL (inputdata,template = NULL)
 \description{
 Convert the mindat R dataframe to TTL string
 }
+\examples{
+\dontrun{
+df <-geomaterials_search_name("Quartz")
+df_out <-ConvertDF2TTL(df)
+}
+}

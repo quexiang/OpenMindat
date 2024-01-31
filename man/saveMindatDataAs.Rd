@@ -14,3 +14,9 @@ saveMindatDataAs (inputdata,outputfname)
 \description{
 Save the mindat R dataframe to a specify format
 }
+\examples{
+\dontrun{
+df <-geomaterials_search_name("Quartz")
+saveMindatDataAs(df,"test.jsonld")
+}
+}

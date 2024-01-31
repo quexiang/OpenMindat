@@ -14,3 +14,9 @@ ConvertDF2JsonLD(inputdata,template = NULL)
 \description{
 Convert the mindat R dataframe to JSON-LD string
 }
+\examples{
+\dontrun{
+df <-geomaterials_search_name("Quartz")
+df_out <-ConvertDF2JsonLD(df)
+}
+}

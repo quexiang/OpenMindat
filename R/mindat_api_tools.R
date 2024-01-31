@@ -100,6 +100,8 @@ build_uri<-function(endpoint, query = list(), api_base = NULL,...){
 #' @description set base uri of current environment
 #' @usage set_api_base (api_base)
 #' @param api_base string. The base uri of mindat api.
+#' @examples
+#' set_api_base("9ce67655d74bcd981e937be80dcea9cb")
 #' @export
 set_api_base<-function(api_base){
   mindat_cache_set('api_base', api_base)
@@ -109,6 +111,8 @@ set_api_base<-function(api_base){
 #' @description set the token of current environment
 #' @usage set_api_token (api_token)
 #' @param api_token string. The token of mindat api.
+#' @examples
+#' set_api_token("9ce67655d74bcd981e937be80dcea9cb")
 #' @export
 set_api_token<-function(api_token){
   mindat_cache_set('api_token', api_token)
@@ -118,6 +122,8 @@ set_api_token<-function(api_token){
 #' @description set the page_size of response records.
 #' @usage set_page_size (page_size)
 #' @param page_size string. The token of mindat api.
+#' @examples
+#' set_page_size(800)
 #' @export
 set_page_size<-function(page_size = 800){
   mindat_cache_set('page_size', page_size)
