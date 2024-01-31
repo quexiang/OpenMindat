@@ -21,3 +21,8 @@ df, a data frame of geomaterials
 This function releated to the field "ima_status" of geomaterials.
 retrieve all the geomaterials that match the input IMA notes.
 }
+\examples{
+\dontrun{
+df <-geomaterials_ima_status(c("APPROVED"))
+}
+}

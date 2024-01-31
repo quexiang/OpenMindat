@@ -25,3 +25,8 @@ ordering=-id - sort by id descending. Prepend "-" to the field name for descendi
 fields:"approval_year" "id" "minstats__ms_locentries" "minstats__ms_photos" "name" "updttime" "weighting".
 retrieve the geomaterials by an given ordering.
 }
+\examples{
+\dontrun{
+df <-geomeaterials_ordering(-id)
+}
+}

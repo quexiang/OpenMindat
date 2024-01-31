@@ -27,3 +27,8 @@ Unnamed (probably valid); Unnamed (probably invalid); Named Amphibole
 
 retrieve all the geomaterials that match the input IMA notes.
 }
+\examples{
+\dontrun{
+df <-geomaterials_ima_notes(c("PENDING_APPROVAL"))
+}
+}

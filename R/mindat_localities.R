@@ -5,6 +5,10 @@
 #' @param country name of country,
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-localities_list_country ("Norway")
+#' }
 #' @details
 #' This function releated to the field "country" of localities.
 #'Enum: "Afghanistan" "Albania" "Algeria" "American Samoa" "Andorra" "Angola" "Anguilla"
@@ -47,6 +51,10 @@ localities_list_country<- function(country,...){
 #' @param desc string,
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-localities_list_description("volcano")
+#' }
 #' @details
 #' This function releated to all the field "description" of localities.
 #' retrieve the localities that contain the given description
@@ -62,6 +70,11 @@ localities_list_description<- function(desc,...){
 #' @param exc_elems_list vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-localities_list_elems_exc(c("H", "O", "Si", "Al",
+#  + "Fe", "Ca", "Na", "K", "P", "C", "Mn", "F", "Mg", "S"))
+#' }
 #' @details
 #' This function releated to the field "elements_exc" of localities.
 #' This function queries the list of localities that do contain the specified elements.
@@ -77,6 +90,10 @@ localities_list_elems_exc<- function(exc_elems_list,...){
 #' @param inc_elems_list vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-localities_list_elems_inc(c("Dy"))
+#' }
 #' @details
 #' This function releated to the field "elements_inc" of localities.
 #' This function queries the list of localities that contain the given elements.
@@ -93,6 +110,10 @@ localities_list_elems_inc<- function(inc_elems_list,...){
 #' @param exc_elems_list vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-localities_list_elems_inc_exc(c("Dy"), c("Li"))
+#' }
 #' @details
 #' This function releated to the fields "elements_inc" and "elements_exc" of localities.
 #' This function queries the list of localities that contain the given elements,but not contain some other given elements.
@@ -109,6 +130,10 @@ localities_list_elems_inc_exc <-function(inc_elems_list,exc_elems_list,...){
 #' @param expands vector of expands.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-localities_list_expand("~all")
+#' }
 #' @details
 #' This function releated to the fields "expand" of localities.
 #' Items Enum: "geomaterials" "~all" "*"
@@ -125,6 +150,10 @@ localities_list_expand <-function(expands,...){
 #' @param txt string.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-localities_list_txt("lava")
+#' }
 #' @details
 #' This function releated to the fields "txt" of localities.
 #' This function queries the list of localities that contain the given txt name.
@@ -140,6 +169,10 @@ localities_list_txt <-function(txt,...){
 #' @param updateDate string<date-time>, Last updated datetime in format %Y-%m-%d %H:%M:%S
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-localities_list_updated_at("lava")
+#' }
 #' @details
 #' This function releated to all the fields "updated_at" of localities.
 #' retrieve the localities that have the latest updated at the given time.
@@ -154,6 +187,10 @@ localities_list_updated_at<-function(updateDate,...){
 #' @usage localities_list_all(...)
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-localities_list_all(fields = "id,name,latitude,longitude")
+#' }
 #' @details
 #' This function releated to  the fields "ids" of localities.
 #' retrieve all the localities.
@@ -169,6 +206,10 @@ localities_list_all<-function(...){
 #' @param id, integer. the mindat localitiy id.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-localities_retrieve_id(3337)
+#' }
 #' @details
 #' This function releated to all the fields "id" of localities.
 #' retrieve the localities by a given id.
@@ -185,6 +226,10 @@ localities_retrieve_id<-function(id,...){
 #' @param id, the mindat localitiy age id.
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality age.
+#' @examples
+#' \dontrun{
+#' df <-locality_age(3337)
+#' }
 #' @details
 #' This function releated to the fields "id" of locality_age and locality.
 #' @export
@@ -198,6 +243,10 @@ locality_age<-function(id,...){
 #' @usage locality_age_list (...)
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality age.
+#' @examples
+#' \dontrun{
+#' df <-locality_age_list()
+#' }
 #' @details
 #' This function is to retrieve all the locality_age list.
 #' @export
@@ -212,6 +261,10 @@ locality_age_list<-function(...){
 #' @usage localities_status_list (...)
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality status
+#' @examples
+#' \dontrun{
+#' df <-localities_status_list()
+#' }
 #' @details
 #' This function is to retrieve all the locality_status list.
 #' @export
@@ -226,6 +279,10 @@ localities_status_list <-function(...){
 #' @param id the mindat localitiy status id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality status.
+#' @examples
+#' \dontrun{
+#' df <-localities_status_retrieve(10)
+#' }
 #' @details
 #' This function is to retrieve the locality_status by an given id of locality.
 #' @export
@@ -240,11 +297,15 @@ localities_status_retrieve<- function(id,...){
 #' @param id the mindat localitiy id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality status.
+#' @examples
+#' \dontrun{
+#' df <-localitiy_type_retrieve(50)
+#' }
 #' @details
 #'  This function is to retrieve the locality types by an given id of locality.
 #'  @export
-localitiy_type_retrieve<- function(id,...){
-  df_out <- mindat_locality_type(id,...)
+localitiy_type_retrieve <- function(id,...){
+  df_out <- mindat_locality_type( id = id,...)
   df_out
 }
 
@@ -253,6 +314,10 @@ localitiy_type_retrieve<- function(id,...){
 #' @usage locality_type_list (...)
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type.
+#' @examples
+#' \dontrun{
+#' df <-locality_type_list()
+#' }
 #' @details
 #' This function is to retrieve the locality types list.
 #' @export

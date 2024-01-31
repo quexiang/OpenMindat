@@ -20,3 +20,8 @@ retrieve mineral ima by its id.
 \details{
 This function is related to the filed "id" of ima minerals.
 }
+\examples{
+\dontrun{
+df <-minerals_ima_retrieve(3337)
+}
+}

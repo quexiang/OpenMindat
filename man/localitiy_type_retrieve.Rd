@@ -21,3 +21,8 @@ retrieve locality type by an given id of locality.
 This function is to retrieve the locality types by an given id of locality.
 @export
 }
+\examples{
+\dontrun{
+df <-localitiy_type_retrieve(50)
+}
+}

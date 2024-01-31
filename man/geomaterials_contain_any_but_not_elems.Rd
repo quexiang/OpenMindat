@@ -2,7 +2,7 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_contain_any_but_not_elems}
 \alias{geomaterials_contain_any_but_not_elems}
-\title{geomaterials that contain any one of the given elements}
+\title{geomaterials that contain any of some given elements but with out any of some other given elements}
 \usage{
 geomaterials_contain_any_but_not_elems(any_elems_vector,ecl_elms_vector,...)
 }
@@ -23,4 +23,9 @@ df, a data frame of geomaterials.
 This function releated to the field "elements_inc" of geomaterials.
 This function queries the list of geological materials that contain any element of an given list (any_elems).
 It performs the query operation by looping through each given element and calling the mindat_geomaterial_list function.
+}
+\examples{
+\dontrun{
+df <-geomaterials_contain_any_but_not_elems(c('Fe','S'), c('O'))
+}
 }

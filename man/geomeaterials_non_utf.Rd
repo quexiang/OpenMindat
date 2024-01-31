@@ -21,3 +21,8 @@ df, a data frame of geomaterials
 This function releated to the field "non_utf" of geomaterials.
 retrieve the geomaterials that contain (or not contain) the non-utf name.
 }
+\examples{
+\dontrun{
+df <-geomeaterials_non_utf(TRUE,fields = "id,name,non_utf")
+}
+}

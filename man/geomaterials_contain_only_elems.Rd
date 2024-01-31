@@ -27,3 +27,8 @@ Here is a list of all elements that can make up geomaterials:'H','Li', 'Be', 'B'
 'Ir', 'Pt', 'Au','Hg','Tl', 'Pb', 'Bi', 'Th', 'U'
 It performs the query operation by calling the mindat_geomaterial_list function
 }
+\examples{
+\dontrun{
+df <-geomaterials_contain_only_elems(c('Fe','S'),fields ="id,name,mindat_formula,elements")
+}
+}

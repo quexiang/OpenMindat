@@ -21,3 +21,8 @@ df, a data frame of geomaterials
 This function releated to the field "ima" of geomaterials.
 retrieve all the geomaterials that are approved by the IMA or not.
 }
+\examples{
+\dontrun{
+df <-geomaterials_ima(TRUE)
+}
+}

@@ -21,3 +21,8 @@ df, a data frame of geomaterials
 This function releated to the field "expand" of geomaterials.
 The field expand(Items Enum): "description" "type_localities" "localities" "relations" "~all" "*"
 }
+\examples{
+\dontrun{
+df <-geomaterials_expand("~all")
+}
+}

@@ -21,3 +21,8 @@ Queries the list of localities that contain the given elements.
 This function releated to the field "elements_inc" of localities.
 This function queries the list of localities that contain the given elements.
 }
+\examples{
+\dontrun{
+df <-localities_list_elems_inc(c("Dy"))
+}
+}

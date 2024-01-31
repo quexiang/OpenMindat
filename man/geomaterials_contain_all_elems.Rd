@@ -23,3 +23,8 @@ It performs the query operation by calling the mindat_geomaterial_list function
 \details{
 This function releated to the field "elements_inc" of geomaterials.
 }
+\examples{
+\dontrun{
+df <-geomaterials_contain_all_elems (c('Fe','S'),fields ="id,name,mindat_formula,elements")
+}
+}

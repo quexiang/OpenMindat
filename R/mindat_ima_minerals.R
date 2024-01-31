@@ -5,6 +5,10 @@
 #' @usage minerals_ima_list (...)
 #' @param ..., Further named parameters.
 #' @return df, data frame of minerals.
+#' @examples
+#' \dontrun{
+#' df <-minerals_ima_list()
+#' }
 #' @details
 #' This function is to retrieve the IMA minerals list.
 #' @export
@@ -18,7 +22,11 @@ minerals_ima_list<- function(...){
 #' @usage minerals_ima_list_expand (expand,...)
 #' @param expand description
 #' @param ..., Further named parameters.
-#' @return df, data frame of locality type.
+#' @return df, data frame of ima minerals with expanded fields.
+#' @examples
+#' \dontrun{
+#' df <-minerals_ima_list_expand("~all")
+#' }
 #' @details
 #' This function is related to the filed "expand" of ima mineral.
 #' Items Enum: "~all" "*"
@@ -35,6 +43,10 @@ minerals_ima_list_expand <- function(expand,...){
 #' @param intValue Integer
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type.
+#' @examples
+#' \dontrun{
+#' df <-minerals_ima_list_ima(1)
+#' }
 #' @details
 #' This function is related to the filed "ima" of ima minerals.
 #' Integer. 0: "PENDING_PUBLICATION"
@@ -51,6 +63,10 @@ minerals_ima_list_ima<- function(intValue,...){
 #' @param updateDate string<date-time>, Last updated datetime in format %Y-%m-%d %H:%M:%S
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-minerals_ima_updated_at("2020-11-10 10:12:20")
+#' }
 #' @details
 #' This function is related to the filed "updated_at" of ima minerals.
 #' retrieve the localities that have the latest updated at the given time.
@@ -65,6 +81,10 @@ minerals_ima_updated_at <- function(updateDate,...){
 #' @param id the mindat ima id
 #' @param ..., Further named parameters.
 #' @return df, data frame of ima mineral by a given id.
+#' @examples
+#' \dontrun{
+#' df <-minerals_ima_retrieve(3337)
+#' }
 #' @details
 #' This function is related to the filed "id" of ima minerals.
 #' @export

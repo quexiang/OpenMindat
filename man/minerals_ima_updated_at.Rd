@@ -21,3 +21,8 @@ df, a data frame of localities
 This function is related to the filed "updated_at" of ima minerals.
 retrieve the localities that have the latest updated at the given time.
 }
+\examples{
+\dontrun{
+df <-minerals_ima_updated_at("2020-11-10 10:12:20")
+}
+}

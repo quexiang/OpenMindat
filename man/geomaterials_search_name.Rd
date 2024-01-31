@@ -21,3 +21,8 @@ df, a list of geomaterials
 This function releated to the fields "name" of geomaterials.
 retrieve the geomaterial list that match the given name.
 }
+\examples{
+\dontrun{
+df <-geomaterials_search_name("qu_rtz")
+}
+}

@@ -21,3 +21,8 @@ df, a data frame of geomaterials
 This function releated to the field "ri_max" of geomaterials.
 retrieve the geomaterials with the refractive index lower than an given value(lt).
 }
+\examples{
+\dontrun{
+df <-geomaterials_ri_lt(0.5)
+}
+}

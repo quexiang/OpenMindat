@@ -18,3 +18,8 @@ retrieve all locality status list.
 \details{
 This function is to retrieve all the locality_status list.
 }
+\examples{
+\dontrun{
+df <-localities_status_list()
+}
+}

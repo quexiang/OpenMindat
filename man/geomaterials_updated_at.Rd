@@ -22,3 +22,8 @@ This function releated to the fields "updated_at" of geomaterials.
 Last updated datetime in format \%Y-\%m-\%d \%H:\%M:\%S
 retrieve the geomaterials that have the latest updated at the given time.
 }
+\examples{
+\dontrun{
+df <-geomaterials_updated_at("2020-2-12 10:15:12")
+}
+}

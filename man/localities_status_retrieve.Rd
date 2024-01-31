@@ -20,3 +20,8 @@ retrieve locality status by its id.
 \details{
 This function is to retrieve the locality_status by an given id of locality.
 }
+\examples{
+\dontrun{
+df <-localities_status_retrieve(10)
+}
+}

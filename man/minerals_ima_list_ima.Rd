@@ -22,3 +22,8 @@ This function is related to the filed "ima" of ima minerals.
 Integer. 0: "PENDING_PUBLICATION"
 1: "APPROVED"
 }
+\examples{
+\dontrun{
+df <-minerals_ima_list_ima(1)
+}
+}

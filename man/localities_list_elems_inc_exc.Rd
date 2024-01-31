@@ -23,3 +23,8 @@ Queries the list of localities that contain the given elements,but not contain s
 This function releated to the fields "elements_inc" and "elements_exc" of localities.
 This function queries the list of localities that contain the given elements,but not contain some other given elements.
 }
+\examples{
+\dontrun{
+df <-localities_list_elems_inc_exc(c("Dy"), c("Li"))
+}
+}

@@ -21,3 +21,8 @@ df, a data frame of localities
 This function releated to all the fields "id" of localities.
 retrieve the localities by a given id.
 }
+\examples{
+\dontrun{
+df <-localities_retrieve_id(3337)
+}
+}

@@ -12,7 +12,7 @@ minerals_ima_list_expand (expand,...)
 \item{..., }{Further named parameters.}
 }
 \value{
-df, data frame of locality type.
+df, data frame of ima minerals with expanded fields.
 }
 \description{
 retrieve mineral ima list with the given expand.
@@ -20,4 +20,9 @@ retrieve mineral ima list with the given expand.
 \details{
 This function is related to the filed "expand" of ima mineral.
 Items Enum: "~all" "*"
+}
+\examples{
+\dontrun{
+df <-minerals_ima_list_expand("~all")
+}
 }

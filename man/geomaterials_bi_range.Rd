@@ -23,3 +23,8 @@ df, a data frame of geomaterials
 This function releated to the fields "bi_min"and "bi_max" of geomaterials.
 retrieve all the geomaterials that has the birifrigence within the given range of (gt,lt).
 }
+\examples{
+\dontrun{
+df <-geomaterials_bi_range(0.2,0.3)
+}
+}

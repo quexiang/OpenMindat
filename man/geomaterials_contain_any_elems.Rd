@@ -22,3 +22,8 @@ This function releated to the field "elements_inc" of geomaterials.
 This function queries the list of geological materials that contain any element of an given list (any_elems).
 It performs the query operation by looping through each given element and calling the mindat_geomaterial_list function.
 }
+\examples{
+\dontrun{
+df <-geomaterials_contain_any_elems (c('Fe','S'),fields ="id,name,mindat_formula,elements")
+}
+}

@@ -22,3 +22,8 @@ A mineral that differs from another only in the stacking of similar structural u
 This function releated to the field "polytypeof" of geomaterials.
 retrieve the geomaterials with an given id of polytypeof.
 }
+\examples{
+\dontrun{
+df <-geomaterials_polytypeof(0,fields = "id,name,polytypeof")
+}
+}

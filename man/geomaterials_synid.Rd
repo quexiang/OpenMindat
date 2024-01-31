@@ -22,3 +22,8 @@ This function releated to the fields "synid" of geomaterials.
 The id of the geomaterial that is the synonym of this record (this geomaterial cannot be added to a locality).
 retrieve the geomaterials that has an given synid.
 }
+\examples{
+\dontrun{
+df <-geomaterials_synid(3777)
+}
+}

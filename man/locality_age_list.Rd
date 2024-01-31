@@ -18,3 +18,8 @@ retrieve all locality age list or by its conditions
 \details{
 This function is to retrieve all the locality_age list.
 }
+\examples{
+\dontrun{
+df <-locality_age_list()
+}
+}

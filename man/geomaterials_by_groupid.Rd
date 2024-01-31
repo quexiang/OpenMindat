@@ -21,3 +21,8 @@ df, a data frame of geomaterials
 This function releated to the field "groupid" of geomaterials.
 retrieve all the geomaterials that match an given groupid.
 }
+\examples{
+\dontrun{
+df <-geomaterials_by_groupid(0)
+}
+}

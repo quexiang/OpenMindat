@@ -71,8 +71,6 @@ ConvertDF2JsonLD<- function(inputdata,template = NULL ){ #"/inst/extdata/OpenMin
   str_context<- str_sub(str_context,end = -3)
   str_context<- paste(str_context,"}",sep = "")
 
-
-
   print_fields_list <- list()
   for (clo_name in d_clo_list){
     #print(clo_name)
