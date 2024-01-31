@@ -15,3 +15,13 @@ qs. generated query string.
 \description{
 Build query string based on the query conditions.
 }
+\examples{
+\dontrun{
+mindat_cache_set('page_size',800)
+ids<-c("")
+hardness_min<- 9.3
+fields<- c("name,hardness")
+args<- list(ids,hardness_min,fields)
+querystring<-mindat_build_querystring(args)
+}
+}

@@ -15,3 +15,13 @@ df_out, R data frame
 \description{
 convert the response json to dataframe of R
 }
+\examples{
+\dontrun{
+id<- c('42155','9300','11282','48322')
+name<-  c('Cuarzo opalescente', 'Cupromagnesite', 'Cuprozippeite', 'Quartz-anorthosite')
+ima_status <- c(0,0,0,0)
+synid <- c(42133, 9281, 0, 0)
+list_cvt <- list(id=id, name=name, ima_status=ima_status, synid=synid)
+df<- mindat_make_data_frame(list_cvt)
+}
+}
