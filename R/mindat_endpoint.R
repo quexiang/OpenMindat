@@ -89,6 +89,10 @@ mindat_set_up_endpoints<-function(){
 #' @usage mindat_setup(base_uri = 'https://api.mindat.org',page_size = 800)
 #' @param base_uri base uri of mindat API.
 #' @param page_size interger,setting the page size of responsed data from the API server.
+#' @examples
+#' \dontrun{
+#' mindat_setup()
+#' }
 #' @export
 mindat_setup<-function(base_uri = 'https://api.mindat.org',page_size = 800){
   set_api_base(base_uri)

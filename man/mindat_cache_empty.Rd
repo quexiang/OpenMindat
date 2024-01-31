@@ -9,3 +9,6 @@ mindat_cache_empty()
 \description{
 Clear all current cached values. Set current environment cache empty.
 }
+\examples{
+mindat_cache_empty()
+}

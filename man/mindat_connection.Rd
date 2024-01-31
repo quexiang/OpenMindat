@@ -18,3 +18,6 @@ mindat_connection(token, base_url = "https://api.mindat.org",fmt ="json",page_si
 \description{
 Initializing API Call. Setup the base_url, token and format.
 }
+\examples{
+mindat_connection("9ce67655d74bcd981e937be80dcea9cb",page_size = 1500)
+}

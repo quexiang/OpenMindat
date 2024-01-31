@@ -14,3 +14,8 @@ mindat_setup(base_uri = 'https://api.mindat.org',page_size = 800)
 \description{
 set up of the mindat basic uri, endpoints, and cache
 }
+\examples{
+\dontrun{
+mindat_setup()
+}
+}
