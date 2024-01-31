@@ -23,6 +23,6 @@ retrieve the geomaterial list that match the given name.
 }
 \examples{
 \dontrun{
-df <-geomaterials_search_name("qu_rtz")
+df <-geomaterials_search_name("Quartz")
 }
 }

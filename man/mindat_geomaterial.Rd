@@ -17,3 +17,8 @@ df, data frame of locality type list
 \description{
 retrieve  geomaterial  by its id
 }
+\examples{
+\dontrun{
+ df<- mindat_geomaterial(3337)
+}
+}

@@ -17,3 +17,8 @@ df query resutls in data frame format.
 \description{
 Basic function for query dataset at a specified endpoit.
 }
+\examples{
+\dontrun{
+df <-mindat_query("geomaterials_list",list(ids="",hardness_min=9))
+}
+}

@@ -15,3 +15,8 @@ df. data frame of localities list.
 \description{
 retrieve localities list
 }
+\examples{
+\dontrun{
+ df<- mindat_localities_list()
+}
+}

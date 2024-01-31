@@ -5,6 +5,10 @@
 #' @param endpoint query endpoint, e.g.'minerals_ima'.
 #' @param query list for query conditions.
 #' @return df query resutls in data frame format.
+#' @examples
+#' \dontrun{
+#' df <-mindat_query("geomaterials_list",list(ids="",hardness_min=9))
+#' }
 #' @export
 mindat_query<-function(endpoint, query = list()){
   query <- lapply(query, params_to_string)
@@ -18,6 +22,10 @@ mindat_query<-function(endpoint, query = list()){
 #' @usage params_to_string (params)
 #' @param params convert params to string,which is used by the mindat query function.
 #' @return str .
+#' @examples
+#' \dontrun{
+#'  params_to_string("")
+#' }
 #' @export
 params_to_string<-function(params){
   if(!(is.vector(params))){
@@ -40,6 +48,10 @@ params_to_string<-function(params){
 #' @param id mindat id
 #' @param ..., Further parameters.
 #' @return df. query resutls in data frame format.
+#' @examples
+#' \dontrun{
+#'  df<- mindat_mineral_ima(3337)
+#' }
 #' @export
 mindat_mineral_ima<-function(id,...){
   l<-list(...)
@@ -51,6 +63,10 @@ mindat_mineral_ima<-function(id,...){
 #' @usage mindat_mineral_ima_list (...)
 #' @param ... , Further named parameters.
 #' @return df, data frame of mineral list.
+#' @examples
+#' \dontrun{
+#'  df<- mindat_mineral_ima_list()
+#' }
 #' @export
 mindat_mineral_ima_list<-function(...){
   l<-list(...)
@@ -62,6 +78,10 @@ mindat_mineral_ima_list<-function(...){
 #' @usage mindat_localities_list (...)
 #' @param ... Further named parameters.
 #' @return df. data frame of localities list.
+#' @examples
+#' \dontrun{
+#'  df<- mindat_localities_list()
+#' }
 #' @export
 mindat_localities_list<-function(...){
   l<-list(...)
@@ -74,6 +94,10 @@ mindat_localities_list<-function(...){
 #' @param id the mindat localitiy id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality
+#' @examples
+#' \dontrun{
+#'  df<- mindat_localitiy(3337)
+#' }
 #' @export
 mindat_localitiy<-function(id,...){
   l<-list(...)
@@ -86,6 +110,10 @@ mindat_localitiy<-function(id,...){
 #' @param id the mindat localitiy status id.
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality status
+#' @examples
+#' \dontrun{
+#'  df<- mindat_locality_status(10)
+#' }
 #' @export
 mindat_locality_status<-function(id,...){
   l<-list(...)
@@ -97,6 +125,10 @@ mindat_locality_status<-function(id,...){
 #' @usage mindat_locality_status_list (...)
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality status list
+#' @examples
+#' \dontrun{
+#'  df<- mindat_locality_status_list()
+#' }
 #' @export
 mindat_locality_status_list<-function(...){
   l<-list(...)
@@ -108,6 +140,10 @@ mindat_locality_status_list<-function(...){
 #' @usage mindat_locality_type_list (...)
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type list
+#' @examples
+#' \dontrun{
+#'  df<- mindat_locality_type_list()
+#' }
 #' @export
 mindat_locality_type_list<-function(...){
   l<-list(...)
@@ -120,6 +156,10 @@ mindat_locality_type_list<-function(...){
 #' @param id locality type id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type list
+#' @examples
+#' \dontrun{
+#'  df<- mindat_locality_type(50)
+#' }
 #' @export
 mindat_locality_type<-function(id,...){
   l<-list(...)
@@ -133,6 +173,10 @@ mindat_locality_type<-function(id,...){
 #' @param id geomaterial id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type list
+#' @examples
+#' \dontrun{
+#'  df<- mindat_geomaterial(3337)
+#' }
 #' @export
 mindat_geomaterial<-function(id,...){
   l<-list(...)
@@ -146,6 +190,10 @@ mindat_geomaterial<-function(id,...){
 #' @param id geomaterial id
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type list
+#' @examples
+#' \dontrun{
+#'  df<- mindat_geomaterial_varieties(3337)
+#' }
 #' @export
 mindat_geomaterial_varieties<-function(id,...){
   l<-list(...)
@@ -158,6 +206,10 @@ mindat_geomaterial_varieties<-function(id,...){
 #' @usage mindat_geomaterial_list(...)
 #' @param ..., Further named parameters.
 #' @return df, data frame of locality type list
+#' @examples
+#' \dontrun{
+#'  df<- mindat_geomaterial_list()
+#' }
 #' @export
 mindat_geomaterial_list<-function(...){
   l<-list(...)
@@ -172,6 +224,10 @@ mindat_geomaterial_list<-function(...){
 #' @usage mindat_geomaterial_search (...)
 #' @param ..., Further named parameters.
 #' @return df, data frame of geomaterials mathch the search
+#' @examples
+#' \dontrun{
+#'  df<- mindat_geomaterial_search(q="Quartz")
+#' }
 #' @export
 mindat_geomaterial_search<-function(...){
   l<-list(...)
@@ -187,6 +243,10 @@ mindat_geomaterial_search<-function(...){
 #' @param id, country id in mindat.
 #' @param ..., Further named parameters.
 #' @return df, a data frame of country
+#' @examples
+#' \dontrun{
+#'  df<- mindat_country(1)
+#' }
 #' @export
 mindat_country<-function(id,...){
   l<-list(...)
@@ -198,6 +258,10 @@ mindat_country<-function(id,...){
 #' @usage mindat_countries (...)
 #' @param ..., Further named parameters.
 #' @return df, data frame of countries list
+#' @examples
+#' \dontrun{
+#'  df<- mindat_countries()
+#' }
 #' @export
 mindat_countries<-function(...){
   l<-list(...)

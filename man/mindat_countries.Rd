@@ -15,3 +15,8 @@ df, data frame of countries list
 \description{
 retrieve all countries list or the contries by given conditions.
 }
+\examples{
+\dontrun{
+ df<- mindat_countries()
+}
+}

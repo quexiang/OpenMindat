@@ -17,3 +17,8 @@ df, a data frame of country
 \description{
 retrieve the country by given its id.
 }
+\examples{
+\dontrun{
+ df<- mindat_country(1)
+}
+}

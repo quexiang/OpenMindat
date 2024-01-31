@@ -17,3 +17,8 @@ df, data frame of locality
 \description{
 retrieve locality by its id
 }
+\examples{
+\dontrun{
+ df<- mindat_localitiy(3337)
+}
+}

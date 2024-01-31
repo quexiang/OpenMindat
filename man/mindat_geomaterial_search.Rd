@@ -15,3 +15,8 @@ df, data frame of geomaterials mathch the search
 \description{
 retrieve all the geomaterial list or the geomaterial by given conditions.
 }
+\examples{
+\dontrun{
+ df<- mindat_geomaterial_search(q="Quartz")
+}
+}

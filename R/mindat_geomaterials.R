@@ -1046,7 +1046,7 @@ geomaterials_varietyof<- function(intvalue,...){
 #' @return df, a list of geomaterials
 #' @examples
 #' \dontrun{
-#' df <-geomaterials_search_name("qu_rtz")
+#' df <-geomaterials_search_name("Quartz")
 #' }
 #' @details
 #' This function releated to the fields "name" of geomaterials.

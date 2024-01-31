@@ -15,3 +15,8 @@ df, data frame of locality type list
 \description{
 retrieve all locality type list
 }
+\examples{
+\dontrun{
+ df<- mindat_locality_type_list()
+}
+}

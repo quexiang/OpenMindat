@@ -15,3 +15,8 @@ df, data frame of mineral list.
 \description{
 retrieve ima mineral list
 }
+\examples{
+\dontrun{
+ df<- mindat_mineral_ima_list()
+}
+}

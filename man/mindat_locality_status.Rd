@@ -17,3 +17,8 @@ df, data frame of locality status
 \description{
 retrieve all locality status by its id
 }
+\examples{
+\dontrun{
+ df<- mindat_locality_status(10)
+}
+}

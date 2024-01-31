@@ -17,3 +17,8 @@ df, data frame of locality type list
 \description{
 retrieve  locality type by its id
 }
+\examples{
+\dontrun{
+ df<- mindat_locality_type(50)
+}
+}

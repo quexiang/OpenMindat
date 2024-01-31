@@ -17,3 +17,8 @@ df. query resutls in data frame format.
 \description{
 retrieve ima mineral by its id.
 }
+\examples{
+\dontrun{
+ df<- mindat_mineral_ima(3337)
+}
+}
