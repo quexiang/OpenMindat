@@ -81,8 +81,8 @@ mindat_make_data_frame<-function(reg_list){
 #' @return df_out, R data frame
 #' @examples
 #' \dontrun{
-#' rd<-"{\"count\":5,\"next\":null,\"previous\":null,
-#' \"results\":[{\"name\":\"Diamond\"},{\"name\":\"Khamrabaevite\"},
+#' rd<-"{\"count\":5,\"next\":null,\"previous\":null,+
+#' \"results\":[{\"name\":\"Diamond\"},{\"name\":\"Khamrabaevite\"},+
 #' {\"name\":\"Moissanite\"},{\"name\":\"Qingsongite\"},{\"name\":\"Uakitite\"}]}"
 #' df<- mindat_parse_raw_data(rd)
 #' }
@@ -128,7 +128,7 @@ mindat_parse_raw_data<-function(raw_data){
 #' @examples
 #' \dontrun{
 #' library(httr)
-#' uri<- "https://api.mindat.org/geomaterials/?id__in=&hardness_min=9.3&fields=name,
+#' uri<- "https://api.mindat.org/geomaterials/?id__in=&hardness_min=9.3&fields=name,+
 #' hardness&page_size=1500"
 #' api_token<- "9ce67655d74bcd981e937be80dcea9cb"
 #' response <- GET(uri,add_headers('Authorization'= paste('Token ',api_token,sep = "")))
@@ -156,7 +156,7 @@ mindat_extract_response_body<-function(response){
 #' @examples
 #' \dontrun{
 #' library(httr)
-#' uri <- "https://api.mindat.org/geomaterials/?id__in=&hardness_min=9.3&fields=name,
+#' uri <- "https://api.mindat.org/geomaterials/?id__in=&hardness_min=9.3&fields=name,+
 #' hardness&page_size=1500"
 #' mindat_cache_set('api_token',"9ce67655d74bcd981e937be80dcea9cb")
 #' df <- mindat_get_data_from_uri(uri)

@@ -18,8 +18,8 @@ request all the pages and then add them into the df_out data frame.
 }
 \examples{
 \dontrun{
-rd<-"{\"count\":5,\"next\":null,\"previous\":null,
-\"results\":[{\"name\":\"Diamond\"},{\"name\":\"Khamrabaevite\"},
+rd<-"{\"count\":5,\"next\":null,\"previous\":null,+
+\"results\":[{\"name\":\"Diamond\"},{\"name\":\"Khamrabaevite\"},+
 {\"name\":\"Moissanite\"},{\"name\":\"Qingsongite\"},{\"name\":\"Uakitite\"}]}"
 df<- mindat_parse_raw_data(rd)
 }

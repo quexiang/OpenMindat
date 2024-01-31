@@ -18,7 +18,7 @@ retrieve data from the uri.
 \examples{
 \dontrun{
 library(httr)
-uri <- "https://api.mindat.org/geomaterials/?id__in=&hardness_min=9.3&fields=name,
+uri <- "https://api.mindat.org/geomaterials/?id__in=&hardness_min=9.3&fields=name,+
 hardness&page_size=1500"
 mindat_cache_set('api_token',"9ce67655d74bcd981e937be80dcea9cb")
 df <- mindat_get_data_from_uri(uri)
