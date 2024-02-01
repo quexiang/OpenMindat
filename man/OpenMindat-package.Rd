@@ -4,7 +4,7 @@
 \name{OpenMindat-package}
 \alias{OpenMindat}
 \alias{OpenMindat-package}
-\title{OpenMindat: Quickly access the required data based on mindat API}
+\title{OpenMindat: Quickly retrieve datasets from the 'Mindat' API}
 \description{
 The goal of OpenMindat R package is to provide functions for users or machines to quickly and easily retrieve datasets from the mindat.org API (https://api.mindat.org/).
 }
