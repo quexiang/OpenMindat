@@ -1,7 +1,7 @@
 Package: OpenMindat
 Type: Package
 Title: Quickly Retrieve Datasets from the 'Mindat' API
-Version: 0.0.9
+Version: 1.0.0
 Imports:
     httr (>= 1.4.4),
     jsonlite (>= 1.8.4),
