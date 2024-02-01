@@ -4,15 +4,24 @@
 \name{OpenMindat-package}
 \alias{OpenMindat}
 \alias{OpenMindat-package}
-\title{OpenMindat: Quickly retrieve datasets from the 'Mindat' API}
+\title{OpenMindat: Quickly Retrieve Datasets from the 'Mindat' API}
 \description{
-The goal of OpenMindat R package is to provide functions for users or machines to quickly and easily retrieve datasets from the mindat.org API (https://api.mindat.org/).
+The goal of OpenMindat R package is to provide functions for users or machines to quickly and easily retrieve datasets from the mindat.org API (\url{https://api.mindat.org/schema/redoc/}).
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://github.com/quexiang/OpenMindat}
   \item Report bugs at \url{https://github.com/quexiang/OpenMindat/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Xiang Que \email{xiangq@uidaho.edu} (\href{https://orcid.org/0000-0002-5687-8627}{ORCID})
+
+Authors:
+\itemize{
+  \item Xiaogang Ma \email{max@uidaho.edu} (\href{https://orcid.org/0000-0002-9110-7369}{ORCID})
 }
 
 }

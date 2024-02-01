@@ -1,6 +1,6 @@
 Package: OpenMindat
 Type: Package
-Title: Quickly retrieve datasets from the 'Mindat' API
+Title: Quickly Retrieve Datasets from the 'Mindat' API
 Version: 0.0.9
 Imports:
     httr (>= 1.4.4),
@@ -10,15 +10,12 @@ Imports:
     stringi,
     stringr
 Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
-Config/testthat/edition: 3
-usethis: :use_testthat(3)
-Author: Xiang Que & Xiaogang Ma
-Author@R: 
-    c(person(given = "Xiang",family = "Que",email = "xiangq@uidaho.edu",role = ("aut","cre"), comment = c(ORCID = "0000-0002-5687-8627")),
-      person(given = "Xiaogang",family = "Ma",email = "max@uidaho.edu",role = ("aut"),comment = c(ORCID = "0000-0002-9110-7369"))
+Authors@R: 
+    c(person(given = "Xiang",family = "Que",email = "xiangq@uidaho.edu",role = c("aut","cre"), comment = c(ORCID = "0000-0002-5687-8627")),
+      person(given = "Xiaogang",family = "Ma",email = "max@uidaho.edu",role = c("aut"),comment = c(ORCID = "0000-0002-9110-7369"))
     )
-Maintainer: The package maintainer <xiangq@uidaho.edu> or <quexiang@fafu.edu.cn>
-Description: The goal of OpenMindat R package is to provide functions for users or machines to quickly and easily retrieve datasets from the mindat.org API (https://api.mindat.org/).
+Maintainer: Xiang Que <xiangq@uidaho.edu>
+Description: The goal of OpenMindat R package is to provide functions for users or machines to quickly and easily retrieve datasets from the mindat.org API (<https://api.mindat.org/schema/redoc/>).
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
