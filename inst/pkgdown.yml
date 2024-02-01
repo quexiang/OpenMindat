@@ -1,0 +1,11 @@
+pandoc: 3.1.1
+pkgdown: 2.0.7
+pkgdown_sha: ~
+articles:
+  Mindat_data: Mindat_data.html
+  OpenMindat: OpenMindat.html
+last_built: 2024-02-01T18:11Z
+urls:
+  reference: https://quexiang.github.io/OpenMindat/reference
+  article: https://quexiang.github.io/OpenMindat/articles
+
