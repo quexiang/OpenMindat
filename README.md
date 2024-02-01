@@ -171,3 +171,5 @@ help(package = OpenMindat)
 **Related Articles**
 
 Ma, X., Ralph, J., Zhang, J., Que, X., Prabhu, A., Morrison, S.M., Hazen, R.M., Wyborn, L., Lehnert, K., 2023. OpenMindat: Open and FAIR mineralogy data from the Mindat database. Geoscience Data Journal, In Press, https://doi.org/10.1002/gdj3.204
+
+[![R-CMD-check](https://github.com/quexiang/OpenMindat/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/quexiang/OpenMindat/actions/workflows/R-CMD-check.yaml)
