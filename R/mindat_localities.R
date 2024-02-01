@@ -72,8 +72,7 @@ localities_list_description<- function(desc,...){
 #' @return df, a data frame of localities
 #' @examples
 #' \dontrun{
-#' df <-localities_list_elems_exc(c("H", "O", "Si", "Al", +
-#  "Fe", "Ca", "Na", "K", "P", "C", "Mn", "F", "Mg", "S"))
+#' df <-localities_list_elems_exc(c("H", "O", "Si", "Al","Fe", "Ca", "Na", "K", "P", "C", "Mn", "F", "Mg", "S"))
 #' }
 #' @details
 #' This function releated to the field "elements_exc" of localities.
