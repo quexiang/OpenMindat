@@ -22,3 +22,8 @@ This function releated to the fields "varietyof" of geomaterials.
 Varieties are geomaterials that have a special distinction from the main geomaterial ie. amethyst var. quartz
 retrieve the geomaterials that are varieties of an given id of geomaterials.
 }
+\examples{
+\dontrun{
+df <-geomaterials_varietyof(3337)
+}
+}

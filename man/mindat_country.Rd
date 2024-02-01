@@ -4,7 +4,7 @@
 \alias{mindat_country}
 \title{mindat_country}
 \usage{
-mindat_country (id)
+mindat_country (id,...)
 }
 \arguments{
 \item{id, }{country id in mindat.}
@@ -16,4 +16,9 @@ df, a data frame of country
 }
 \description{
 retrieve the country by given its id.
+}
+\examples{
+\dontrun{
+ df<- mindat_country(1)
+}
 }

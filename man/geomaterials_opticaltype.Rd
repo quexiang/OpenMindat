@@ -22,3 +22,8 @@ This function releated to the field "opticaltype" of geomaterials.
 transparent mineral.
 opticaltype(Enum) :"Biaxial" "Isotropic" "Uniaxial"
 }
+\examples{
+\dontrun{
+df <-geomaterials_opticaltype("Isotropic")
+}
+}

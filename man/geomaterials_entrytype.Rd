@@ -4,7 +4,7 @@
 \alias{geomaterials_entrytype}
 \title{retrieve the geomaterials that have the given entrytype}
 \usage{
-geomaterials_entrytype(type, ...)
+geomaterials_entrytype(types,...)
 }
 \arguments{
 \item{types}{list of entry types.}
@@ -23,4 +23,9 @@ Items Enum: 0 1 2 3 4 5 6 7 8
 Multiple choice:
 0- mineral; 1-synonym; 2-variety; 3-mixture; 4-series; 5-grouplist; 6-polytype; 7-rock; 8-commodity
 Releated field: entrytype_text (description of the entrytype).
+}
+\examples{
+\dontrun{
+df <-geomaterials_entrytype(c('1'))
+}
 }

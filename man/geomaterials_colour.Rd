@@ -22,3 +22,8 @@ df, a data frame of geomaterials
 This function releated to the field "colour" of geomaterials.
 For example: "Brown", "Yellow", "green", "Pink","White","Orange","Blue","Gold","Dark brown","Purple".
 }
+\examples{
+\dontrun{
+df <-geomaterials_colour(c("bright blue"))
+}
+}

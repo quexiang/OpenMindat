@@ -3,11 +3,15 @@
 #' @description retrieve the geomaterials that contain all of the elements.This function queries
 #' the list of geomaterials that contain all the given elements.
 #' It performs the query operation by calling the mindat_geomaterial_list function
-#' @usage geomaterials_contain_all_elems (icl_elms_vector)
+#' @usage geomaterials_contain_all_elems(icl_elms_vector,...)
 #' @param icl_elms_vector, vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments that can be
 #' passed to the mindat_geomaterial_list function.
 #' @return df, a data frame of geomaterials list.
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_contain_all_elems (c('Fe','S'),fields ="id,name,mindat_formula,elements")
+#' }
 #' @details
 #' This function releated to the field "elements_inc" of geomaterials.
 #' @export
@@ -22,6 +26,10 @@ geomaterials_contain_all_elems<- function(icl_elms_vector,...){
 #' @param ecl_elms_vector, vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of geomaterials list.
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_not_contain_elems (c('Fe','S', 'O'), fields ="id,name,mindat_formula,elements")
+#' }
 #' @details
 #' This function releated to the field "elements_exc" of geomaterials.
 #' @export
@@ -30,7 +38,7 @@ geomaterials_not_contain_elems <- function(ecl_elms_vector,...){
   df
 }
 
-#' geomaterials that contain some elements but not some other elements.
+#' geomaterials that contain all of some given elements but without any of some other given elements.
 #' @description Queries the list of geomaterials that contain all the given elements listed in icl_elm_vector,
 #' but do not contain the given elements listed in ecl_elms_vector.
 #' @usage geomaterials_contain_all_but_not_elems(icl_elm_vector, ecl_elms_vector, ...)
@@ -38,6 +46,10 @@ geomaterials_not_contain_elems <- function(ecl_elms_vector,...){
 #' @param ecl_elms_vector vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of geomaterials.
+#' @examples
+#' \dontrun{
+#' df<-geomaterials_contain_all_but_not_elems (c('Fe','S'), c('O'),fields ="id,name,mindat_formula,elements")
+#' }
 #' @details
 #' This function releated to the field "elements_inc" and "elements_exc" of geomaterials.
 #' This function queries the list of geological materials that contain an given list of elements (icl_elm_vector),
@@ -55,6 +67,10 @@ geomaterials_contain_all_but_not_elems <- function(icl_elm_vector,ecl_elms_vecto
 #' @param any_elems vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of geomaterials.
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_contain_any_elems (c('Fe','S'),fields ="id,name,mindat_formula,elements")
+#' }
 #' @details
 #' This function releated to the field "elements_inc" of geomaterials.
 #' This function queries the list of geological materials that contain any element of an given list (any_elems).
@@ -69,13 +85,17 @@ geomaterials_contain_any_elems <- function(any_elems,...){
   df_out
 }
 
-#' geomaterials that contain any one of the given elements
+#' geomaterials that contain any of some given elements but with out any of some other given elements
 #' @description : Queries the list of geological materials that contain any one of the given elements.
-#' @usage geomaterials_contain_any_elems(any_elems, ...)
+#' @usage geomaterials_contain_any_but_not_elems(any_elems_vector,ecl_elms_vector,...)
 #' @param any_elems_vector vector of elements. vector of any elements contained.
 #' @param ecl_elms_vector  vector of elements. vector of any elements excluded.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of geomaterials.
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_contain_any_but_not_elems(c('Fe','S'), c('O'))
+#' }
 #' @details
 #' This function releated to the field "elements_inc" of geomaterials.
 #' This function queries the list of geological materials that contain any element of an given list (any_elems).
@@ -92,11 +112,15 @@ geomaterials_contain_any_but_not_elems <- function(any_elems_vector,ecl_elms_vec
 
 #' geomaterials_contain_only_elems
 #' @description retrieve the geomaterials that only contain elements in an given list (icl_only_elms_vector).
-#' @usage geomaterials_contain_only_elems (icl_only_elms_vector)
+#' @usage geomaterials_contain_only_elems (icl_only_elms_vector,...)
 #' @param icl_only_elms_vector, vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments that can be
 #' passed to the mindat_geomaterial_list function.
 #' @return df, a data frame of geomaterials.
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_contain_only_elems(c('Fe','S'),fields ="id,name,mindat_formula,elements")
+#' }
 #' @details
 #' This function releated to the fields "elements_inc" and "elements_exc" of geomaterials.
 #' Here is a list of all elements that can make up geomaterials:'H','Li', 'Be', 'B', 'C', 'N', 'O', 'F',
@@ -125,6 +149,10 @@ geomaterials_contain_only_elems<- function(icl_only_elms_vector,...){
 #' The field "cleavage" is used to describe the crystallographic orientation of cleavage directions or planes and quality.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_cleavagetype(c("Poor/Indistinct"))
+#' }
 #' @details
 #' This function releated to the field "cleavagetype" of geomaterials.
 #' Items Enum: "Distinct/Good" "Imperfect/Fair" "None Observed" "Perfect" "Poor/Indistinct" "Very Good"
@@ -154,6 +182,10 @@ geomaterials_cleavagetype <- function(types,...){
 #' colors of the mineral or rock - individual minerals at localities can also have color information.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_colour(c("bright blue"))
+#' }
 #' @details
 #' This function releated to the field "colour" of geomaterials.
 #' For example: "Brown", "Yellow", "green", "Pink","White","Orange","Blue","Gold","Dark brown","Purple".
@@ -181,6 +213,10 @@ geomaterials_colour<- function(colors,...){
 #'"Amorphous","Hexagonal","Icosahedral","Isometric","Monoclinic","Orthorhombic","Tetragonal","Triclinic","Trigonal"
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_crystal_system(c("Icosahedral"))
+#' }
 #' @details
 #' This function releated to the field "crystal_system" of geomaterials.
 #' Items Enum: "Amorphous" "Hexagonal" "Icosahedral" "Isometric" "Monoclinic" "Orthorhombic" "Tetragonal" "Triclinic" "Trigonal"
@@ -206,6 +242,10 @@ geomaterials_crystal_system <- function(crystals,...){
 #' @param gt float value.Birifrigence is calculated from refractive index as (rimax-rimin).Range: bi_min - bi_max.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_bi_greater_than(0.2)
+#' }
 #' @details
 #' This function releated to the field "bi_min" of geomaterials.
 #' retrieve all the geomaterials that has higher birifrigence than the given value(gt).
@@ -221,6 +261,10 @@ geomaterials_bi_greater_than<- function(gt,...){
 #' @param lt float value.Birifrigence is calculated from refractive index as (rimax-rimin).Range: bi_min - bi_max.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_bi_less_than(0.3)
+#' }
 #' @details
 #' This function releated to the field "bi_max" of geomaterials.
 #' retrieve all the geomaterials that has higher birifrigence than the given value(lt).
@@ -237,6 +281,10 @@ geomaterials_bi_less_than<- function(lt,...){
 #' @param lt float value.Birifrigence is calculated from refractive index as (rimax-rimin).Range: bi_min - bi_max.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_bi_range(0.2,0.3)
+#' }
 #' @details
 #' This function releated to the fields "bi_min"and "bi_max" of geomaterials.
 #' retrieve all the geomaterials that has the birifrigence within the given range of (gt,lt).
@@ -256,6 +304,10 @@ geomaterials_bi_range <- function(gt,lt,...){
 #' dmeas2:measured maximum density of mineral
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_dens_greater_than(2)
+#' }
 #' @details
 #' This function releated to the field "density_min" of geomaterials.
 #' retrieve all the geomaterials that has higher density than the given density(gt).
@@ -274,6 +326,10 @@ geomaterials_dens_greater_than<- function(gt,...){
 #' dmeas2:measured maximum density of mineral
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_dens_less_than(3)
+#' }
 #' @details
 #' This function releated to the field "density_max" of geomaterials.
 #' retrieve all the geomaterials that has higher density than the given density(lt).
@@ -293,6 +349,10 @@ geomaterials_dens_less_than<- function(lt,...){
 #' dmeas2:measured maximum density of mineral
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_dens_range(2,3)
+#' }
 #' @details
 #' This function releated to the fields "density_min" and "density_max" of geomaterials.
 #' retrieve all the geomaterials records that has the density within an given range of (gt,lt).
@@ -308,6 +368,10 @@ geomaterials_dens_range <- function(gt,lt,...){
 #' @param diapheny string. The diaphany of the mineral - transparent; translucent; opaque
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_diapheny("Transparent")
+#' }
 #' @details
 #' This function releated to the field "diapheny" of geomaterials.
 #' The diaphany of the mineral(Items Enum): "Opaque" "Translucent" "Transparent"
@@ -330,10 +394,14 @@ geomaterials_diapheny <- function(diapheny,...){
 
 #' retrieve the geomaterials that have the given entrytype
 #' @description : Queries the list of geomaterials that have the given entrytype
-#' @usage geomaterials_entrytype(type, ...)
+#' @usage geomaterials_entrytype(types,...)
 #' @param types list of entry types.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_entrytype(c('1'))
+#' }
 #' @details
 #' This function releated to the field "entrytype" of geomaterials.
 #' Items Enum: 0 1 2 3 4 5 6 7 8
@@ -358,10 +426,14 @@ geomaterials_entrytype <- function(types,...){
 
 #' retrieve the geomaterials that have the given expand.
 #' @description : Queries the list of geomaterials that have the given expand.
-#' @usage geomaterials_expand(expand_fields, ...)
+#' @usage geomaterials_expand(expanded_fields,...)
 #' @param expanded_fields list of expand (Array of strings (Expanded fields)).Select fields to expand.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_expand("~all")
+#' }
 #' @details
 #' This function releated to the field "expand" of geomaterials.
 #' The field expand(Items Enum): "description" "type_localities" "localities" "relations" "~all" "*"
@@ -388,6 +460,10 @@ geomaterials_expand <- function(expanded_fields,...){
 #' How the mineral breaks-"Conchoidal" "Fibrous" "Hackly" "Irregular/Uneven" "Micaceous" "None observed" "Splintery" "Step-Like" "Sub-Conchoidal".
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_fracturetype(c("Step-Like"))
+#' }
 #' @details
 #' This function releated to the field "fracturetype" of geomaterials.
 #' fracturetype(Items Enum): "Conchoidal" "Fibrous" "Hackly" "Irregular/Uneven" "Micaceous" "None observed" "Splintery" "Step-Like" "Sub-Conchoidal"
@@ -407,13 +483,16 @@ geomaterials_fracturetype <- function(types,...){
   }
 }
 
-
 #' retrieve the geomaterials by an given value of groupid.
 #' @description : Queries the list of geomaterials that match an given groupid.
-#' @usage geomaterials_by_groupid(id, ...)
+#' @usage geomaterials_by_groupid(gid,...)
 #' @param gid integer value. The id of the group to which this mineral belongs
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_by_groupid(0)
+#' }
 #' @details
 #' This function releated to the field "groupid" of geomaterials.
 #' retrieve all the geomaterials that match an given groupid.
@@ -431,13 +510,16 @@ geomaterials_by_groupid<- function(gid,...){
 #' @param hmin float value of the Mohs scale of mineral hardness, which ranging from 0 to 10.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_hardness_gt(8)
+#' }
 #' @details
 #' This function releated to the field "hardness_min" of geomaterials.
 #' retrieve all the geomaterials that has higher hardness than the given value(hmin).
 #' hmin:the given value of minimum Moh's hardness
 #' @export
 geomaterials_hardness_gt<- function(hmin,...){
-
   df_out <- mindat_geomaterial_list(ids = c(''),hardness_min = hmin,...)
   df_out
 
@@ -449,6 +531,10 @@ geomaterials_hardness_gt<- function(hmin,...){
 #' @param hmax float value of the Mohs scale of mineral hardness, which ranging from 0 to 10.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_hardness_lt(2)
+#' }
 #' @details
 #' This function releated to the field "hardness_max" of geomaterials.
 #' retrieve all the geomaterials that has lower hardness than an given value(hmax).
@@ -467,6 +553,10 @@ geomaterials_hardness_lt<- function(hmax,...){
 #' @param hmax float value of the Mohs scale of mineral hardness, which ranging from 0 to 10.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_hardness_range(2,3)
+#' }
 #' @details
 #' This function releated to the fields "hardness_min" and "hardness_max" of geomaterials.
 #' retrieve all the geomaterials that has the hardness within an given range(hmin,hmax).
@@ -484,6 +574,10 @@ geomaterials_hardness_range<-function(hmin,hmax,...){
 #' @param btrue boolean value.TRUE IMA approved, otherwise not approved.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_ima(TRUE)
+#' }
 #' @details
 #' This function releated to the field "ima" of geomaterials.
 #' retrieve all the geomaterials that are approved by the IMA or not.
@@ -495,11 +589,15 @@ geomaterials_ima<- function(btrue =TRUE,...){
 
 #' retrieve the geomaterials match given notes.
 #' @description : Queries the geomaterials with an given .
-#' @usage geomaterials_ima(btrue,...)
+#' @usage geomaterials_ima_notes(enum_item,...)
 #' @param enum_item  	Array of integers or null.
 #' Ima notes: multiple choice (OR) : "GROUP" "INTERMEDIATE" "NAMED_AMPHIBOLE" "PENDING_APPROVAL"
 #'  "PUBLISHED_WITHOUT_APPROVAL" "REDEFINED" "REJECTED" "RENAMED" "UNNAMED_INVALID" "UNNAMED_VALID"
 #' @param ..., Further named parameters.Other optional arguments.
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_ima_notes(c("PENDING_APPROVAL"))
+#' }
 #' @return df, a data frame of geomaterials
 #' @details
 #' This function releated to the field "ima_notes" of geomaterials.
@@ -520,6 +618,10 @@ geomaterials_ima_notes<- function(enum_item,...){
 #' @param enum_status  Ima status: multiple choice (OR):"APPROVED" "DISCREDITED" "GRANDFATHERED" "PENDING_PUBLICATION" "QUESTIONABLE"
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_ima_status(c("APPROVED"))
+#' }
 #' @details
 #' This function releated to the field "ima_status" of geomaterials.
 #' retrieve all the geomaterials that match the input IMA notes.
@@ -535,6 +637,10 @@ geomaterials_ima_status<- function(enum_status,...){
 #' @param str_name Text search supporting: _ as wildcards, e.g. "qu_rtz", "bario*"
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_name("qu_rtz")
+#' }
 #' @details
 #' This function releated to the field "name" of geomaterials.
 #' retrieve all the geomaterials that match the input IMA notes.
@@ -547,10 +653,14 @@ geomaterials_name<- function(str_name,...){
 
 #' retrieve the geomaterials matched a given string in its meteoritical code.
 #' @description : Queries the geomaterials with a given string matched its given meteoritical_code.
-#' @usage geomaterials_meteoritical_code(str_name,...)
-#' @param str_meteoritical_code Text search supporting: _ as wildcards.
+#' @usage geomaterials_meteoritical_code(str_meteoritical_code,...)
+#' @param str_meteoritical_code boolean, meteoritical code exists. Include non-empty (TRUE) / include empty only (FALSE).
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_meteoritical_code(TRUE)
+#' }
 #' @details
 #' This function releated to the field "meteoritical_code_exists" of geomaterials.
 #' Meteoritical code exists. Include non-empty (true) / include empty only (false).
@@ -568,6 +678,10 @@ geomaterials_meteoritical_code<- function(str_meteoritical_code,...){
 #' adamantine, subadamtine, vitreous, subvitreous, resinous, waxy, greasy, silky, pearly, metallic, submetallic, dull, earthy
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_lustretype(c("Adamantine"))
+#' }
 #' @details
 #' This function releated to the field "lustretype" of geomaterials.
 #' lustretype(Items Enum): "Adamantine" "Dull" "Earthy" "Greasy" "Metallic" "Pearly" "Resinous" "Silky"
@@ -597,6 +711,10 @@ geomaterials_lustretype <- function(types,...){
 #'  Enum: "approval_year" "id" "minstats__ms_locentries" "minstats__ms_photos" "name" "updttime" "weighting".
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomeaterials_ordering(-id)
+#' }
 #' @details
 #' This function releated to the field "ordering" of geomaterials.
 #' ordering=-id - sort by id descending. Prepend "-" to the field name for descending order.
@@ -616,6 +734,10 @@ geomeaterials_ordering<- function(ord,...){
 #' @param ptype integer. an mindat id of the mineral that this record is the polytype of
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_polytypeof(0,fields = "id,name,polytypeof")
+#' }
 #' @details
 #' This function releated to the field "polytypeof" of geomaterials.
 #' retrieve the geomaterials with an given id of polytypeof.
@@ -632,6 +754,10 @@ geomaterials_polytypeof<- function(ptype,...){
 #' @param lt list of the signs.Please refer to the details.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_optical2v_max(0.2)
+#' }
 #' @details
 #' This function releated to the field "optical2v_max" of geomaterials.
 #' optical2vcalc:The calculated 2V angle minimum or average of biaxial minerals
@@ -651,6 +777,10 @@ geomaterials_optical2v_max<- function(lt,...){
 #' @param gt given value of optical 2v of mineral.Please refer to the details.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_optical2v_min(0.1)
+#' }
 #' @details
 #'  This function releated to the field "optical2v_mix" of geomaterials.
 #' optical2vcalc:The calculated 2V angle minimum or average of biaxial minerals
@@ -666,11 +796,15 @@ geomaterials_optical2v_min<- function(gt,...){
 
 #' retrieve the geomaterials that has the given range of optical 2v.
 #' @description : Queries the geomaterials have the higher optical 2v value than the given lt.
-#' @usage geomaterials_optical2v_range(lt, ...)
+#' @usage geomaterials_optical2v_range(gt,lt,...)
 #' @param gt given value of minimum of optical 2v of mineral.Please refer to the details.
 #' @param lt an given value of maximum of optical 2v of mineral.Please refer to the details.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_optical2v_range(0.1,0.2)
+#' }
 #' @details
 #' This function releated to the field "optical2v_min" and "optical2v_max" of geomaterials.
 #' optical2vcalc:The calculated 2V angle minimum or average of biaxial minerals
@@ -692,6 +826,10 @@ geomaterials_optical2v_range<- function(gt,lt,...){
 #' sign for uniaxial and biaxial minerals: +;-;+/- .Please refer to the details.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_opticalsign("-")
+#' }
 #' @details
 #' This function releated to the field "opticalsign" of geomaterials.
 #' Optical sign: single choice (Enum): "+", "+/-", "-"
@@ -718,6 +856,10 @@ geomaterials_opticalsign<- function(signs,...){
 #' @param types list of the types for the field of opticaltype. Please refer to the details.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_opticaltype("Isotropic")
+#' }
 #' @details
 #' This function releated to the field "opticaltype" of geomaterials.
 #' transparent mineral.
@@ -740,10 +882,14 @@ geomaterials_opticaltype <- function(types,...){
 
 #' retrieve the geomaterials that include non-utf mineral names or not.
 #' @description : Queries the geomaterials include non-utf mineral names or not.
-#' @usage geomeaterials_non_utf(types, ...)
+#' @usage geomeaterials_non_utf(btrue =TRUE,...)
 #' @param btrue boolean. Include non-UTF mineral names?.Default is TRUE.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomeaterials_non_utf(TRUE,fields = "id,name,non_utf")
+#' }
 #' @details
 #' This function releated to the field "non_utf" of geomaterials.
 #' retrieve the geomaterials that contain (or not contain) the non-utf name.
@@ -759,6 +905,10 @@ geomeaterials_non_utf<- function(btrue =TRUE,...){
 #' @param gt float value. Refractive index, from (rimax>=).
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_ri_gt(0.3)
+#' }
 #' @details
 #' This function releated to the field "ri_min" of geomaterials.
 #' retrieve the geomaterials with the refractive index higher than an given value(gt).
@@ -770,10 +920,14 @@ geomaterials_ri_gt <- function(gt,...){
 
 #' retrieve the geomaterials that refractive index lower than an given value(lt).
 #' @description : Queries the geomaterials have the lower refractive index than an given value(lt).
-#' @usage geomaterials_ri_gt(lt, ...)
+#' @usage geomaterials_ri_lt(lt,...)
 #' @param lt float value. Refractive index, to (rimin<=)
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_ri_lt(0.5)
+#' }
 #' @details
 #' This function releated to the field "ri_max" of geomaterials.
 #' retrieve the geomaterials with the refractive index lower than an given value(lt).
@@ -790,6 +944,10 @@ geomaterials_ri_lt <- function(lt,...){
 #' @param lt float value. Refractive index, to (rimin<=)
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_ri_range(0.2,0.5)
+#' }
 #' @details
 #' This function releated to the fields "ri_min" and "ri_max" of geomaterials.
 #' retrieve all the geomaterials that has the refractive index within the range of (gt,lt).
@@ -805,6 +963,10 @@ geomaterials_ri_range <- function(gt,lt,...){
 #' @param str string.  The color of the streak (color of powdered mineral)
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_streak("orange")
+#' }
 #' @details
 #' This function releated to the fields "steak" of geomaterials.
 #' The color of the streak (color of powdered mineral).
@@ -821,6 +983,10 @@ geomaterials_streak <- function(str,...){
 #' @param idnum integer,an given synonym id.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_synid(3777)
+#' }
 #' @details
 #' This function releated to the fields "synid" of geomaterials.
 #' The id of the geomaterial that is the synonym of this record (this geomaterial cannot be added to a locality).
@@ -837,6 +1003,10 @@ geomaterials_synid <- function(idnum,...){
 #' @param strDate string<date-time>, Last updated datetime in format %Y-%m-%d %H:%M:%S
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_updated_at("2020-2-12 10:15:12")
+#' }
 #' @details
 #' This function releated to the fields "updated_at" of geomaterials.
 #' Last updated datetime in format %Y-%m-%d %H:%M:%S
@@ -853,6 +1023,10 @@ geomaterials_updated_at <- function(strDate,...){
 #' @param intvalue integer, id of mineral that has this variety.
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_varietyof(3337)
+#' }
 #' @details
 #' This function releated to the fields "varietyof" of geomaterials.
 #' Varieties are geomaterials that have a special distinction from the main geomaterial ie. amethyst var. quartz
@@ -869,6 +1043,10 @@ geomaterials_varietyof<- function(intvalue,...){
 #' @param name string. Text search supporting wildcards, e.g. qu_rtz, bario*"
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a list of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_search_name("Quartz")
+#' }
 #' @details
 #' This function releated to the fields "name" of geomaterials.
 #' retrieve the geomaterial list that match the given name.
@@ -881,11 +1059,15 @@ geomaterials_search_name<- function(name,...){
 
 #' retrieve the geomaterials records of empty or not empty of a given field.
 #' @description : Queries the list of geomaterials with an empty or not empty of a given field.
-#' @usage geomaterials_field_exists(fieldname,...)
+#' @usage geomaterials_field_exists(fieldname,bexists,...)
 #' @param fieldname string
 #' @param bexists bool
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a list of geomaterials
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_field_exists("meteoritical_code")
+#' }
 #' @details
 #' This function releated to all the fields of geomaterials.
 #' e.g. meteoritical_code_exists.Meteoritical code exists. Include non-empty (true) / include empty only (false)

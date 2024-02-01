@@ -21,3 +21,8 @@ df, a data frame of geomaterials
 This function releated to the field "diapheny" of geomaterials.
 The diaphany of the mineral(Items Enum): "Opaque" "Translucent" "Transparent"
 }
+\examples{
+\dontrun{
+df <-geomaterials_diapheny("Transparent")
+}
+}

@@ -4,7 +4,7 @@
 \alias{saveMindatDataAs}
 \title{Output file as a given format}
 \usage{
-saveMindatDataAs (filename,format = 'csv')
+saveMindatDataAs (inputdata,outputfname)
 }
 \arguments{
 \item{inputdata}{R dataframe of retrieived data from Mindat database.}
@@ -13,4 +13,10 @@ saveMindatDataAs (filename,format = 'csv')
 }
 \description{
 Save the mindat R dataframe to a specify format
+}
+\examples{
+\dontrun{
+df <-geomaterials_search_name("Quartz")
+saveMindatDataAs(df,"test.jsonld")
+}
 }

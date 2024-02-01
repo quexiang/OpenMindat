@@ -4,7 +4,7 @@
 \alias{geomeaterials_non_utf}
 \title{retrieve the geomaterials that include non-utf mineral names or not.}
 \usage{
-geomeaterials_non_utf(types, ...)
+geomeaterials_non_utf(btrue =TRUE,...)
 }
 \arguments{
 \item{btrue}{boolean. Include non-UTF mineral names?.Default is TRUE.}
@@ -20,4 +20,9 @@ df, a data frame of geomaterials
 \details{
 This function releated to the field "non_utf" of geomaterials.
 retrieve the geomaterials that contain (or not contain) the non-utf name.
+}
+\examples{
+\dontrun{
+df <-geomeaterials_non_utf(TRUE,fields = "id,name,non_utf")
+}
 }

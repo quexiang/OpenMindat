@@ -4,7 +4,7 @@
 \alias{mindat_geomaterial_list}
 \title{mindat_geomaterial_list}
 \usage{
-mindat_geomaterial_list ()
+mindat_geomaterial_list(...)
 }
 \arguments{
 \item{..., }{Further named parameters.}
@@ -14,4 +14,9 @@ df, data frame of locality type list
 }
 \description{
 retrieve all the geomaterial list or the geomaterial by given conditions.
+}
+\examples{
+\dontrun{
+ df<- mindat_geomaterial_list()
+}
 }

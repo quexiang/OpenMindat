@@ -4,10 +4,10 @@
 \alias{locality_age}
 \title{locality_age}
 \usage{
-locality_age (id)
+locality_age (id,...)
 }
 \arguments{
-\item{id, }{the mindat localitiy id.}
+\item{id, }{the mindat localitiy age id.}
 
 \item{..., }{Further named parameters.}
 }
@@ -19,4 +19,9 @@ retrieve locality age by its id
 }
 \details{
 This function releated to the fields "id" of locality_age and locality.
+}
+\examples{
+\dontrun{
+df <-locality_age(3337)
+}
 }

@@ -4,11 +4,15 @@
 \alias{getExtension}
 \title{Output the file extension of a filename}
 \usage{
-getExtension (file)
+getExtension (filename)
 }
 \arguments{
 \item{filename}{R dataframe of retrieived data from Mindat database.}
 }
 \description{
 Convert the mindat R dataframe to JSON-LD string
+}
+\examples{
+filename<- "fname.txt"
+fname_extension<- getExtension(filename)
 }

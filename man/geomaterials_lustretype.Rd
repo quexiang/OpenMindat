@@ -24,3 +24,8 @@ lustretype(Items Enum): "Adamantine" "Dull" "Earthy" "Greasy" "Metallic" "Pearly
 "Sub-Adamantine" "Sub-Metallic" "Sub-Vitreous" "Vitreous" "Waxy"
 multiple choice (AND)
 }
+\examples{
+\dontrun{
+df <-geomaterials_lustretype(c("Adamantine"))
+}
+}

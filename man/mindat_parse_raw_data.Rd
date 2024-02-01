@@ -16,3 +16,11 @@ df_out, R data frame
 parse the raw response of json to dataframe of R. If the raw_data obtained from the response is paged,
 request all the pages and then add them into the df_out data frame.
 }
+\examples{
+\dontrun{
+rd<-"{\"count\":5,\"next\":null,\"previous\":null,+
+\"results\":[{\"name\":\"Diamond\"},{\"name\":\"Khamrabaevite\"},+
+{\"name\":\"Moissanite\"},{\"name\":\"Qingsongite\"},{\"name\":\"Uakitite\"}]}"
+df<- mindat_parse_raw_data(rd)
+}
+}

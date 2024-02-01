@@ -22,3 +22,8 @@ This function releated to the fields "steak" of geomaterials.
 The color of the streak (color of powdered mineral).
 retrieve the geomaterials that has the given steak.
 }
+\examples{
+\dontrun{
+df <-geomaterials_streak("orange")
+}
+}

@@ -20,3 +20,8 @@ retrieve the geomaterials that do not contain any of the given elements.
 \details{
 This function releated to the field "elements_exc" of geomaterials.
 }
+\examples{
+\dontrun{
+df <-geomaterials_not_contain_elems (c('Fe','S', 'O'), fields ="id,name,mindat_formula,elements")
+}
+}

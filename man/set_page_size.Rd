@@ -12,3 +12,6 @@ set_page_size (page_size)
 \description{
 set the page_size of response records.
 }
+\examples{
+set_page_size(800)
+}

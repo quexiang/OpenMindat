@@ -4,7 +4,7 @@
 \alias{ConvertDF2TTL}
 \title{Convert a dataframe to a string of TTL format}
 \usage{
-ConvertDF2TTL (DataFrame)
+ConvertDF2TTL (inputdata,template = NULL)
 }
 \arguments{
 \item{inputdata}{R dataframe of retrieived data from Mindat database.}
@@ -13,4 +13,10 @@ ConvertDF2TTL (DataFrame)
 }
 \description{
 Convert the mindat R dataframe to TTL string
+}
+\examples{
+\dontrun{
+df <-geomaterials_search_name("Quartz")
+df_out <-ConvertDF2TTL(df)
+}
 }

@@ -15,3 +15,8 @@ df, data frame of locality status list
 \description{
 retrieve all locality status list
 }
+\examples{
+\dontrun{
+ df<- mindat_locality_status_list()
+}
+}

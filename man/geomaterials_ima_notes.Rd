@@ -4,7 +4,7 @@
 \alias{geomaterials_ima_notes}
 \title{retrieve the geomaterials match given notes.}
 \usage{
-geomaterials_ima(btrue,...)
+geomaterials_ima_notes(enum_item,...)
 }
 \arguments{
 \item{enum_item}{Array of integers or null.
@@ -26,4 +26,9 @@ Renamed by the IMA; Intermediate member of a solid-solution series; Published wi
 Unnamed (probably valid); Unnamed (probably invalid); Named Amphibole
 
 retrieve all the geomaterials that match the input IMA notes.
+}
+\examples{
+\dontrun{
+df <-geomaterials_ima_notes(c("PENDING_APPROVAL"))
+}
 }

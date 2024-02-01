@@ -4,14 +4,21 @@
 \alias{mindat_query}
 \title{mindat_query}
 \usage{
-mindat_query (endpoint,query)
+mindat_query (endpoint, query = list())
 }
 \arguments{
 \item{endpoint}{query endpoint, e.g.'minerals_ima'.}
+
+\item{query}{list for query conditions.}
 }
 \value{
 df query resutls in data frame format.
 }
 \description{
 Basic function for query dataset at a specified endpoit.
+}
+\examples{
+\dontrun{
+df <-mindat_query("geomaterials_list",list(ids="",hardness_min=9))
+}
 }

@@ -4,11 +4,18 @@
 \alias{mindat_setup}
 \title{mindat_setup}
 \usage{
-mindat_set_up_endpoints (base_uri)
+mindat_setup(base_uri = 'https://api.mindat.org',page_size = 800)
 }
 \arguments{
 \item{base_uri}{base uri of mindat API.}
+
+\item{page_size}{interger,setting the page size of responsed data from the API server.}
 }
 \description{
 set up of the mindat basic uri, endpoints, and cache
+}
+\examples{
+\dontrun{
+mindat_setup()
+}
 }

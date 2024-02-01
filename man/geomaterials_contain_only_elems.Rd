@@ -4,7 +4,7 @@
 \alias{geomaterials_contain_only_elems}
 \title{geomaterials_contain_only_elems}
 \usage{
-geomaterials_contain_only_elems (icl_only_elms_vector)
+geomaterials_contain_only_elems (icl_only_elms_vector,...)
 }
 \arguments{
 \item{icl_only_elms_vector, }{vector of elements.}
@@ -26,4 +26,9 @@ Here is a list of all elements that can make up geomaterials:'H','Li', 'Be', 'B'
 'Sb', 'Te', 'I', 'Cs',Ba', 'La', 'Ce', 'Nd', 'Sm', 'Gd', 'Dy', 'Er','Yb', 'Hf', 'Ta', 'W', 'Re', 'Os',
 'Ir', 'Pt', 'Au','Hg','Tl', 'Pb', 'Bi', 'Th', 'U'
 It performs the query operation by calling the mindat_geomaterial_list function
+}
+\examples{
+\dontrun{
+df <-geomaterials_contain_only_elems(c('Fe','S'),fields ="id,name,mindat_formula,elements")
+}
 }

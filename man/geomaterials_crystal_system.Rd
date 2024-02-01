@@ -23,3 +23,8 @@ df, a data frame of geomaterials
 This function releated to the field "crystal_system" of geomaterials.
 Items Enum: "Amorphous" "Hexagonal" "Icosahedral" "Isometric" "Monoclinic" "Orthorhombic" "Tetragonal" "Triclinic" "Trigonal"
 }
+\examples{
+\dontrun{
+df <-geomaterials_crystal_system(c("Icosahedral"))
+}
+}

@@ -4,7 +4,7 @@
 \alias{mindat_locality_status}
 \title{mindat_locality_status}
 \usage{
-mindat_locality_status (...)
+mindat_locality_status (id,...)
 }
 \arguments{
 \item{id}{the mindat localitiy status id.}
@@ -16,4 +16,9 @@ df, data frame of locality status
 }
 \description{
 retrieve all locality status by its id
+}
+\examples{
+\dontrun{
+ df<- mindat_locality_status(10)
+}
 }

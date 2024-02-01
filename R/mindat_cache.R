@@ -1,6 +1,7 @@
 ############  mindat_cache.R  #################
 #' Create a cache environment named midnat_cache
 #' @description Create a new mindat cache environment.
+#' @noRd
 mindat_cache <- new.env()
 
 #' Set cache name and value
@@ -8,6 +9,8 @@ mindat_cache <- new.env()
 #' @usage mindat_cache_set(varname, value)
 #' @param varname  string. The cached varname.
 #' @param value  string.
+#' @examples
+#' mindat_cache_set('api_token',"9ce67655d74bcd981e937be80dcea9cb")
 #' @export
 mindat_cache_set<-function(varname, value)
 {
@@ -19,6 +22,8 @@ mindat_cache_set<-function(varname, value)
 #' @usage mindat_cache_get(varname)
 #' @param varname  string
 #' @returns cached value. A string, list or other objects.
+#' @examples
+#' token<- mindat_cache_get('api_token')
 #' @export
 mindat_cache_get<-function(varname)
 {
@@ -29,6 +34,8 @@ mindat_cache_get<-function(varname)
 #' @description Remove (clear) the cache named varname in current environment.
 #' @usage mindat_cache_delete(varname)
 #' @param varname string input a cached name.Set a cached value empty by the given varname. A string, list or other objects.
+#' @examples
+#' mindat_cache_delete('api_token')
 #' @export
 mindat_cache_delete<-function(varname)
 {
@@ -37,7 +44,9 @@ mindat_cache_delete<-function(varname)
 
 #' Remove all cached values
 #' @description Clear all current cached values. Set current environment cache empty.
-#' @usage mindt_cache_empty()
+#' @usage mindat_cache_empty()
+#' @examples
+#' mindat_cache_empty()
 #' @export
 mindat_cache_empty<-function(){
   rm(list = ls(envir = mindat_cache))
@@ -48,6 +57,8 @@ mindat_cache_empty<-function(){
 #' @usage mindat_cache_has(varname)
 #' @param varname string.
 #' @returns Boolean value. if the varname is found in current environment cache, return True otherwise return False.
+#' @examples
+#' b_has <- mindat_cache_has('api_token')
 #' @export
 mindat_cache_has <-function(varname)
 {
@@ -65,8 +76,11 @@ mindat_cache_has <-function(varname)
 #'              if not, setup up a new cache function named varname.
 #' @usage mindat_cache_return_or_setup(varname,setupfun)
 #' @param varname string.
+#' @param setupfun boolean, if the cached is a setup function.
 #' @returns If the varname is found in current environment cache, return cached function.
 #'          If not, eval the function and return cached function.
+#' @examples
+#'  aep<-  api_end_points<-mindat_cache_return_or_setup('api_end_points', function(){return (list()) })
 #' @export
 mindat_cache_return_or_setup<-function(varname, setupfun)
 {

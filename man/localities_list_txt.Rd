@@ -21,3 +21,8 @@ Queries the list of localities that contain the given txt name.
 This function releated to the fields "txt" of localities.
 This function queries the list of localities that contain the given txt name.
 }
+\examples{
+\dontrun{
+df <-localities_list_txt("lava")
+}
+}

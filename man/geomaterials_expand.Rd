@@ -4,7 +4,7 @@
 \alias{geomaterials_expand}
 \title{retrieve the geomaterials that have the given expand.}
 \usage{
-geomaterials_expand(expand_fields, ...)
+geomaterials_expand(expanded_fields,...)
 }
 \arguments{
 \item{expanded_fields}{list of expand (Array of strings (Expanded fields)).Select fields to expand.}
@@ -20,4 +20,9 @@ df, a data frame of geomaterials
 \details{
 This function releated to the field "expand" of geomaterials.
 The field expand(Items Enum): "description" "type_localities" "localities" "relations" "~all" "*"
+}
+\examples{
+\dontrun{
+df <-geomaterials_expand("~all")
+}
 }

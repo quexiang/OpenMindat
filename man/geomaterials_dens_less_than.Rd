@@ -24,3 +24,8 @@ df, a data frame of geomaterials
 This function releated to the field "density_max" of geomaterials.
 retrieve all the geomaterials that has higher density than the given density(lt).
 }
+\examples{
+\dontrun{
+df <-geomaterials_dens_less_than(3)
+}
+}

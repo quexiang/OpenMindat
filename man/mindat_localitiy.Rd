@@ -4,7 +4,7 @@
 \alias{mindat_localitiy}
 \title{mindat_localitiy}
 \usage{
-mindat_localitiy (id)
+mindat_localitiy (id,...)
 }
 \arguments{
 \item{id}{the mindat localitiy id}
@@ -16,4 +16,9 @@ df, data frame of locality
 }
 \description{
 retrieve locality by its id
+}
+\examples{
+\dontrun{
+ df<- mindat_localitiy(3337)
+}
 }

@@ -18,3 +18,8 @@ retrieve all mineral ima list.
 \details{
 This function is to retrieve the IMA minerals list.
 }
+\examples{
+\dontrun{
+df <-minerals_ima_list()
+}
+}

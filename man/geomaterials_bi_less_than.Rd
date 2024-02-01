@@ -21,3 +21,8 @@ df, a data frame of geomaterials
 This function releated to the field "bi_max" of geomaterials.
 retrieve all the geomaterials that has higher birifrigence than the given value(lt).
 }
+\examples{
+\dontrun{
+df <-geomaterials_bi_less_than(0.3)
+}
+}

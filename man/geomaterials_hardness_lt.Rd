@@ -22,3 +22,8 @@ This function releated to the field "hardness_max" of geomaterials.
 retrieve all the geomaterials that has lower hardness than an given value(hmax).
 hamx: maximum Moh's hardness
 }
+\examples{
+\dontrun{
+df <-geomaterials_hardness_lt(2)
+}
+}

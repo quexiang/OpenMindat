@@ -22,3 +22,8 @@ df, a data frame of geomaterials
 This function releated to the field "cleavagetype" of geomaterials.
 Items Enum: "Distinct/Good" "Imperfect/Fair" "None Observed" "Perfect" "Poor/Indistinct" "Very Good"
 }
+\examples{
+\dontrun{
+df <-geomaterials_cleavagetype(c("Poor/Indistinct"))
+}
+}

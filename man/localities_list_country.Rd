@@ -4,7 +4,7 @@
 \alias{localities_list_country}
 \title{retrieve the localities list that are belong to a given country.}
 \usage{
-localities_list_country(intvalue,...)
+localities_list_country(country,...)
 }
 \arguments{
 \item{country}{name of country,}
@@ -47,4 +47,9 @@ Enum: "Afghanistan" "Albania" "Algeria" "American Samoa" "Andorra" "Angola" "Ang
 "Turks And Caicos Islands" "Tuvalu" "U.S. Virgin Islands" "Uganda" "Ukraine" "United Arab Emirates" "United Kingdom"
 "United States" "Uruguay" "Uzbekistan" "Vanuatu (Republic of Vanuatu; New Hebrides) " "Venezuela" "Vietnam" "Western Sahara"
 "Western Samoa" "Yemen" "Zambia" "Zimbabwe"
+}
+\examples{
+\dontrun{
+df <-localities_list_country ("Norway")
+}
 }

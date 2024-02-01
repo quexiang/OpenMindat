@@ -24,3 +24,8 @@ optical2vcalc2:The calculated 2V angle maximum of biaxial minerals
 optical2vmeasured:The measured 2V angle minimum or average of biaxial minerals
 optical2vmeasured2:The measured 2V angle maximum of biaxial minerals
 }
+\examples{
+\dontrun{
+df <-geomaterials_optical2v_min(0.1)
+}
+}

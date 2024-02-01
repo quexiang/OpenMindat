@@ -25,3 +25,8 @@ retrieve all the geomaterials that has the hardness within an given range(hmin,h
 hmin:the given value of minimum Moh's hardness
 hamx: maximum Moh's hardness
 }
+\examples{
+\dontrun{
+df <-geomaterials_hardness_range(2,3)
+}
+}

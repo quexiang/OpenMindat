@@ -12,3 +12,6 @@ set_api_base (api_base)
 \description{
 set base uri of current environment
 }
+\examples{
+set_api_base("9ce67655d74bcd981e937be80dcea9cb")
+}

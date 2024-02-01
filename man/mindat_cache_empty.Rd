@@ -4,8 +4,11 @@
 \alias{mindat_cache_empty}
 \title{Remove all cached values}
 \usage{
-mindt_cache_empty()
+mindat_cache_empty()
 }
 \description{
 Clear all current cached values. Set current environment cache empty.
+}
+\examples{
+mindat_cache_empty()
 }

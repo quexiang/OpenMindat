@@ -22,3 +22,8 @@ This function releated to the fields "expand" of localities.
 Items Enum: "geomaterials" "~all" "*"
 This function queries the list of localities that contain the given expands.
 }
+\examples{
+\dontrun{
+df <-localities_list_expand("~all")
+}
+}

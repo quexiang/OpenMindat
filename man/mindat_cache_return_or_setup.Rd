@@ -8,6 +8,8 @@ mindat_cache_return_or_setup(varname,setupfun)
 }
 \arguments{
 \item{varname}{string.}
+
+\item{setupfun}{boolean, if the cached is a setup function.}
 }
 \value{
 If the varname is found in current environment cache, return cached function.
@@ -16,4 +18,7 @@ If not, eval the function and return cached function.
 \description{
 Check whether the current environment has the cached function named varname,if has, return it.
 if not, setup up a new cache function named varname.
+}
+\examples{
+ aep<-  api_end_points<-mindat_cache_return_or_setup('api_end_points', function(){return (list()) })
 }

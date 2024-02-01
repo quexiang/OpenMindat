@@ -2,7 +2,7 @@
 % Please edit documentation in R/mindat_geomaterials.R
 \name{geomaterials_contain_all_but_not_elems}
 \alias{geomaterials_contain_all_but_not_elems}
-\title{geomaterials that contain some elements but not some other elements.}
+\title{geomaterials that contain all of some given elements but without any of some other given elements.}
 \usage{
 geomaterials_contain_all_but_not_elems(icl_elm_vector, ecl_elms_vector, ...)
 }
@@ -25,4 +25,9 @@ This function releated to the field "elements_inc" and "elements_exc" of geomate
 This function queries the list of geological materials that contain an given list of elements (icl_elm_vector),
 but not contain the other list of elements (ecl_elms_vector).
 It performs the query operation by calling the mindat_geomaterial_list function.
+}
+\examples{
+\dontrun{
+df<-geomaterials_contain_all_but_not_elems (c('Fe','S'), c('O'),fields ="id,name,mindat_formula,elements")
+}
 }

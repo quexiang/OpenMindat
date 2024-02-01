@@ -16,3 +16,13 @@ Otherwise,report the errors.
 \description{
 .
 }
+\examples{
+\dontrun{
+library(httr)
+uri<- "https://api.mindat.org/geomaterials/?id__in=&hardness_min=9.3&fields=name,+
+hardness&page_size=1500"
+api_token<- "9ce67655d74bcd981e937be80dcea9cb"
+response <- GET(uri,add_headers('Authorization'= paste('Token ',api_token,sep = "")))
+raw_data <- mindat_extract_response_body(response)
+}
+}

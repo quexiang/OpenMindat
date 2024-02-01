@@ -22,3 +22,8 @@ df, a data frame of geomaterials
 This function releated to the field "opticalsign" of geomaterials.
 Optical sign: single choice (Enum): "+", "+/-", "-"
 }
+\examples{
+\dontrun{
+df <-geomaterials_opticalsign("-")
+}
+}

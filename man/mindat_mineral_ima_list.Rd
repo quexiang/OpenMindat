@@ -4,7 +4,7 @@
 \alias{mindat_mineral_ima_list}
 \title{mindat_mineral_ima_list}
 \usage{
-mindat_mineral_ima (...)
+mindat_mineral_ima_list (...)
 }
 \arguments{
 \item{...}{, Further named parameters.}
@@ -14,4 +14,9 @@ df, data frame of mineral list.
 }
 \description{
 retrieve ima mineral list
+}
+\examples{
+\dontrun{
+ df<- mindat_mineral_ima_list()
+}
 }

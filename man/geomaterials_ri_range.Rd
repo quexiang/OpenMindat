@@ -23,3 +23,8 @@ df, a data frame of geomaterials
 This function releated to the fields "ri_min" and "ri_max" of geomaterials.
 retrieve all the geomaterials that has the refractive index within the range of (gt,lt).
 }
+\examples{
+\dontrun{
+df <-geomaterials_ri_range(0.2,0.5)
+}
+}

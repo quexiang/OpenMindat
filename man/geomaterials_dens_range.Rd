@@ -26,3 +26,8 @@ df, a data frame of geomaterials
 This function releated to the fields "density_min" and "density_max" of geomaterials.
 retrieve all the geomaterials records that has the density within an given range of (gt,lt).
 }
+\examples{
+\dontrun{
+df <-geomaterials_dens_range(2,3)
+}
+}

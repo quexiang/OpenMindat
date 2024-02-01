@@ -4,10 +4,10 @@
 \alias{geomaterials_meteoritical_code}
 \title{retrieve the geomaterials matched a given string in its meteoritical code.}
 \usage{
-geomaterials_meteoritical_code(str_name,...)
+geomaterials_meteoritical_code(str_meteoritical_code,...)
 }
 \arguments{
-\item{str_meteoritical_code}{Text search supporting: _ as wildcards.}
+\item{str_meteoritical_code}{boolean, meteoritical code exists. Include non-empty (TRUE) / include empty only (FALSE).}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -21,4 +21,9 @@ df, a data frame of geomaterials
 This function releated to the field "meteoritical_code_exists" of geomaterials.
 Meteoritical code exists. Include non-empty (true) / include empty only (false).
 retrieve all the geomaterials that match the input str_meteoritical_code.
+}
+\examples{
+\dontrun{
+df <-geomaterials_meteoritical_code(TRUE)
+}
 }

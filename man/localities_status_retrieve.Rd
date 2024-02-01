@@ -4,7 +4,7 @@
 \alias{localities_status_retrieve}
 \title{localities_status_retrieve}
 \usage{
-localities_status_retrieve (...)
+localities_status_retrieve (id,...)
 }
 \arguments{
 \item{id}{the mindat localitiy status id}
@@ -19,4 +19,9 @@ retrieve locality status by its id.
 }
 \details{
 This function is to retrieve the locality_status by an given id of locality.
+}
+\examples{
+\dontrun{
+df <-localities_status_retrieve(10)
+}
 }

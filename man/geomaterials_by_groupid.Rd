@@ -4,7 +4,7 @@
 \alias{geomaterials_by_groupid}
 \title{retrieve the geomaterials by an given value of groupid.}
 \usage{
-geomaterials_by_groupid(id, ...)
+geomaterials_by_groupid(gid,...)
 }
 \arguments{
 \item{gid}{integer value. The id of the group to which this mineral belongs}
@@ -20,4 +20,9 @@ df, a data frame of geomaterials
 \details{
 This function releated to the field "groupid" of geomaterials.
 retrieve all the geomaterials that match an given groupid.
+}
+\examples{
+\dontrun{
+df <-geomaterials_by_groupid(0)
+}
 }

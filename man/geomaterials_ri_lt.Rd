@@ -4,7 +4,7 @@
 \alias{geomaterials_ri_lt}
 \title{retrieve the geomaterials that refractive index lower than an given value(lt).}
 \usage{
-geomaterials_ri_gt(lt, ...)
+geomaterials_ri_lt(lt,...)
 }
 \arguments{
 \item{lt}{float value. Refractive index, to (rimin<=)}
@@ -20,4 +20,9 @@ df, a data frame of geomaterials
 \details{
 This function releated to the field "ri_max" of geomaterials.
 retrieve the geomaterials with the refractive index lower than an given value(lt).
+}
+\examples{
+\dontrun{
+df <-geomaterials_ri_lt(0.5)
+}
 }

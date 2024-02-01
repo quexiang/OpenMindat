@@ -4,7 +4,7 @@
 \alias{mindat_locality_type}
 \title{mindat_locality_type}
 \usage{
-mindat_locality_type (...)
+mindat_locality_type (id,...)
 }
 \arguments{
 \item{id}{locality type id}
@@ -16,4 +16,9 @@ df, data frame of locality type list
 }
 \description{
 retrieve  locality type by its id
+}
+\examples{
+\dontrun{
+ df<- mindat_locality_type(50)
+}
 }

@@ -4,7 +4,7 @@
 \alias{mindat_geomaterial}
 \title{mindat_geomaterial}
 \usage{
-mindat_geomaterial (id)
+mindat_geomaterial (id,...)
 }
 \arguments{
 \item{id}{geomaterial id}
@@ -16,4 +16,9 @@ df, data frame of locality type list
 }
 \description{
 retrieve  geomaterial  by its id
+}
+\examples{
+\dontrun{
+ df<- mindat_geomaterial(3337)
+}
 }

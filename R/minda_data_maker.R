@@ -1,9 +1,13 @@
 #library(stringr)
 
+
 #' Output the file extension of a filename
 #' @description Convert the mindat R dataframe to JSON-LD string
-#' @usage getExtension (file)
+#' @usage getExtension (filename)
 #' @param filename R dataframe of retrieived data from Mindat database.
+#' @examples
+#' filename<- "fname.txt"
+#' fname_extension<- getExtension(filename)
 #' @export
 getExtension <- function(filename){
   ext<- strsplit(filename, ".", fixed=T)[[1]][-1]
@@ -12,10 +16,16 @@ getExtension <- function(filename){
 
 #' Output file as a given format
 #' @import stringr
+#' @import readxl
 #' @description Convert the mindat R dataframe to JSON-LD string
-#' @usage ConvertDF2JsonLD (DataFrame)
+#' @usage ConvertDF2JsonLD(inputdata,template = NULL)
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param template filepath to the template
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_search_name("Quartz")
+#' df_out <-ConvertDF2JsonLD(df)
+#' }
 #' @export
 ConvertDF2JsonLD<- function(inputdata,template = NULL ){ #"/inst/extdata/OpenMindat_Schema_JSON-LD.xlsx"
   #read a document files  template for output the 'JSON-LD' as references
@@ -56,7 +66,7 @@ ConvertDF2JsonLD<- function(inputdata,template = NULL ){ #"/inst/extdata/OpenMin
   }
   type_list <-unique(type_list)
 
-  str_context <- "\"@context\":{"
+  str_context <- "\"@context\":{\n"
   for (i_ctx in contex_list){
     str_fld <- paste("\"",i_ctx,sep = "")
     str_fld <- paste(str_fld,"\"",sep = "")
@@ -85,13 +95,18 @@ ConvertDF2JsonLD<- function(inputdata,template = NULL ){ #"/inst/extdata/OpenMin
   str_graph <- "\"@graph\":["
   for (idf in 1:nrow(inputdata)){
     cur_str <- "{ \n"
+    cur_type <-"\"@type\":["
+
     for(itp in type_list){
       str_itp <- paste("\"",itp,sep = "")
-      str_itp <- paste(str_itp,"\"")
-      cur_type <- paste("\"@type\"",str_itp, sep = ":" )
-      cur_str <- paste(cur_str,cur_type)
-      cur_str<- paste(cur_str,",")
+      str_itp <- paste(str_itp,"\",")
+      cur_type <- paste(cur_type,str_itp, sep = "" )
+      #cur_str <- paste(cur_str,cur_type)
+      #cur_str<- paste(cur_str,",")
     }
+    cur_type<- str_sub(cur_type,end = -2)
+    cur_type <- paste(cur_type,"],", sep = "" )
+    cur_str <- paste(cur_str,cur_type)
 
     for (c_idx in 1:length(print_fields_list)){
       cur_field <- paste("\"",print_fields_list[c_idx])
@@ -115,17 +130,23 @@ ConvertDF2JsonLD<- function(inputdata,template = NULL ){ #"/inst/extdata/OpenMin
 
   str_out <-"{ \n"
   str_out<- paste(str_out,str_context)
-  str_out<- paste(str_out,str_graph,sep = ",")
+  str_out<- paste(str_out,str_graph,sep = ",\n")
   str_out <-paste(str_out,"}")
   str_out
 }
 
 #' Convert a dataframe to a string of TTL format
 #' @import stringr
+#' @import readxl
 #' @description Convert the mindat R dataframe to TTL string
-#' @usage ConvertDF2TTL (DataFrame)
+#' @usage ConvertDF2TTL (inputdata,template = NULL)
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param template filepath to the template
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_search_name("Quartz")
+#' df_out <-ConvertDF2TTL(df)
+#' }
 #' @export
 ConvertDF2TTL<- function(inputdata,template = NULL){
 
@@ -221,9 +242,14 @@ ConvertDF2TTL<- function(inputdata,template = NULL){
 
 #' Output file as a given format
 #' @description Save the mindat R dataframe to a specify format
-#' @usage saveMindatDataAs (filename,format = 'csv')
+#' @usage saveMindatDataAs (inputdata,outputfname)
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param outputfname string. the output file name.
+#' @examples
+#' \dontrun{
+#' df <-geomaterials_search_name("Quartz")
+#' saveMindatDataAs(df,"test.jsonld")
+#' }
 #' @export
 saveMindatDataAs <-function(inputdata,outputfname){
   fmt <- getExtension(outputfname)

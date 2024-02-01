@@ -4,7 +4,7 @@
 \alias{geomaterials_contain_all_elems}
 \title{geomaterials_contain_all_elems}
 \usage{
-geomaterials_contain_all_elems (icl_elms_vector)
+geomaterials_contain_all_elems(icl_elms_vector,...)
 }
 \arguments{
 \item{icl_elms_vector, }{vector of elements.}
@@ -22,4 +22,9 @@ It performs the query operation by calling the mindat_geomaterial_list function
 }
 \details{
 This function releated to the field "elements_inc" of geomaterials.
+}
+\examples{
+\dontrun{
+df <-geomaterials_contain_all_elems (c('Fe','S'),fields ="id,name,mindat_formula,elements")
+}
 }

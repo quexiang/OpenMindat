@@ -14,3 +14,6 @@ mindat_cache_set(varname, value)
 \description{
 Assigns the value to the cache named varname in current environment.
 }
+\examples{
+mindat_cache_set('api_token',"9ce67655d74bcd981e937be80dcea9cb")
+}

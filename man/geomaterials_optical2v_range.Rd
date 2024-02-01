@@ -4,7 +4,7 @@
 \alias{geomaterials_optical2v_range}
 \title{retrieve the geomaterials that has the given range of optical 2v.}
 \usage{
-geomaterials_optical2v_range(lt, ...)
+geomaterials_optical2v_range(gt,lt,...)
 }
 \arguments{
 \item{gt}{given value of minimum of optical 2v of mineral.Please refer to the details.}
@@ -25,4 +25,9 @@ optical2vcalc:The calculated 2V angle minimum or average of biaxial minerals
 optical2vcalc2:The calculated 2V angle maximum of biaxial minerals
 optical2vmeasured:The measured 2V angle minimum or average of biaxial minerals
 optical2vmeasured2:The measured 2V angle maximum of biaxial minerals
+}
+\examples{
+\dontrun{
+df <-geomaterials_optical2v_range(0.1,0.2)
+}
 }

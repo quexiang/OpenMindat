@@ -4,7 +4,7 @@
 \alias{mindat_geomaterial_search}
 \title{mindat_geomaterial_search}
 \usage{
-mindat_geomaterial_search (name)
+mindat_geomaterial_search (...)
 }
 \arguments{
 \item{..., }{Further named parameters.}
@@ -14,4 +14,9 @@ df, data frame of geomaterials mathch the search
 }
 \description{
 retrieve all the geomaterial list or the geomaterial by given conditions.
+}
+\examples{
+\dontrun{
+ df<- mindat_geomaterial_search(q="Quartz")
+}
 }

@@ -4,7 +4,7 @@
 \alias{geomaterials_field_exists}
 \title{retrieve the geomaterials records of empty or not empty of a given field.}
 \usage{
-geomaterials_field_exists(fieldname,...)
+geomaterials_field_exists(fieldname,bexists,...)
 }
 \arguments{
 \item{fieldname}{string}
@@ -23,4 +23,9 @@ df, a list of geomaterials
 This function releated to all the fields of geomaterials.
 e.g. meteoritical_code_exists.Meteoritical code exists. Include non-empty (true) / include empty only (false)
 retrieve the geomaterial list with an empty or not empty of a given field.
+}
+\examples{
+\dontrun{
+df <-geomaterials_field_exists("meteoritical_code")
+}
 }

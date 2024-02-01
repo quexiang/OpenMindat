@@ -15,3 +15,6 @@ Boolean value. if the varname is found in current environment cache, return True
 \description{
 Check whether or not the current environment has the cache named varname.
 }
+\examples{
+b_has <- mindat_cache_has('api_token')
+}

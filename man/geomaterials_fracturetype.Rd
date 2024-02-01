@@ -22,3 +22,8 @@ df, a data frame of geomaterials
 This function releated to the field "fracturetype" of geomaterials.
 fracturetype(Items Enum): "Conchoidal" "Fibrous" "Hackly" "Irregular/Uneven" "Micaceous" "None observed" "Splintery" "Step-Like" "Sub-Conchoidal"
 }
+\examples{
+\dontrun{
+df <-geomaterials_fracturetype(c("Step-Like"))
+}
+}

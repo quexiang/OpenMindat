@@ -4,7 +4,7 @@
 \alias{ConvertDF2JsonLD}
 \title{Output file as a given format}
 \usage{
-ConvertDF2JsonLD (DataFrame)
+ConvertDF2JsonLD(inputdata,template = NULL)
 }
 \arguments{
 \item{inputdata}{R dataframe of retrieived data from Mindat database.}
@@ -13,4 +13,10 @@ ConvertDF2JsonLD (DataFrame)
 }
 \description{
 Convert the mindat R dataframe to JSON-LD string
+}
+\examples{
+\dontrun{
+df <-geomaterials_search_name("Quartz")
+df_out <-ConvertDF2JsonLD(df)
+}
 }

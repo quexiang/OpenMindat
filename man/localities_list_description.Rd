@@ -21,3 +21,8 @@ df, a data frame of localities
 This function releated to all the field "description" of localities.
 retrieve the localities that contain the given description
 }
+\examples{
+\dontrun{
+df <-localities_list_description("volcano")
+}
+}
