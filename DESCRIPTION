@@ -8,10 +8,11 @@ Imports:
     readxl (>= 1.4.3),
     utils,
     stringi,
-    stringr
+    stringr,
+    usethis
 Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
-Authors@R: 
-    c(person(given = "Xiang",family = "Que",email = "xiangq@uidaho.edu",role = c("aut","cre"), comment = c(ORCID = "0000-0002-5687-8627")),
+Authors@R: c(
+      person(given = "Xiang",family = "Que",email = "xiangq@uidaho.edu",role = c("aut","cre"), comment = c(ORCID = "0000-0002-5687-8627")),
       person(given = "Xiaogang",family = "Ma",email = "max@uidaho.edu",role = c("aut"),comment = c(ORCID = "0000-0002-9110-7369"))
     )
 Maintainer: Xiang Que <xiangq@uidaho.edu>
