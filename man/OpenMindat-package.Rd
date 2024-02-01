@@ -12,6 +12,7 @@ The goal of OpenMindat R package is to provide functions for users or machines t
 Useful links:
 \itemize{
   \item \url{https://github.com/quexiang/OpenMindat}
+  \item \url{https://quexiang.github.io/OpenMindat/}
   \item Report bugs at \url{https://github.com/quexiang/OpenMindat/issues}
 }
 
