@@ -175,4 +175,5 @@ Ma, X., Ralph, J., Zhang, J., Que, X., Prabhu, A., Morrison, S.M., Hazen, R.M., 
 
 Jiyin Zhang,Xiang Que, Bhuwan Mdahikarmi,Robert M Hazen,Jolyon Ralph; Anirudh Prabhu, Shaunna M Morrison,Xiaogang Ma*, Using a 3D heat map to explore the diverse correlations among elements and mineral species, Applied Computing & Geosciences, 2024, [https://doi.org/10.1016/j.acags.2024.100154](https://doi.org/10.1016/j.acags.2024.100154) 
 
-[R-CMD-check](https://github.com/quexiang/OpenMindat/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/quexiang/OpenMindat/actions/workflows/R-CMD-check.yaml)
+
+[![R-CMD-check](https://github.com/quexiang/OpenMindat/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/quexiang/OpenMindat/actions/workflows/R-CMD-check.yaml)
