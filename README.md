@@ -170,6 +170,9 @@ help(package = OpenMindat)
 
 **Related Articles**
 
-Ma, X., Ralph, J., Zhang, J., Que, X., Prabhu, A., Morrison, S.M., Hazen, R.M., Wyborn, L., Lehnert, K., 2023. OpenMindat: Open and FAIR mineralogy data from the Mindat database. Geoscience Data Journal, In Press, https://doi.org/10.1002/gdj3.204
+Ma, X., Ralph, J., Zhang, J., Que, X., Prabhu, A., Morrison, S.M., Hazen, R.M., Wyborn, L., Lehnert, K., 2023. OpenMindat: Open and FAIR mineralogy data from the Mindat database. Geoscience Data Journal, In Press,[https://doi.org/10.1002/gdj3.204](https://doi.org/10.1002/gdj3.204)
 
-[![R-CMD-check](https://github.com/quexiang/OpenMindat/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/quexiang/OpenMindat/actions/workflows/R-CMD-check.yaml)
+
+Jiyin Zhang,Xiang Que, Bhuwan Mdahikarmi,Robert M Hazen,Jolyon Ralph; Anirudh Prabhu, Shaunna M Morrison,Xiaogang Ma*, Using a 3D heat map to explore the diverse correlations among elements and mineral species, Applied Computing & Geosciences, 2024, [https://doi.org/10.1016/j.acags.2024.100154](https://doi.org/10.1016/j.acags.2024.100154) 
+
+[R-CMD-check](https://github.com/quexiang/OpenMindat/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/quexiang/OpenMindat/actions/workflows/R-CMD-check.yaml)
