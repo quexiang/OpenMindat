@@ -181,12 +181,9 @@ Jiyin Zhang,Xiang Que, Bhuwan Mdahikarmi,Robert M Hazen,Jolyon Ralph; Anirudh Pr
 ## Acknowledgments
 
 <p float="left">
-
-        <div align=center> <img src="/inst/Logo/UI_logo.png?raw=true"  width="9%"></div>
-        
-        <div align=center> <img src="/inst/Logo/mindat2017.png?raw=true"  width="25%"></div>
-        
-        <div align=center> <img src="/inst/Logo/NSF_Official_logo_Low_Res.png?raw=true"  width="10%"></div>
+        <div><img src="/inst/Logo/UI_logo.png?raw=true" width="9%"></div>
+        <div> <img src="/inst/Logo/mindat2017.png?raw=true"  width="25%"></div>
+        <div> <img src="/inst/Logo/NSF_Official_logo_Low_Res.png?raw=true"  width="10%"></div>
 </p>
 
 This work is supported by NSF, Award #2126315.
