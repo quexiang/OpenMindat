@@ -177,3 +177,13 @@ Jiyin Zhang,Xiang Que, Bhuwan Mdahikarmi,Robert M Hazen,Jolyon Ralph; Anirudh Pr
 
 
 [![R-CMD-check](https://github.com/quexiang/OpenMindat/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/quexiang/OpenMindat/actions/workflows/R-CMD-check.yaml)
+
+## Acknowledgments
+
+<p float="left">
+        <img src="https://github.com/quexiang/OpenMindat/tree/main/inst/Logo/mindat2017.png?raw=true"  width="25%">
+        <img src="https://github.com/quexiang/OpenMindat/tree/main/inst/Logo/NSF_Official_logo_Low_Res.png?raw=true"  width="10%">
+        <img src="https://github.com/quexiang/OpenMindat/tree/main/inst/Logo/ui_black_white.png?raw=true"  width="30%">
+</p>
+
+- This work is supported by NSF, Award #2126315.
