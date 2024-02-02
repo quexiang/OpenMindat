@@ -7,7 +7,7 @@
 localities_list_updated_at(updateDate,...)
 }
 \arguments{
-\item{updateDate}{string\if{html}{\out{<date-time>}}, Last updated datetime in format \%Y-\%m-\%d \%H:\%M:\%S}
+\item{updateDate}{str, Last updated datetime in format \%Y-\%m-\%d \%H:\%M:\%S}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -23,6 +23,7 @@ retrieve the localities that have the latest updated at the given time.
 }
 \examples{
 \dontrun{
-df <-localities_list_updated_at("lava")
+strdate<- "2023-09-13 17:36:19"
+df <-localities_list_updated_at(strdate)
 }
 }

@@ -7,7 +7,7 @@
 geomaterials_updated_at(strDate,...)
 }
 \arguments{
-\item{strDate}{string\if{html}{\out{<date-time>}}, Last updated datetime in format \%Y-\%m-\%d \%H:\%M:\%S}
+\item{strDate}{str, Last updated datetime in format \%Y-\%m-\%d \%H:\%M:\%S}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }
@@ -24,6 +24,7 @@ retrieve the geomaterials that have the latest updated at the given time.
 }
 \examples{
 \dontrun{
-df <-geomaterials_updated_at("2020-2-12 10:15:12")
+strdate<- "2023-09-13 17:36:19"
+df <-geomaterials_updated_at(strdate)
 }
 }

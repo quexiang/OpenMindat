@@ -2,6 +2,7 @@
 ########## mindat_data_parse.R ############
 #' @import httr
 #' @importFrom httr GET
+#' @import usethis
 #' @name GET
 #' @title the function is form the httr GET function.
 #' @noRd

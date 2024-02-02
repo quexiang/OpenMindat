@@ -48,7 +48,8 @@ geomaterials_not_contain_elems <- function(ecl_elms_vector,...){
 #' @return df, a data frame of geomaterials.
 #' @examples
 #' \dontrun{
-#' df<-geomaterials_contain_all_but_not_elems (c('Fe','S'), c('O'),fields ="id,name,mindat_formula,elements")
+#' df<-geomaterials_contain_all_but_not_elems (c('Fe','S'), c('O')) +
+#'    geomaterials_contain_all_but_not_elems(fields ="id,name,mindat_formula,elements")
 #' }
 #' @details
 #' This function releated to the field "elements_inc" and "elements_exc" of geomaterials.
@@ -1000,12 +1001,13 @@ geomaterials_synid <- function(idnum,...){
 #' retrieve the geomaterials updated at an given time.
 #' @description : Queries the list of geomaterials that were updated at an given time
 #' @usage geomaterials_updated_at(strDate,...)
-#' @param strDate string<date-time>, Last updated datetime in format %Y-%m-%d %H:%M:%S
+#' @param strDate str, Last updated datetime in format %Y-%m-%d %H:%M:%S
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
 #' @examples
 #' \dontrun{
-#' df <-geomaterials_updated_at("2020-2-12 10:15:12")
+#' strdate<- "2023-09-13 17:36:19"
+#' df <-geomaterials_updated_at(strdate)
 #' }
 #' @details
 #' This function releated to the fields "updated_at" of geomaterials.

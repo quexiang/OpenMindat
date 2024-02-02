@@ -60,12 +60,13 @@ minerals_ima_list_ima<- function(intValue,...){
 #' retrieve the mineral_ima list updated at the given time.
 #' @description : Queries the list of mineral_ima that have the given time
 #' @usage minerals_ima_updated_at(updateDate,...)
-#' @param updateDate string<date-time>, Last updated datetime in format %Y-%m-%d %H:%M:%S
+#' @param updateDate str, Last updated datetime in format %Y-%m-%d %H:%M:%S
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
 #' @examples
 #' \dontrun{
-#' df <-minerals_ima_updated_at("2020-11-10 10:12:20")
+#' strdate<- "2023-09-13 17:36:19"
+#' df <-minerals_ima_updated_at(strdate)
 #' }
 #' @details
 #' This function is related to the filed "updated_at" of ima minerals.

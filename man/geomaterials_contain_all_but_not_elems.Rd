@@ -28,6 +28,7 @@ It performs the query operation by calling the mindat_geomaterial_list function.
 }
 \examples{
 \dontrun{
-df<-geomaterials_contain_all_but_not_elems (c('Fe','S'), c('O'),fields ="id,name,mindat_formula,elements")
+df<-geomaterials_contain_all_but_not_elems (c('Fe','S'), c('O')) +
+   geomaterials_contain_all_but_not_elems(fields ="id,name,mindat_formula,elements")
 }
 }

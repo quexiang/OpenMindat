@@ -23,6 +23,6 @@ This function queries the list of localities that do contain the specified eleme
 }
 \examples{
 \dontrun{
-df <-localities_list_elems_exc(c("H", "O", "Si", "Al","Fe", "Ca", "Na", "K", "P", "C", "Mn", "F", "Mg", "S"))
+df <-localities_list_elems_exc(c("H", "O", "Si","Fe"),fields="id,name")
 }
 }

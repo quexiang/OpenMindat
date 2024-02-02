@@ -72,7 +72,7 @@ localities_list_description<- function(desc,...){
 #' @return df, a data frame of localities
 #' @examples
 #' \dontrun{
-#' df <-localities_list_elems_exc(c("H", "O", "Si", "Al","Fe", "Ca", "Na", "K", "P", "C", "Mn", "F", "Mg", "S"))
+#' df <-localities_list_elems_exc(c("H", "O", "Si","Fe"),fields="id,name")
 #' }
 #' @details
 #' This function releated to the field "elements_exc" of localities.
@@ -165,12 +165,13 @@ localities_list_txt <-function(txt,...){
 #' retrieve the localities list updated at the given time.
 #' @description : Queries the list of localities that have the given time
 #' @usage localities_list_updated_at(updateDate,...)
-#' @param updateDate string<date-time>, Last updated datetime in format %Y-%m-%d %H:%M:%S
+#' @param updateDate str, Last updated datetime in format %Y-%m-%d %H:%M:%S
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
 #' @examples
 #' \dontrun{
-#' df <-localities_list_updated_at("lava")
+#' strdate<- "2023-09-13 17:36:19"
+#' df <-localities_list_updated_at(strdate)
 #' }
 #' @details
 #' This function releated to all the fields "updated_at" of localities.
