@@ -183,7 +183,7 @@ Jiyin Zhang,Xiang Que, Bhuwan Mdahikarmi,Robert M Hazen,Jolyon Ralph; Anirudh Pr
 <p float="left">
         <img src="https://github.com/quexiang/OpenMindat/blob/main/inst/Logo/mindat2017.png?raw=true"  width="25%">
         <img src="https://github.com/quexiang/OpenMindat/blob/main/inst/Logo/NSF_Official_logo_Low_Res.png?raw=true"  width="10%">
-        <img src="https://github.com/quexiang/OpenMindat/blob/main/inst/Logo/ui_black_white.png?raw=true"  width="15%">
+        <img src="https://github.com/quexiang/OpenMindat/blob/main/inst/Logo/UI_logo.png?raw=true"  width="15%">
 </p>
 
 This work is supported by NSF, Award #2126315.
