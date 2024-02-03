@@ -6,7 +6,7 @@
 \alias{OpenMindat-package}
 \title{OpenMindat: Quickly Retrieve Datasets from the 'Mindat' API}
 \description{
-The goal of OpenMindat R package is to provide functions for users or machines to quickly and easily retrieve datasets from the mindat.org API (\url{https://api.mindat.org/schema/redoc/}).
+The OpenMindat R package is used to retrieve datasets from the 'mindat.org' API (\url{https://api.mindat.org/schema/redoc/}).
 }
 \seealso{
 Useful links:
