@@ -1,5 +1,5 @@
 # OpenMindat
-R package for querying open data from Mindat API
+An R package for querying open data from Mindat API
 
 ### Overview
 `OpenMindat` is a package for retrieving and processing data from [mindat.org Database](https://www.mindat.org/) through its open data API.
