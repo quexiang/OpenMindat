@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ### NEW features
 
 
-* OpenMindat R package is useful for retrieving and processing data from [mindat.org Database](https://www.mindat.org/) through its open data API.
+* 'OpenMindat' R package is useful for retrieving and processing data from [mindat.org Database](https://www.mindat.org/) through its open data API.
 
 
 ## OpenMindat 0.1.0

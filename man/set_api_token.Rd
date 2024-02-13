@@ -9,6 +9,9 @@ set_api_token (api_token)
 \arguments{
 \item{api_token}{string. The token of mindat api.}
 }
+\value{
+No return value. The api_token will be cached. Users can retrieve the value by calling mindat_cache_get('api_token').
+}
 \description{
 set the token of current environment
 }

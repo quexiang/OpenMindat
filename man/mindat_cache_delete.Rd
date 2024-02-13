@@ -9,6 +9,9 @@ mindat_cache_delete(varname)
 \arguments{
 \item{varname}{string input a cached name.Set a cached value empty by the given varname. A string, list or other objects.}
 }
+\value{
+No return value. The cached variable named varname will be clear.
+}
 \description{
 Remove (clear) the cache named varname in current environment.
 }

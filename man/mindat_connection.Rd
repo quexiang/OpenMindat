@@ -15,6 +15,9 @@ mindat_connection(token, base_url = "https://api.mindat.org",fmt ="json",page_si
 
 \item{page_size}{interger, setting the page size of responsed data from the API server.}
 }
+\value{
+No return value. A connection to the Mindat server will be established with your input token cached.
+}
 \description{
 Initializing API Call. Setup the base_url, token and format.
 }

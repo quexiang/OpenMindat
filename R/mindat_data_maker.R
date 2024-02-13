@@ -8,6 +8,7 @@
 #' @examples
 #' filename<- "fname.txt"
 #' fname_extension<- getExtension(filename)
+#' @return 'getExtension()' returns a string which is the suffix string of a file name.
 #' @export
 getExtension <- function(filename){
   ext<- strsplit(filename, ".", fixed=T)[[1]][-1]
@@ -21,6 +22,7 @@ getExtension <- function(filename){
 #' @usage ConvertDF2JsonLD(inputdata,template = NULL)
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param template filepath to the template
+#' @return 'ConvertDF2JsonLD()' returns a string written in Json-LD format converted from an input R data frame (df).
 #' @examples
 #' \dontrun{
 #' df <-geomaterials_search_name("Quartz")
@@ -142,6 +144,7 @@ ConvertDF2JsonLD<- function(inputdata,template = NULL ){ #"/inst/extdata/OpenMin
 #' @usage ConvertDF2TTL (inputdata,template = NULL)
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param template filepath to the template
+#' @return 'ConvertDF2TTL()' returns a string written in TTL (pronounced 'turtle') format converted from an input R data frame (df).
 #' @examples
 #' \dontrun{
 #' df <-geomaterials_search_name("Quartz")
@@ -245,6 +248,7 @@ ConvertDF2TTL<- function(inputdata,template = NULL){
 #' @usage saveMindatDataAs (inputdata,outputfname)
 #' @param inputdata R dataframe of retrieived data from Mindat database.
 #' @param outputfname string. the output file name.
+#' @return No return value.If successful, the input data frame(df) will be saved to the specified file. Otherwise, it will report an error.
 #' @examples
 #' \dontrun{
 #' df <-geomaterials_search_name("Quartz")

@@ -11,6 +11,9 @@ mindat_setup(base_uri = 'https://api.mindat.org',page_size = 800)
 
 \item{page_size}{interger,setting the page size of responsed data from the API server.}
 }
+\value{
+No return value. Mindat basic configuration will be set up.
+}
 \description{
 set up of the mindat basic uri, endpoints, and cache
 }

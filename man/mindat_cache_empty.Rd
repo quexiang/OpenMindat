@@ -6,6 +6,9 @@
 \usage{
 mindat_cache_empty()
 }
+\value{
+No return value. All cached content will be cleared.
+}
 \description{
 Clear all current cached values. Set current environment cache empty.
 }

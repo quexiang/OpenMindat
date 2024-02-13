@@ -19,7 +19,6 @@ retrieve locality type by an given id of locality.
 }
 \details{
 This function is to retrieve the locality types by an given id of locality.
-@export
 }
 \examples{
 \dontrun{

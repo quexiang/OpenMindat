@@ -11,6 +11,9 @@ mindat_cache_set(varname, value)
 
 \item{value}{string.}
 }
+\value{
+No return value. The value will be cached in memory, and the cached value can be fetched by calling the function mindat_cache_get with the assigned varname.
+}
 \description{
 Assigns the value to the cache named varname in current environment.
 }

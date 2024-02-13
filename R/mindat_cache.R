@@ -9,6 +9,7 @@ mindat_cache <- new.env()
 #' @usage mindat_cache_set(varname, value)
 #' @param varname  string. The cached varname.
 #' @param value  string.
+#' @return No return value. The value will be cached in memory, and the cached value can be fetched by calling the function mindat_cache_get with the assigned varname.
 #' @examples
 #' mindat_cache_set('api_token',"9ce67655d74bcd981e937be80dcea9cb")
 #' @export
@@ -34,6 +35,7 @@ mindat_cache_get<-function(varname)
 #' @description Remove (clear) the cache named varname in current environment.
 #' @usage mindat_cache_delete(varname)
 #' @param varname string input a cached name.Set a cached value empty by the given varname. A string, list or other objects.
+#' @return No return value. The cached variable named varname will be clear.
 #' @examples
 #' mindat_cache_delete('api_token')
 #' @export
@@ -45,6 +47,7 @@ mindat_cache_delete<-function(varname)
 #' Remove all cached values
 #' @description Clear all current cached values. Set current environment cache empty.
 #' @usage mindat_cache_empty()
+#' @return No return value. All cached content will be cleared.
 #' @examples
 #' mindat_cache_empty()
 #' @export

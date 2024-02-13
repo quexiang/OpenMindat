@@ -4,14 +4,14 @@ R package for OpenMindat
 ### Overview
 `OpenMindat` is a package for retrieving and processing data from ['mindat.org' Database](https://www.mindat.org/) through its open data API.
 
-Mindat and University of Idaho collaborate on '[OpenMindat](https://www.mindat.org/mesg-567769.html)'
+University of Idaho and 'mindat.org' collaborate on '['OpenMindat'](https://www.mindat.org/mesg-567769.html)' project.
 
 ### Quick start
 
 
 **Install and load necessary packages**
 
-This package can be installed directly through the `remotes` package:
+`OpenMindat` can be installed directly through the `remotes` package:
 
 ```coffee
 install.packages("remotes")
@@ -22,9 +22,9 @@ remotes::install_github("quexiang/OpenMindat")
 Or through devtools:
 
 ```coffee
-install.packages("devtools")
-library("devtools")
-install_github("quexiang/OpenMindat")
+install.packages('devtools')
+library('devtools')
+install_github('quexiang/OpenMindat')
 ```
 
 Or download the source code locally and install it as follows:
@@ -44,11 +44,11 @@ Then, you can create a new file to load the dependent package, and then call the
 
 
 ```coffee
-#install.packages("httr")
-#install.packages("jsonlite")
-#install.packages("usethis")
-#install.packages("readxl")
-#install.packages("OpenMindat")
+#install.packages('httr')
+#install.packages('jsonlite')
+#install.packages('usethis')
+#install.packages('readxl')
+#install.packages('OpenMindat')
 library(OpenMindat)
 library(httr)
 library(usethis)
@@ -56,9 +56,9 @@ library(jsonlite)
 library(readxl)
 ```
 
-**Set up API connection with your Mindat API token and use the functions**
+**Set up API connection with your 'mindat.org' API token and use the functions**
 
-1. You should first get your own Mindat api token `YourToken` . ([How to get your mindat API token ?](https://www.mindat.org/a/how_to_get_my_mindat_api_key))
+1. You should first get your own 'mindat.org' API token `YourToken` . ([How to get your 'mindat.org' API token ?](https://www.mindat.org/a/how_to_get_my_mindat_api_key))
 
 2. Set up your token `YourToken`
 

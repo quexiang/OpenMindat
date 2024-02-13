@@ -303,7 +303,7 @@ localities_status_retrieve<- function(id,...){
 #' }
 #' @details
 #'  This function is to retrieve the locality types by an given id of locality.
-#'  @export
+#' @export
 localitiy_type_retrieve <- function(id,...){
   df_out <- mindat_locality_type( id = id,...)
   df_out

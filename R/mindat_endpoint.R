@@ -5,6 +5,7 @@
 #' @param api_base_url list. The base url of mindat api.
 #' @param config list. config of current environment.
 #' @param querystring list. list of query fields and conditions.
+#' @return uri string.
 #' @noRd
 mindat_uri_builder<- function(api_base_url, config, querystring = ''){
   if(querystring != ''){
@@ -20,6 +21,7 @@ mindat_uri_builder<- function(api_base_url, config, querystring = ''){
 #' mindat_set_up_endpoints
 #' @description Set up the basic mindat endpoints for current mindat API.
 #' @usage mindat_set_up_endpoints ()
+#' @return No return value. The default endpoints will be set up.
 #' @noRd
 mindat_set_up_endpoints<-function(){
   # single ima mineral
@@ -89,6 +91,7 @@ mindat_set_up_endpoints<-function(){
 #' @usage mindat_setup(base_uri = 'https://api.mindat.org',page_size = 800)
 #' @param base_uri base uri of mindat API.
 #' @param page_size interger,setting the page size of responsed data from the API server.
+#' @return No return value. Mindat basic configuration will be set up.
 #' @examples
 #' \dontrun{
 #' mindat_setup()

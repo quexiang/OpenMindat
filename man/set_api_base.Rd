@@ -9,6 +9,9 @@ set_api_base (api_base)
 \arguments{
 \item{api_base}{string. The base uri of mindat api.}
 }
+\value{
+No return value. The api based url (api_base) will be cached. Users can retrieve the value by calling mindat_cache_get('api_base').
+}
 \description{
 set base uri of current environment
 }

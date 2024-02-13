@@ -71,6 +71,7 @@ minerals_ima_list_ima<- function(intValue,...){
 #' @details
 #' This function is related to the filed "updated_at" of ima minerals.
 #' retrieve the localities that have the latest updated at the given time.
+#' @export
 minerals_ima_updated_at <- function(updateDate,...){
   df_out <-mindat_mineral_ima_list(ids = c(''),updated_at = updateDate,...)
   df_out

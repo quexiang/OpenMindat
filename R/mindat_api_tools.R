@@ -50,6 +50,7 @@ mindat_api_endpoint<-function(name,epb,ubuilder = default_uri_builder,qparams=li
 #' @usage stop_not_param (comp_params, query)
 #' @param comp_params list. list of compulsory, the internal params in the mindat api.
 #' @param query list of query name/value pairs.
+#' @return No return value.It will stop and report the errors if the query param is not in the list of mindat api.
 #' @noRd
 stop_not_param<-function(comp_params, query){
  q_params <- names(query)
@@ -100,6 +101,7 @@ build_uri<-function(endpoint, query = list(), api_base = NULL,...){
 #' @description set base uri of current environment
 #' @usage set_api_base (api_base)
 #' @param api_base string. The base uri of mindat api.
+#' @return No return value. The api based url (api_base) will be cached. Users can retrieve the value by calling mindat_cache_get('api_base').
 #' @examples
 #' set_api_base("9ce67655d74bcd981e937be80dcea9cb")
 #' @export
@@ -111,6 +113,7 @@ set_api_base<-function(api_base){
 #' @description set the token of current environment
 #' @usage set_api_token (api_token)
 #' @param api_token string. The token of mindat api.
+#' @return No return value. The api_token will be cached. Users can retrieve the value by calling mindat_cache_get('api_token').
 #' @examples
 #' set_api_token("9ce67655d74bcd981e937be80dcea9cb")
 #' @export
@@ -122,6 +125,8 @@ set_api_token<-function(api_token){
 #' @description set the page_size of response records.
 #' @usage set_page_size (page_size)
 #' @param page_size string. The token of mindat api.
+#' @return No return value. The 'page_size' will be cached.
+#'        The page_size information is added to the query string of every request sent to the Mindat server via the "OpenMindat" package.
 #' @examples
 #' set_page_size(800)
 #' @export

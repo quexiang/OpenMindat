@@ -4,9 +4,9 @@
 \name{OpenMindat-package}
 \alias{OpenMindat}
 \alias{OpenMindat-package}
-\title{OpenMindat: Quickly Retrieve Datasets from the 'Mindat' API}
+\title{OpenMindat: Quickly Retrieve Datasets from the 'mindat.org' API}
 \description{
-The OpenMindat R package is used to retrieve datasets from the 'mindat.org' API (\url{https://api.mindat.org/schema/redoc/}).
+Mindat ('mindat.org') is one of the world's most widely used databases of mineral species and their distribution. Many scientists in mineralogy, geochemistry, petrology, and other Earth and planetary disciplines have been using the Mindat data. Still, an open data service and the machine interface have never been fully established. To meet the overwhelming data needs, the Mindat team has built an API (\url{https://api.mindat.org/schema/redoc/}) for data access.'OpenMindat' R package provides valuable functions to bridge the data highway, connecting users's data requirements to the Mindat API server and assist with retrieval and initial processing to improve efficiency further and lower the barrier of data query and access to scientists. 'OpenMindat' provides friendly and extensible data retrieval functions, including the subjects of geomaterials (e.g., rocks, minerals, synonyms, variety, mixture, and commodity), localities, and the IMA (International Mineralogical Association)-approved mineral list. 'OpenMindat' R package will accelerate the process of data-intensive studies in mineral informatics and lead to more scientific discoveries.
 }
 \seealso{
 Useful links:

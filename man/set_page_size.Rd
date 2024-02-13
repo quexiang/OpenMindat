@@ -9,6 +9,10 @@ set_page_size (page_size)
 \arguments{
 \item{page_size}{string. The token of mindat api.}
 }
+\value{
+No return value. The 'page_size' will be cached.
+The page_size information is added to the query string of every request sent to the Mindat server via the "OpenMindat" package.
+}
 \description{
 set the page_size of response records.
 }
