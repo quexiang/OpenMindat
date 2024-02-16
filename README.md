@@ -1,6 +1,10 @@
 # OpenMindat
 An R package for querying and accessing open data from the Mindat API
 
+### News
+
+The first version of the OpenMindat R package has been published on CRAN and can be accessed via https://cran.r-project.org/web/packages/OpenMindat/index.html
+
 ### Overview
 `OpenMindat` is a package for retrieving and processing data from [mindat.org Database](https://www.mindat.org/) through its open data API.
 
