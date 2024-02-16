@@ -66,7 +66,7 @@
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>updateDate</dt>
-<dd><p>str, Last updated datetime in format %Y-%m-%d %H:%M:%S</p></dd>
+<dd><p>string<date-time>, Last updated datetime in format %Y-%m-%d %H:%M:%S</date-time></p></dd>
 
 
 <dt>..., </dt>
@@ -88,8 +88,7 @@ retrieve the localities that have the latest updated at the given time.</p>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span><span class="va">strdate</span><span class="op">&lt;-</span> <span class="st">"2023-09-13 17:36:19"</span></span></span>
-<span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span><span class="fu">localities_list_updated_at</span><span class="op">(</span><span class="va">strdate</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span><span class="fu">localities_list_updated_at</span><span class="op">(</span><span class="st">"lava"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
