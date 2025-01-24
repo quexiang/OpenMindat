@@ -1,345 +1,117 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/404.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/articles/Mindat_data.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/articles/OpenMindat.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/index.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/ConvertDF2JsonLD.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/ConvertDF2TTL.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/OpenMindat-package.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_bi_greater_than.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_bi_less_than.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_bi_range.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_by_groupid.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_cleavagetype.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_colour.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_contain_all_but_not_elems.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_contain_all_elems.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_contain_any_but_not_elems.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_contain_any_elems.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_contain_only_elems.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_crystal_system.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_dens_greater_than.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_dens_less_than.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_dens_range.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_diapheny.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_entrytype.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_expand.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_field_exists.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_fracturetype.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_hardness_gt.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_hardness_lt.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_hardness_range.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_ima.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_ima_notes.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_ima_status.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_lustretype.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_meteoritical_code.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_name.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_not_contain_elems.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_optical2v_max.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_optical2v_min.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_optical2v_range.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_opticalsign.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_opticaltype.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_polytypeof.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_ri_gt.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_ri_lt.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_ri_range.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_search_name.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_streak.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_synid.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_updated_at.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_varietyof.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomeaterials_non_utf.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/geomeaterials_ordering.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/getExtension.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/localities_list_all.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/localities_list_country.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/localities_list_description.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/localities_list_elems_exc.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/localities_list_elems_inc.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/localities_list_elems_inc_exc.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/localities_list_expand.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/localities_list_txt.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/localities_list_updated_at.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/localities_retrieve_id.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/localities_status_list.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/localities_status_retrieve.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/localitiy_type_retrieve.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/locality_age.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/locality_age_list.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/locality_type_list.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_build_querystring.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_cache_delete.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_cache_empty.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_cache_get.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_cache_has.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_cache_return_or_setup.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_cache_set.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_connection.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_countries.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_country.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_extract_response_body.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_geomaterial.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_geomaterial_list.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_geomaterial_search.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_geomaterial_varieties.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_get_data_from_uri.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_localities_list.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_localitiy.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_locality_status.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_locality_status_list.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_locality_type.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_locality_type_list.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_make_data_frame.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_mineral_ima.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_mineral_ima_list.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_parse_raw_data.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_query.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/mindat_setup.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/minerals_ima_list.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/minerals_ima_list_expand.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/minerals_ima_list_ima.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/minerals_ima_retrieve.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/minerals_ima_updated_at.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/params_to_string.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/saveMindatDataAs.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/set_api_base.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/set_api_token.html</loc>
-  </url>
-  <url>
-    <loc>https://quexiang.github.io/OpenMindat/reference/set_page_size.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://quexiang.github.io/OpenMindat/404.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/LICENSE-text.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/LICENSE.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/articles/Mindat_data.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/articles/OpenMindat.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/articles/index.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/authors.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/index.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/news/index.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/ConvertDF2JsonLD.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/ConvertDF2TTL.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/OpenMindat-package.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_bi_greater_than.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_bi_less_than.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_bi_range.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_by_groupid.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_cleavagetype.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_colour.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_contain_all_but_not_elems.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_contain_all_elems.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_contain_any_but_not_elems.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_contain_any_elems.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_contain_only_elems.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_crystal_system.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_dens_greater_than.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_dens_less_than.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_dens_range.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_diapheny.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_entrytype.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_expand.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_field_exists.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_fracturetype.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_hardness_gt.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_hardness_lt.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_hardness_range.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_ima.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_ima_notes.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_ima_status.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_lustretype.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_meteoritical_code.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_name.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_not_contain_elems.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_optical2v_max.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_optical2v_min.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_optical2v_range.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_opticalsign.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_opticaltype.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_polytypeof.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_ri_gt.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_ri_lt.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_ri_range.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_search_name.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_streak.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_synid.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_updated_at.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomaterials_varietyof.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomeaterials_non_utf.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/geomeaterials_ordering.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/getExtension.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/index.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/localities_list_all.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/localities_list_country.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/localities_list_description.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/localities_list_elems_exc.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/localities_list_elems_inc.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/localities_list_elems_inc_exc.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/localities_list_expand.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/localities_list_txt.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/localities_list_updated_at.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/localities_retrieve_id.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/localities_status_list.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/localities_status_retrieve.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/localitiy_type_retrieve.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/locality_age.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/locality_age_list.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/locality_type_list.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_build_querystring.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_cache_delete.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_cache_empty.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_cache_get.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_cache_has.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_cache_return_or_setup.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_cache_set.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_connection.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_countries.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_country.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_extract_response_body.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_geomaterial.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_geomaterial_list.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_geomaterial_search.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_geomaterial_varieties.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_get_data_from_uri.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_localities_list.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_localitiy.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_locality_status.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_locality_status_list.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_locality_type.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_locality_type_list.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_make_data_frame.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_mineral_ima.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_mineral_ima_list.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_parse_raw_data.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_query.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/mindat_setup.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/minerals_ima_list.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/minerals_ima_list_expand.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/minerals_ima_list_ima.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/minerals_ima_retrieve.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/minerals_ima_updated_at.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/params_to_string.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/saveMindatDataAs.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/set_api_base.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/set_api_token.html</loc></url>
+<url><loc>https://quexiang.github.io/OpenMindat/reference/set_page_size.html</loc></url>
 </urlset>
+
