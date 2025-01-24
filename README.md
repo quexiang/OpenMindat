@@ -77,7 +77,7 @@ library(readxl)
 #input your Mindat API token
 mindat_connection("YourToken") #including the quotation marks
 # The new Mindat server's API is not yet fully deployed，you may need to specify the base_url 
-mindat_connection(`YourToken`,base_url = "147.135.28.115")
+mindat_connection("YourToken",base_url = "147.135.28.115")
 ```
 
 3. You can now retrieve datasets of interest using functions in the `OpenMindat` package. Below are a few examples.
