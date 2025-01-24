@@ -3,6 +3,13 @@ An R package for querying and accessing open data from the Mindat API
 
 ### News
 
+Due to ongoing server migration, the new Mindat server's API is not yet fully deployed.To ensure the normal execution of this R package, please specify the base_url parameter as "147.135.28.115" when executing mindat_connection.The details are as follows:
+mindat_connection(`YourToken`,base_url = "147.135.28.115")
+
+When the new Mindat server is fully deployed, please connect using the default settings: mindat_connection(`YourToken`).
+
+
+
 The first version of the OpenMindat R package has been published on CRAN and can be accessed via https://cran.r-project.org/web/packages/OpenMindat/index.html
 
 ### Overview
@@ -69,6 +76,8 @@ library(readxl)
 ```coffee
 #input your Mindat API token
 mindat_connection("YourToken") #including the quotation marks
+# The new Mindat server's API is not yet fully deployed，you may need to specify the base_url 
+mindat_connection(`YourToken`,base_url = "147.135.28.115")
 ```
 
 3. You can now retrieve datasets of interest using functions in the `OpenMindat` package. Below are a few examples.

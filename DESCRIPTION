@@ -3,7 +3,7 @@ Type: Package
 Title: Quickly Retrieve Datasets from the 'Mindat' API
 Version: 1.0.0
 Imports:
-    httr (>= 1.4.4),
+    httr,
     jsonlite (>= 1.8.4),
     readxl (>= 1.4.3),
     utils,
@@ -21,7 +21,7 @@ VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 URL: https://github.com/quexiang/OpenMindat, https://quexiang.github.io/OpenMindat/
 BugReports: https://github.com/quexiang/OpenMindat/issues
 License: MIT + file LICENSE
