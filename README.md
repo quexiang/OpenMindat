@@ -176,6 +176,9 @@ An initial version of the `OpenMindat` documentation is available, inclduing a f
 help(package = OpenMindat)
 
 ```
+Technical architecture of the software package
+
+<img src="/inst/technical_architecture/OpenMindat_R_Package.png?raw=true"  width="100%"> 
 
 **Bug Reports**
 
