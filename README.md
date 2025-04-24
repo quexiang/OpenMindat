@@ -3,9 +3,6 @@ An R package for querying and accessing open data from the Mindat API
 
 ### News
 
-Due to ongoing server migration, the new Mindat server's API is not yet fully deployed.To ensure the normal execution of this R package, please specify the base_url parameter as "147.135.28.115" when executing mindat_connection.The details are as follows:
-mindat_connection(`YourToken`,base_url = "147.135.28.115")
-
 When the new Mindat server is fully deployed, please connect using the default settings: mindat_connection(`YourToken`).
 
 
