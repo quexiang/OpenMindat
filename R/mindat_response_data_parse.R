@@ -157,7 +157,7 @@ mindat_extract_response_body<-function(response){
 #' \dontrun{
 #' library(httr)
 #' uri <- "https://api.mindat.org/geomaterials/?id__in=&hardness_min=9.3&fields=name,+
-#' hardness&page_size=1500"
+#' hardness&page-size=1500"
 #' mindat_cache_set('api_token',"9ce67655d74bcd981e937be80dcea9cb")
 #' df <- mindat_get_data_from_uri(uri)
 #' }
@@ -183,7 +183,7 @@ mindat_get_data_from_uri<-function(uri){
 #' @return qs. generated query string.
 #' @examples
 #' \dontrun{
-#' mindat_cache_set('page_size',800)
+#' mindat_cache_set('page-size',800)
 #' ids<-c("")
 #' hardness_min<- 9.3
 #' fields<- c("name,hardness")
@@ -211,17 +211,17 @@ mindat_build_querystring<-function(args){
     }
   }
   #qs <- substr(qs,0,nchar(qs)-1)
-  page_size <- mindat_cache_get('page_size')
+  page_size <- mindat_cache_get('page-size')
   if(grepl('\\?',qs)){
-    qs <- paste(qs, 'page_size', "=", page_size, sep = "")
+    qs <- paste(qs, 'page-size', "=", page_size, sep = "")
   }
   else{
     if('&' == substr(qs,nchar(qs),nchar(qs))){
       qs<- substr(qs,0,nchar(qs)-1)
-      qs <- paste(qs, '/?page_size', "=", page_size, sep = "")
+      qs <- paste(qs, '/?page-size', "=", page_size, sep = "")
     }
     else{
-      qs <- paste(qs, '?page_size', "=", page_size, sep = "")
+      qs <- paste(qs, '?page-size', "=", page_size, sep = "")
     }
   }
   qs

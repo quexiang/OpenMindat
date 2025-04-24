@@ -55,7 +55,7 @@ params_to_string<-function(params){
 #' @export
 mindat_mineral_ima<-function(id,...){
   l<-list(...)
-  mindat_query('minerals_ima', query = c(list(id = id), l))
+  mindat_query('minerals-ima', query = c(list(id = id), l))
 }
 
 #' mindat_mineral_ima_list

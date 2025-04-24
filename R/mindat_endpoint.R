@@ -23,11 +23,11 @@ mindat_uri_builder<- function(api_base_url, config, querystring = ''){
 #' @noRd
 mindat_set_up_endpoints<-function(){
   # single ima mineral
-  mindat_api_endpoint('minerals_ima', 'minerals_ima/%s', uri_builder = mindat_uri_builder,
+  mindat_api_endpoint('minerals_ima', 'minerals-ima/%s', uri_builder = mindat_uri_builder,
                       compulsory_params = list('id'))
 
   # ima minerals list
-  mindat_api_endpoint('minerals_ima_list', 'minerals_ima/%s', uri_builder = mindat_uri_builder)
+  mindat_api_endpoint('minerals_ima_list', 'minerals-ima/%s', uri_builder = mindat_uri_builder)
 
   # single locality
   mindat_api_endpoint('localities', 'localities/%s',uri_builder = mindat_uri_builder,

@@ -126,7 +126,7 @@ set_api_token<-function(api_token){
 #' set_page_size(800)
 #' @export
 set_page_size<-function(page_size = 800){
-  mindat_cache_set('page_size', page_size)
+  mindat_cache_set('page-size', page_size)
 }
 
 ########### mindat_api_tools.R #############
