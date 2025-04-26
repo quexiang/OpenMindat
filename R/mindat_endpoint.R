@@ -36,17 +36,17 @@ mindat_set_up_endpoints<-function(){
   mindat_api_endpoint('localities_list', 'localities/%s',uri_builder = mindat_uri_builder)
 
   # locality_age
-  mindat_api_endpoint('locality_age_list', 'locality_age/%s',uri_builder = mindat_uri_builder)
-  mindat_api_endpoint('locality_age', 'locality_age/%s',uri_builder = mindat_uri_builder,
+  mindat_api_endpoint('locality_age_list', 'locality-age/%s',uri_builder = mindat_uri_builder)
+  mindat_api_endpoint('locality_age', 'locality-age/%s',uri_builder = mindat_uri_builder,
                       compulsory_params = list('id'))
 
   # locality_status
-  mindat_api_endpoint('locality_status_list', 'locality_status/%s',uri_builder = mindat_uri_builder)
-  mindat_api_endpoint('locality_status', 'locality_status/%s',uri_builder = mindat_uri_builder,
+  mindat_api_endpoint('locality_status_list', 'locality-status/%s',uri_builder = mindat_uri_builder)
+  mindat_api_endpoint('locality_status', 'locality-status/%s',uri_builder = mindat_uri_builder,
                       compulsory_params = list('id'))
 
-  mindat_api_endpoint('locality_type_list', 'locality_type/%s',uri_builder = mindat_uri_builder)
-  mindat_api_endpoint('locality_type', 'locality_type/%s',uri_builder = mindat_uri_builder,
+  mindat_api_endpoint('locality_type_list', 'locality-type/%s',uri_builder = mindat_uri_builder)
+  mindat_api_endpoint('locality_type', 'locality-type/%s',uri_builder = mindat_uri_builder,
                       compulsory_params = list('id'))
 
   #geomaterials

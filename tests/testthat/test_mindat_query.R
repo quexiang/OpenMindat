@@ -1,5 +1,5 @@
 #You should apply for and get your own token from Mindat.org.
-This_is_a_temporary_token = "9ce67655d74bcd981e937be80dcea9cb"
+This_is_a_temporary_token = "321e35e57066ccb129a9d9af7ffe1958"
 expect_no_error(mindat_connection(This_is_a_temporary_token,page_size = 1500))
 
 test_that("Test mindat_query function", {

@@ -1,6 +1,6 @@
 
 #You should apply for and get your own token from Mindat.org.
-This_is_a_temporary_token = "9ce67655d74bcd981e937be80dcea9cb"
+This_is_a_temporary_token = "321e35e57066ccb129a9d9af7ffe1958"
 expect_no_error(mindat_connection(This_is_a_temporary_token,page_size = 1500))
 
 
@@ -36,8 +36,8 @@ test_that("Test mindat_get_data_from_uri function", {
 
 test_that("Test mindat_build_querystring function", {
   args <- list(ids = "6,7,8",fields ="id,name,updttime,ima_formula,ima_status,ima_notes,key_elements",elements_inc = "H,O")
-  page_size <- mindat_cache_get('page_size')
+  page_size <- mindat_cache_get('page-size')
   qs<- "?id__in=6,7,8&fields=id,name,updttime,ima_formula,ima_status,ima_notes,key_elements&elements_inc=H,O&"
-  qs <- paste(qs, 'page_size', "=", page_size, sep = "")
+  qs <- paste(qs, 'page-size', "=", page_size, sep = "")
   expect_equal( mindat_build_querystring(args),qs)
 })
