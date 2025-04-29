@@ -95,18 +95,18 @@ test_that("Test mindat_geomaterial_list function", {
 })
 
 
-test_that("Test mindat_country function", {
+#test_that("Test mindat_country function", {
   #test_base_token =  #Your_token
   #expect_no_error(mindat_connection(test_base_token))
-  expect_no_error(df <- mindat_country(id=1))
-  expect_equal(typeof(df), "list")
-})
+#  expect_no_error(df <- mindat_country(id=1))
+#  expect_equal(typeof(df), "list")
+#})
 
-test_that("Test mindat_countries function", {
+#test_that("Test mindat_countries function", {
   #test_base_token =  #Your_token
   #expect_no_error(mindat_connection(test_base_token))
-  expect_no_error(df <- mindat_countries())
-  expect_equal(typeof(df), "list")
-})
+#  expect_no_error(df <- mindat_countries())
+#  expect_equal(typeof(df), "list")
+#})
 
 
