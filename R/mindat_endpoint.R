@@ -62,7 +62,25 @@ mindat_set_up_endpoints<-function(){
   mindat_api_endpoint('geomaterials/dict', 'geomaterials/dict/%s',uri_builder = mindat_uri_builder)
 
   #geomaterials_search/
-  mindat_api_endpoint('geomaterials_search', 'geomaterials_search/?%s',uri_builder = mindat_uri_builder)
+  mindat_api_endpoint('geomaterials_search', 'geomaterials-search/?%s',uri_builder = mindat_uri_builder)
+
+  #crystalclasses/
+  mindat_api_endpoint('crystalclasses', 'crystalclasses/%s',uri_builder = mindat_uri_builder,
+                      compulsory_params = list('id'))
+  #crystalclasses_list
+  mindat_api_endpoint('crystalclasses_list', 'crystalclasses/%s',uri_builder = mindat_uri_builder)
+
+  #spacegroups/
+  mindat_api_endpoint('spacegroups', 'spacegroups/%s',uri_builder = mindat_uri_builder,
+                      compulsory_params = list('id'))
+  #spacegroups_list
+  mindat_api_endpoint('spacegroups_list', 'spacegroups/%s',uri_builder = mindat_uri_builder)
+
+  #spacegroupsets/
+  mindat_api_endpoint('spacegroupsets', 'spacegroupsets/%s',uri_builder = mindat_uri_builder,
+                      compulsory_params = list('id'))
+  #spacegroupsets_list
+  mindat_api_endpoint('spacegroupsets_list', 'spacegroupsets/%s',uri_builder = mindat_uri_builder)
 
   #dana-8
   mindat_api_endpoint('dana-8', 'dana-8/%s',uri_builder = mindat_uri_builder,
@@ -82,6 +100,7 @@ mindat_set_up_endpoints<-function(){
   #countries
   mindat_api_endpoint('countries', 'countries/%s',uri_builder = mindat_uri_builder,
                       compulsory_params = list('id'))
+
 }
 
 #' mindat_setup

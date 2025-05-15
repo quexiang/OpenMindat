@@ -166,7 +166,6 @@ mindat_locality_type<-function(id,...){
   mindat_query('locality_type', query = c(list(id = id), l))
 }
 
-
 #' mindat_geomaterial
 #' @description retrieve  geomaterial  by its id
 #' @usage mindat_geomaterial (id,...)
@@ -222,7 +221,7 @@ mindat_geomaterial_list<-function(...){
 #' mindat_geomaterial_search
 #' @description retrieve all the geomaterial list or the geomaterial by given conditions.
 #' @usage mindat_geomaterial_search (...)
-#' @param ..., Further named parameters.
+#' @param ..., Further named parameters (e:Exact.If 1 returns only exact matech;ima:if 1 returns only ima-approved minerals;size:limit of returned records).
 #' @return df, data frame of geomaterials mathch the search
 #' @examples
 #' \dontrun{
@@ -274,5 +273,100 @@ mindat_countries<-function(...){
 # mindat_geo_minerals<-function(){
 #
 # }
+
+#' mindat_crystalclasses
+#' @description retrieve crystalclasses by its id
+#' @usage mindat_crystalclasses (id,...)
+#' @param id crystalclasses id
+#' @param ..., Further named parameters.
+#' @return df, data frame of crystalclasses
+#' @examples
+#' \dontrun{
+#'  df<- mindat_crystalclasses(4)
+#' }
+#' @export
+mindat_crystalclasses<-function(id,...){
+  l<-list(...)
+  mindat_query('crystalclasses', query  = c(list(id = id), l))
+}
+
+#' mindat_crystalclass_list
+#' @description retrieve all the crystalclasses list or the crystalclasses list by given conditions.
+#' @usage mindat_crystalclass_list(...)
+#' @param ..., Further named parameters.
+#' @return df, data frame of crystalclasses list
+#' @examples
+#' \dontrun{
+#'  df<- mindat_crystalclass_list()
+#' }
+#' @export
+mindat_crystalclass_list<-function(...){
+  l<-list(...)
+  mindat_query('crystalclasses_list', query = l)
+}
+
+
+#' mindat_spacegroups
+#' @description retrieve spacegroups by its id
+#' @usage mindat_spacegroups (id,...)
+#' @param id spacegroups id
+#' @param ..., Further named parameters.
+#' @return df, data frame of spacegroups
+#' @examples
+#' \dontrun{
+#'  df<- mindat_spacegroups(4)
+#' }
+#' @export
+mindat_spacegroups<-function(id,...){
+  l<-list(...)
+  mindat_query('spacegroups', query  = c(list(id = id), l))
+}
+
+#' mindat_spacegroups_list
+#' @description retrieve all the spacegroups list or the spacegroups list by given conditions.
+#' @usage mindat_spacegroups_list(...)
+#' @param ..., Further named parameters.
+#' @return df, data frame of spacegroups list
+#' @examples
+#' \dontrun{
+#'  df<- mindat_spacegroups_list()
+#' }
+#' @export
+mindat_spacegroups_list<-function(...){
+  l<-list(...)
+  mindat_query('spacegroups_list', query = l)
+}
+
+
+#' mindat_spacegroupsets
+#' @description retrieve spacegroups by its id
+#' @usage mindat_spacegroupsets (id,...)
+#' @param id spacegroupsets id
+#' @param ..., Further named parameters.
+#' @return df, data frame of spacegroupsets
+#' @examples
+#' \dontrun{
+#'  df<- mindat_spacegroupsets(4)
+#' }
+#' @export
+mindat_spacegroupsets<-function(id,...){
+  l<-list(...)
+  mindat_query('spacegroupsets', query  = c(list(id = id), l))
+}
+
+#' mindat_spacegroupsets_list
+#' @description retrieve all the spacegroups list or the spacegroups list by given conditions.
+#' @usage mindat_spacegroupsets_list(...)
+#' @param ..., Further named parameters.
+#' @return df, data frame of spacegroupsets list
+#' @examples
+#' \dontrun{
+#'  df<- mindat_spacegroups_list()
+#' }
+#' @export
+mindat_spacegroupsets_list<-function(...){
+  l<-list(...)
+  mindat_query('spacegroupsets_list', query = l)
+}
 
 ########### mindat_querys.R #############

@@ -7,7 +7,7 @@
 mindat_geomaterial_search (...)
 }
 \arguments{
-\item{..., }{Further named parameters.}
+\item{..., }{Further named parameters (e:Exact.If 1 returns only exact matech;ima:if 1 returns only ima-approved minerals;size:limit of returned records).}
 }
 \value{
 df, data frame of geomaterials mathch the search
