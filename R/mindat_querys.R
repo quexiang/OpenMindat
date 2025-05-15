@@ -166,6 +166,68 @@ mindat_locality_type<-function(id,...){
   mindat_query('locality_type', query = c(list(id = id), l))
 }
 
+#' mindat_locentries_list
+#' @description retrieve Mindat locentries. A 'locentry' is a record of specific geomaterial (mineral, etc) at a specific locality.
+#' @usage mindat_locentries_list (...)
+#' @param ..., Further named parameters.
+#' @return df, data frame of locentries list.
+#' @examples
+#' \dontrun{
+#'  df<- mindat_locentries_list()
+#' }
+#' @export
+mindat_locentries_list<-function(...){
+  l<-list(...)
+  mindat_query('locentries_list', query = l)
+}
+
+#' mindat_locentries_retrieve
+#' @description retrieve Mindat locentries by a given ID. A 'locentry' is a record of specific geomaterial (mineral, etc) at a specific locality.
+#' @usage mindat_locentries_retrieve (id,...)
+#' @param id Locentry id (Integer)
+#' @param ..., Further named parameters.
+#' @return df, data frame of locentries list.
+#' @examples
+#' \dontrun{
+#'  df<- mindat_locentries_retrieve(2)
+#' }
+#' @export
+mindat_locentries_retrieve<-function(id,...){
+  l<-list(...)
+  mindat_query('locentries', query = c(list(id = id), l))
+}
+
+#' mindat_locentries_stat
+#' @description retrieve Mindat locality-geomaterial pairs and some statistics list.
+#' @usage mindat_locentries_stat (...)
+#' @param ..., Further named parameters.
+#' @return df, data frame of locentries statstics list.
+#' @examples
+#' \dontrun{
+#'  df<- mindat_locentries_stat()
+#' }
+#' @export
+mindat_locentries_stat<-function(...){
+  l<-list(...)
+  mindat_query('locentries_statistics_list', query = l)
+}
+
+#' mindat_locentries_lstm_id
+#' @description retrieve Mindat locality-geomaterial pairs and some statistics list.
+#' @usage mindat_locentries_lstm_id (lstmid,...)
+#' @param id A unique integer value identifying this locstatsmin.
+#' @param ..., Further named parameters.
+#' @return df, data frame of locentries statstics list.
+#' @examples
+#' \dontrun{
+#'  df<- mindat_locentries_lstm_id(2)
+#' }
+#' @export
+mindat_locentries_lstm_id<-function(id,...){
+  l<-list(...)
+  mindat_query('locentries_statistics', query = c(list(id = id), l))
+}
+
 #' mindat_geomaterial
 #' @description retrieve  geomaterial  by its id
 #' @usage mindat_geomaterial (id,...)
@@ -367,6 +429,83 @@ mindat_spacegroupsets<-function(id,...){
 mindat_spacegroupsets_list<-function(...){
   l<-list(...)
   mindat_query('spacegroupsets_list', query = l)
+}
+
+#' mindat_dana8_groups
+#' @description retrieve all the classifications of dana8.
+#' @usage mindat_dana8_groups(...)
+#' @param ..., Further named parameters.
+#' @return df, data frame of dana8 classification list
+#' @examples
+#' \dontrun{
+#'  df<- mindat_dana8_groups()
+#' }
+#' @export
+mindat_dana8_groups<-function(...){
+  l<-list(...)
+  mindat_query('dana-8/groups', query = l)
+}
+
+
+#' mindat_dana8_subgroups
+#' @description retrieve all the subgroups of dana8.
+#' @usage mindat_dana8_subgroups(...)
+#' @param ..., Further named parameters.
+#' @return df, data frame of subgroups of dana8 classification.
+#' @examples
+#' \dontrun{
+#'  df<- mindat_dana8_subgroups()
+#' }
+#' @export
+mindat_dana8_subgroups<-function(...){
+  l<-list(...)
+  mindat_query('dana-8/subgroups', query = l)
+}
+
+#' mindat_nickel_strunz10_classes
+#' @description retrieve the class list of Nickel-Strunz 10th edition classifications.
+#' @usage mindat_nickel_strunz10_classes(...)
+#' @param ..., Further named parameters.
+#' @return df, data frame of classes of Nickel-Strunz 10th edition classifications.
+#' @examples
+#' \dontrun{
+#'  df<- mindat_nickel_strunz10_classes()
+#' }
+#' @export
+mindat_nickel_strunz10_classes<-function(...){
+  l<-list(...)
+  mindat_query('nickel-strunz-10/classes', query = l)
+}
+
+#' mindat_nickel_strunz10_subclasses
+#' @description retrieve the subclass list of Nickel-Strunz 10th edition classifications.
+#' @usage mindat_nickel_strunz10_subclasses(...)
+#' @param ..., Further named parameters.
+#' @return df, data frame of subclasses of Nickel-Strunz 10th edition classifications.
+#' @examples
+#' \dontrun{
+#'  df<- mindat_nickel_strunz10_subclasses()
+#' }
+#' @export
+mindat_nickel_strunz10_subclasses<-function(...){
+  l<-list(...)
+  mindat_query('nickel-strunz-10/subclasses', query = l)
+}
+
+
+#' mindat_nickel_strunz10_families
+#' @description retrieve the families list of Nickel-Strunz 10th edition classifications.
+#' @usage mindat_nickel_strunz10_families(...)
+#' @param ..., Further named parameters.
+#' @return df, data frame of families of Nickel-Strunz 10th edition classifications.
+#' @examples
+#' \dontrun{
+#'  df<- mindat_nickel_strunz10_families()
+#' }
+#' @export
+mindat_nickel_strunz10_families<-function(...){
+  l<-list(...)
+  mindat_query('nickel-strunz-10/families', query = l)
 }
 
 ########### mindat_querys.R #############

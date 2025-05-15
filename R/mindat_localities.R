@@ -325,4 +325,76 @@ locality_type_list <- function(...){
   df_out
 }
 
+
+
+#' retrieve a full list of locacentries.
+#' @description : Queries locacentries.
+#' @usage mindat_locentries_list(...)
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-mindat_locentries_list()
+#' }
+#' @details
+#' This function return a list of locacentries.
+#' @export
+Locentries_list<-function(...){
+  df_out <- mindat_locentries_list(...)
+  df_out
+}
+
+#' retrieve locacentries by given a Locentry ID.
+#' @description : Queries locacentries by given a ID.
+#' @usage Locentries_retrieve(...)
+#' @param id  mindat Locentry id (Integer)
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-Locentries_retrieve(2)
+#' }
+#' @details
+#' This function return a list of locacentries.
+#' @export
+Locentries_retrieve<-function(id,...){
+  df_out <- mindat_locentries_retrieve(id,...)
+  df_out
+}
+
+#' retrieve a full list of locacentries statstics.
+#' @description : Queries locacentries statstics list.
+#' @usage Locentries_statstics_list(...)
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-Locentries_statstics_list()
+#' }
+#' @details
+#' This function return a list of locacentries.
+#' @export
+Locentries_statstics_list<-function(...){
+  df_out <- mindat_locentries_stat(...)
+  df_out
+}
+
+#' retrieve locacentries statstics by given a Locentry ID.
+#' @description : Queries locacentries locacentries statstics by given a ID.
+#' @usage Locentries_stat_retrieve(id,...)
+#' @param id  mindat Locentry id (Integer)
+#' @param ..., Further named parameters.Other optional arguments.
+#' @return df, a data frame of localities
+#' @examples
+#' \dontrun{
+#' df <-Locentries_stat_retrieve(2)
+#' }
+#' @details
+#' This function return a list of locacentries.
+#' @export
+Locentries_stat_retrieve<-function(id,...){
+  df_out <- mindat_locentries_lstm_id(id,...)
+  df_out
+}
+
 ################ mindat_localities.R  #################

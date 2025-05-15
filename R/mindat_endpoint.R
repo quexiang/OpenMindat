@@ -44,11 +44,19 @@ mindat_set_up_endpoints<-function(){
   mindat_api_endpoint('locality_status_list', 'locality-status/%s',uri_builder = mindat_uri_builder)
   mindat_api_endpoint('locality_status', 'locality-status/%s',uri_builder = mindat_uri_builder,
                       compulsory_params = list('id'))
-
+  # locality_type
   mindat_api_endpoint('locality_type_list', 'locality-type/%s',uri_builder = mindat_uri_builder)
   mindat_api_endpoint('locality_type', 'locality-type/%s',uri_builder = mindat_uri_builder,
                       compulsory_params = list('id'))
 
+  #locentries
+  mindat_api_endpoint('locentries_list', 'locentries/%s',uri_builder = mindat_uri_builder)
+  mindat_api_endpoint('locentries', 'locentries/%s',uri_builder = mindat_uri_builder,
+                      compulsory_params = list('id'))
+  #locentries_statistics
+  mindat_api_endpoint('locentries_statistics_list', 'locentries-statistics/%s',uri_builder = mindat_uri_builder)
+  mindat_api_endpoint('locentries_statistics', 'locentries-statistics/%s',uri_builder = mindat_uri_builder,
+                      compulsory_params = list('id'))
   #geomaterials
   mindat_api_endpoint('geomaterials', 'geomaterials/%s',uri_builder = mindat_uri_builder,
                       compulsory_params = list('id'))
@@ -83,10 +91,10 @@ mindat_set_up_endpoints<-function(){
   mindat_api_endpoint('spacegroupsets_list', 'spacegroupsets/%s',uri_builder = mindat_uri_builder)
 
   #dana-8
-  mindat_api_endpoint('dana-8', 'dana-8/%s',uri_builder = mindat_uri_builder,
-                      compulsory_params = list('id'))
+  #mindat_api_endpoint('dana-8', 'dana-8/%s',uri_builder = mindat_uri_builder,
+  #                    compulsory_params = list('id'))
 
-  mindat_api_endpoint('dana-8', 'dana-8/%s',uri_builder = mindat_uri_builder)
+  #mindat_api_endpoint('dana-8', 'dana-8/%s',uri_builder = mindat_uri_builder)
 
   #dana-8/groups
   mindat_api_endpoint('dana-8/groups', 'dana-8/groups/%s',uri_builder = mindat_uri_builder,
@@ -94,12 +102,23 @@ mindat_set_up_endpoints<-function(){
   #dana-8/subgroups
   mindat_api_endpoint('dana-8/subgroups', 'dana-8/subgroup/%s',uri_builder = mindat_uri_builder)
 
+  #nickel-strunz-10/classes
+  mindat_api_endpoint('nickel-strunz-10/classes', 'nickel-strunz-10/classes/%s',uri_builder = mindat_uri_builder)
+
+  #nickel-strunz-10/subclasses
+  mindat_api_endpoint('nickel-strunz-10/subclasses', 'nickel-strunz-10/subclasses/%s',uri_builder = mindat_uri_builder)
+
+  #nickel-strunz-10/families
+  mindat_api_endpoint('nickel-strunz-10/families', 'nickel-strunz-10/families/%s',uri_builder = mindat_uri_builder)
+
+
   #countries
   mindat_api_endpoint('countries', 'countries/%s',uri_builder = mindat_uri_builder)
 
   #countries
   mindat_api_endpoint('countries', 'countries/%s',uri_builder = mindat_uri_builder,
                       compulsory_params = list('id'))
+
 
 }
 
