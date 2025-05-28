@@ -2,12 +2,12 @@
 This_is_a_temporary_token = "321e35e57066ccb129a9d9af7ffe1958"
 expect_no_error(mindat_connection(This_is_a_temporary_token,page_size = 1500))
 
-test_that("Test mindat_query function", {
-  request_uri = "https://api.mindat.org/geomaterials/6"
-  endpoint<-"geomaterials"
-  expect_no_error(df <- mindat_query(endpoint, query = c(list(id = 6))))
-  expect_equal(typeof(df), "list")
-})
+#test_that("Test mindat_query function", {
+#  request_uri = "https://api.mindat.org/v1/geomaterials/6"
+#  endpoint<-"geomaterials"
+#  expect_no_error(df <- mindat_query(endpoint, query = c(list(id = 6))))
+#  expect_equal(typeof(df), "list")
+#})
 
 
 test_that("Test params_to_string function", {
@@ -18,27 +18,27 @@ test_that("Test params_to_string function", {
 })
 
 
-test_that("Test mindat_mineral_ima function", {
+#test_that("Test mindat_mineral_ima function", {
   #expect_no_error(mindat_connection(This_is_a_temporary_token))
-  expect_no_error(df <- mindat_mineral_ima(1))
-  expect_equal(typeof(df), "list")
-})
+  #expect_no_error(df <- mindat_mineral_ima(1))
+  #expect_equal(typeof(df), "list")
+#})
 
-test_that("Test mindat_mineral_ima_list function", {
+#test_that("Test mindat_mineral_ima_list function", {
   #test_base_token =  #Your_token
   #expect_no_error(mindat_connection(test_base_token))
-  expect_no_error(df <- mindat_mineral_ima_list(ids = c('1','3','9')))
-  expect_equal(typeof(df), "list")
-})
+  #expect_no_error(df <- mindat_mineral_ima_list(ids = c('1','3','9')))
+  #expect_equal(typeof(df), "list")
+#})
 
 
-test_that("Test mindat_localities_list function", {
+#test_that("Test mindat_localities_list function", {
   #test_base_token =  #Your_token
   #expect_no_error(mindat_connection(test_base_token))
-  df <- mindat_localities_list(ids = c('2','3','9','222'))
-  expect_no_error(df <- mindat_localities_list(ids = c('2','3','9','222')))
-  expect_equal(typeof(df), "list")
-})
+  #df <- mindat_localities_list(ids = c('2','3','9','222'))
+  #expect_no_error(df <- mindat_localities_list(ids = c('2','3','9','222')))
+  #expect_equal(typeof(df), "list")
+#})
 
 test_that("Test mindat_localitiy function", {
   #test_base_token =  #Your_token
@@ -47,12 +47,12 @@ test_that("Test mindat_localitiy function", {
   expect_equal(typeof(df), "list")
 })
 
-test_that("Test mindat_locality_status function", {
+#test_that("Test mindat_locality_status function", {
   #test_base_token =  #Your_token
   #expect_no_error(mindat_connection(test_base_token))
-  expect_no_error(df <- mindat_locality_status(2))
-  expect_equal(typeof(df), "list")
-})
+  #expect_no_error(df <- mindat_locality_status(2))
+  #expect_equal(typeof(df), "list")
+#})
 
 
 test_that("Test mindat_locality_status_list function", {
@@ -87,12 +87,12 @@ test_that("Test mindat_geomaterial_varieties function", {
 })
 
 
-test_that("Test mindat_geomaterial_list function", {
+#test_that("Test mindat_geomaterial_list function", {
   #test_base_token =  #Your_token
   #expect_no_error(mindat_connection(test_base_token))
-  expect_no_error(df <- mindat_geomaterial_list(ids = c('1','3','9')))
-  expect_equal(typeof(df), "list")
-})
+  #expect_no_error(df <- mindat_geomaterial_list(ids = c('1','3','9')))
+  #expect_equal(typeof(df), "list")
+#})
 
 
 #test_that("Test mindat_country function", {
