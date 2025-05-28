@@ -19,7 +19,7 @@ test_that("Test mindat_parse_raw_data function", {
 
 
 test_that("Test mindat_extract_response_body function", {
-  request_uri = "https://api.mindat.org/geomaterials/6"
+  request_uri = "https://api.mindat.org/v1/geomaterials/6"
   api_token <- mindat_cache_get('api_token')
   response_data <- GET(request_uri,add_headers('Authorization'= paste('Token ',api_token,sep = "")))
   expect_no_error(mindat_extract_response_body(response_data))
@@ -27,7 +27,7 @@ test_that("Test mindat_extract_response_body function", {
 
 
 test_that("Test mindat_get_data_from_uri function", {
-  request_uri = "https://api.mindat.org/geomaterials/6"
+  request_uri = "https://api.mindat.org/v1/geomaterials/6"
   expect_no_error(df <- mindat_get_data_from_uri(request_uri))
   expect_equal(typeof(df), "list")
 
