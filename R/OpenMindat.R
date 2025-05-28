@@ -11,7 +11,7 @@
 #' @examples
 #' mindat_connection("9ce67655d74bcd981e937be80dcea9cb",page_size = 1500)
 #' @export
-mindat_connection <- function(token, base_url = "https://api.mindat.org",fmt ="json",page_size = 800){
+mindat_connection <- function(token, base_url = "https://api.mindat.org/v1",fmt ="json",page_size = 800){
   set_api_token(token)
   mindat_setup(base_url,page_size = page_size)
 }
