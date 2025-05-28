@@ -5,7 +5,7 @@ Version: 1.0.0
 Imports:
     httr,
     jsonlite (>= 1.8.4),
-    readxl (== 1.4.3),
+    readxl (>= 1.4.3),
     utils,
     stringi,
     stringr,
