@@ -7,9 +7,9 @@ test_that("Initializing Mindat API with only token", {
 })
 
 test_that("Initializing Mindat API with token and base_uri", {
-  expect_no_error(mindat_connection(This_is_a_temporary_token,"https://api.mindat.org"))
+  expect_no_error(mindat_connection(This_is_a_temporary_token,"https://api.mindat.org/v1"))
 })
 
 test_that("Initializing Mindat API with token, base_uri ,and fmt", {
-  expect_no_error(mindat_connection(This_is_a_temporary_token,"https://api.mindat.org","json"))
+  expect_no_error(mindat_connection(This_is_a_temporary_token,"https://api.mindat.org/v1","json"))
 })

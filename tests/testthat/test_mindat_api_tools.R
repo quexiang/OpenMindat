@@ -1,8 +1,8 @@
 
 test_that("Test set_api_base function", {
-  expect_no_error(set_api_base("https://api.mindat.org"))
+  expect_no_error(set_api_base("https://api.mindat.org/v1"))
   expect_equal(mindat_cache_has("api_base"),TRUE)
-  expect_equal(mindat_cache_get("api_base"),"https://api.mindat.org")
+  expect_equal(mindat_cache_get("api_base"),"https://api.mindat.org/v1")
 })
 
 
@@ -14,13 +14,13 @@ test_that("Test set_api_token function", {
 
 test_that("Test default_uri_builder function", {
   config <- c(endpoint_base = "geomaterials/")
-  expect_equal(default_uri_builder("https://api.mindat.org",config),"https://api.mindat.org/geomaterials/")
-  #expect_equal(mindat_cache_get("api_token"),"https://api.mindat.org/geomaterials/")
+  expect_equal(default_uri_builder("https://api.mindat.org/v1",config),"https://api.mindat.org/v1/geomaterials/")
+  #expect_equal(mindat_cache_get("api_token"),"https://api.mindat.org/v1/geomaterials/")
 })
 
 test_that("Test mindat_api_endpoint function", {
   config <- c(endpoint_base = "geomaterials/")
-  default_uri_builder("https://api.mindat.org",config)
+  default_uri_builder("https://api.mindat.org/v1",config)
   expect_no_error(mindat_api_endpoint("geomaterials", "geomaterials/",default_uri_builder,c('')))
   test_error_uribuilder = "error uri builder"
   expect_error(mindat_api_endpoint("geomaterials", "geomaterials",test_error_uribuilder,c('')))
@@ -29,11 +29,11 @@ test_that("Test mindat_api_endpoint function", {
 
 # test_that("Test build_uri function", {
 #   config <- c(endpoint_base = "geomaterials/")
-#   default_uri_builder("https://api.mindat.org",config)
+#   default_uri_builder("https://api.mindat.org/v1",config)
 #   mindat_api_endpoint("geomaterials","geomaterials/",default_uri_builder)
-#   qs<- "https://api.mindat.org/geomaterials/?fields=id,name/"
+#   qs<- "https://api.mindat.org/v1/geomaterials/?fields=id,name/"
 #   qs <- paste(qs,'?', 'page_size = 10', sep = "")
-#   expect_no_error(build_uri("geomaterials",fields = "id,name",api_base = "https://api.mindat.org"))
+#   expect_no_error(build_uri("geomaterials",fields = "id,name",api_base = "https://api.mindat.org/v1"))
 # })
 
 

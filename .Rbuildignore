@@ -4,3 +4,11 @@
 ^docs$
 ^pkgdown$
 ^\.github$
+^README.Rmd
+^LICENSE.Rmd
+^NEWS.Rmd
+^NEWS.html
+^notebook$
+^CRAN-SUBMISSION
+^LICENSE.md
+^cran-comments.md

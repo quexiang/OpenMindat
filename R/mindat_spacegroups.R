@@ -2,8 +2,8 @@
 
 #' spacegroups that match a given spacegroup ID (integer)
 #' @description : Queries a list of spacegroup that match a given spacegroup ID
-#' @usage spacegroups_cclass(spacegroup_id, ...)
-#' @param spacegroups_by_id integer spacegroup ID .
+#' @usage spacegroups_by_id(spacegroup_id, ...)
+#' @param spacegroup_id integer spacegroup ID .
 #' The field "spacegroup_id" is a integer of spacegroup ID.
 #' @param ..., Further parameters like "sgtext"(space group text) .Other optional arguments-Additional arguments.
 #' @return df, a data frame of spacegroup
@@ -116,7 +116,7 @@ spacegroupsets_list <- function(...){
 
 #' spacegroupsets that match a given crystalclass ID (integer)
 #' @description : Queries a list of spacegroupsets that match a given crystalclass ID
-#' @usage mindat_spacegroupsets_list(crystalclass_id, ...)
+#' @usage spacegroupsets_cclass(crystalclass_id, ...)
 #' @param crystalclass_id integer crystalclass ID .
 #' The field "crystalclass_id" is a integer of crystalclass ID.
 #' @param ..., Further parameters like "sgtext"(space group text) .Other optional arguments-Additional arguments.

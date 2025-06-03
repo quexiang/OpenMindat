@@ -4,12 +4,12 @@
 \alias{mindat_connection}
 \title{Initializing Mindat API}
 \usage{
-mindat_connection(token, base_url = "https://api.mindat.org",fmt ="json",page_size = 800)
+mindat_connection(token, base_url = "https://api.mindat.org/v1",fmt ="json",page_size = 800)
 }
 \arguments{
 \item{token}{string. You can apply a token from Mindat.org.}
 
-\item{base_url}{string.The base url of mindat API, default is "https://api.mindat.org".}
+\item{base_url}{string.The base url of mindat API, default is "https://api.mindat.org/v1".}
 
 \item{fmt}{string. The format of the request and response, default is json.}
 

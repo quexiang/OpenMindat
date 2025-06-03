@@ -4,12 +4,12 @@
 \alias{geomaterials_contain_all_but_not_elems}
 \title{geomaterials that contain all of some given elements but without any of some other given elements.}
 \usage{
-geomaterials_contain_all_but_not_elems(icl_elm_vector, ecl_elms_vector, ...)
+geomaterials_contain_all_but_not_elems(icl_elms, ecl_elms, ...)
 }
 \arguments{
-\item{icl_elm_vector}{vector of elements.}
+\item{icl_elms}{vector of elements.}
 
-\item{ecl_elms_vector}{vector of elements.}
+\item{ecl_elms}{vector of elements.}
 
 \item{..., }{Further named parameters.Other optional arguments-Additional arguments.}
 }
@@ -17,17 +17,17 @@ geomaterials_contain_all_but_not_elems(icl_elm_vector, ecl_elms_vector, ...)
 df, a data frame of geomaterials.
 }
 \description{
-Queries the list of geomaterials that contain all the given elements listed in icl_elm_vector,
-but do not contain the given elements listed in ecl_elms_vector.
+Queries the list of geomaterials that contain all the given elements listed in icl_elms,
+but do not contain the given elements listed in ecl_elms
 }
 \details{
 This function releated to the field "elements_inc" and "elements_exc" of geomaterials.
-This function queries the list of geological materials that contain an given list of elements (icl_elm_vector),
-but not contain the other list of elements (ecl_elms_vector).
+This function queries the list of geological materials that contain an given list of elements (icl_elms),
+but not contain the other list of elements (ecl_elms).
 It performs the query operation by calling the mindat_geomaterial_list function.
 }
 \examples{
 \dontrun{
-df<-geomaterials_contain_all_but_not_elems (c('Fe','S'), c('O'),fields ="id,name,mindat_formula,elements")
+df<-geomaterials_contain_all_but_not_elems(c('Fe','S'), c('O'),fields ="id,name,mindat_formula,elements")
 }
 }

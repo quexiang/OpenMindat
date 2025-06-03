@@ -39,25 +39,25 @@ geomaterials_not_contain_elems <- function(ecl_elms_vector,...){
 }
 
 #' geomaterials that contain all of some given elements but without any of some other given elements.
-#' @description Queries the list of geomaterials that contain all the given elements listed in icl_elm_vector,
-#' but do not contain the given elements listed in ecl_elms_vector.
-#' @usage geomaterials_contain_all_but_not_elems(icl_elm_vector, ecl_elms_vector, ...)
-#' @param icl_elm_vector vector of elements.
-#' @param ecl_elms_vector vector of elements.
+#' @description Queries the list of geomaterials that contain all the given elements listed in icl_elms,
+#' but do not contain the given elements listed in ecl_elms
+#' @usage geomaterials_contain_all_but_not_elems(icl_elms, ecl_elms, ...)
+#' @param icl_elms vector of elements.
+#' @param ecl_elms vector of elements.
 #' @param ..., Further named parameters.Other optional arguments-Additional arguments.
 #' @return df, a data frame of geomaterials.
 #' @examples
 #' \dontrun{
-#' df<-geomaterials_contain_all_but_not_elems (c('Fe','S'), c('O'),fields ="id,name,mindat_formula,elements")
+#' df<-geomaterials_contain_all_but_not_elems(c('Fe','S'), c('O'),fields ="id,name,mindat_formula,elements")
 #' }
 #' @details
 #' This function releated to the field "elements_inc" and "elements_exc" of geomaterials.
-#' This function queries the list of geological materials that contain an given list of elements (icl_elm_vector),
-#' but not contain the other list of elements (ecl_elms_vector).
+#' This function queries the list of geological materials that contain an given list of elements (icl_elms),
+#' but not contain the other list of elements (ecl_elms).
 #' It performs the query operation by calling the mindat_geomaterial_list function.
 #' @export
-geomaterials_contain_all_but_not_elems <- function(icl_elm_vector,ecl_elms_vector,...){
-  df <- mindat_geomaterial_list(ids = c(''),elements_inc = icl_elm_vector,elements_exc = ecl_elms_vector,...)
+geomaterials_contain_all_but_not_elems <- function(icl_elms,ecl_elms,...){
+  df <- mindat_geomaterial_list(ids = c(''),elements_inc = icl_elms,elements_exc = ecl_elms,...)
   df
 }
 

@@ -124,7 +124,7 @@ mindat_set_up_endpoints<-function(){
 
 #' mindat_setup
 #' @description set up of the mindat basic uri, endpoints, and cache
-#' @usage mindat_setup(base_uri = 'https://api.mindat.org',page_size = 800)
+#' @usage mindat_setup(base_uri = 'https://api.mindat.org/v1',page_size = 800)
 #' @param base_uri base uri of mindat API.
 #' @param page_size interger,setting the page size of responsed data from the API server.
 #' @examples
@@ -132,7 +132,7 @@ mindat_set_up_endpoints<-function(){
 #' mindat_setup()
 #' }
 #' @export
-mindat_setup<-function(base_uri = 'https://api.mindat.org',page_size = 800){
+mindat_setup<-function(base_uri = 'https://api.mindat.org/v1',page_size = 800){
   set_api_base(base_uri)
   set_page_size(page_size)
   mindat_set_up_endpoints()

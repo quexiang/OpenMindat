@@ -214,7 +214,7 @@ mindat_locentries_stat<-function(...){
 
 #' mindat_locentries_lstm_id
 #' @description retrieve Mindat locality-geomaterial pairs and some statistics list.
-#' @usage mindat_locentries_lstm_id (lstmid,...)
+#' @usage mindat_locentries_lstm_id (id,...)
 #' @param id A unique integer value identifying this locstatsmin.
 #' @param ..., Further named parameters.
 #' @return df, data frame of locentries statstics list.

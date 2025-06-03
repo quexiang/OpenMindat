@@ -4,7 +4,7 @@
 \alias{mindat_locentries_lstm_id}
 \title{mindat_locentries_lstm_id}
 \usage{
-mindat_locentries_lstm_id (lstmid,...)
+mindat_locentries_lstm_id (id,...)
 }
 \arguments{
 \item{id}{A unique integer value identifying this locstatsmin.}

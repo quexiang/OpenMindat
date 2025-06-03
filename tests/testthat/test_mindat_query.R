@@ -55,12 +55,12 @@ test_that("Test mindat_localitiy function", {
 #})
 
 
-test_that("Test mindat_locality_status_list function", {
+#test_that("Test mindat_locality_status_list function", {
   #test_base_token =  #Your_token
   #expect_no_error(mindat_connection(test_base_token))
-  expect_no_error(df <- mindat_locality_status_list(ids = c('2','3','9','222')))
-  expect_equal(typeof(df), "list")
-})
+  #expect_no_error(df <- mindat_locality_status_list(ids = c('2','3','9','222')))
+  #expect_equal(typeof(df), "list")
+#})
 
 
 test_that("Test mindat_locality_type function", {

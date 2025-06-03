@@ -4,7 +4,7 @@
 \alias{Locentries_list}
 \title{retrieve a full list of locacentries.}
 \usage{
-mindat_locentries_list(...)
+Locentries_list(...)
 }
 \arguments{
 \item{..., }{Further named parameters.Other optional arguments.}
@@ -20,6 +20,6 @@ This function return a list of locacentries.
 }
 \examples{
 \dontrun{
-df <-mindat_locentries_list()
+df <-Locentries_list()
 }
 }

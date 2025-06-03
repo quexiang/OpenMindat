@@ -4,13 +4,13 @@
 \alias{spacegroups_by_id}
 \title{spacegroups that match a given spacegroup ID (integer)}
 \usage{
-spacegroups_cclass(spacegroup_id, ...)
+spacegroups_by_id(spacegroup_id, ...)
 }
 \arguments{
-\item{..., }{Further parameters like "sgtext"(space group text) .Other optional arguments-Additional arguments.}
-
-\item{spacegroups_by_id}{integer spacegroup ID .
+\item{spacegroup_id}{integer spacegroup ID .
 The field "spacegroup_id" is a integer of spacegroup ID.}
+
+\item{..., }{Further parameters like "sgtext"(space group text) .Other optional arguments-Additional arguments.}
 }
 \value{
 df, a data frame of spacegroup

@@ -4,7 +4,7 @@
 \alias{spacegroupsets_cclass}
 \title{spacegroupsets that match a given crystalclass ID (integer)}
 \usage{
-mindat_spacegroupsets_list(crystalclass_id, ...)
+spacegroupsets_cclass(crystalclass_id, ...)
 }
 \arguments{
 \item{crystalclass_id}{integer crystalclass ID .

@@ -72,7 +72,7 @@ localities_list_description<- function(desc,...){
 #' @return df, a data frame of localities
 #' @examples
 #' \dontrun{
-#' df <-localities_list_elems_exc(c("H", "O", "Si", "Al","Fe", "Ca", "Na", "K", "P", "C", "Mn", "F", "Mg", "S"))
+#' df<-localities_list_elems_exc(c("H","O","Si","Al","Fe","Ca","Na","K","P","C","Mn","F","Mg","S"))
 #' }
 #' @details
 #' This function releated to the field "elements_exc" of localities.
@@ -329,12 +329,12 @@ locality_type_list <- function(...){
 
 #' retrieve a full list of locacentries.
 #' @description : Queries locacentries.
-#' @usage mindat_locentries_list(...)
+#' @usage Locentries_list(...)
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
 #' @examples
 #' \dontrun{
-#' df <-mindat_locentries_list()
+#' df <-Locentries_list()
 #' }
 #' @details
 #' This function return a list of locacentries.
@@ -346,7 +346,7 @@ Locentries_list<-function(...){
 
 #' retrieve locacentries by given a Locentry ID.
 #' @description : Queries locacentries by given a ID.
-#' @usage Locentries_retrieve(...)
+#' @usage Locentries_retrieve(id,...)
 #' @param id  mindat Locentry id (Integer)
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities

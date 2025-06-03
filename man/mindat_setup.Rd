@@ -4,7 +4,7 @@
 \alias{mindat_setup}
 \title{mindat_setup}
 \usage{
-mindat_setup(base_uri = 'https://api.mindat.org',page_size = 800)
+mindat_setup(base_uri = 'https://api.mindat.org/v1',page_size = 800)
 }
 \arguments{
 \item{base_uri}{base uri of mindat API.}

@@ -4,7 +4,7 @@
 \alias{Locentries_retrieve}
 \title{retrieve locacentries by given a Locentry ID.}
 \usage{
-Locentries_retrieve(...)
+Locentries_retrieve(id,...)
 }
 \arguments{
 \item{id}{mindat Locentry id (Integer)}
