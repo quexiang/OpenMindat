@@ -128,7 +128,7 @@ mindat_parse_raw_data<-function(raw_data){
 #' @examples
 #' \dontrun{
 #' library(httr)
-#' uri<- "https://api.mindat.org/geomaterials/?id__in=&hardness_min=9.3&fields=name,+
+#' uri<- "https://api.mindat.org/v1/geomaterials/?id_in=&hardness_min=9.3&fields=name,+
 #' hardness&page_size=1500"
 #' api_token<- "9ce67655d74bcd981e937be80dcea9cb"
 #' response <- GET(uri,add_headers('Authorization'= paste('Token ',api_token,sep = "")))
@@ -201,7 +201,7 @@ mindat_build_querystring<-function(args){
       #break
     }
     else if(argName == "ids"){
-      qs <-paste('?id__in=',qs, encodedArgValue, '&', sep = "")
+      qs <-paste('?id_in=',qs, encodedArgValue, '&', sep = "")
     }
     else if(argName == "filed_exists"){
       qs <-paste(qs, encodedArgValue, '&', sep = "")

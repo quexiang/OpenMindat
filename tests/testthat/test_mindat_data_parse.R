@@ -37,7 +37,7 @@ test_that("Test mindat_get_data_from_uri function", {
 test_that("Test mindat_build_querystring function", {
   args <- list(ids = "6,7,8",fields ="id,name,updttime,ima_formula,ima_status,ima_notes,key_elements",elements_inc = "H,O")
   page_size <- mindat_cache_get('page-size')
-  qs<- "?id__in=6,7,8&fields=id,name,updttime,ima_formula,ima_status,ima_notes,key_elements&elements_inc=H,O&"
+  qs<- "?id_in=6,7,8&fields=id,name,updttime,ima_formula,ima_status,ima_notes,key_elements&elements_inc=H,O&"
   qs <- paste(qs, 'page-size', "=", page_size, sep = "")
   expect_equal( mindat_build_querystring(args),qs)
 })
