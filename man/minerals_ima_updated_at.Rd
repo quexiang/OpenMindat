@@ -7,7 +7,7 @@
 minerals_ima_updated_at(updateDate,...)
 }
 \arguments{
-\item{updateDate}{string\if{html}{\out{<date-time>}}, Last updated datetime in format \%Y-\%m-\%d \%H:\%M:\%S}
+\item{updateDate}{string (date-time), Last updated datetime in format \%Y-\%m-\%d \%H:\%M:\%S}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }

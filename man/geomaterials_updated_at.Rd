@@ -7,7 +7,7 @@
 geomaterials_updated_at(strDate,...)
 }
 \arguments{
-\item{strDate}{string\if{html}{\out{<date-time>}}, Last updated datetime in format \%Y-\%m-\%d \%H:\%M:\%S}
+\item{strDate}{string(date-time>), Last updated datetime in format \%Y-\%m-\%d \%H:\%M:\%S}
 
 \item{..., }{Further named parameters.Other optional arguments.}
 }

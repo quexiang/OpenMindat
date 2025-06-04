@@ -1000,7 +1000,7 @@ geomaterials_synid <- function(idnum,...){
 #' retrieve the geomaterials updated at an given time.
 #' @description : Queries the list of geomaterials that were updated at an given time
 #' @usage geomaterials_updated_at(strDate,...)
-#' @param strDate string<date-time>, Last updated datetime in format %Y-%m-%d %H:%M:%S
+#' @param strDate string(date-time>), Last updated datetime in format %Y-%m-%d %H:%M:%S
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of geomaterials
 #' @examples

@@ -165,7 +165,7 @@ localities_list_txt <-function(txt,...){
 #' retrieve the localities list updated at the given time.
 #' @description : Queries the list of localities that have the given time
 #' @usage localities_list_updated_at(updateDate,...)
-#' @param updateDate string<date-time>, Last updated datetime in format %Y-%m-%d %H:%M:%S
+#' @param updateDate string (date-time), Last updated datetime in format %Y-%m-%d %H:%M:%S
 #' @param ..., Further named parameters.Other optional arguments.
 #' @return df, a data frame of localities
 #' @examples
