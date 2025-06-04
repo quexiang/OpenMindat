@@ -9,7 +9,7 @@
   "spacegroups_cclass","spacegroups_sgtext","spacegroupsets_by_id","spacegroupsets_list","spacegroupsets_cclass",
   "spacegroupsets_sgtext","crystalclasses_symbols","crystalclasses_systems".
   6.  update test files.
-  7. We replaced the field 'id__in' with 'id_in' according to the Mindat API Server's updated.
+  7.  We replaced the field 'id__in' with 'id_in' according to the Mindat API Server's updated.
   
   
 # OpenMindat 1.0.0
