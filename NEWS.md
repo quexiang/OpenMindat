@@ -1,4 +1,3 @@
-
 # OpenMindat 1.0.1
   1. `mindat_connection()` update the default settings of base_url to avoid failure in data retrieval.
   2.  The Mindat API server updated its endpoints of 'minerals-ima','locality-age', 'locality-status', 'locality-type', and 'page-size'. We kept consist with the server to aviod failure in data retrieval.
