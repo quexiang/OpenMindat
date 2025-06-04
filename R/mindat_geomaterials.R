@@ -48,7 +48,7 @@ geomaterials_not_contain_elems <- function(ecl_elms_vector,...){
 #' @return df, a data frame of geomaterials.
 #' @examples
 #' \dontrun{
-#' df<-geomaterials_contain_all_but_not_elems(c('Fe','S'), c('O'),fields ="id,name,mindat_formula,elements")
+#' geomaterials_contain_all_but_not_elems(c('Fe','S'), c('O'),fields ="id,name")
 #' }
 #' @details
 #' This function releated to the field "elements_inc" and "elements_exc" of geomaterials.
