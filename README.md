@@ -183,7 +183,7 @@ Technical architecture of the software package
 
 **Related Articles**
 
-Ma, X., Ralph, J., Zhang, J., Que, X., Prabhu, A., Morrison, S.M., Hazen, R.M., Wyborn, L., Lehnert, K., 2023. OpenMindat: Open and FAIR mineralogy data from the Mindat database. Geoscience Data Journal, In Press,[https://doi.org/10.1002/gdj3.204](https://doi.org/10.1002/gdj3.204)
+Ma, X., Ralph, J., Zhang, J., Que, X., Prabhu, A., Morrison, S.M., Hazen, R.M., Wyborn, L. and Lehnert, K., 2024. OpenMindat: Open and FAIR mineralogy data from the Mindat database. Geoscience Data Journal (SCI), 11(1), pp.94-104.[https://doi.org/10.1002/gdj3.204]
 
 
 Jiyin Zhang,Xiang Que, Bhuwan Mdahikarmi,Robert M Hazen,Jolyon Ralph; Anirudh Prabhu, Shaunna M Morrison,Xiaogang Ma*, Using a 3D heat map to explore the diverse correlations among elements and mineral species, Applied Computing & Geosciences, 2024, [https://doi.org/10.1016/j.acags.2024.100154](https://doi.org/10.1016/j.acags.2024.100154) 
