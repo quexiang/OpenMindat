@@ -3,4 +3,5 @@ template:
   bootstrap: 5
   bootswatch: cerulean
 deploy:
-  install_metadata: true
+  install_metadata: yes
+
