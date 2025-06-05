@@ -1,7 +1,7 @@
 Package: OpenMindat
 Type: Package
 Title: Quickly Retrieve Datasets from the 'Mindat' API
-Version: 1.0.1
+Version: 1.0.1.9000
 Imports:
     httr,
     jsonlite (>= 1.8.4),
@@ -16,7 +16,7 @@ Authors@R: c(
       person(given = "Xiaogang",family = "Ma",email = "max@uidaho.edu",role = c("aut"),comment = c(ORCID = "0000-0002-9110-7369"))
     )
 Maintainer: Xiang Que <xiangq@uidaho.edu>
-Description: The goal of OpenMindat R package is to provide functions for users or machines to quickly and easily retrieve datasets from the mindat.org API (<https://api.mindat.org/schema/redoc/>).
+Description: Provide functions for users or machines to quickly and easily retrieve datasets from the 'mindat.org' API (<https://api.mindat.org/schema/redoc/>).
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
